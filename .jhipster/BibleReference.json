@@ -1,0 +1,50 @@
+{
+  "annotations": {
+    "changelogDate": "20241205034618"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "bibleVerse",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "version",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "book",
+      "fieldType": "Book",
+      "fieldValues": "GENESIS,EXODUS,REVELATIONS"
+    },
+    {
+      "fieldName": "chapter",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "verse",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "testament",
+      "fieldType": "Testament",
+      "fieldValues": "OLD_TESTAMENT,NEW_TESTAMENT"
+    },
+    {
+      "fieldName": "url",
+      "fieldType": "String"
+    }
+  ],
+  "name": "BibleReference",
+  "relationships": [
+    {
+      "otherEntityName": "triviaAnswer",
+      "otherEntityRelationshipName": "bibleReference",
+      "relationshipName": "triviaAnswer",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-many"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

@@ -1,0 +1,30 @@
+{
+  "bibletriviaApp": {
+    "triviaAnswer": {
+      "home": {
+        "title": "Trivia Answers",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Trivia Answer",
+        "createOrEditLabel": "Create or edit a Trivia Answer",
+        "notFound": "No Trivia Answers found"
+      },
+      "created": "A new Trivia Answer is created with identifier {{ param }}",
+      "updated": "A Trivia Answer is updated with identifier {{ param }}",
+      "deleted": "A Trivia Answer is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Trivia Answer {{ id }}?"
+      },
+      "detail": {
+        "title": "Trivia Answer"
+      },
+      "id": "ID",
+      "answerId": "Answer Id",
+      "answer": "Answer",
+      "explanation": "Explanation",
+      "correct": "Correct",
+      "picture": "Picture",
+      "bibleReference": "Bible Reference",
+      "triviaQuestion": "Trivia Question"
+    }
+  }
+}

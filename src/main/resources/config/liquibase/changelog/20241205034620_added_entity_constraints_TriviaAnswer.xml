@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+    <!--
+        Added the constraints for entity TriviaAnswer.
+    -->
+    <changeSet id="20241205034620-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="trivia_answer_id"
+                                 baseTableName="rel_trivia_answer__bible_reference"
+                                 constraintName="fk_rel_trivia_answer__bible_reference__trivia_answer_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="trivia_answer"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="bible_reference_id"
+                                 baseTableName="rel_trivia_answer__bible_reference"
+                                 constraintName="fk_rel_trivia_answer__bible_reference__bible_reference_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="bible_reference"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="trivia_question_id"
+                                 baseTableName="trivia_answer"
+                                 constraintName="fk_trivia_answer__trivia_question_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="trivia_question"
+                                 />
+    </changeSet>
+</databaseChangeLog>

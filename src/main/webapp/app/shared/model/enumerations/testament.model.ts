@@ -1,0 +1,5 @@
+export enum Testament {
+  OLD_TESTAMENT = 'OLD_TESTAMENT',
+
+  NEW_TESTAMENT = 'NEW_TESTAMENT',
+}

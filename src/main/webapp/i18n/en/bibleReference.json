@@ -1,0 +1,31 @@
+{
+  "bibletriviaApp": {
+    "bibleReference": {
+      "home": {
+        "title": "Bible References",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Bible Reference",
+        "createOrEditLabel": "Create or edit a Bible Reference",
+        "notFound": "No Bible References found"
+      },
+      "created": "A new Bible Reference is created with identifier {{ param }}",
+      "updated": "A Bible Reference is updated with identifier {{ param }}",
+      "deleted": "A Bible Reference is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Bible Reference {{ id }}?"
+      },
+      "detail": {
+        "title": "Bible Reference"
+      },
+      "id": "ID",
+      "bibleVerse": "Bible Verse",
+      "version": "Version",
+      "book": "Book",
+      "chapter": "Chapter",
+      "verse": "Verse",
+      "testament": "Testament",
+      "url": "Url",
+      "triviaAnswer": "Trivia Answer"
+    }
+  }
+}

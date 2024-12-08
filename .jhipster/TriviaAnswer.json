@@ -1,0 +1,47 @@
+{
+  "annotations": {
+    "changelogDate": "20241205034620"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "answerId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "answer",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "explanation",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "correct",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "picture",
+      "fieldType": "String"
+    }
+  ],
+  "name": "TriviaAnswer",
+  "relationships": [
+    {
+      "otherEntityField": "bibleVerse",
+      "otherEntityName": "bibleReference",
+      "otherEntityRelationshipName": "triviaAnswer",
+      "relationshipName": "bibleReference",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-many"
+    },
+    {
+      "otherEntityName": "triviaQuestion",
+      "relationshipName": "triviaQuestion",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

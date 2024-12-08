@@ -1,0 +1,44 @@
+{
+  "annotations": {
+    "changelogDate": "20241205034619"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "level",
+      "fieldType": "TriviaLevel",
+      "fieldValues": "EASY,DIFFICULT"
+    },
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "type",
+      "fieldType": "TriviaType",
+      "fieldValues": "BIBLICAL,HISTORY"
+    },
+    {
+      "fieldName": "startDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "endDate",
+      "fieldType": "Instant"
+    }
+  ],
+  "name": "Trivia",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityField": "questionId",
+      "otherEntityName": "triviaQuestion",
+      "otherEntityRelationshipName": "trivia",
+      "relationshipName": "triviaQuestion",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-many"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

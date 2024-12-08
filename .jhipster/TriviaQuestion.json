@@ -1,0 +1,54 @@
+{
+  "annotations": {
+    "changelogDate": "20241205034621"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "questionId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "questionType",
+      "fieldType": "TriviaType",
+      "fieldValues": "BIBLICAL,HISTORY"
+    },
+    {
+      "fieldName": "question",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "answerType",
+      "fieldType": "AnswerType",
+      "fieldValues": "SINGLE,MULTIPLE,TRUE_FALSE"
+    },
+    {
+      "fieldName": "value",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "picture",
+      "fieldType": "String"
+    }
+  ],
+  "name": "TriviaQuestion",
+  "pagination": "infinite-scroll",
+  "relationships": [
+    {
+      "otherEntityName": "triviaAnswer",
+      "otherEntityRelationshipName": "triviaQuestion",
+      "relationshipName": "triviaAnswer",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "trivia",
+      "otherEntityRelationshipName": "triviaQuestion",
+      "relationshipName": "trivia",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-many"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

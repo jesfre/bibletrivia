@@ -1,0 +1,9 @@
+{
+  "bibletriviaApp": {
+    "TriviaLevel": {
+      "null": "",
+      "EASY": "EASY",
+      "DIFFICULT": "DIFFICULT"
+    }
+  }
+}

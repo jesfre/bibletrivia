@@ -1,0 +1,10 @@
+{
+  "bibletriviaApp": {
+    "AnswerType": {
+      "null": "",
+      "SINGLE": "SINGLE",
+      "MULTIPLE": "MULTIPLE",
+      "TRUE_FALSE": "TRUE_FALSE"
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "bibletriviaApp": {
+    "TriviaType": {
+      "null": "",
+      "BIBLICAL": "BIBLICAL",
+      "HISTORY": "HISTORY"
+    }
+  }
+}

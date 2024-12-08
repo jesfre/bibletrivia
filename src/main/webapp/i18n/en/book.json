@@ -1,0 +1,10 @@
+{
+  "bibletriviaApp": {
+    "Book": {
+      "null": "",
+      "GENESIS": "GENESIS",
+      "EXODUS": "EXODUS",
+      "REVELATIONS": "REVELATIONS"
+    }
+  }
+}
