@@ -12,7 +12,7 @@ export default () => {
     <div>
       <ErrorBoundaryRoutes>
         {/* prettier-ignore */}
-        {/*<Route path="trivia1/*" element={<Trivia1 />} />*/}
+        <Route path="trivia1/*" element={<Trivia1 />} />
         {/* jhipster-needle-add-route-path - JHipster will add routes here */}
       </ErrorBoundaryRoutes>
     </div>

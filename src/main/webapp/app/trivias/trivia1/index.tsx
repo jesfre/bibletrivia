@@ -7,7 +7,7 @@ import Trivia1 from './trivia1';
 
 const TriviasRoutes = () => (
   <ErrorBoundaryRoutes>
-    {/*<Route index element={<Trivia1 />} />*/}
+    <Route index element={<Trivia1 />} />
   </ErrorBoundaryRoutes>
 );
 
