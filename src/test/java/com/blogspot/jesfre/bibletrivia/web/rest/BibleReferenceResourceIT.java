@@ -41,8 +41,8 @@ class BibleReferenceResourceIT {
     private static final String DEFAULT_VERSION = "AAAAAAAAAA";
     private static final String UPDATED_VERSION = "BBBBBBBBBB";
 
-    private static final Book DEFAULT_BOOK = Book.GENESIS;
-    private static final Book UPDATED_BOOK = Book.EXODUS;
+    private static final Book DEFAULT_BOOK = Book.Genesis;
+    private static final Book UPDATED_BOOK = Book.Exodus;
 
     private static final Integer DEFAULT_CHAPTER = 1;
     private static final Integer UPDATED_CHAPTER = 2;
