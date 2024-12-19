@@ -6,7 +6,7 @@ const TriviasMenu = () => {
   return (
     <>
       {/* prettier-ignore */}
-      <MenuItem icon="asterisk" to="/trivia1">
+      <MenuItem icon="asterisk" to="/game/trivia1">
         <Translate contentKey="global.menu.trivias.trivia1" />
       </MenuItem>
     </>
