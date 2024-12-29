@@ -35,7 +35,6 @@ const AppRoutes = () => {
             path="game/*"
             element={ <TriviasRoutes /> }
           />
-        {/*<TriviasRoutes />*/}
         <Route index element={<Home />} />
         <Route path="login" element={<Login />} />
         <Route path="logout" element={<Logout />} />

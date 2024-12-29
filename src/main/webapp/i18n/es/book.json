@@ -2,9 +2,9 @@
   "bibletriviaApp": {
     "Book": {
       "null": "",
-      "GENESIS": "GENESIS",
-      "EXODUS": "EXODUS",
-      "REVELATIONS": "REVELATIONS"
+      "Genesis": "Genesis",
+      "Exodus": "Exodus",
+      "Revelation": "Revelation"
     }
   }
 }

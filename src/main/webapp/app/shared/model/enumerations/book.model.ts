@@ -1,7 +1,7 @@
 export enum Book {
-  GENESIS = 'GENESIS',
+  Genesis = 'Genesis',
 
-  EXODUS = 'EXODUS',
+  Exodus = 'Exodus',
 
-  REVELATIONS = 'REVELATIONS',
+  Revelation = 'Revelation',
 }

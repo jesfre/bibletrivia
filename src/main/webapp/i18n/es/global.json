@@ -6,7 +6,7 @@
       "home": "Inicio",
       "trivias": {
         "main": "Trivias",
-        "trivia1": "Trivia 1"
+        "trivia-game": "Trivia Game"
       },
       "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
       "entities": {
@@ -99,6 +99,7 @@
     "action": {
       "addblob": "Añadir fichero",
       "addimage": "Añadir imagen",
+      "start": "Iniciar",
       "back": "Volver",
       "cancel": "Cancelar",
       "delete": "Eliminar",

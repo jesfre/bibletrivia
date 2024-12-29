@@ -3,12 +3,12 @@ import { Route } from 'react-router-dom';
 
 import ErrorBoundaryRoutes from 'app/shared/error/error-boundary-routes';
 
-import Trivia1 from './trivia1';
+import TriviaGame from './trivia-game';
 
-const TriviasRoutes = () => (
+const TriviaGameRoutes = () => (
   <ErrorBoundaryRoutes>
-    <Route index element={<Trivia1 />} />
+    <Route index element={<TriviaGame />} />
   </ErrorBoundaryRoutes>
 );
 
-export default TriviasRoutes;
+export default TriviaGameRoutes;

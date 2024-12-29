@@ -59,7 +59,7 @@ describe('Header', () => {
     expect(html).toContain('navbar');
     // Find AdminMenu component
     expect(html).toContain('admin-menu');
-    // Find TriviasMenu component
+    // Find TriviaGameMenu component
     expect(html).toContain('trivias-menu');
     // Find EntitiesMenu component
     expect(html).toContain('entity-menu');
@@ -76,7 +76,7 @@ describe('Header', () => {
     expect(html).toContain('navbar');
     // Find AdminMenu component
     expect(html).toContain('admin-menu');
-    // Find TriviasMenu component
+    // Find TriviaGameMenu component
     expect(html).toContain('trivias-menu');
     // Find EntitiesMenu component
     expect(html).toContain('entity-menu');
@@ -93,7 +93,7 @@ describe('Header', () => {
     expect(html).toContain('navbar');
     // Not find AdminMenu component
     expect(html).not.toContain('admin-menu');
-    // Find TriviasMenu component
+    // Find TriviaGameMenu component
     expect(html).toContain('trivias-menu');
     // Find EntitiesMenu component
     expect(html).toContain('entity-menu');
@@ -108,7 +108,7 @@ describe('Header', () => {
     expect(html).toContain('navbar');
     // Not find AdminMenu component
     expect(html).not.toContain('admin-menu');
-    // Find TriviasMenu component
+    // Find TriviaGameMenu component
     expect(html).toContain('trivias-menu');
     // Not find EntitiesMenu component
     expect(html).not.toContain('entity-menu');
