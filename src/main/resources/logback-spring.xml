@@ -27,7 +27,7 @@
     </root>
     -->
 
-    <logger name="com.blogspot.jesfre.bibletrivia" level="INFO"/>
+    <logger name="com.blogspot.jesfre.bibletrivia" level="DEBUG"/>
 
     <logger name="angus.activation" level="WARN"/>
     <logger name="jakarta.activation" level="WARN"/>

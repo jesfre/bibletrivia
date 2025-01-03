@@ -23,7 +23,7 @@ const TriviaGame = () => {
 
            <br/>
            <p>Trivia 2</p>
-           <Button tag={Link} to="/trivia-game" replace color="info" data-cy="entityDetailsBackButton">
+           <Button tag={Link} to="/game/trivia-game/question" replace color="info" data-cy="entityDetailsBackButton">
             <FontAwesomeIcon icon="arrow-right" />{' '}
             <span className="d-none d-md-inline">
               <Translate contentKey="entity.action.start">Start</Translate>

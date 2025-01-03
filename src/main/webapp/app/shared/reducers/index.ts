@@ -13,6 +13,7 @@ import entitiesReducers from 'app/entities/reducers';
 import applicationProfile from './application-profile';
 import authentication from './authentication';
 import locale from './locale';
+import triviaGameQuestion from 'app/trivias/trivia-game/trivia-game.reducer';
 /* jhipster-needle-add-reducer-import - JHipster will add reducer here */
 
 const rootReducer: ReducersMapObject = {
@@ -30,6 +31,7 @@ const rootReducer: ReducersMapObject = {
   loadingBar,
   /* jhipster-needle-add-reducer-combine - JHipster will add reducer here */
   ...entitiesReducers,
+  triviaGameQuestion,
 };
 
 export default rootReducer;

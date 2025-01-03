@@ -1,35 +1,32 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { TriviaLevel } from 'app/shared/model/enumerations/trivia-level.model';
 import { Translate, ValidatedField, ValidatedForm, translate } from 'react-jhipster';
 import { Button, Col, Row } from 'reactstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import axios from 'axios';
+import { createAsyncThunk } from '@reduxjs/toolkit';
+import { EntityState, IQueryParams, createEntitySlice, serializeAxiosError } from 'app/shared/reducers/reducer.utils';
+import { ITriviaGameQuestion, defaultValue } from 'app/shared/model/trivia-game-question.model';
+import { useAppDispatch, useAppSelector } from 'app/config/store';
+import { getQuestion } from './trivia-game.reducer';
 
 const TriviaGameQuestion = () => {
+  const dispatch = useAppDispatch();
 
-    const triviaLevelValues = Object.keys(TriviaLevel);
+  const questionNum = 1;
 
-    return (
+  useEffect(() => {
+    dispatch(getQuestion(questionNum));
+  }, []);
+
+  const questionEntity = useAppSelector(state => state.triviaGameQuestion.entity);
+  
+  return (
         <div>
-           <p>Select Trivia Complexity</p>
-           
-           <ValidatedField label={translate('bibletriviaApp.trivia.level')} id="trivia-level" name="level" data-cy="level" type="select">
-                {triviaLevelValues.map(triviaLevel => (
-                  <option value={triviaLevel} key={triviaLevel}>
-                    {translate(`bibletriviaApp.TriviaLevel.${triviaLevel}`)}
-                  </option>
-                ))}
-              </ValidatedField>
-
-           <br/>
-           <p>Trivia 2</p>
-           <Button tag={Link} to="/trivia-question" replace color="info" data-cy="entityDetailsBackButton">
-            <FontAwesomeIcon icon="arrow-right" />{' '}
-            <span className="d-none d-md-inline">
-              <Translate contentKey="entity.action.back">Start</Translate>
-            </span>
-          </Button>
-          &nbsp;
+          <p>Question</p>
+          <span>Question {questionEntity.questionNumber}.</span> <br/>
+          <span>{questionEntity.questionText}</span>
         </div>
     );
 }
