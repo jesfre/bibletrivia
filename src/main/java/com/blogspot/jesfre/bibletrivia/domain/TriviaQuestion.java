@@ -44,7 +44,8 @@ public class TriviaQuestion implements Serializable {
     @Column(name = "picture")
     private String picture;
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "triviaQuestion")
+    // TODO change back to LAZY
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "triviaQuestion")
     @JsonIgnoreProperties(value = { "bibleReferences", "triviaQuestion" }, allowSetters = true)
     private Set<TriviaAnswer> triviaAnswers = new HashSet<>();
 

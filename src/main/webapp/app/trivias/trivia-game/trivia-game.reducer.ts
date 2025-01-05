@@ -3,9 +3,10 @@ import { createAsyncThunk, isFulfilled, isPending } from '@reduxjs/toolkit';
 import { ASC } from 'app/shared/util/pagination.constants';
 import { cleanEntity } from 'app/shared/util/entity-utils';
 import { EntityState, IQueryParams, createEntitySlice, serializeAxiosError } from 'app/shared/reducers/reducer.utils';
-import { ITriviaGameQuestion, defaultValue } from 'app/shared/model/trivia-game-question.model';
+import { ITriviaGameQuestion } from 'app/shared/model/trivia-game-question.model';
+import { ITriviaQuestion, defaultValue } from 'app/shared/model/trivia-question.model';
 
-const initialState: EntityState<ITriviaGameQuestion> = {
+const initialState: EntityState<ITriviaQuestion> = {
   loading: false,
   errorMessage: null,
   entities: [],
@@ -22,7 +23,7 @@ export const getEntities = createAsyncThunk(
   'triviaGameQuestion/fetch_entity_list',
   async ({ sort }: IQueryParams) => {
     const requestUrl = `${apiUrl}?${sort ? `sort=${sort}&` : ''}cacheBuster=${new Date().getTime()}`;
-    return axios.get<ITriviaGameQuestion[]>(requestUrl);
+    return axios.get<ITriviaQuestion[]>(requestUrl);
   },
   { serializeError: serializeAxiosError },
 );
@@ -31,7 +32,7 @@ export const getQuestion = createAsyncThunk(
   'triviaGameQuestion/fetch_entity',
   async (id: string | number) => {
     const requestUrl = `${apiUrl}/${id}`;
-    return axios.get<ITriviaGameQuestion>(requestUrl);
+    return axios.get<ITriviaQuestion>(requestUrl);
   },
   { serializeError: serializeAxiosError },
 );

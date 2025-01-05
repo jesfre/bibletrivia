@@ -16,6 +16,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.blogspot.jesfre.bibletrivia.domain.TriviaGameQuestion;
+import com.blogspot.jesfre.bibletrivia.domain.TriviaQuestion;
+import com.blogspot.jesfre.bibletrivia.repository.TriviaQuestionRepository;
+import com.blogspot.jesfre.bibletrivia.service.TriviaQuestionService;
 import com.blogspot.jesfre.bibletrivia.web.rest.errors.BadRequestAlertException;
 
 import tech.jhipster.web.util.ResponseUtil;
@@ -36,17 +39,30 @@ public class TriviaGameResource {
 	@Value("${jhipster.clientApp.name}")
 	private String applicationName;
 	
+	private final TriviaQuestionService triviaQuestionService;
+
+    public TriviaGameResource(TriviaQuestionService triviaQuestionService) {
+        this.triviaQuestionService = triviaQuestionService;
+    }
+	
 	@GetMapping("/question/{questionNumber}")
-	public ResponseEntity<TriviaGameQuestion> getQuestion(@PathVariable("questionNumber") Integer questionNumber) throws URISyntaxException {
+	public ResponseEntity<TriviaQuestion> getQuestion(@PathVariable("questionNumber") Integer questionNumber) throws URISyntaxException {
 		LOG.debug("In newTriviaQuestion... REST request to get question: {}", questionNumber);
 		if (questionNumber < 0) {
 			throw new BadRequestAlertException("Question numbers cannot be " + questionNumber, ENTITY_NAME, "badquestionnumber");
 		}
 		
-		TriviaGameQuestion question = new TriviaGameQuestion();
-		question.setQuestionNumber(questionNumber);
-		question.setQuestionText("Got question " + questionNumber);
+		// TODO logic to get next question
 		
-		return ResponseUtil.wrapOrNotFound(Optional.ofNullable(question));
+		// TODO store answered questions
+		
+		if(questionNumber == null || questionNumber < 1) {
+			questionNumber = 0;
+		}
+		questionNumber++;
+		
+		long id = 1L;
+		
+		return ResponseUtil.wrapOrNotFound(triviaQuestionService.findOne(id));
 	}
 }

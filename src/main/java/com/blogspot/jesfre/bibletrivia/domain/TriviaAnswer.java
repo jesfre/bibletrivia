@@ -46,8 +46,7 @@ public class TriviaAnswer implements Serializable {
     @JsonIgnoreProperties(value = { "triviaAnswers" }, allowSetters = true)
     private Set<BibleReference> bibleReferences = new HashSet<>();
 
-    // TODO make this relation LAZY again
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne(fetch = FetchType.LAZY)
     @JsonIgnoreProperties(value = { "triviaAnswers", "trivias" }, allowSetters = true)
     private TriviaQuestion triviaQuestion;
 

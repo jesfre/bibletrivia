@@ -11,6 +11,7 @@ import { ITriviaGameQuestion, defaultValue } from 'app/shared/model/trivia-game-
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 import { getQuestion } from './trivia-game.reducer';
 import { getEntitiesForQuestion } from 'app/entities/trivia-answer/trivia-answer.reducer';
+import { AnswerType } from 'app/shared/model/enumerations/answer-type.model';
 
 const TriviaGameQuestion = () => {
   const dispatch = useAppDispatch();
@@ -26,27 +27,26 @@ const TriviaGameQuestion = () => {
   }, []);
 
   const questionEntity = useAppSelector(state => state.triviaGameQuestion.entity);
-  const answerList = useAppSelector(state => state.triviaAnswer.entities);
-  const loading = useAppSelector(state => state.triviaAnswer.loading);
+  const loading = useAppSelector(state => state.triviaGameQuestion.loading);
   
   return (
         <div>
           <p>Question</p>
-          <dt><span>Question {questionEntity.questionNumber}.</span></dt>
-          <dd><span>{questionEntity.questionText}</span></dd>
+          <dt><span>Question {questionEntity.id}.</span></dt>
+          <dd><span>{questionEntity.question}</span></dd>
+          <dd><span>{questionEntity.questionType}</span></dd>
+          <dd><span>{questionEntity.answerType}</span></dd>
           
           <br/><br/>
 
-          {answerList && answerList.length > 0 ? (
+          {questionEntity.triviaAnswers && questionEntity.triviaAnswers.length > 0 ? (
             <div className="table-responsive">
-              {answerList.map((answer, i) => (
+              {questionEntity.triviaAnswers.map((answer, i) => (
                 <div className="answer">
-                  <span>{answer.id}</span>
-                    <span>{answer.answerId}</span>
-                    <span>{answer.answer}</span>
-                    <span>{answer.explanation}</span>
-                    <span>{answer.correct ? 'true' : 'false'}</span>
-                    <span>{answer.picture}</span>
+                    <span>
+                      <input type={questionEntity.answerType == AnswerType.MULTIPLE ? 'checkbox' : 'radio'} name="selectedAnswers" value="{answer.id}"/>
+                    </span>
+                    &nbsp;&nbsp;<span>{answer.answer}</span>
                 </div>
                 ))}
             </div>
@@ -57,33 +57,6 @@ const TriviaGameQuestion = () => {
               </div>
             )
           )}
-
- <br/><br/>
-          
-          <div className="table-responsive">
-          {answerList && answerList.length > 0 ? (
-            <Table responsive>
-              <tbody>
-                {answerList.map((answer, i) => (
-                  <tr key={`entity-${i}`} data-cy="entityTable">
-                    <td>{answer.id}</td>
-                    <td>{answer.answerId}</td>
-                    <td>{answer.answer}</td>
-                    <td>{answer.explanation}</td>
-                    <td>{answer.correct ? 'true' : 'false'}</td>
-                    <td>{answer.picture}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </Table>
-          ) : (
-            !loading && (
-              <div className="alert alert-warning">
-                <Translate contentKey="bibletriviaApp.answer.home.notFound">No Trivia Answers found</Translate>
-              </div>
-            )
-          )}
-        </div>
 
         </div>
     );
