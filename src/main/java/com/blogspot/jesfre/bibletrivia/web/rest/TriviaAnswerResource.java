@@ -169,4 +169,13 @@ public class TriviaAnswerResource {
             .headers(HeaderUtil.createEntityDeletionAlert(applicationName, true, ENTITY_NAME, id.toString()))
             .build();
     }
+    
+    @GetMapping("/question/{questionId}")
+    public List<TriviaAnswer> getAnswersForQuestion(@PathVariable("questionId") Long questionId) {
+        LOG.debug("REST request to get TriviaAnswers for question {}", questionId);
+        return triviaAnswerService.findAll().stream()
+        		.filter(ans -> ans.getTriviaQuestion() != null)
+        		.filter(ans -> ans.getTriviaQuestion().getId() == questionId)
+        		.toList();
+    }
 }

@@ -77,6 +77,15 @@ export const deleteEntity = createAsyncThunk(
   { serializeError: serializeAxiosError },
 );
 
+export const getEntitiesForQuestion = createAsyncThunk(
+  'triviaAnswer/fetch_entity_list_question',
+  async (questonId: string | number) => {
+    const requestUrl = `${apiUrl}/question/${questonId}`;
+    return axios.get<ITriviaAnswer[]>(requestUrl);
+  },
+  { serializeError: serializeAxiosError },
+);
+
 // slice
 
 export const TriviaAnswerSlice = createEntitySlice({
@@ -109,13 +118,22 @@ export const TriviaAnswerSlice = createEntitySlice({
           }),
         };
       })
+      .addMatcher(isFulfilled(getEntitiesForQuestion), (state, action) => {
+        const { data } = action.payload;
+
+        return {
+          ...state,
+          loading: false,
+          entities: data,
+        };
+      })
       .addMatcher(isFulfilled(createEntity, updateEntity, partialUpdateEntity), (state, action) => {
         state.updating = false;
         state.loading = false;
         state.updateSuccess = true;
         state.entity = action.payload.data;
       })
-      .addMatcher(isPending(getEntities, getEntity), state => {
+      .addMatcher(isPending(getEntities, getEntity, getEntitiesForQuestion), state => {
         state.errorMessage = null;
         state.updateSuccess = false;
         state.loading = true;
