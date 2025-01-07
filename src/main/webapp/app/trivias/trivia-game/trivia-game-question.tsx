@@ -15,6 +15,8 @@ import { AnswerType } from 'app/shared/model/enumerations/answer-type.model';
 
 const TriviaGameQuestion = () => {
   const dispatch = useAppDispatch();
+  const location = useLocation();
+  const complexityLevel = location.state?.complexityLevel; 
 
   const questionNum = 1;
 
@@ -31,7 +33,7 @@ const TriviaGameQuestion = () => {
   
   return (
         <div>
-          <p>Question</p>
+          <h3>{complexityLevel} Quiz</h3>
           <dt><span>Question {questionEntity.id}.</span></dt>
           <dd><span>{questionEntity.question}</span></dd>
           <dd><span>{questionEntity.questionType}</span></dd>
