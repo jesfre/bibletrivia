@@ -1,6 +1,7 @@
 package com.blogspot.jesfre.bibletrivia.domain;
 
 import com.blogspot.jesfre.bibletrivia.domain.enumeration.AnswerType;
+import com.blogspot.jesfre.bibletrivia.domain.enumeration.TriviaLevel;
 import com.blogspot.jesfre.bibletrivia.domain.enumeration.TriviaType;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
@@ -26,6 +27,10 @@ public class TriviaQuestion implements Serializable {
 
     @Column(name = "question_id")
     private Long questionId;
+    
+    @Enumerated(EnumType.STRING)
+    @Column(name = "level")
+    private TriviaLevel level;
 
     @Enumerated(EnumType.STRING)
     @Column(name = "question_type")
@@ -79,6 +84,19 @@ public class TriviaQuestion implements Serializable {
 
     public void setQuestionId(Long questionId) {
         this.questionId = questionId;
+    }
+    
+    public TriviaLevel getLevel() {
+        return this.level;
+    }
+
+    public TriviaQuestion level(TriviaLevel level) {
+        this.setLevel(level);
+        return this;
+    }
+
+    public void setLevel(TriviaLevel level) {
+        this.level = level;
     }
 
     public TriviaType getQuestionType() {
@@ -233,6 +251,7 @@ public class TriviaQuestion implements Serializable {
         return "TriviaQuestion{" +
             "id=" + getId() +
             ", questionId=" + getQuestionId() +
+            ", level='" + getLevel() + "'" +
             ", questionType='" + getQuestionType() + "'" +
             ", question='" + getQuestion() + "'" +
             ", answerType='" + getAnswerType() + "'" +

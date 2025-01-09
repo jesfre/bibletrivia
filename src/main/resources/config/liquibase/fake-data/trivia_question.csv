@@ -1,11 +1,11 @@
-id;question_id;question_type;question;answer_type;value;picture
-1;7649;BIBLICAL;moisten scientific;SINGLE;29260;outside gah puzzled
-2;12312;HISTORY;duster roger lest;MULTIPLE;8740;unnecessarily
-3;4405;BIBLICAL;tinderbox jiggle;SINGLE;30988;nightlife
-4;14218;BIBLICAL;blah sardonic badly;SINGLE;27288;orderly meal chunter
-5;25633;HISTORY;unzip unfinished;MULTIPLE;32134;foot
-6;9826;BIBLICAL;gallery unabashedly;TRUE_FALSE;7986;onto oh along
-7;32104;BIBLICAL;understated woot ick;TRUE_FALSE;6270;courteous
-8;21301;HISTORY;as underneath charm;TRUE_FALSE;10839;corrupt
-9;19803;BIBLICAL;lumpy;TRUE_FALSE;21705;qua though
-10;23018;BIBLICAL;than responsible;SINGLE;2292;weary
+id;question_id;level;question_type;question;answer_type;value;picture
+1;7649;DIFFICULT;BIBLICAL;moisten scientific;SINGLE;29260;outside gah puzzled
+2;12312;EASY;HISTORY;duster roger lest;MULTIPLE;8740;unnecessarily
+3;4405;DIFFICULT;BIBLICAL;tinderbox jiggle;SINGLE;30988;nightlife
+4;14218;EASY;BIBLICAL;blah sardonic badly;SINGLE;27288;orderly meal chunter
+5;25633;DIFFICULT;HISTORY;unzip unfinished;MULTIPLE;32134;foot
+6;9826;EASY;BIBLICAL;gallery unabashedly;TRUE_FALSE;7986;onto oh along
+7;32104;DIFFICULT;BIBLICAL;understated woot ick;TRUE_FALSE;6270;courteous
+8;21301;EASY;HISTORY;as underneath charm;TRUE_FALSE;10839;corrupt
+9;19803;DIFFICULT;BIBLICAL;lumpy;TRUE_FALSE;21705;qua though
+10;23018;EASY;BIBLICAL;than responsible;SINGLE;2292;weary
