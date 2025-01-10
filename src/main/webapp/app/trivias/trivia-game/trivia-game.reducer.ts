@@ -6,6 +6,8 @@ import { EntityState, IQueryParams, createEntitySlice, serializeAxiosError } fro
 import { ITriviaGameQuestion } from 'app/shared/model/trivia-game-question.model';
 import { ITriviaQuestion, defaultValue } from 'app/shared/model/trivia-question.model';
 
+{/* prettier-ignore */}
+
 const initialState: EntityState<ITriviaQuestion> = {
   loading: false,
   errorMessage: null,

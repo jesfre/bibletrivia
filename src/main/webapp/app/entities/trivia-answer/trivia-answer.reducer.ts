@@ -5,6 +5,8 @@ import { cleanEntity } from 'app/shared/util/entity-utils';
 import { EntityState, IQueryParams, createEntitySlice, serializeAxiosError } from 'app/shared/reducers/reducer.utils';
 import { ITriviaAnswer, defaultValue } from 'app/shared/model/trivia-answer.model';
 
+{/* prettier-ignore */}
+
 const initialState: EntityState<ITriviaAnswer> = {
   loading: false,
   errorMessage: null,

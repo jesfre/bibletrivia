@@ -19,6 +19,7 @@ const initialState: EntityState<ITriviaQuestion> = {
 const apiUrl = 'api/trivia-questions';
 
 // Actions
+{/* prettier-ignore */}
 
 export const getEntities = createAsyncThunk(
   'triviaQuestion/fetch_entity_list',

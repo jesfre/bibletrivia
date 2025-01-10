@@ -4,6 +4,8 @@ import { AnswerType } from 'app/shared/model/enumerations/answer-type.model';
 import { TriviaLevel } from 'app/shared/model/enumerations/trivia-level.model';
 import { ITriviaAnswer } from 'app/shared/model/trivia-answer.model';
 
+{/* prettier-ignore */}
+
 export interface ITriviaQuestion {
   id?: number;
   questionId?: number | null;

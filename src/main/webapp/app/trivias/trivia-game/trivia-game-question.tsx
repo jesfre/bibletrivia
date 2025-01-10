@@ -13,6 +13,8 @@ import { getQuestion } from './trivia-game.reducer';
 import { getEntitiesForQuestion } from 'app/entities/trivia-answer/trivia-answer.reducer';
 import { AnswerType } from 'app/shared/model/enumerations/answer-type.model';
 
+{/* prettier-ignore */}
+
 const TriviaGameQuestion = () => {
   const dispatch = useAppDispatch();
   const location = useLocation();

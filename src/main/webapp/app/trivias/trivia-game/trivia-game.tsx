@@ -5,6 +5,8 @@ import { Translate, ValidatedField, ValidatedForm, translate } from 'react-jhips
 import { Button } from 'reactstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
+{/* prettier-ignore */}
+
 const TriviaGame = () => {
 
     const triviaLevelValues = Object.keys(TriviaLevel);
