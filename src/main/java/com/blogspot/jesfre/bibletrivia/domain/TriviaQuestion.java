@@ -257,6 +257,7 @@ public class TriviaQuestion implements Serializable {
             ", answerType='" + getAnswerType() + "'" +
             ", value=" + getValue() +
             ", picture='" + getPicture() + "'" +
+            ", answers='" + getTriviaAnswers() + "'" +
             "}";
     }
 }

@@ -1,6 +1,8 @@
 package com.blogspot.jesfre.bibletrivia.service;
 
 import com.blogspot.jesfre.bibletrivia.domain.TriviaQuestion;
+import com.blogspot.jesfre.bibletrivia.domain.enumeration.TriviaLevel;
+import java.util.List;
 import java.util.Optional;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -55,4 +57,10 @@ public interface TriviaQuestionService {
      * @param id the id of the entity.
      */
     void delete(Long id);
+
+    /**
+     * Finds all questions in the given level
+     * @param level
+     */
+    List<TriviaQuestion> findInLevel(TriviaLevel level);
 }

@@ -195,7 +195,6 @@ public class TriviaAnswer implements Serializable {
             ", explanation='" + getExplanation() + "'" +
             ", correct='" + getCorrect() + "'" +
             ", picture='" + getPicture() + "'" +
-            ", triviaQuestion='" + getTriviaQuestion() + "'" +
             "}";
     }
 }

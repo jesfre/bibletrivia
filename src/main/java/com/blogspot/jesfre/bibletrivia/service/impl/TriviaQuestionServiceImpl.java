@@ -1,9 +1,12 @@
 package com.blogspot.jesfre.bibletrivia.service.impl;
 
 import com.blogspot.jesfre.bibletrivia.domain.TriviaQuestion;
+import com.blogspot.jesfre.bibletrivia.domain.enumeration.TriviaLevel;
 import com.blogspot.jesfre.bibletrivia.repository.TriviaQuestionRepository;
 import com.blogspot.jesfre.bibletrivia.service.TriviaQuestionService;
+import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Page;
@@ -87,5 +90,15 @@ public class TriviaQuestionServiceImpl implements TriviaQuestionService {
     public void delete(Long id) {
         LOG.debug("Request to delete TriviaQuestion : {}", id);
         triviaQuestionRepository.deleteById(id);
+    }
+
+    @Override
+    public List<TriviaQuestion> findInLevel(TriviaLevel level) {
+        // TODO change to use findAll(Example)
+        return triviaQuestionRepository
+            .findAll()
+            .stream()
+            .filter(t -> t.getLevel() == level)
+            .collect(Collectors.toList());
     }
 }

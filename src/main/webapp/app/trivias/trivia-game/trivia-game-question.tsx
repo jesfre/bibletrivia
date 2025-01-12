@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link, useLocation, useNavigate, useParams } from 'react-router-dom';
 import { TriviaLevel } from 'app/shared/model/enumerations/trivia-level.model';
 import { Translate, ValidatedField, ValidatedForm, translate } from 'react-jhipster';
@@ -12,43 +12,38 @@ import { useAppDispatch, useAppSelector } from 'app/config/store';
 import { getQuestion } from './trivia-game.reducer';
 import { getEntitiesForQuestion } from 'app/entities/trivia-answer/trivia-answer.reducer';
 import { AnswerType } from 'app/shared/model/enumerations/answer-type.model';
+import { getTriviaQuestionInLevel } from 'app/entities/trivia-question/trivia-question.reducer';
 
 {/* prettier-ignore */}
 
 const TriviaGameQuestion = () => {
   const dispatch = useAppDispatch();
   const location = useLocation();
-  const complexityLevel = location.state?.complexityLevel; 
-
-  const questionNum = 1;
-
-  useEffect(() => {
-    dispatch(getQuestion(questionNum));
-  }, []);
+  const complexityLevel = location.state?.complexityLevel;
+   const [level, setLevel] = useState('0');
 
   useEffect(() => {
-    dispatch(getEntitiesForQuestion(questionNum));
+    dispatch(getTriviaQuestionInLevel(complexityLevel));
   }, []);
 
-  const questionEntity = useAppSelector(state => state.triviaGameQuestion.entity);
-  const loading = useAppSelector(state => state.triviaGameQuestion.loading);
-  
+  const questionEntity = useAppSelector(state => state.triviaQuestion.entity);
+  const loading = useAppSelector(state => state.triviaQuestion.loading);
+
   return (
         <div>
           <h3>{complexityLevel} Quiz</h3>
-          <dt><span>Question {questionEntity.id}.</span></dt>
-          <dd><span>{questionEntity.question}</span></dd>
           <dd><span>{questionEntity.questionType}</span></dd>
-          <dd><span>{questionEntity.answerType}</span></dd>
+          <dd><span>Question {questionEntity.id}.</span></dd>
+          <dt><span>{questionEntity.question}</span></dt>
           
           <br/><br/>
 
           {questionEntity.triviaAnswers && questionEntity.triviaAnswers.length > 0 ? (
             <div className="table-responsive">
               {questionEntity.triviaAnswers.map((answer, i) => (
-                <div className="answer">
+                <div key={`entity-${i}`}  className="answer">
                     <span>
-                      <input type={questionEntity.answerType == AnswerType.MULTIPLE ? 'checkbox' : 'radio'} name="selectedAnswers" value="{answer.id}"/>
+                      <input type={questionEntity.answerType === AnswerType.MULTIPLE ? 'checkbox' : 'radio'} name="selectedAnswers" value="{answer.id}"/>
                     </span>
                     &nbsp;&nbsp;<span>{answer.answer}</span>
                 </div>

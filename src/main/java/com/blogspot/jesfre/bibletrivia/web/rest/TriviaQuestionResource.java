@@ -1,14 +1,18 @@
 package com.blogspot.jesfre.bibletrivia.web.rest;
 
 import com.blogspot.jesfre.bibletrivia.domain.TriviaQuestion;
+import com.blogspot.jesfre.bibletrivia.domain.enumeration.TriviaLevel;
 import com.blogspot.jesfre.bibletrivia.repository.TriviaQuestionRepository;
 import com.blogspot.jesfre.bibletrivia.service.TriviaQuestionService;
 import com.blogspot.jesfre.bibletrivia.web.rest.errors.BadRequestAlertException;
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
+import java.util.Random;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
@@ -32,6 +36,8 @@ public class TriviaQuestionResource {
     private static final Logger LOG = LoggerFactory.getLogger(TriviaQuestionResource.class);
 
     private static final String ENTITY_NAME = "triviaQuestion";
+
+    private static final List<Long> QUESTIONS_ANSWERED = new ArrayList<Long>();
 
     @Value("${jhipster.clientApp.name}")
     private String applicationName;
@@ -173,5 +179,25 @@ public class TriviaQuestionResource {
         return ResponseEntity.noContent()
             .headers(HeaderUtil.createEntityDeletionAlert(applicationName, true, ENTITY_NAME, id.toString()))
             .build();
+    }
+
+    @GetMapping("/level/{level}")
+    public ResponseEntity<TriviaQuestion> getTriviaQuestionInLevel(@PathVariable("level") TriviaLevel level) {
+        LOG.debug("REST request to get a TriviaQuestion for level {}", level);
+        
+//        Optional<TriviaQuestion> opt = triviaQuestionService
+//            .findInLevel(level)
+//            .stream()
+//            .filter(q -> !QUESTIONS_ANSWERED.contains(q.getId()))
+//            .findAny();
+//     // TODO fix this query to avoid NoSuchElementException and to avoid two calls to the service
+//        return ResponseUtil.wrapOrNotFound(triviaQuestionService.findOne(opt.get().getId()));
+        
+        // TODO exclude already answered questions
+        Random random = new Random();
+        List<TriviaQuestion> triviasInLevel = triviaQuestionService.findInLevel(level);
+        int nextQnumber = random.nextInt(triviasInLevel.size());
+        Optional<TriviaQuestion> result = Optional.ofNullable(triviasInLevel.get(nextQnumber));
+        return ResponseUtil.wrapOrNotFound(result);
     }
 }

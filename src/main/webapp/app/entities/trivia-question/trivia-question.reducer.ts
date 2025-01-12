@@ -72,6 +72,15 @@ export const deleteEntity = createAsyncThunk(
   { serializeError: serializeAxiosError },
 );
 
+export const getTriviaQuestionInLevel = createAsyncThunk(
+  'triviaQuestion/fetch_entity_by_level',
+  async (level: string) => {
+    const requestUrl = `${apiUrl}/level/${level}`;
+    return axios.get<ITriviaQuestion>(requestUrl);
+  },
+  { serializeError: serializeAxiosError },
+);
+
 // slice
 
 export const TriviaQuestionSlice = createEntitySlice({
@@ -80,6 +89,10 @@ export const TriviaQuestionSlice = createEntitySlice({
   extraReducers(builder) {
     builder
       .addCase(getEntity.fulfilled, (state, action) => {
+        state.loading = false;
+        state.entity = action.payload.data;
+      })
+      .addCase(getTriviaQuestionInLevel.fulfilled, (state, action) => {
         state.loading = false;
         state.entity = action.payload.data;
       })
@@ -106,7 +119,7 @@ export const TriviaQuestionSlice = createEntitySlice({
         state.updateSuccess = true;
         state.entity = action.payload.data;
       })
-      .addMatcher(isPending(getEntities, getEntity), state => {
+      .addMatcher(isPending(getEntities, getEntity, getTriviaQuestionInLevel), state => {
         state.errorMessage = null;
         state.updateSuccess = false;
         state.loading = true;
