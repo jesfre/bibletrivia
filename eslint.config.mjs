@@ -16,6 +16,7 @@ export default tseslint.config(
     },
   },
   { ignores: ['src/main/docker/'] },
+  { ignores: ['src/main/webapp/'] },
   { ignores: ['target/classes/static/', 'target/'] },
   eslint.configs.recommended,
   {
