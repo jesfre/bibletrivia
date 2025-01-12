@@ -21,6 +21,7 @@ const TriviaGameQuestion = () => {
   const location = useLocation();
   const complexityLevel = location.state?.complexityLevel;
    const [level, setLevel] = useState('0');
+  const navigate = useNavigate();
 
   useEffect(() => {
     dispatch(getTriviaQuestionInLevel(complexityLevel));
@@ -29,6 +30,11 @@ const TriviaGameQuestion = () => {
   const questionEntity = useAppSelector(state => state.triviaQuestion.entity);
   const loading = useAppSelector(state => state.triviaQuestion.loading);
 
+  const handleNextQuestionPageClick = () => {
+    //navigate('#', { state: { complexityLevel: complexityLevel } });
+    dispatch(getTriviaQuestionInLevel(complexityLevel));
+  };
+  
   return (
         <div>
           <h3>{complexityLevel} Quiz</h3>
@@ -56,6 +62,17 @@ const TriviaGameQuestion = () => {
               </div>
             )
           )}
+
+          <br/><br/>
+          <div className="button-section">
+              <Button tag={Button} onClick={handleNextQuestionPageClick} 
+                  replace color="info" data-cy="entityDetailsBackButton">
+                <FontAwesomeIcon icon="arrow-right" />{' '}
+                <span className="d-none d-md-inline">
+                  <Translate contentKey="entity.action.next">Next</Translate>
+                </span>
+              </Button>
+          </div>
 
         </div>
     );
