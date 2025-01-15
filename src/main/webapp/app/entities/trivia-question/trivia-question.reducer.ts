@@ -119,10 +119,22 @@ export const TriviaQuestionSlice = createEntitySlice({
         state.updateSuccess = true;
         state.entity = action.payload.data;
       })
-      .addMatcher(isPending(getEntities, getEntity, getTriviaQuestionInLevel), state => {
+      .addMatcher(isPending(getEntities, getEntity), state => {
         state.errorMessage = null;
         state.updateSuccess = false;
         state.loading = true;
+      })
+      .addMatcher(isFulfilled(getTriviaQuestionInLevel), (state, action) => {
+        const { data, headers } = action.payload;
+
+        return {
+          ...state,
+          errorMessage: null,
+          updateSuccess: false,
+          loading: true,
+          isLastQuestion: headers['x-bibletriviaapp-last-question'],
+          entity: action.payload.data
+        };
       })
       .addMatcher(isPending(createEntity, updateEntity, partialUpdateEntity, deleteEntity), state => {
         state.errorMessage = null;

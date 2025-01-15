@@ -29,9 +29,10 @@ const TriviaGameQuestion = () => {
 
   const questionEntity = useAppSelector(state => state.triviaQuestion.entity);
   const loading = useAppSelector(state => state.triviaQuestion.loading);
+  const isLastQuestion = useAppSelector(state => state.triviaQuestion.isLastQuestion);
+  
 
   const handleNextQuestionPageClick = () => {
-    //navigate('#', { state: { complexityLevel: complexityLevel } });
     dispatch(getTriviaQuestionInLevel(complexityLevel));
   };
   
@@ -65,6 +66,14 @@ const TriviaGameQuestion = () => {
 
           <br/><br/>
           <div className="button-section">
+              {isLastQuestion == 'Y' ? (
+              <Button tag={Button} onClick={handleNextQuestionPageClick} 
+                  replace color="primary" data-cy="entityDetailsBackButton">
+                <span className="d-none d-md-inline">
+                  <Translate contentKey="entity.action.end">End</Translate>
+                </span>
+              </Button>
+              ):(
               <Button tag={Button} onClick={handleNextQuestionPageClick} 
                   replace color="info" data-cy="entityDetailsBackButton">
                 <FontAwesomeIcon icon="arrow-right" />{' '}
@@ -72,6 +81,7 @@ const TriviaGameQuestion = () => {
                   <Translate contentKey="entity.action.next">Next</Translate>
                 </span>
               </Button>
+              )}
           </div>
 
         </div>

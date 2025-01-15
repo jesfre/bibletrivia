@@ -12,6 +12,7 @@ import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import java.util.Random;
+import java.util.stream.Collectors;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -34,10 +35,14 @@ import tech.jhipster.web.util.ResponseUtil;
 public class TriviaQuestionResource {
 
     private static final Logger LOG = LoggerFactory.getLogger(TriviaQuestionResource.class);
+    
+    // TODO somehow configure the maximum number of questions per trivia
+    private static final int MAX_NUMBER_OF_QUESTIONS = 100;
 
     private static final String ENTITY_NAME = "triviaQuestion";
-
-    private static final List<Long> QUESTIONS_ANSWERED = new ArrayList<Long>();
+    
+    // TODO update with information stored in DB
+    public static final List<Long> QUESTIONS_ANSWERED = new ArrayList<Long>();
 
     @Value("${jhipster.clientApp.name}")
     private String applicationName;
@@ -193,11 +198,30 @@ public class TriviaQuestionResource {
 //     // TODO fix this query to avoid NoSuchElementException and to avoid two calls to the service
 //        return ResponseUtil.wrapOrNotFound(triviaQuestionService.findOne(opt.get().getId()));
         
-        // TODO exclude already answered questions
-        Random random = new Random();
-        List<TriviaQuestion> triviasInLevel = triviaQuestionService.findInLevel(level);
-        int nextQnumber = random.nextInt(triviasInLevel.size());
-        Optional<TriviaQuestion> result = Optional.ofNullable(triviasInLevel.get(nextQnumber));
-        return ResponseUtil.wrapOrNotFound(result);
+        // TODO exclude already answered questions but using Database instead of static field
+        List<TriviaQuestion> questionsInLevel = triviaQuestionService.findInLevel(level);
+        if(questionsInLevel.isEmpty()) {
+        	return ResponseEntity.noContent()
+                    .headers(HeaderUtil.createFailureAlert(applicationName, true, ENTITY_NAME, "nomorequestions", "No more questions"))
+                    .build();
+        }
+        
+        List<TriviaQuestion> availableQuestions = questionsInLevel.stream()
+        		.filter(q -> !QUESTIONS_ANSWERED.contains(q.getId()))
+        		.collect(Collectors.toList());
+
+        
+        
+        int nextQnumber = new Random().nextInt(questionsInLevel.size());
+        Optional<TriviaQuestion> result = Optional.ofNullable(questionsInLevel.get(nextQnumber));
+
+        result.ifPresent(q -> QUESTIONS_ANSWERED.add(q.getId()));
+        HttpHeaders headers = new HttpHeaders();
+        if(availableQuestions.size() == 1 || QUESTIONS_ANSWERED.size() == MAX_NUMBER_OF_QUESTIONS) {
+        	// TODO Create a list of state values. Here 2 will be "last question of a trivia"  
+            headers.add("x-" + applicationName + "-last-question", "Y");
+        }
+
+        return ResponseUtil.wrapOrNotFound(result, headers);
     }
 }
