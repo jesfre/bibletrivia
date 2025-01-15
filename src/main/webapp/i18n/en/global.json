@@ -109,7 +109,8 @@
       "view": "View",
       "show": "Show {{otherEntity}}",
       "next": "Next",
-      "nextEntity": "Next {{otherEntity}}"
+      "nextEntity": "Next {{otherEntity}}",
+      "end": "End"
     },
     "detail": {
       "field": "Field",
@@ -149,6 +150,7 @@
     "idnull": "Invalid ID",
     "idinvalid": "Invalid ID",
     "idnotfound": "ID cannot be found",
+    "nomorequestions": "Cannot find more questions",
     "file": {
       "could.not.extract": "Could not extract file",
       "not.image": "File was expected to be an image but was found to be \"{{ fileType }}\""
