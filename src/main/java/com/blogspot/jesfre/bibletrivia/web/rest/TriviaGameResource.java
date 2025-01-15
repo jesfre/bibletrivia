@@ -51,18 +51,8 @@ public class TriviaGameResource {
 		if (questionNumber < 0) {
 			throw new BadRequestAlertException("Question numbers cannot be " + questionNumber, ENTITY_NAME, "badquestionnumber");
 		}
-		
-		// TODO logic to get next question
-		
-		// TODO store answered questions
-		
-		if(questionNumber == null || questionNumber < 1) {
-			questionNumber = 0;
-		}
-		questionNumber++;
-		
+
 		long id = 1L;
-		
 		return ResponseUtil.wrapOrNotFound(triviaQuestionService.findOne(id));
 	}
 }

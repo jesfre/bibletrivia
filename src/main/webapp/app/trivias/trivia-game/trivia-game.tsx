@@ -1,17 +1,24 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { TriviaLevel } from 'app/shared/model/enumerations/trivia-level.model';
 import { Translate, ValidatedField, ValidatedForm, translate } from 'react-jhipster';
 import { Button } from 'reactstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { resetTrivia } from 'app/entities/trivia-question/trivia-question.reducer';
+import { useAppDispatch, useAppSelector } from 'app/config/store';
 
 {/* prettier-ignore */}
 
 const TriviaGame = () => {
-
+    const dispatch = useAppDispatch();
     const triviaLevelValues = Object.keys(TriviaLevel);
     const [level, setLevel] = useState('0');
     const navigate = useNavigate();
+
+    useEffect(() => {
+      dispatch(resetTrivia('EASY'));
+      dispatch(resetTrivia('DIFFICULT'));
+    }, []);
 
     const handleButtonClick = () => {
       navigate('/game/trivia-game/question', { state: { complexityLevel: level } });
@@ -36,7 +43,6 @@ const TriviaGame = () => {
            <p>Trivia 2</p>
            <Button tag={Button} onClick={handleButtonClick}
               replace color="info" data-cy="entityDetailsBackButton">
-            <FontAwesomeIcon icon="arrow-right" />{' '}
             <span className="d-none d-md-inline">
               <Translate contentKey="entity.action.start">Start</Translate>
             </span>

@@ -72,6 +72,15 @@ export const deleteEntity = createAsyncThunk(
   { serializeError: serializeAxiosError },
 );
 
+export const resetTrivia = createAsyncThunk(
+  'triviaQuestion/reset_trivia',
+  async (level: string) => {
+    const requestUrl = `${apiUrl}/reset/${level}`;
+    return await axios.get<ITriviaQuestion>(requestUrl);
+  },
+  { serializeError: serializeAxiosError },
+);
+
 export const getTriviaQuestionInLevel = createAsyncThunk(
   'triviaQuestion/fetch_entity_by_level',
   async (level: string) => {

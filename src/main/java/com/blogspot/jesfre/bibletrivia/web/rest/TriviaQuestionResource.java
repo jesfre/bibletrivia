@@ -185,6 +185,14 @@ public class TriviaQuestionResource {
             .headers(HeaderUtil.createEntityDeletionAlert(applicationName, true, ENTITY_NAME, id.toString()))
             .build();
     }
+    
+    @GetMapping("/reset/{level}")
+    public ResponseEntity<Void> resetTrivia(@PathVariable("level") TriviaLevel level) {
+        LOG.debug("REST request to reset the trivia for: {}", level);
+        QUESTIONS_ANSWERED.clear();
+        LOG.debug("The Trivia questions have been reset for level {}", level);
+        return ResponseEntity.noContent().build();
+    }
 
     @GetMapping("/level/{level}")
     public ResponseEntity<TriviaQuestion> getTriviaQuestionInLevel(@PathVariable("level") TriviaLevel level) {
