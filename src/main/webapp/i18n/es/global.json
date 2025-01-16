@@ -135,6 +135,9 @@
       "set": "Following filters are set",
       "clear": "Clear filter",
       "clearAll": "Clear all filters"
+    },
+    "level": {
+      "selectOne": "Elija Uno"
     }
   },
   "error": {
