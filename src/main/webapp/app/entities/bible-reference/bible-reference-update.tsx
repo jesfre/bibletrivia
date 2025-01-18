@@ -76,7 +76,7 @@ export const BibleReferenceUpdate = () => {
     isNew
       ? {}
       : {
-          book: 'GENESIS',
+          book: 'Genesis',
           testament: 'OLD_TESTAMENT',
           ...bibleReferenceEntity,
           triviaAnswers: bibleReferenceEntity?.triviaAnswers?.map(e => e.id.toString()),
