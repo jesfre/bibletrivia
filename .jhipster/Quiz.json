@@ -1,0 +1,43 @@
+{
+  "annotations": {
+    "changelogDate": "20250118025914"
+  },
+  "dto": "no",
+  "fields": [
+    {
+      "fieldName": "quizTaker",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength"],
+      "fieldValidateRulesMaxlength": "120"
+    },
+    {
+      "fieldName": "startDate",
+      "fieldType": "ZonedDateTime",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "totalQuestions",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "correctQuestions",
+      "fieldType": "Integer"
+    }
+  ],
+  "jpaMetamodelFiltering": false,
+  "name": "Quiz",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityField": "orderNum",
+      "otherEntityName": "quizEntry",
+      "otherEntityRelationshipName": "quiz",
+      "relationshipName": "quizEntries",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

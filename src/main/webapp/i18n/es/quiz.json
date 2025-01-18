@@ -1,0 +1,28 @@
+{
+  "bibletriviaApp": {
+    "quiz": {
+      "home": {
+        "title": "Quizzes",
+        "refreshListLabel": "Refrescar lista",
+        "createLabel": "Crear nuevo Quiz",
+        "createOrEditLabel": "Crear o editar Quiz",
+        "notFound": "Ningún Quizzes encontrado"
+      },
+      "created": "Un nuevo Quiz ha sido creado con el identificador {{ param }}",
+      "updated": "Un Quiz ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Quiz ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Quiz {{ id }}?"
+      },
+      "detail": {
+        "title": "Quiz"
+      },
+      "id": "ID",
+      "quizTaker": "Quiz Taker",
+      "startDate": "Start Date",
+      "totalQuestions": "Total Questions",
+      "correctQuestions": "Correct Questions",
+      "quizEntries": "Quiz Entries"
+    }
+  }
+}

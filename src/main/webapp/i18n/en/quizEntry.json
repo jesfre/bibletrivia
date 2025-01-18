@@ -1,0 +1,28 @@
+{
+  "bibletriviaApp": {
+    "quizEntry": {
+      "home": {
+        "title": "Quiz Entries",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Quiz Entry",
+        "createOrEditLabel": "Create or edit a Quiz Entry",
+        "notFound": "No Quiz Entries found"
+      },
+      "created": "A new Quiz Entry is created with identifier {{ param }}",
+      "updated": "A Quiz Entry is updated with identifier {{ param }}",
+      "deleted": "A Quiz Entry is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Quiz Entry {{ id }}?"
+      },
+      "detail": {
+        "title": "Quiz Entry"
+      },
+      "id": "ID",
+      "orderNum": "Order Num",
+      "correct": "Correct",
+      "triviaQuestion": "Trivia Question",
+      "triviaAnswer": "Trivia Answer",
+      "quiz": "Quiz"
+    }
+  }
+}

@@ -15,7 +15,9 @@
         "bibleReference": "Bible Reference",
         "trivia": "Trivia",
         "triviaAnswer": "Trivia Answer",
-        "triviaQuestion": "Trivia Question"
+        "triviaQuestion": "Trivia Question",
+        "quizEntry": "Quiz Entry",
+        "quiz": "Quiz"
       },
       "account": {
         "main": "Cuenta",

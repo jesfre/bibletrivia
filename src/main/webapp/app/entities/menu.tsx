@@ -18,6 +18,12 @@ const EntitiesMenu = () => {
       <MenuItem icon="asterisk" to="/trivia-question">
         <Translate contentKey="global.menu.entities.triviaQuestion" />
       </MenuItem>
+      <MenuItem icon="asterisk" to="/quiz-entry">
+        <Translate contentKey="global.menu.entities.quizEntry" />
+      </MenuItem>
+      <MenuItem icon="asterisk" to="/quiz">
+        <Translate contentKey="global.menu.entities.quiz" />
+      </MenuItem>
       {/* jhipster-needle-add-entity-to-menu - JHipster will add entities to the menu here */}
     </>
   );

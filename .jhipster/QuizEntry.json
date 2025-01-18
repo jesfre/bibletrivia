@@ -1,0 +1,40 @@
+{
+  "annotations": {
+    "changelogDate": "20250118024630"
+  },
+  "dto": "no",
+  "fields": [
+    {
+      "fieldName": "orderNum",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "correct",
+      "fieldType": "Boolean"
+    }
+  ],
+  "jpaMetamodelFiltering": false,
+  "name": "QuizEntry",
+  "pagination": "infinite-scroll",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityField": "question",
+      "otherEntityName": "triviaQuestion",
+      "relationshipName": "triviaQuestion",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": ["required"]
+    },
+    {
+      "otherEntityField": "answer",
+      "otherEntityName": "triviaAnswer",
+      "relationshipName": "triviaAnswer",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

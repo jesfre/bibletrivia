@@ -1,0 +1,11 @@
+id;order_num;correct;trivia_question_id
+1;7675;true;1
+2;8676;true;2
+3;6931;false;3
+4;10758;true;4
+5;12915;true;5
+6;24189;true;6
+7;2125;true;7
+8;3422;false;8
+9;19409;false;9
+10;21856;false;10
