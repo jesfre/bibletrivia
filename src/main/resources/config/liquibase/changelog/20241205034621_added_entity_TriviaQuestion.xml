@@ -17,6 +17,9 @@
             <column name="question_id" type="bigint">
                 <constraints nullable="true" />
             </column>
+            <column name="level" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
             <column name="question_type" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
@@ -54,6 +57,7 @@
                   usePreparedStatements="true">
             <column name="id" type="numeric"/>
             <column name="question_id" type="numeric"/>
+            <column name="level" type="string"/>
             <column name="question_type" type="string"/>
             <column name="question" type="string"/>
             <column name="answer_type" type="string"/>
