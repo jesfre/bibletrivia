@@ -70,11 +70,15 @@ public class QuizServiceImpl implements QuizService {
         return quizRepository.findAll(pageable);
     }
 
+    public Page<Quiz> findAllWithEagerRelationships(Pageable pageable) {
+        return quizRepository.findAllWithEagerRelationships(pageable);
+    }
+
     @Override
     @Transactional(readOnly = true)
     public Optional<Quiz> findOne(Long id) {
         LOG.debug("Request to get Quiz : {}", id);
-        return quizRepository.findById(id);
+        return quizRepository.findOneWithEagerRelationships(id);
     }
 
     @Override

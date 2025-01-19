@@ -22,7 +22,8 @@
       "startDate": "Start Date",
       "totalQuestions": "Total Questions",
       "correctQuestions": "Correct Questions",
-      "quizEntries": "Quiz Entries"
+      "quizEntries": "Quiz Entries",
+      "owner": "Owner"
     }
   }
 }

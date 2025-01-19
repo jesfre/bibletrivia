@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { convertDateTimeFromServer, convertDateTimeToServer, displayDefaultDateTime } from 'app/shared/util/date-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
+import { getUsers } from 'app/modules/administration/user-management/user-management.reducer';
 import { createEntity, getEntity, reset, updateEntity } from './quiz.reducer';
 
 export const QuizUpdate = () => {
@@ -17,6 +18,7 @@ export const QuizUpdate = () => {
   const { id } = useParams<'id'>();
   const isNew = id === undefined;
 
+  const users = useAppSelector(state => state.userManagement.users);
   const quizEntity = useAppSelector(state => state.quiz.entity);
   const loading = useAppSelector(state => state.quiz.loading);
   const updating = useAppSelector(state => state.quiz.updating);
@@ -32,6 +34,8 @@ export const QuizUpdate = () => {
     } else {
       dispatch(getEntity(id));
     }
+
+    dispatch(getUsers({}));
   }, []);
 
   useEffect(() => {
@@ -55,6 +59,7 @@ export const QuizUpdate = () => {
     const entity = {
       ...quizEntity,
       ...values,
+      owner: users.find(it => it.id.toString() === values.owner?.toString()),
     };
 
     if (isNew) {
@@ -72,6 +77,7 @@ export const QuizUpdate = () => {
       : {
           ...quizEntity,
           startDate: convertDateTimeFromServer(quizEntity.startDate),
+          owner: quizEntity?.owner?.id,
         };
 
   return (
@@ -135,6 +141,16 @@ export const QuizUpdate = () => {
                 data-cy="correctQuestions"
                 type="text"
               />
+              <ValidatedField id="quiz-owner" name="owner" data-cy="owner" label={translate('bibletriviaApp.quiz.owner')} type="select">
+                <option value="" key="0" />
+                {users
+                  ? users.map(otherEntity => (
+                      <option value={otherEntity.id} key={otherEntity.id}>
+                        {otherEntity.firstName}
+                      </option>
+                    ))
+                  : null}
+              </ValidatedField>
               <Button tag={Link} id="cancel-save" data-cy="entityCreateCancelButton" to="/quiz" replace color="info">
                 <FontAwesomeIcon icon="arrow-left" />
                 &nbsp;

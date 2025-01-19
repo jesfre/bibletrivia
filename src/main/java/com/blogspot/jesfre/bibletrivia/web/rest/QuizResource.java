@@ -137,12 +137,21 @@ public class QuizResource {
      * {@code GET  /quizzes} : get all the quizzes.
      *
      * @param pageable the pagination information.
+     * @param eagerload flag to eager load entities from relationships (This is applicable for many-to-many).
      * @return the {@link ResponseEntity} with status {@code 200 (OK)} and the list of quizzes in body.
      */
     @GetMapping("")
-    public ResponseEntity<List<Quiz>> getAllQuizzes(@org.springdoc.core.annotations.ParameterObject Pageable pageable) {
+    public ResponseEntity<List<Quiz>> getAllQuizzes(
+        @org.springdoc.core.annotations.ParameterObject Pageable pageable,
+        @RequestParam(name = "eagerload", required = false, defaultValue = "true") boolean eagerload
+    ) {
         LOG.debug("REST request to get a page of Quizzes");
-        Page<Quiz> page = quizService.findAll(pageable);
+        Page<Quiz> page;
+        if (eagerload) {
+            page = quizService.findAllWithEagerRelationships(pageable);
+        } else {
+            page = quizService.findAll(pageable);
+        }
         HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(ServletUriComponentsBuilder.fromCurrentRequest(), page);
         return ResponseEntity.ok().headers(headers).body(page.getContent());
     }

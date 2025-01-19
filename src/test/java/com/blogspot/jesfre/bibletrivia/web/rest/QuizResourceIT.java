@@ -5,6 +5,7 @@ import static com.blogspot.jesfre.bibletrivia.web.rest.TestUtil.createUpdateProx
 import static com.blogspot.jesfre.bibletrivia.web.rest.TestUtil.sameInstant;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.hamcrest.Matchers.hasItem;
+import static org.mockito.Mockito.*;
 import static org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors.csrf;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
@@ -12,19 +13,27 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import com.blogspot.jesfre.bibletrivia.IntegrationTest;
 import com.blogspot.jesfre.bibletrivia.domain.Quiz;
 import com.blogspot.jesfre.bibletrivia.repository.QuizRepository;
+import com.blogspot.jesfre.bibletrivia.repository.UserRepository;
+import com.blogspot.jesfre.bibletrivia.service.QuizService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.persistence.EntityManager;
 import java.time.Instant;
 import java.time.ZoneId;
 import java.time.ZoneOffset;
 import java.time.ZonedDateTime;
+import java.util.ArrayList;
 import java.util.Random;
 import java.util.concurrent.atomic.AtomicLong;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
+import org.springframework.data.domain.PageImpl;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.MediaType;
 import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.web.servlet.MockMvc;
@@ -34,6 +43,7 @@ import org.springframework.transaction.annotation.Transactional;
  * Integration tests for the {@link QuizResource} REST controller.
  */
 @IntegrationTest
+@ExtendWith(MockitoExtension.class)
 @AutoConfigureMockMvc
 @WithMockUser
 class QuizResourceIT {
@@ -61,6 +71,15 @@ class QuizResourceIT {
 
     @Autowired
     private QuizRepository quizRepository;
+
+    @Autowired
+    private UserRepository userRepository;
+
+    @Mock
+    private QuizRepository quizRepositoryMock;
+
+    @Mock
+    private QuizService quizServiceMock;
 
     @Autowired
     private EntityManager em;
@@ -200,6 +219,23 @@ class QuizResourceIT {
             .andExpect(jsonPath("$.[*].startDate").value(hasItem(sameInstant(DEFAULT_START_DATE))))
             .andExpect(jsonPath("$.[*].totalQuestions").value(hasItem(DEFAULT_TOTAL_QUESTIONS)))
             .andExpect(jsonPath("$.[*].correctQuestions").value(hasItem(DEFAULT_CORRECT_QUESTIONS)));
+    }
+
+    @SuppressWarnings({ "unchecked" })
+    void getAllQuizzesWithEagerRelationshipsIsEnabled() throws Exception {
+        when(quizServiceMock.findAllWithEagerRelationships(any())).thenReturn(new PageImpl(new ArrayList<>()));
+
+        restQuizMockMvc.perform(get(ENTITY_API_URL + "?eagerload=true")).andExpect(status().isOk());
+
+        verify(quizServiceMock, times(1)).findAllWithEagerRelationships(any());
+    }
+
+    @SuppressWarnings({ "unchecked" })
+    void getAllQuizzesWithEagerRelationshipsIsNotEnabled() throws Exception {
+        when(quizServiceMock.findAllWithEagerRelationships(any())).thenReturn(new PageImpl(new ArrayList<>()));
+
+        restQuizMockMvc.perform(get(ENTITY_API_URL + "?eagerload=false")).andExpect(status().isOk());
+        verify(quizRepositoryMock, times(1)).findAll(any(Pageable.class));
     }
 
     @Test

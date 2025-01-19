@@ -42,6 +42,14 @@ public interface QuizService {
     Page<Quiz> findAll(Pageable pageable);
 
     /**
+     * Get all the quizzes with eager load of many-to-many relationships.
+     *
+     * @param pageable the pagination information.
+     * @return the list of entities.
+     */
+    Page<Quiz> findAllWithEagerRelationships(Pageable pageable);
+
+    /**
      * Get the "id" quiz.
      *
      * @param id the id of the entity.

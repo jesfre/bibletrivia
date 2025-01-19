@@ -129,6 +129,9 @@ export const Quiz = () => {
                   <Translate contentKey="bibletriviaApp.quiz.correctQuestions">Correct Questions</Translate>{' '}
                   <FontAwesomeIcon icon={getSortIconByFieldName('correctQuestions')} />
                 </th>
+                <th>
+                  <Translate contentKey="bibletriviaApp.quiz.owner">Owner</Translate> <FontAwesomeIcon icon="sort" />
+                </th>
                 <th />
               </tr>
             </thead>
@@ -144,6 +147,7 @@ export const Quiz = () => {
                   <td>{quiz.startDate ? <TextFormat type="date" value={quiz.startDate} format={APP_DATE_FORMAT} /> : null}</td>
                   <td>{quiz.totalQuestions}</td>
                   <td>{quiz.correctQuestions}</td>
+                  <td>{quiz.owner ? quiz.owner.firstName : ''}</td>
                   <td className="text-end">
                     <div className="btn-group flex-btn-group-container">
                       <Button tag={Link} to={`/quiz/${quiz.id}`} color="info" size="sm" data-cy="entityDetailsButton">

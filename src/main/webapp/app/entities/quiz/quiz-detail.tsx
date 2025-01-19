@@ -56,6 +56,10 @@ export const QuizDetail = () => {
             </span>
           </dt>
           <dd>{quizEntity.correctQuestions}</dd>
+          <dt>
+            <Translate contentKey="bibletriviaApp.quiz.owner">Owner</Translate>
+          </dt>
+          <dd>{quizEntity.owner ? quizEntity.owner.firstName : ''}</dd>
         </dl>
         <Button tag={Link} to="/quiz" replace color="info" data-cy="entityDetailsBackButton">
           <FontAwesomeIcon icon="arrow-left" />{' '}

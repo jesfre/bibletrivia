@@ -43,6 +43,9 @@ public class Quiz implements Serializable {
     @JsonIgnoreProperties(value = { "triviaQuestion", "triviaAnswer", "quiz" }, allowSetters = true)
     private Set<QuizEntry> quizEntries = new HashSet<>();
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    private User owner;
+
     // jhipster-needle-entity-add-field - JHipster will add fields here
 
     public Long getId() {
@@ -138,6 +141,19 @@ public class Quiz implements Serializable {
     public Quiz removeQuizEntries(QuizEntry quizEntry) {
         this.quizEntries.remove(quizEntry);
         quizEntry.setQuiz(null);
+        return this;
+    }
+
+    public User getOwner() {
+        return this.owner;
+    }
+
+    public void setOwner(User user) {
+        this.owner = user;
+    }
+
+    public Quiz owner(User user) {
+        this.setOwner(user);
         return this;
     }
 
