@@ -8,6 +8,11 @@
       "fieldName": "questionId",
       "fieldType": "Long"
     },
+	{
+      "fieldName": "level",
+      "fieldType": "TriviaLevel",
+      "fieldValues": "EASY,DIFFICULT"
+    },
     {
       "fieldName": "questionType",
       "fieldType": "TriviaType",
