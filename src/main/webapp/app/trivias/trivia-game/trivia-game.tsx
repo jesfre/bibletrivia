@@ -10,6 +10,7 @@ import { useAppDispatch, useAppSelector } from 'app/config/store';
 {/* prettier-ignore */}
 
 const TriviaGame = () => {
+    const account = useAppSelector(state => state.authentication.account);
     const dispatch = useAppDispatch();
     const triviaLevelValues = Object.keys(TriviaLevel);
     const [level, setLevel] = useState('0');
@@ -27,6 +28,21 @@ const TriviaGame = () => {
     return (
         <div>
            <p>Select Trivia Complexity</p>
+
+          {account.login ? (
+            <input type="hidden" name="owner" value={account.login}/>
+          ):( <span/> )}
+          <ValidatedField
+              label={translate('bibletriviaApp.quiz.quizTaker')}
+              id="quiz-quizTaker"
+              name="quizTaker"
+              type="text"
+              value={account.login}
+              validate={{
+                required: { value: true, message: translate('entity.validation.required') },
+                maxLength: { value: 120, message: translate('entity.validation.maxlength', { max: 120 }) },
+              }}
+            />
            
            <ValidatedField label={translate('bibletriviaApp.trivia.level')} id="trivia-level" name="level" data-cy="level" type="select" 
               onChange={(e) => setLevel(e.target.value)}>
