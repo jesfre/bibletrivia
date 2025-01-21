@@ -17,14 +17,14 @@ const initialState: EntityState<ITriviaQuestion> = {
   updateSuccess: false,
 };
 
-const apiUrl = 'api/trivia-game/question';
+const apiUrl = 'api/trivia-game';
 
 // Actions
 
 export const getEntities = createAsyncThunk(
   'triviaGameQuestion/fetch_entity_list',
   async ({ sort }: IQueryParams) => {
-    const requestUrl = `${apiUrl}?${sort ? `sort=${sort}&` : ''}cacheBuster=${new Date().getTime()}`;
+    const requestUrl = `${apiUrl}/question?${sort ? `sort=${sort}&` : ''}cacheBuster=${new Date().getTime()}`;
     return axios.get<ITriviaQuestion[]>(requestUrl);
   },
   { serializeError: serializeAxiosError },
@@ -33,7 +33,16 @@ export const getEntities = createAsyncThunk(
 export const getQuestion = createAsyncThunk(
   'triviaGameQuestion/fetch_entity',
   async (id: string | number) => {
-    const requestUrl = `${apiUrl}/${id}`;
+    const requestUrl = `${apiUrl}/question/${id}`;
+    return axios.get<ITriviaQuestion>(requestUrl);
+  },
+  { serializeError: serializeAxiosError },
+);
+
+export const createTrivia = createAsyncThunk(
+  'triviaGameQuestion/create_entity',
+  async (id: string | number) => {
+    const requestUrl = `${apiUrl}/create`;
     return axios.get<ITriviaQuestion>(requestUrl);
   },
   { serializeError: serializeAxiosError },
@@ -66,7 +75,7 @@ export const TriviaGameSlice = createEntitySlice({
           }),
         };
       })
-      .addMatcher(isPending(getEntities, getQuestion), state => {
+      .addMatcher(isPending(getEntities, getQuestion, createTrivia), state => {
         state.errorMessage = null;
         state.updateSuccess = false;
         state.loading = true;

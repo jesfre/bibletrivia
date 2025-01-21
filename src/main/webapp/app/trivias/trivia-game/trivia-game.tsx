@@ -5,6 +5,7 @@ import { Translate, ValidatedField, ValidatedForm, translate } from 'react-jhips
 import { Button } from 'reactstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { resetTrivia } from 'app/entities/trivia-question/trivia-question.reducer';
+import { createTrivia } from 'app/trivias/trivia-game/trivia-game.reducer';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
 {/* prettier-ignore */}
@@ -22,6 +23,7 @@ const TriviaGame = () => {
     }, []);
 
     const handleButtonClick = () => {
+      dispatch(createTrivia('EASY'));
       navigate('/game/trivia-game/question', { state: { complexityLevel: level } });
     };
 
@@ -37,7 +39,7 @@ const TriviaGame = () => {
               id="quiz-quizTaker"
               name="quizTaker"
               type="text"
-              value={account.login}
+              //value={account.login}
               validate={{
                 required: { value: true, message: translate('entity.validation.required') },
                 maxLength: { value: 120, message: translate('entity.validation.maxlength', { max: 120 }) },
