@@ -1,7 +1,7 @@
 {
   "home": {
-    "title": "¡Bienvenido, Java Hipster!",
-    "subtitle": "Esta es su página de inicio",
+    "title": "Trivia de la Biblia",
+    "subtitle": "Pon a prueba tus conocimientos",
     "logged": {
       "message": "Está conectado como \"{{username}}\"."
     },

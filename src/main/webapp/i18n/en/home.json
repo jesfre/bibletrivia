@@ -1,7 +1,7 @@
 {
   "home": {
-    "title": "Welcome, Java Hipster!",
-    "subtitle": "This is your homepage",
+    "title": "Bible Trivia",
+    "subtitle": "Test your knowledge",
     "logged": {
       "message": "You are logged in as user \"{{username}}\"."
     },
