@@ -23,7 +23,7 @@ const TriviaGame = () => {
     }, []);
 
     const handleButtonClick = () => {
-      dispatch(createTrivia('EASY'));
+      dispatch(createTrivia(''));
       navigate('/game/trivia-game/question', { state: { complexityLevel: level } });
     };
 

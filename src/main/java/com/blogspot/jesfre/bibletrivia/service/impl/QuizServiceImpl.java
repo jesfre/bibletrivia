@@ -1,15 +1,19 @@
 package com.blogspot.jesfre.bibletrivia.service.impl;
 
-import com.blogspot.jesfre.bibletrivia.domain.Quiz;
-import com.blogspot.jesfre.bibletrivia.repository.QuizRepository;
-import com.blogspot.jesfre.bibletrivia.service.QuizService;
 import java.util.Optional;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import com.blogspot.jesfre.bibletrivia.domain.Quiz;
+import com.blogspot.jesfre.bibletrivia.repository.QuizRepository;
+import com.blogspot.jesfre.bibletrivia.service.QuizService;
 
 /**
  * Service Implementation for managing {@link com.blogspot.jesfre.bibletrivia.domain.Quiz}.
@@ -85,5 +89,26 @@ public class QuizServiceImpl implements QuizService {
     public void delete(Long id) {
         LOG.debug("Request to delete Quiz : {}", id);
         quizRepository.deleteById(id);
+    }
+    
+    @Cacheable(cacheNames = "com.blogspot.jesfre.bibletrivia.domain.Quiz", key = "#sessionId")
+    public Quiz addOrGetCached(String sessionId, Quiz quiz) {
+        LOG.debug("Adding Quiz to cache...");
+        if(quiz != null) {
+        	return quiz;
+        } else {
+        	return new Quiz();
+        }
+    }
+    
+    @Cacheable(cacheNames = "com.blogspot.jesfre.bibletrivia.domain.Quiz", key = "#sessionId")
+    public Quiz updateCached(String sessionId, Quiz quiz) {
+        LOG.debug("Updating Quiz in cache...");
+    	return quiz;
+    }
+    
+    @CacheEvict(cacheNames = "com.blogspot.jesfre.bibletrivia.domain.Quiz", key = "#sessionId")
+    public void removeCached(String sessionId) {
+        LOG.debug("Removing Quiz from cache...");
     }
 }

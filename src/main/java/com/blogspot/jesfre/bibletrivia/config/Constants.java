@@ -12,4 +12,7 @@ public final class Constants {
     public static final String DEFAULT_LANGUAGE = "en";
 
     private Constants() {}
+    
+ // TODO somehow configure the maximum number of questions per trivia
+    public static final int MAX_NUMBER_OF_QUESTIONS = 100;
 }

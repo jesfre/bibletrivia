@@ -99,6 +99,12 @@ public class Quiz implements Serializable {
     public void setTotalQuestions(Integer totalQuestions) {
         this.totalQuestions = totalQuestions;
     }
+    
+    public void incrementTotalQuestions() {
+    	synchronized(Quiz.class) {
+    		this.totalQuestions++;
+        }
+    }
 
     public Integer getCorrectQuestions() {
         return this.correctQuestions;

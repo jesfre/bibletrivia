@@ -1,9 +1,11 @@
 package com.blogspot.jesfre.bibletrivia.service;
 
-import com.blogspot.jesfre.bibletrivia.domain.Quiz;
 import java.util.Optional;
+
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+
+import com.blogspot.jesfre.bibletrivia.domain.Quiz;
 
 /**
  * Service Interface for managing {@link com.blogspot.jesfre.bibletrivia.domain.Quiz}.
@@ -63,4 +65,10 @@ public interface QuizService {
      * @param id the id of the entity.
      */
     void delete(Long id);
+    
+    Quiz addOrGetCached(String sessionId, Quiz quiz);
+    
+    Quiz updateCached(String sessionId, Quiz quiz);
+    
+    void removeCached(String sessionId);
 }

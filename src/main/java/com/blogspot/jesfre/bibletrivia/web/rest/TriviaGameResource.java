@@ -4,8 +4,8 @@
 package com.blogspot.jesfre.bibletrivia.web.rest;
 
 import java.net.URISyntaxException;
-import java.time.LocalDate;
 import java.time.ZonedDateTime;
+import java.util.List;
 import java.util.Optional;
 
 import org.slf4j.Logger;
@@ -18,17 +18,20 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.blogspot.jesfre.bibletrivia.domain.Quiz;
-import com.blogspot.jesfre.bibletrivia.domain.TriviaGameQuestion;
+import com.blogspot.jesfre.bibletrivia.domain.QuizEntry;
+import com.blogspot.jesfre.bibletrivia.domain.TriviaAnswer;
 import com.blogspot.jesfre.bibletrivia.domain.TriviaQuestion;
 import com.blogspot.jesfre.bibletrivia.domain.User;
-import com.blogspot.jesfre.bibletrivia.repository.TriviaQuestionRepository;
+import com.blogspot.jesfre.bibletrivia.service.QuizService;
 import com.blogspot.jesfre.bibletrivia.service.TriviaQuestionService;
 import com.blogspot.jesfre.bibletrivia.service.UserService;
-import com.blogspot.jesfre.bibletrivia.web.rest.errors.BadRequestAlertException;
 
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpSession;
 import tech.jhipster.web.util.ResponseUtil;
 
 /**
@@ -48,35 +51,75 @@ public class TriviaGameResource {
 	private String applicationName;
 	
 	private final TriviaQuestionService triviaQuestionService;
+	private final QuizService quizService;
 	private final UserService userService;
 
-    public TriviaGameResource(TriviaQuestionService triviaQuestionService, UserService userService) {
+    public TriviaGameResource(TriviaQuestionService triviaQuestionService, QuizService quizService, UserService userService) {
         this.triviaQuestionService = triviaQuestionService;
+        this.quizService = quizService;
         this.userService = userService;
     }
 	
 	@GetMapping("/create")
-	public ResponseEntity<Quiz> createTriviaGame() throws URISyntaxException {
+	public ResponseEntity<Quiz> createTriviaGame(HttpServletRequest request) throws URISyntaxException {
 		LOG.debug("In createTriviaGame... REST request...");
 
 		User usr = getLoggedInUser();
 		
-		LOG.debug("Got user {}", usr);
-		
 		// TODO implement user.getFullName() 
 		String ownerName = usr != null ? usr.getFirstName() : "Aonymous" ; 
-		
-		LOG.debug("Got quiztaker {}", ownerName);
 		
 		Quiz quiz = new Quiz();
 		quiz.setOwner(usr);
 		quiz.setQuizTaker(ownerName);
 		quiz.setStartDate(ZonedDateTime.now());
+		quiz.setTotalQuestions(0);
+		
+		HttpSession session = request.getSession();
+		LOG.debug("Session: {}", session);
+		
+        String sessionId = session.getId();
+		LOG.debug("Session ID: {}", sessionId);
+		
+		quizService.addOrGetCached(sessionId, quiz);
 		
 		return ResponseUtil.wrapOrNotFound(Optional.of(quiz));
 	}
 	
-	public String isQuizOwnerName() {
+	@GetMapping("/update/{questionId}")
+	public ResponseEntity<Void> updateTriviaGame(HttpServletRequest request, 
+			@PathVariable("questionId") Long questionId, @RequestParam("answers") List<Long> answers) throws URISyntaxException {
+		LOG.debug("Got questionId={}, asnwers={}", questionId, answers);
+		
+		HttpSession session = request.getSession();
+        String sessionId = session.getId();
+		
+		Quiz quiz = quizService.addOrGetCached(sessionId, null);
+		
+		TriviaQuestion question = new TriviaQuestion();
+		question.setId(questionId);
+		
+		QuizEntry quizEntry = new QuizEntry();
+		quizEntry.setTriviaQuestion(question);
+
+		if(answers != null && answers.size() > 0) {
+			Long answerId = answers.get(0);
+			TriviaAnswer answer = new TriviaAnswer();
+			answer.setId(answerId);
+			quizEntry.setTriviaAnswer(answer);
+		}
+				
+		quiz.addQuizEntries(quizEntry)
+			.incrementTotalQuestions();
+		
+		quizService.updateCached(sessionId, quiz);
+		
+		LOG.debug("Cached quiz: {}", quizService.addOrGetCached(sessionId, null));
+		
+		return ResponseEntity.noContent().build();
+	}
+	
+	private String isQuizOwnerName() {
 		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
 		  if (authentication == null || authentication instanceof AnonymousAuthenticationToken) {
 			  return "Anonymous";
@@ -84,12 +127,11 @@ public class TriviaGameResource {
 		return authentication.getName();
 	}
 	
-	public User getLoggedInUser() {
+	private User getLoggedInUser() {
 		LOG.debug("In getLoggedInUser...");
 		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
 		  if (authentication != null || authentication instanceof AnonymousAuthenticationToken) {
 			  String login = authentication.getName();
-			  LOG.debug("Got Principal's login {}", login);
               User user = userService.getUserWithAuthoritiesByLogin(login)
                 .orElseThrow( () -> new IllegalStateException("User not found when creating a new trivia game.") );
               return user;

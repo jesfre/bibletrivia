@@ -1,5 +1,6 @@
 package com.blogspot.jesfre.bibletrivia.web.rest;
 
+import com.blogspot.jesfre.bibletrivia.config.Constants;
 import com.blogspot.jesfre.bibletrivia.domain.TriviaQuestion;
 import com.blogspot.jesfre.bibletrivia.domain.enumeration.TriviaLevel;
 import com.blogspot.jesfre.bibletrivia.repository.TriviaQuestionRepository;
@@ -36,9 +37,6 @@ public class TriviaQuestionResource {
 
     private static final Logger LOG = LoggerFactory.getLogger(TriviaQuestionResource.class);
     
-    // TODO somehow configure the maximum number of questions per trivia
-    private static final int MAX_NUMBER_OF_QUESTIONS = 100;
-
     private static final String ENTITY_NAME = "triviaQuestion";
     
     // TODO update with information stored in DB
@@ -225,7 +223,7 @@ public class TriviaQuestionResource {
 
         result.ifPresent(q -> QUESTIONS_ANSWERED.add(q.getId()));
         HttpHeaders headers = new HttpHeaders();
-        if(availableQuestions.size() == 1 || QUESTIONS_ANSWERED.size() == MAX_NUMBER_OF_QUESTIONS) {
+        if(availableQuestions.size() == 1 || QUESTIONS_ANSWERED.size() == Constants.MAX_NUMBER_OF_QUESTIONS) {
         	// TODO Create a list of state values. Here 2 will be "last question of a trivia"  
             headers.add("x-" + applicationName + "-last-question", "Y");
         }
