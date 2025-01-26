@@ -51,6 +51,9 @@ public class TriviaQuestionServiceImpl implements TriviaQuestionService {
                 if (triviaQuestion.getQuestionId() != null) {
                     existingTriviaQuestion.setQuestionId(triviaQuestion.getQuestionId());
                 }
+                if (triviaQuestion.getLevel() != null) {
+                    existingTriviaQuestion.setLevel(triviaQuestion.getLevel());
+                }
                 if (triviaQuestion.getQuestionType() != null) {
                     existingTriviaQuestion.setQuestionType(triviaQuestion.getQuestionType());
                 }

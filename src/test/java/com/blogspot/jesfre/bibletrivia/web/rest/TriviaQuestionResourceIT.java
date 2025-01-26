@@ -11,6 +11,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import com.blogspot.jesfre.bibletrivia.IntegrationTest;
 import com.blogspot.jesfre.bibletrivia.domain.TriviaQuestion;
 import com.blogspot.jesfre.bibletrivia.domain.enumeration.AnswerType;
+import com.blogspot.jesfre.bibletrivia.domain.enumeration.TriviaLevel;
 import com.blogspot.jesfre.bibletrivia.domain.enumeration.TriviaType;
 import com.blogspot.jesfre.bibletrivia.repository.TriviaQuestionRepository;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -37,6 +38,9 @@ class TriviaQuestionResourceIT {
 
     private static final Long DEFAULT_QUESTION_ID = 1L;
     private static final Long UPDATED_QUESTION_ID = 2L;
+
+    private static final TriviaLevel DEFAULT_LEVEL = TriviaLevel.EASY;
+    private static final TriviaLevel UPDATED_LEVEL = TriviaLevel.DIFFICULT;
 
     private static final TriviaType DEFAULT_QUESTION_TYPE = TriviaType.BIBLICAL;
     private static final TriviaType UPDATED_QUESTION_TYPE = TriviaType.HISTORY;
@@ -84,6 +88,7 @@ class TriviaQuestionResourceIT {
     public static TriviaQuestion createEntity() {
         return new TriviaQuestion()
             .questionId(DEFAULT_QUESTION_ID)
+            .level(DEFAULT_LEVEL)
             .questionType(DEFAULT_QUESTION_TYPE)
             .question(DEFAULT_QUESTION)
             .answerType(DEFAULT_ANSWER_TYPE)
@@ -100,6 +105,7 @@ class TriviaQuestionResourceIT {
     public static TriviaQuestion createUpdatedEntity() {
         return new TriviaQuestion()
             .questionId(UPDATED_QUESTION_ID)
+            .level(UPDATED_LEVEL)
             .questionType(UPDATED_QUESTION_TYPE)
             .question(UPDATED_QUESTION)
             .answerType(UPDATED_ANSWER_TYPE)
@@ -176,6 +182,7 @@ class TriviaQuestionResourceIT {
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_VALUE))
             .andExpect(jsonPath("$.[*].id").value(hasItem(triviaQuestion.getId().intValue())))
             .andExpect(jsonPath("$.[*].questionId").value(hasItem(DEFAULT_QUESTION_ID.intValue())))
+            .andExpect(jsonPath("$.[*].level").value(hasItem(DEFAULT_LEVEL.toString())))
             .andExpect(jsonPath("$.[*].questionType").value(hasItem(DEFAULT_QUESTION_TYPE.toString())))
             .andExpect(jsonPath("$.[*].question").value(hasItem(DEFAULT_QUESTION)))
             .andExpect(jsonPath("$.[*].answerType").value(hasItem(DEFAULT_ANSWER_TYPE.toString())))
@@ -196,6 +203,7 @@ class TriviaQuestionResourceIT {
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_VALUE))
             .andExpect(jsonPath("$.id").value(triviaQuestion.getId().intValue()))
             .andExpect(jsonPath("$.questionId").value(DEFAULT_QUESTION_ID.intValue()))
+            .andExpect(jsonPath("$.level").value(DEFAULT_LEVEL.toString()))
             .andExpect(jsonPath("$.questionType").value(DEFAULT_QUESTION_TYPE.toString()))
             .andExpect(jsonPath("$.question").value(DEFAULT_QUESTION))
             .andExpect(jsonPath("$.answerType").value(DEFAULT_ANSWER_TYPE.toString()))
@@ -224,6 +232,7 @@ class TriviaQuestionResourceIT {
         em.detach(updatedTriviaQuestion);
         updatedTriviaQuestion
             .questionId(UPDATED_QUESTION_ID)
+            .level(UPDATED_LEVEL)
             .questionType(UPDATED_QUESTION_TYPE)
             .question(UPDATED_QUESTION)
             .answerType(UPDATED_ANSWER_TYPE)
@@ -311,7 +320,7 @@ class TriviaQuestionResourceIT {
         TriviaQuestion partialUpdatedTriviaQuestion = new TriviaQuestion();
         partialUpdatedTriviaQuestion.setId(triviaQuestion.getId());
 
-        partialUpdatedTriviaQuestion.questionId(UPDATED_QUESTION_ID).value(UPDATED_VALUE).picture(UPDATED_PICTURE);
+        partialUpdatedTriviaQuestion.questionType(UPDATED_QUESTION_TYPE);
 
         restTriviaQuestionMockMvc
             .perform(
@@ -345,6 +354,7 @@ class TriviaQuestionResourceIT {
 
         partialUpdatedTriviaQuestion
             .questionId(UPDATED_QUESTION_ID)
+            .level(UPDATED_LEVEL)
             .questionType(UPDATED_QUESTION_TYPE)
             .question(UPDATED_QUESTION)
             .answerType(UPDATED_ANSWER_TYPE)

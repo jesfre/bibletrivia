@@ -134,6 +134,10 @@ export const TriviaQuestion = () => {
                     <Translate contentKey="bibletriviaApp.triviaQuestion.questionId">Question Id</Translate>{' '}
                     <FontAwesomeIcon icon={getSortIconByFieldName('questionId')} />
                   </th>
+                  <th className="hand" onClick={sort('level')}>
+                    <Translate contentKey="bibletriviaApp.triviaQuestion.level">Level</Translate>{' '}
+                    <FontAwesomeIcon icon={getSortIconByFieldName('level')} />
+                  </th>
                   <th className="hand" onClick={sort('questionType')}>
                     <Translate contentKey="bibletriviaApp.triviaQuestion.questionType">Question Type</Translate>{' '}
                     <FontAwesomeIcon icon={getSortIconByFieldName('questionType')} />
@@ -166,6 +170,9 @@ export const TriviaQuestion = () => {
                       </Button>
                     </td>
                     <td>{triviaQuestion.questionId}</td>
+                    <td>
+                      <Translate contentKey={`bibletriviaApp.TriviaLevel.${triviaQuestion.level}`} />
+                    </td>
                     <td>
                       <Translate contentKey={`bibletriviaApp.TriviaType.${triviaQuestion.questionType}`} />
                     </td>

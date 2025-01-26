@@ -38,6 +38,12 @@ export const TriviaQuestionDetail = () => {
           </dt>
           <dd>{triviaQuestionEntity.questionId}</dd>
           <dt>
+            <span id="level">
+              <Translate contentKey="bibletriviaApp.triviaQuestion.level">Level</Translate>
+            </span>
+          </dt>
+          <dd>{triviaQuestionEntity.level}</dd>
+          <dt>
             <span id="questionType">
               <Translate contentKey="bibletriviaApp.triviaQuestion.questionType">Question Type</Translate>
             </span>

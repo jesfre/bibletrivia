@@ -8,6 +8,7 @@ import { mapIdList } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
 import { getEntities as getTrivias } from 'app/entities/trivia/trivia.reducer';
+import { TriviaLevel } from 'app/shared/model/enumerations/trivia-level.model';
 import { TriviaType } from 'app/shared/model/enumerations/trivia-type.model';
 import { AnswerType } from 'app/shared/model/enumerations/answer-type.model';
 import { createEntity, getEntity, updateEntity } from './trivia-question.reducer';
@@ -25,6 +26,7 @@ export const TriviaQuestionUpdate = () => {
   const loading = useAppSelector(state => state.triviaQuestion.loading);
   const updating = useAppSelector(state => state.triviaQuestion.updating);
   const updateSuccess = useAppSelector(state => state.triviaQuestion.updateSuccess);
+  const triviaLevelValues = Object.keys(TriviaLevel);
   const triviaTypeValues = Object.keys(TriviaType);
   const answerTypeValues = Object.keys(AnswerType);
 
@@ -74,6 +76,7 @@ export const TriviaQuestionUpdate = () => {
     isNew
       ? {}
       : {
+          level: 'EASY',
           questionType: 'BIBLICAL',
           answerType: 'SINGLE',
           ...triviaQuestionEntity,
@@ -112,6 +115,19 @@ export const TriviaQuestionUpdate = () => {
                 data-cy="questionId"
                 type="text"
               />
+              <ValidatedField
+                label={translate('bibletriviaApp.triviaQuestion.level')}
+                id="trivia-question-level"
+                name="level"
+                data-cy="level"
+                type="select"
+              >
+                {triviaLevelValues.map(triviaLevel => (
+                  <option value={triviaLevel} key={triviaLevel}>
+                    {translate(`bibletriviaApp.TriviaLevel.${triviaLevel}`)}
+                  </option>
+                ))}
+              </ValidatedField>
               <ValidatedField
                 label={translate('bibletriviaApp.triviaQuestion.questionType')}
                 id="trivia-question-questionType"

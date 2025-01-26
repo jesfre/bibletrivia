@@ -48,6 +48,7 @@ public class TriviaQuestionAsserts {
         assertThat(expected)
             .as("Verify TriviaQuestion relevant properties")
             .satisfies(e -> assertThat(e.getQuestionId()).as("check questionId").isEqualTo(actual.getQuestionId()))
+            .satisfies(e -> assertThat(e.getLevel()).as("check level").isEqualTo(actual.getLevel()))
             .satisfies(e -> assertThat(e.getQuestionType()).as("check questionType").isEqualTo(actual.getQuestionType()))
             .satisfies(e -> assertThat(e.getQuestion()).as("check question").isEqualTo(actual.getQuestion()))
             .satisfies(e -> assertThat(e.getAnswerType()).as("check answerType").isEqualTo(actual.getAnswerType()))
