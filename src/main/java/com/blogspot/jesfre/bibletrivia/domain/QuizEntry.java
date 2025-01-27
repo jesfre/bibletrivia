@@ -4,6 +4,8 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
 import java.io.Serializable;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * A QuizEntry.
@@ -33,9 +35,14 @@ public class QuizEntry implements Serializable {
     @JsonIgnoreProperties(value = { "triviaAnswers", "trivias" }, allowSetters = true)
     private TriviaQuestion triviaQuestion;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JsonIgnoreProperties(value = { "bibleReferences", "triviaQuestion" }, allowSetters = true)
-    private TriviaAnswer triviaAnswer;
+    @ManyToMany(fetch = FetchType.LAZY)
+    @JoinTable(
+        name = "rel_quiz_entry__trivia_answers",
+        joinColumns = @JoinColumn(name = "quiz_entry_id"),
+        inverseJoinColumns = @JoinColumn(name = "trivia_answers_id")
+    )
+    @JsonIgnoreProperties(value = { "bibleReferences", "triviaQuestion", "quizEntries" }, allowSetters = true)
+    private Set<TriviaAnswer> triviaAnswers = new HashSet<>();
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JsonIgnoreProperties(value = { "quizEntries", "owner" }, allowSetters = true)
@@ -95,16 +102,26 @@ public class QuizEntry implements Serializable {
         return this;
     }
 
-    public TriviaAnswer getTriviaAnswer() {
-        return this.triviaAnswer;
+    public Set<TriviaAnswer> getTriviaAnswers() {
+        return this.triviaAnswers;
     }
 
-    public void setTriviaAnswer(TriviaAnswer triviaAnswer) {
-        this.triviaAnswer = triviaAnswer;
+    public void setTriviaAnswers(Set<TriviaAnswer> triviaAnswers) {
+        this.triviaAnswers = triviaAnswers;
     }
 
-    public QuizEntry triviaAnswer(TriviaAnswer triviaAnswer) {
-        this.setTriviaAnswer(triviaAnswer);
+    public QuizEntry triviaAnswers(Set<TriviaAnswer> triviaAnswers) {
+        this.setTriviaAnswers(triviaAnswers);
+        return this;
+    }
+
+    public QuizEntry addTriviaAnswers(TriviaAnswer triviaAnswer) {
+        this.triviaAnswers.add(triviaAnswer);
+        return this;
+    }
+
+    public QuizEntry removeTriviaAnswers(TriviaAnswer triviaAnswer) {
+        this.triviaAnswers.remove(triviaAnswer);
         return this;
     }
 

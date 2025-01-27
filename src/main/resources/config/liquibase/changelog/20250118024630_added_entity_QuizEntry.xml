@@ -23,14 +23,25 @@
             <column name="trivia_question_id" type="bigint">
                 <constraints nullable="false" />
             </column>
-            <column name="trivia_answer_id" type="bigint">
-                <constraints nullable="true" />
-            </column>
             <column name="quiz_id" type="bigint">
                 <constraints nullable="true" />
             </column>
             <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here -->
         </createTable>
+    </changeSet>
+
+    <changeSet id="20250118024630-1-relations" author="jhipster">
+
+        <createTable tableName="rel_quiz_entry__trivia_answers">
+            <column name="trivia_answers_id" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+            <column name="quiz_entry_id" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <addPrimaryKey columnNames="quiz_entry_id, trivia_answers_id" tableName="rel_quiz_entry__trivia_answers"/>
     </changeSet>
 
     <!-- jhipster-needle-liquibase-add-changeset - JHipster will add changesets here -->

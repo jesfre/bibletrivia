@@ -48,7 +48,7 @@ public class BibleReference implements Serializable {
     private String url;
 
     @ManyToMany(fetch = FetchType.LAZY, mappedBy = "bibleReferences")
-    @JsonIgnoreProperties(value = { "bibleReferences", "triviaQuestion" }, allowSetters = true)
+    @JsonIgnoreProperties(value = { "bibleReferences", "triviaQuestion", "quizEntries" }, allowSetters = true)
     private Set<TriviaAnswer> triviaAnswers = new HashSet<>();
 
     // jhipster-needle-entity-add-field - JHipster will add fields here

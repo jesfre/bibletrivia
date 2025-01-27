@@ -24,7 +24,8 @@
       "correct": "Correct",
       "picture": "Picture",
       "bibleReference": "Bible Reference",
-      "triviaQuestion": "Trivia Question"
+      "triviaQuestion": "Trivia Question",
+      "quizEntries": "Quiz Entries"
     }
   }
 }

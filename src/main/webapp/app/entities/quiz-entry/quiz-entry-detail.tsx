@@ -48,9 +48,18 @@ export const QuizEntryDetail = () => {
           </dt>
           <dd>{quizEntryEntity.triviaQuestion ? quizEntryEntity.triviaQuestion.question : ''}</dd>
           <dt>
-            <Translate contentKey="bibletriviaApp.quizEntry.triviaAnswer">Trivia Answer</Translate>
+            <Translate contentKey="bibletriviaApp.quizEntry.triviaAnswers">Trivia Answers</Translate>
           </dt>
-          <dd>{quizEntryEntity.triviaAnswer ? quizEntryEntity.triviaAnswer.answer : ''}</dd>
+          <dd>
+            {quizEntryEntity.triviaAnswers
+              ? quizEntryEntity.triviaAnswers.map((val, i) => (
+                  <span key={val.id}>
+                    <a>{val.answer}</a>
+                    {quizEntryEntity.triviaAnswers && i === quizEntryEntity.triviaAnswers.length - 1 ? '' : ', '}
+                  </span>
+                ))
+              : null}
+          </dd>
           <dt>
             <Translate contentKey="bibletriviaApp.quizEntry.quiz">Quiz</Translate>
           </dt>

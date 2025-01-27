@@ -332,7 +332,7 @@ class TriviaAnswerResourceIT {
         partialUpdatedTriviaAnswer.setId(triviaAnswer.getId());
 
         partialUpdatedTriviaAnswer
-            .answerId(UPDATED_ANSWER_ID)
+            .answer(UPDATED_ANSWER)
             .explanation(UPDATED_EXPLANATION)
             .correct(UPDATED_CORRECT)
             .picture(UPDATED_PICTURE);

@@ -78,6 +78,19 @@ export const TriviaAnswerDetail = () => {
             <Translate contentKey="bibletriviaApp.triviaAnswer.triviaQuestion">Trivia Question</Translate>
           </dt>
           <dd>{triviaAnswerEntity.triviaQuestion ? triviaAnswerEntity.triviaQuestion.id : ''}</dd>
+          <dt>
+            <Translate contentKey="bibletriviaApp.triviaAnswer.quizEntries">Quiz Entries</Translate>
+          </dt>
+          <dd>
+            {triviaAnswerEntity.quizEntries
+              ? triviaAnswerEntity.quizEntries.map((val, i) => (
+                  <span key={val.id}>
+                    <a>{val.id}</a>
+                    {triviaAnswerEntity.quizEntries && i === triviaAnswerEntity.quizEntries.length - 1 ? '' : ', '}
+                  </span>
+                ))
+              : null}
+          </dd>
         </dl>
         <Button tag={Link} to="/trivia-answer" replace color="info" data-cy="entityDetailsBackButton">
           <FontAwesomeIcon icon="arrow-left" />{' '}

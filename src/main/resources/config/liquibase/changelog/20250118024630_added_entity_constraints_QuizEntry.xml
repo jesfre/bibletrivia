@@ -17,9 +17,16 @@
                                  referencedTableName="trivia_question"
                                  />
 
-        <addForeignKeyConstraint baseColumnNames="trivia_answer_id"
-                                 baseTableName="quiz_entry"
-                                 constraintName="fk_quiz_entry__trivia_answer_id"
+        <addForeignKeyConstraint baseColumnNames="quiz_entry_id"
+                                 baseTableName="rel_quiz_entry__trivia_answers"
+                                 constraintName="fk_rel_quiz_entry__trivia_answers__quiz_entry_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="quiz_entry"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="trivia_answers_id"
+                                 baseTableName="rel_quiz_entry__trivia_answers"
+                                 constraintName="fk_rel_quiz_entry__trivia_answers__trivia_answers_id"
                                  referencedColumnNames="id"
                                  referencedTableName="trivia_answer"
                                  />

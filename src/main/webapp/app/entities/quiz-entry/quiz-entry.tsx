@@ -143,9 +143,6 @@ export const QuizEntry = () => {
                     <FontAwesomeIcon icon="sort" />
                   </th>
                   <th>
-                    <Translate contentKey="bibletriviaApp.quizEntry.triviaAnswer">Trivia Answer</Translate> <FontAwesomeIcon icon="sort" />
-                  </th>
-                  <th>
                     <Translate contentKey="bibletriviaApp.quizEntry.quiz">Quiz</Translate> <FontAwesomeIcon icon="sort" />
                   </th>
                   <th />
@@ -164,13 +161,6 @@ export const QuizEntry = () => {
                     <td>
                       {quizEntry.triviaQuestion ? (
                         <Link to={`/trivia-question/${quizEntry.triviaQuestion.id}`}>{quizEntry.triviaQuestion.question}</Link>
-                      ) : (
-                        ''
-                      )}
-                    </td>
-                    <td>
-                      {quizEntry.triviaAnswer ? (
-                        <Link to={`/trivia-answer/${quizEntry.triviaAnswer.id}`}>{quizEntry.triviaAnswer.answer}</Link>
                       ) : (
                         ''
                       )}

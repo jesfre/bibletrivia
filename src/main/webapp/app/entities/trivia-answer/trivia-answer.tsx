@@ -115,6 +115,9 @@ export const TriviaAnswer = () => {
                   <Translate contentKey="bibletriviaApp.triviaAnswer.triviaQuestion">Trivia Question</Translate>{' '}
                   <FontAwesomeIcon icon="sort" />
                 </th>
+                <th>
+                  <Translate contentKey="bibletriviaApp.triviaAnswer.quizEntries">Quiz Entries</Translate> <FontAwesomeIcon icon="sort" />
+                </th>
                 <th />
               </tr>
             </thead>
@@ -147,6 +150,16 @@ export const TriviaAnswer = () => {
                     ) : (
                       ''
                     )}
+                  </td>
+                  <td>
+                    {triviaAnswer.quizEntries
+                      ? triviaAnswer.quizEntries.map((val, j) => (
+                          <span key={j}>
+                            <Link to={`/quiz-entry/${val.id}`}>{val.id}</Link>
+                            {j === triviaAnswer.quizEntries.length - 1 ? '' : ', '}
+                          </span>
+                        ))
+                      : null}
                   </td>
                   <td className="text-end">
                     <div className="btn-group flex-btn-group-container">

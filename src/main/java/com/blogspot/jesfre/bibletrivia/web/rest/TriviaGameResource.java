@@ -103,10 +103,11 @@ public class TriviaGameResource {
 		quizEntry.setTriviaQuestion(question);
 
 		if(answers != null && answers.size() > 0) {
-			Long answerId = answers.get(0);
-			TriviaAnswer answer = new TriviaAnswer();
-			answer.setId(answerId);
-			quizEntry.setTriviaAnswer(answer);
+			answers.forEach(aid -> {
+				TriviaAnswer answer = new TriviaAnswer();
+				answer.setId(aid);
+				quizEntry.addTriviaAnswers(answer);
+			});
 		}
 				
 		quiz.addQuizEntries(quizEntry)

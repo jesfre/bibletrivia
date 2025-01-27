@@ -30,9 +30,10 @@
     {
       "otherEntityField": "answer",
       "otherEntityName": "triviaAnswer",
-      "relationshipName": "triviaAnswer",
+      "otherEntityRelationshipName": "quizEntries",
+      "relationshipName": "triviaAnswers",
       "relationshipSide": "left",
-      "relationshipType": "many-to-one"
+      "relationshipType": "many-to-many"
     }
   ],
   "searchEngine": "no",

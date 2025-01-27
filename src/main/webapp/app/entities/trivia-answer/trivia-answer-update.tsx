@@ -9,6 +9,7 @@ import { useAppDispatch, useAppSelector } from 'app/config/store';
 
 import { getEntities as getBibleReferences } from 'app/entities/bible-reference/bible-reference.reducer';
 import { getEntities as getTriviaQuestions } from 'app/entities/trivia-question/trivia-question.reducer';
+import { getEntities as getQuizEntries } from 'app/entities/quiz-entry/quiz-entry.reducer';
 import { createEntity, getEntity, reset, updateEntity } from './trivia-answer.reducer';
 
 export const TriviaAnswerUpdate = () => {
@@ -21,6 +22,7 @@ export const TriviaAnswerUpdate = () => {
 
   const bibleReferences = useAppSelector(state => state.bibleReference.entities);
   const triviaQuestions = useAppSelector(state => state.triviaQuestion.entities);
+  const quizEntries = useAppSelector(state => state.quizEntry.entities);
   const triviaAnswerEntity = useAppSelector(state => state.triviaAnswer.entity);
   const loading = useAppSelector(state => state.triviaAnswer.loading);
   const updating = useAppSelector(state => state.triviaAnswer.updating);
@@ -39,6 +41,7 @@ export const TriviaAnswerUpdate = () => {
 
     dispatch(getBibleReferences({}));
     dispatch(getTriviaQuestions({}));
+    dispatch(getQuizEntries({}));
   }, []);
 
   useEffect(() => {
@@ -60,6 +63,7 @@ export const TriviaAnswerUpdate = () => {
       ...values,
       bibleReferences: mapIdList(values.bibleReferences),
       triviaQuestion: triviaQuestions.find(it => it.id.toString() === values.triviaQuestion?.toString()),
+      quizEntries: mapIdList(values.quizEntries),
     };
 
     if (isNew) {
@@ -76,6 +80,7 @@ export const TriviaAnswerUpdate = () => {
           ...triviaAnswerEntity,
           bibleReferences: triviaAnswerEntity?.bibleReferences?.map(e => e.id.toString()),
           triviaQuestion: triviaAnswerEntity?.triviaQuestion?.id,
+          quizEntries: triviaAnswerEntity?.quizEntries?.map(e => e.id.toString()),
         };
 
   return (
@@ -166,6 +171,23 @@ export const TriviaAnswerUpdate = () => {
                 <option value="" key="0" />
                 {triviaQuestions
                   ? triviaQuestions.map(otherEntity => (
+                      <option value={otherEntity.id} key={otherEntity.id}>
+                        {otherEntity.id}
+                      </option>
+                    ))
+                  : null}
+              </ValidatedField>
+              <ValidatedField
+                label={translate('bibletriviaApp.triviaAnswer.quizEntries')}
+                id="trivia-answer-quizEntries"
+                data-cy="quizEntries"
+                type="select"
+                multiple
+                name="quizEntries"
+              >
+                <option value="" key="0" />
+                {quizEntries
+                  ? quizEntries.map(otherEntity => (
                       <option value={otherEntity.id} key={otherEntity.id}>
                         {otherEntity.id}
                       </option>

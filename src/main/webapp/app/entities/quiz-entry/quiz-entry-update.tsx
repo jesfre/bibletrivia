@@ -4,6 +4,7 @@ import { Button, Col, FormText, Row } from 'reactstrap';
 import { Translate, ValidatedField, ValidatedForm, isNumber, translate } from 'react-jhipster';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
+import { mapIdList } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
 import { getEntities as getTriviaQuestions } from 'app/entities/trivia-question/trivia-question.reducer';
@@ -59,7 +60,7 @@ export const QuizEntryUpdate = () => {
       ...quizEntryEntity,
       ...values,
       triviaQuestion: triviaQuestions.find(it => it.id.toString() === values.triviaQuestion?.toString()),
-      triviaAnswer: triviaAnswers.find(it => it.id.toString() === values.triviaAnswer?.toString()),
+      triviaAnswers: mapIdList(values.triviaAnswers),
       quiz: quizzes.find(it => it.id.toString() === values.quiz?.toString()),
     };
 
@@ -76,7 +77,7 @@ export const QuizEntryUpdate = () => {
       : {
           ...quizEntryEntity,
           triviaQuestion: quizEntryEntity?.triviaQuestion?.id,
-          triviaAnswer: quizEntryEntity?.triviaAnswer?.id,
+          triviaAnswers: quizEntryEntity?.triviaAnswers?.map(e => e.id.toString()),
           quiz: quizEntryEntity?.quiz?.id,
         };
 
@@ -145,11 +146,12 @@ export const QuizEntryUpdate = () => {
                 <Translate contentKey="entity.validation.required">This field is required.</Translate>
               </FormText>
               <ValidatedField
-                id="quiz-entry-triviaAnswer"
-                name="triviaAnswer"
-                data-cy="triviaAnswer"
-                label={translate('bibletriviaApp.quizEntry.triviaAnswer')}
+                label={translate('bibletriviaApp.quizEntry.triviaAnswers')}
+                id="quiz-entry-triviaAnswers"
+                data-cy="triviaAnswers"
                 type="select"
+                multiple
+                name="triviaAnswers"
               >
                 <option value="" key="0" />
                 {triviaAnswers

@@ -64,6 +64,7 @@ public class TriviaAnswerAsserts {
         assertThat(expected)
             .as("Verify TriviaAnswer relationships")
             .satisfies(e -> assertThat(e.getBibleReferences()).as("check bibleReferences").isEqualTo(actual.getBibleReferences()))
-            .satisfies(e -> assertThat(e.getTriviaQuestion()).as("check triviaQuestion").isEqualTo(actual.getTriviaQuestion()));
+            .satisfies(e -> assertThat(e.getTriviaQuestion()).as("check triviaQuestion").isEqualTo(actual.getTriviaQuestion()))
+            .satisfies(e -> assertThat(e.getQuizEntries()).as("check quizEntries").isEqualTo(actual.getQuizEntries()));
     }
 }

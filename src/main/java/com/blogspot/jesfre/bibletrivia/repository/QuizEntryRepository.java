@@ -11,32 +11,33 @@ import org.springframework.stereotype.Repository;
 
 /**
  * Spring Data JPA repository for the QuizEntry entity.
+ *
+ * When extending this class, extend QuizEntryRepositoryWithBagRelationships too.
+ * For more information refer to https://github.com/jhipster/generator-jhipster/issues/17990.
  */
 @Repository
-public interface QuizEntryRepository extends JpaRepository<QuizEntry, Long> {
+public interface QuizEntryRepository extends QuizEntryRepositoryWithBagRelationships, JpaRepository<QuizEntry, Long> {
     default Optional<QuizEntry> findOneWithEagerRelationships(Long id) {
-        return this.findOneWithToOneRelationships(id);
+        return this.fetchBagRelationships(this.findOneWithToOneRelationships(id));
     }
 
     default List<QuizEntry> findAllWithEagerRelationships() {
-        return this.findAllWithToOneRelationships();
+        return this.fetchBagRelationships(this.findAllWithToOneRelationships());
     }
 
     default Page<QuizEntry> findAllWithEagerRelationships(Pageable pageable) {
-        return this.findAllWithToOneRelationships(pageable);
+        return this.fetchBagRelationships(this.findAllWithToOneRelationships(pageable));
     }
 
     @Query(
-        value = "select quizEntry from QuizEntry quizEntry left join fetch quizEntry.triviaQuestion left join fetch quizEntry.triviaAnswer",
+        value = "select quizEntry from QuizEntry quizEntry left join fetch quizEntry.triviaQuestion",
         countQuery = "select count(quizEntry) from QuizEntry quizEntry"
     )
     Page<QuizEntry> findAllWithToOneRelationships(Pageable pageable);
 
-    @Query("select quizEntry from QuizEntry quizEntry left join fetch quizEntry.triviaQuestion left join fetch quizEntry.triviaAnswer")
+    @Query("select quizEntry from QuizEntry quizEntry left join fetch quizEntry.triviaQuestion")
     List<QuizEntry> findAllWithToOneRelationships();
 
-    @Query(
-        "select quizEntry from QuizEntry quizEntry left join fetch quizEntry.triviaQuestion left join fetch quizEntry.triviaAnswer where quizEntry.id =:id"
-    )
+    @Query("select quizEntry from QuizEntry quizEntry left join fetch quizEntry.triviaQuestion where quizEntry.id =:id")
     Optional<QuizEntry> findOneWithToOneRelationships(@Param("id") Long id);
 }

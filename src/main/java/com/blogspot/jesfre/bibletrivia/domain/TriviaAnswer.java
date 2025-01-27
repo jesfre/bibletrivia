@@ -50,6 +50,10 @@ public class TriviaAnswer implements Serializable {
     @JsonIgnoreProperties(value = { "triviaAnswers", "trivias" }, allowSetters = true)
     private TriviaQuestion triviaQuestion;
 
+    @ManyToMany(fetch = FetchType.LAZY, mappedBy = "triviaAnswers")
+    @JsonIgnoreProperties(value = { "triviaQuestion", "triviaAnswers", "quiz" }, allowSetters = true)
+    private Set<QuizEntry> quizEntries = new HashSet<>();
+
     // jhipster-needle-entity-add-field - JHipster will add fields here
 
     public Long getId() {
@@ -163,6 +167,37 @@ public class TriviaAnswer implements Serializable {
 
     public TriviaAnswer triviaQuestion(TriviaQuestion triviaQuestion) {
         this.setTriviaQuestion(triviaQuestion);
+        return this;
+    }
+
+    public Set<QuizEntry> getQuizEntries() {
+        return this.quizEntries;
+    }
+
+    public void setQuizEntries(Set<QuizEntry> quizEntries) {
+        if (this.quizEntries != null) {
+            this.quizEntries.forEach(i -> i.removeTriviaAnswers(this));
+        }
+        if (quizEntries != null) {
+            quizEntries.forEach(i -> i.addTriviaAnswers(this));
+        }
+        this.quizEntries = quizEntries;
+    }
+
+    public TriviaAnswer quizEntries(Set<QuizEntry> quizEntries) {
+        this.setQuizEntries(quizEntries);
+        return this;
+    }
+
+    public TriviaAnswer addQuizEntries(QuizEntry quizEntry) {
+        this.quizEntries.add(quizEntry);
+        quizEntry.getTriviaAnswers().add(this);
+        return this;
+    }
+
+    public TriviaAnswer removeQuizEntries(QuizEntry quizEntry) {
+        this.quizEntries.remove(quizEntry);
+        quizEntry.getTriviaAnswers().remove(this);
         return this;
     }
 

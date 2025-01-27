@@ -1,6 +1,7 @@
 package com.blogspot.jesfre.bibletrivia.domain;
 
 import static com.blogspot.jesfre.bibletrivia.domain.BibleReferenceTestSamples.*;
+import static com.blogspot.jesfre.bibletrivia.domain.QuizEntryTestSamples.*;
 import static com.blogspot.jesfre.bibletrivia.domain.TriviaAnswerTestSamples.*;
 import static com.blogspot.jesfre.bibletrivia.domain.TriviaQuestionTestSamples.*;
 import static org.assertj.core.api.Assertions.assertThat;
@@ -54,5 +55,27 @@ class TriviaAnswerTest {
 
         triviaAnswer.triviaQuestion(null);
         assertThat(triviaAnswer.getTriviaQuestion()).isNull();
+    }
+
+    @Test
+    void quizEntriesTest() {
+        TriviaAnswer triviaAnswer = getTriviaAnswerRandomSampleGenerator();
+        QuizEntry quizEntryBack = getQuizEntryRandomSampleGenerator();
+
+        triviaAnswer.addQuizEntries(quizEntryBack);
+        assertThat(triviaAnswer.getQuizEntries()).containsOnly(quizEntryBack);
+        assertThat(quizEntryBack.getTriviaAnswers()).containsOnly(triviaAnswer);
+
+        triviaAnswer.removeQuizEntries(quizEntryBack);
+        assertThat(triviaAnswer.getQuizEntries()).doesNotContain(quizEntryBack);
+        assertThat(quizEntryBack.getTriviaAnswers()).doesNotContain(triviaAnswer);
+
+        triviaAnswer.quizEntries(new HashSet<>(Set.of(quizEntryBack)));
+        assertThat(triviaAnswer.getQuizEntries()).containsOnly(quizEntryBack);
+        assertThat(quizEntryBack.getTriviaAnswers()).containsOnly(triviaAnswer);
+
+        triviaAnswer.setQuizEntries(new HashSet<>());
+        assertThat(triviaAnswer.getQuizEntries()).doesNotContain(quizEntryBack);
+        assertThat(quizEntryBack.getTriviaAnswers()).doesNotContain(triviaAnswer);
     }
 }

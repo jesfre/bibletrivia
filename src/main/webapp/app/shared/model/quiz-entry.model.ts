@@ -7,7 +7,7 @@ export interface IQuizEntry {
   orderNum?: number;
   correct?: boolean | null;
   triviaQuestion?: ITriviaQuestion;
-  triviaAnswer?: ITriviaAnswer | null;
+  triviaAnswers?: ITriviaAnswer[] | null;
   quiz?: IQuiz | null;
 }
 

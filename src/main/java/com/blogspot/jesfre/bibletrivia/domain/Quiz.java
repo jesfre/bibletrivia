@@ -40,7 +40,7 @@ public class Quiz implements Serializable {
     private Integer correctQuestions;
 
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "quiz")
-    @JsonIgnoreProperties(value = { "triviaQuestion", "triviaAnswer", "quiz" }, allowSetters = true)
+    @JsonIgnoreProperties(value = { "triviaQuestion", "triviaAnswers", "quiz" }, allowSetters = true)
     private Set<QuizEntry> quizEntries = new HashSet<>();
 
     @ManyToOne(fetch = FetchType.LAZY)
