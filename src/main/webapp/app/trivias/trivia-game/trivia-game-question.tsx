@@ -87,8 +87,7 @@ const TriviaGameQuestion = () => {
               </Button>
               &nbsp;
               {isLastQuestion == 'Y' ? (
-              <Button tag={Button} onClick={handleNextQuestionPageClick} 
-                  replace color="primary" data-cy="entityDetailsBackButton">
+              <Button tag={Button} replace color="primary" disabled={true}>
                 <span className="d-none d-md-inline">
                   <Translate contentKey="entity.action.end">End</Translate>
                 </span>
