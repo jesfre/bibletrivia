@@ -52,9 +52,6 @@ public class TriviaGameResource {
 
 	private static final Logger LOG = LoggerFactory.getLogger(TriviaGameResource.class);
 
-	// TODO update with information stored in DB
-    public static final List<Long> QUESTIONS_ANSWERED = new ArrayList<Long>();
-
 	private static final String ENTITY_NAME = "triviaGameQuestion";
 	
 	@Value("${jhipster.clientApp.name}")
@@ -71,16 +68,24 @@ public class TriviaGameResource {
     }
     
     @GetMapping("/reset/{level}")
-    public ResponseEntity<Void> resetTrivia(@PathVariable("level") TriviaLevel level) {
+    public ResponseEntity<Void> resetTrivia(HttpServletRequest request, @PathVariable("level") TriviaLevel level) {
         LOG.debug("REST request to reset the trivia for: {}", level);
-        QUESTIONS_ANSWERED.clear();
+        
+        HttpSession session = request.getSession();
+        String sessionId = session.getId();
+        quizService.removeCached(sessionId);
+        
         LOG.debug("The Trivia questions have been reset for level {}", level);
         return ResponseEntity.noContent().build();
     }
 
     @GetMapping("/level/{level}")
-    public ResponseEntity<TriviaQuestion> getTriviaQuestionInLevel(@PathVariable("level") TriviaLevel level) {
+    public ResponseEntity<TriviaQuestion> getTriviaQuestionInLevel(HttpServletRequest request, @PathVariable("level") TriviaLevel level) {
         LOG.debug("REST request to get a TriviaQuestion for level {}", level);
+        
+        HttpSession session = request.getSession();
+        String sessionId = session.getId();
+        Quiz currentQuiz = quizService.addOrGetCached(sessionId, null);
         
         // TODO exclude already answered questions but using Database instead of static field
         List<TriviaQuestion> questionsInLevel = triviaQuestionService.findInLevel(level);
@@ -90,16 +95,20 @@ public class TriviaGameResource {
                     .build();
         }
         
+        List<Long> questonsAnswered = currentQuiz.getQuizEntries().stream().map(qe -> qe.getTriviaQuestion().getId()).collect(Collectors.toList());
+        
+        // Filter out questions already answered to select a new question to display
         List<TriviaQuestion> availableQuestions = questionsInLevel.stream()
-        		.filter(q -> !QUESTIONS_ANSWERED.contains(q.getId()))
+        		.filter(q -> !questonsAnswered.contains(q.getId()))
         		.collect(Collectors.toList());
 
-        int nextQnumber = new Random().nextInt(questionsInLevel.size());
-        Optional<TriviaQuestion> result = Optional.ofNullable(questionsInLevel.get(nextQnumber));
+        int nextQnumber = new Random().nextInt(availableQuestions.size());
+        Optional<TriviaQuestion> result = Optional.ofNullable(availableQuestions.get(nextQnumber));
 
-        result.ifPresent(q -> QUESTIONS_ANSWERED.add(q.getId()));
         HttpHeaders headers = new HttpHeaders();
-        if(availableQuestions.size() == 1 || QUESTIONS_ANSWERED.size() >= Constants.MAX_NUMBER_OF_QUESTIONS) {
+        
+        if(availableQuestions.size() == 1 || currentQuiz.getTotalQuestions() >= Constants.MAX_NUMBER_OF_QUESTIONS - 1) {
+        	// Is the last available question
         	// TODO Create a list of state values. Here 2 will be "last question of a trivia"  
             headers.add("x-" + applicationName + "-last-question", "Y");
         }

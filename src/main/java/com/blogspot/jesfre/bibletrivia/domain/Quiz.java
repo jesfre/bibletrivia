@@ -47,6 +47,10 @@ public class Quiz implements Serializable {
     private User owner;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here
+    
+    public Quiz() {
+    	this.totalQuestions = 0;
+	}
 
     public Long getId() {
         return this.id;
