@@ -92,8 +92,8 @@ const TriviaGameQuestion = () => {
                 </span>
               </Button>
               ):(
-              <Button tag={Button} onClick={handleNextQuestionPageClick} 
-                  replace color="info" data-cy="entityDetailsBackButton">
+              <Button tag={Button} onClick={handleNextQuestionPageClick} replace color="info" data-cy="entityDetailsBackButton">
+              	<FontAwesomeIcon icon="arrow-right" />{' '}
                 <span className="d-none d-md-inline">
                   <Translate contentKey="entity.action.next">Next</Translate>
                 </span>

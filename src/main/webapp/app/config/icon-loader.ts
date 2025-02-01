@@ -1,5 +1,6 @@
 import {
   faArrowLeft,
+  faArrowRight,
   faAsterisk,
   faBan,
   faBell,
@@ -39,6 +40,7 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 export const loadIcons = () => {
   library.add(
     faArrowLeft,
+    faArrowRight,
     faAsterisk,
     faBan,
     faBell,
