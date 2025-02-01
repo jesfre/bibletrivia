@@ -39,9 +39,6 @@ public class TriviaQuestionResource {
     
     private static final String ENTITY_NAME = "triviaQuestion";
     
-    // TODO update with information stored in DB
-    public static final List<Long> QUESTIONS_ANSWERED = new ArrayList<Long>();
-
     @Value("${jhipster.clientApp.name}")
     private String applicationName;
 
@@ -183,51 +180,5 @@ public class TriviaQuestionResource {
             .headers(HeaderUtil.createEntityDeletionAlert(applicationName, true, ENTITY_NAME, id.toString()))
             .build();
     }
-    
-    @GetMapping("/reset/{level}")
-    public ResponseEntity<Void> resetTrivia(@PathVariable("level") TriviaLevel level) {
-        LOG.debug("REST request to reset the trivia for: {}", level);
-        QUESTIONS_ANSWERED.clear();
-        LOG.debug("The Trivia questions have been reset for level {}", level);
-        return ResponseEntity.noContent().build();
-    }
 
-    @GetMapping("/level/{level}")
-    public ResponseEntity<TriviaQuestion> getTriviaQuestionInLevel(@PathVariable("level") TriviaLevel level) {
-        LOG.debug("REST request to get a TriviaQuestion for level {}", level);
-        
-//        Optional<TriviaQuestion> opt = triviaQuestionService
-//            .findInLevel(level)
-//            .stream()
-//            .filter(q -> !QUESTIONS_ANSWERED.contains(q.getId()))
-//            .findAny();
-//     // TODO fix this query to avoid NoSuchElementException and to avoid two calls to the service
-//        return ResponseUtil.wrapOrNotFound(triviaQuestionService.findOne(opt.get().getId()));
-        
-        // TODO exclude already answered questions but using Database instead of static field
-        List<TriviaQuestion> questionsInLevel = triviaQuestionService.findInLevel(level);
-        if(questionsInLevel.isEmpty()) {
-        	return ResponseEntity.noContent()
-                    .headers(HeaderUtil.createFailureAlert(applicationName, true, ENTITY_NAME, "nomorequestions", "No more questions"))
-                    .build();
-        }
-        
-        List<TriviaQuestion> availableQuestions = questionsInLevel.stream()
-        		.filter(q -> !QUESTIONS_ANSWERED.contains(q.getId()))
-        		.collect(Collectors.toList());
-
-        
-        
-        int nextQnumber = new Random().nextInt(questionsInLevel.size());
-        Optional<TriviaQuestion> result = Optional.ofNullable(questionsInLevel.get(nextQnumber));
-
-        result.ifPresent(q -> QUESTIONS_ANSWERED.add(q.getId()));
-        HttpHeaders headers = new HttpHeaders();
-        if(availableQuestions.size() == 1 || QUESTIONS_ANSWERED.size() == Constants.MAX_NUMBER_OF_QUESTIONS) {
-        	// TODO Create a list of state values. Here 2 will be "last question of a trivia"  
-            headers.add("x-" + applicationName + "-last-question", "Y");
-        }
-
-        return ResponseUtil.wrapOrNotFound(result, headers);
-    }
 }

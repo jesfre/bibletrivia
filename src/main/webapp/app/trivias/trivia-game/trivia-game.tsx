@@ -4,8 +4,7 @@ import { TriviaLevel } from 'app/shared/model/enumerations/trivia-level.model';
 import { Translate, ValidatedField, ValidatedForm, translate } from 'react-jhipster';
 import { Button } from 'reactstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { resetTrivia } from 'app/entities/trivia-question/trivia-question.reducer';
-import { createTrivia } from 'app/trivias/trivia-game/trivia-game.reducer';
+import { createTrivia, resetTrivia } from 'app/trivias/trivia-game/trivia-game.reducer';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
 {/* prettier-ignore */}

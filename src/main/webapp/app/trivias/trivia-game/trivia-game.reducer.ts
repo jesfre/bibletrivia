@@ -3,29 +3,39 @@ import { createAsyncThunk, isFulfilled, isPending } from '@reduxjs/toolkit';
 import { ASC } from 'app/shared/util/pagination.constants';
 import { cleanEntity } from 'app/shared/util/entity-utils';
 import { EntityState, IQueryParams, createEntitySlice, serializeAxiosError } from 'app/shared/reducers/reducer.utils';
-import { ITriviaGameQuestion } from 'app/shared/model/trivia-game-question.model';
 import { ITriviaQuestion, defaultValue } from 'app/shared/model/trivia-question.model';
-
-{/* prettier-ignore */}
 
 const initialState: EntityState<ITriviaQuestion> = {
   loading: false,
   errorMessage: null,
   entities: [],
   entity: defaultValue,
+  links: { next: 0 },
   updating: false,
+  totalItems: 0,
   updateSuccess: false,
 };
 
 const apiUrl = 'api/trivia-game';
 
 // Actions
+{/* prettier-ignore */}
 
-export const getEntities = createAsyncThunk(
-  'triviaGameQuestion/fetch_entity_list',
-  async ({ sort }: IQueryParams) => {
-    const requestUrl = `${apiUrl}/question?${sort ? `sort=${sort}&` : ''}cacheBuster=${new Date().getTime()}`;
-    return axios.get<ITriviaQuestion[]>(requestUrl);
+
+export const resetTrivia = createAsyncThunk(
+  'triviaGameQuestion/reset_trivia',
+  async (level: string) => {
+    const requestUrl = `${apiUrl}/reset/${level}`;
+    return await axios.get<ITriviaQuestion>(requestUrl);
+  },
+  { serializeError: serializeAxiosError },
+);
+
+export const getTriviaQuestionInLevel = createAsyncThunk(
+  'triviaGameQuestion/fetch_entity_by_level',
+  async (level: string) => {
+    const requestUrl = `${apiUrl}/level/${level}`;
+    return axios.get<ITriviaQuestion>(requestUrl);
   },
   { serializeError: serializeAxiosError },
 );
@@ -68,23 +78,23 @@ export const TriviaGameSlice = createEntitySlice({
         state.loading = false;
         state.entity = action.payload.data;
       })
-      .addMatcher(isFulfilled(getEntities), (state, action) => {
-        const { data } = action.payload;
+      .addCase(getTriviaQuestionInLevel.fulfilled, (state, action) => {
+        state.loading = false;
+        state.entity = action.payload.data;
+      })
+      .addMatcher(isFulfilled(getTriviaQuestionInLevel), (state, action) => {
+        const { data, headers } = action.payload;
 
         return {
           ...state,
-          loading: false,
-          entities: data.sort((a, b) => {
-            if (!action.meta?.arg?.sort) {
-              return 1;
-            }
-            const order = action.meta.arg.sort.split(',')[1];
-            const predicate = action.meta.arg.sort.split(',')[0];
-            return order === ASC ? (a[predicate] < b[predicate] ? -1 : 1) : b[predicate] < a[predicate] ? -1 : 1;
-          }),
+          errorMessage: null,
+          updateSuccess: false,
+          loading: true,
+          isLastQuestion: headers['x-bibletriviaapp-last-question'],
+          entity: action.payload.data
         };
       })
-      .addMatcher(isPending(getEntities, getQuestion, createTrivia, updateTrivia), state => {
+      .addMatcher(isPending(getQuestion, createTrivia, updateTrivia), state => {
         state.errorMessage = null;
         state.updateSuccess = false;
         state.loading = true;

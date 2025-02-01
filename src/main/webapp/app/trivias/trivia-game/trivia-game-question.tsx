@@ -9,10 +9,9 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 import { EntityState, IQueryParams, createEntitySlice, serializeAxiosError } from 'app/shared/reducers/reducer.utils';
 import { ITriviaGameQuestion, defaultValue } from 'app/shared/model/trivia-game-question.model';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
-import { getQuestion, updateTrivia } from './trivia-game.reducer';
+import { getQuestion, updateTrivia, getTriviaQuestionInLevel } from './trivia-game.reducer';
 import { getEntitiesForQuestion } from 'app/entities/trivia-answer/trivia-answer.reducer';
 import { AnswerType } from 'app/shared/model/enumerations/answer-type.model';
-import { getTriviaQuestionInLevel } from 'app/entities/trivia-question/trivia-question.reducer';
 
 {/* prettier-ignore */}
 
@@ -29,9 +28,9 @@ const TriviaGameQuestion = () => {
     dispatch(getTriviaQuestionInLevel(complexityLevel));
   }, []);
 
-  const questionEntity = useAppSelector(state => state.triviaQuestion.entity);
-  const loading = useAppSelector(state => state.triviaQuestion.loading);
-  const isLastQuestion = useAppSelector(state => state.triviaQuestion.isLastQuestion);
+  const questionEntity = useAppSelector(state => state.triviaGameQuestion.entity);
+  const loading = useAppSelector(state => state.triviaGameQuestion.loading);
+  const isLastQuestion = useAppSelector(state => state.triviaGameQuestion.isLastQuestion);
   
 
   const handleNextQuestionPageClick = () => {

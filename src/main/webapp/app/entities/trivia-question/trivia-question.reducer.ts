@@ -72,23 +72,6 @@ export const deleteEntity = createAsyncThunk(
   { serializeError: serializeAxiosError },
 );
 
-export const resetTrivia = createAsyncThunk(
-  'triviaQuestion/reset_trivia',
-  async (level: string) => {
-    const requestUrl = `${apiUrl}/reset/${level}`;
-    return await axios.get<ITriviaQuestion>(requestUrl);
-  },
-  { serializeError: serializeAxiosError },
-);
-
-export const getTriviaQuestionInLevel = createAsyncThunk(
-  'triviaQuestion/fetch_entity_by_level',
-  async (level: string) => {
-    const requestUrl = `${apiUrl}/level/${level}`;
-    return axios.get<ITriviaQuestion>(requestUrl);
-  },
-  { serializeError: serializeAxiosError },
-);
 
 // slice
 
@@ -98,10 +81,6 @@ export const TriviaQuestionSlice = createEntitySlice({
   extraReducers(builder) {
     builder
       .addCase(getEntity.fulfilled, (state, action) => {
-        state.loading = false;
-        state.entity = action.payload.data;
-      })
-      .addCase(getTriviaQuestionInLevel.fulfilled, (state, action) => {
         state.loading = false;
         state.entity = action.payload.data;
       })
@@ -132,18 +111,6 @@ export const TriviaQuestionSlice = createEntitySlice({
         state.errorMessage = null;
         state.updateSuccess = false;
         state.loading = true;
-      })
-      .addMatcher(isFulfilled(getTriviaQuestionInLevel), (state, action) => {
-        const { data, headers } = action.payload;
-
-        return {
-          ...state,
-          errorMessage: null,
-          updateSuccess: false,
-          loading: true,
-          isLastQuestion: headers['x-bibletriviaapp-last-question'],
-          entity: action.payload.data
-        };
       })
       .addMatcher(isPending(createEntity, updateEntity, partialUpdateEntity, deleteEntity), state => {
         state.errorMessage = null;
