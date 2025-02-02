@@ -5,7 +5,6 @@ package com.blogspot.jesfre.bibletrivia.web.rest;
 
 import java.net.URISyntaxException;
 import java.time.ZonedDateTime;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.Random;
@@ -87,7 +86,6 @@ public class TriviaGameResource {
         String sessionId = session.getId();
         Quiz currentQuiz = quizService.addOrGetCached(sessionId, null);
         
-        // TODO exclude already answered questions but using Database instead of static field
         List<TriviaQuestion> questionsInLevel = triviaQuestionService.findInLevel(level);
         if(questionsInLevel.isEmpty()) {
         	return ResponseEntity.noContent()
@@ -106,7 +104,6 @@ public class TriviaGameResource {
         Optional<TriviaQuestion> result = Optional.ofNullable(availableQuestions.get(nextQnumber));
 
         HttpHeaders headers = new HttpHeaders();
-        
         if(availableQuestions.size() == 1 || currentQuiz.getTotalQuestions() >= Constants.MAX_NUMBER_OF_QUESTIONS - 1) {
         	// Is the last available question
         	// TODO Create a list of state values. Here 2 will be "last question of a trivia"  
@@ -114,6 +111,102 @@ public class TriviaGameResource {
         }
 
         return ResponseUtil.wrapOrNotFound(result, headers);
+    }
+    
+    @GetMapping("/next/{level}/{currentQuestionId}")
+	public ResponseEntity<TriviaQuestion> getNextQuestion(HttpServletRequest request, 
+			@PathVariable("level") TriviaLevel level, 
+			@PathVariable Long currentQuestionId) throws URISyntaxException {
+    	HttpSession session = request.getSession();
+        String sessionId = session.getId();
+        Quiz currentQuiz = quizService.addOrGetCached(sessionId, null);
+        
+        int availableQuestionsInDb = Constants.MAX_NUMBER_OF_QUESTIONS;
+        Integer currentQuestionOrderNumber = currentQuiz.getQuizEntries().stream()
+	        	.filter(qe -> qe.getTriviaQuestion().getId() == currentQuestionId)
+	        	.findFirst()
+	        	.orElse(new QuizEntry().orderNum(0)) 
+	        	.getOrderNum();
+        
+        QuizEntry nextQentry = currentQuiz.getQuizEntries().stream()
+        		.filter(qe -> qe.getOrderNum() == currentQuestionOrderNumber+1)
+        		.findFirst().orElse(null);
+        
+        List<TriviaQuestion> questionsInLevel = triviaQuestionService.findInLevel(level);
+    	if(questionsInLevel.isEmpty()) {
+    		return ResponseEntity.noContent()
+    				.headers(HeaderUtil.createFailureAlert(applicationName, true, ENTITY_NAME, "nomorequestions", "No more questions"))
+    				.build();
+    	}
+    	
+    	List<Long> questionsAnswered = currentQuiz.getQuizEntries().stream()
+    			.map(qe -> qe.getTriviaQuestion().getId())
+    			.collect(Collectors.toList());
+    	
+    	// Filter out questions already answered to select a new question to display
+    	List<TriviaQuestion> availableQuestions = questionsInLevel.stream()
+    			.filter(q -> !questionsAnswered.contains(q.getId()))
+    			.collect(Collectors.toList());
+    	
+    	availableQuestionsInDb = availableQuestions.size();
+        
+        if(nextQentry == null) {
+        	// Get question from DB
+        	int nextQnumber = new Random().nextInt(availableQuestions.size());
+        	TriviaQuestion newQuestion = availableQuestions.get(nextQnumber);
+        	
+        	nextQentry = new QuizEntry()
+    				.triviaQuestion(newQuestion)
+    				.orderNum(currentQuiz.getTotalQuestions()+1);
+        }
+        
+        
+        HttpHeaders headers = new HttpHeaders();
+        LOG.debug("nextQentry.getOrderNum()={}, currentQuiz.getTotalQuestions()={}, availableQuestionsInDb={}", 
+        		nextQentry.getOrderNum(), currentQuiz.getTotalQuestions(), availableQuestionsInDb);
+        if(nextQentry.getOrderNum() == currentQuiz.getTotalQuestions() && availableQuestionsInDb == 0 
+        		|| (availableQuestionsInDb == 1 || currentQuiz.getTotalQuestions() >= Constants.MAX_NUMBER_OF_QUESTIONS - 1)) {
+            headers.add("x-" + applicationName + "-last-question", "Y");
+        } else {
+        	headers.add("x-" + applicationName + "-last-question", "N");
+        }
+        headers.add("x-" + applicationName + "-first-question", "N");
+        LOG.debug("Added header for NextQ: {}", headers.toString());
+        return ResponseUtil.wrapOrNotFound(Optional.ofNullable(nextQentry.getTriviaQuestion()), headers);
+    }
+    
+    @GetMapping("/previous/{currentQuestionId}")
+	public ResponseEntity<TriviaQuestion> getPreviousQuestion(HttpServletRequest request, @PathVariable Long currentQuestionId) throws URISyntaxException {
+    	HttpSession session = request.getSession();
+        String sessionId = session.getId();
+        Quiz currentQuiz = quizService.addOrGetCached(sessionId, null);
+        
+        currentQuiz.getQuizEntries().stream().forEach(qe -> LOG.debug("QuizEntry's Question: {}", qe.getTriviaQuestion()));
+        
+        Integer currentQuestionOrderNumber = currentQuiz.getQuizEntries().stream()
+	        	.peek(qe -> LOG.debug("Picked question: {}", qe.getTriviaQuestion()))
+	        	.filter(qe -> qe.getTriviaQuestion().getId() == currentQuestionId)
+	        	.peek(qe -> LOG.debug("Filtered question: {}", qe.getTriviaQuestion()))
+	        	.findFirst()
+	        	.orElseThrow()
+	        	.getOrderNum();
+        
+        LOG.debug("Got CURRENT QUESTION NUMBER: {}", currentQuestionOrderNumber);
+        
+        QuizEntry previousQentry = currentQuiz.getQuizEntries().stream()
+        		.filter(qe -> qe.getOrderNum() == currentQuestionOrderNumber-1)
+        		.findFirst().orElseThrow();
+        
+        HttpHeaders headers = new HttpHeaders();
+        if(previousQentry.getOrderNum() == 1) {
+        	// Is the very first question created in the current quiz
+            headers.add("x-" + applicationName + "-first-question", "Y");
+        } else {
+        	headers.add("x-" + applicationName + "-first-question", "N");
+        }
+        headers.add("x-" + applicationName + "-last-question", "N");
+        LOG.debug("Added heade for PrevQ: {}", headers.toString());
+        return ResponseUtil.wrapOrNotFound(Optional.ofNullable(previousQentry.getTriviaQuestion()), headers);
     }
 	
 	@GetMapping("/create")
@@ -132,10 +225,7 @@ public class TriviaGameResource {
 		quiz.setTotalQuestions(0);
 		
 		HttpSession session = request.getSession();
-		LOG.debug("Session: {}", session);
-		
         String sessionId = session.getId();
-		LOG.debug("Session ID: {}", sessionId);
 		
 		quizService.addOrGetCached(sessionId, quiz);
 		
@@ -151,23 +241,40 @@ public class TriviaGameResource {
         String sessionId = session.getId();
 		
 		Quiz quiz = quizService.addOrGetCached(sessionId, null);
+		boolean alreadyAnsweredQuestion = quiz.getQuizEntries().stream()
+				.anyMatch(qe -> qe.getTriviaQuestion().getId() == questionId);
 		
-		TriviaQuestion question = new TriviaQuestion();
-		question.setId(questionId);
-		
-		QuizEntry quizEntry = new QuizEntry();
-		quizEntry.setTriviaQuestion(question);
-
-		if(answers != null && answers.size() > 0) {
-			answers.forEach(aid -> {
-				TriviaAnswer answer = new TriviaAnswer();
-				answer.setId(aid);
-				quizEntry.addTriviaAnswers(answer);
-			});
+		if(alreadyAnsweredQuestion) {
+			QuizEntry quizEntry = quiz.getQuizEntries().stream()
+			.filter(qe -> qe.getTriviaQuestion().getId() == questionId)
+			.collect(Collectors.toList()).get(0);
+			
+			if(answers != null && answers.size() > 0) {
+				answers.forEach(aid -> {
+					TriviaAnswer answer = new TriviaAnswer();
+					answer.setId(aid);
+					quizEntry.addTriviaAnswers(answer);
+				});
+			}
+		} else {
+			TriviaQuestion question = triviaQuestionService.findOne(questionId).orElseThrow();
+			
+			QuizEntry quizEntry = new QuizEntry()
+					.triviaQuestion(question)
+					.orderNum(quiz.getTotalQuestions()+1);
+			
+			if(answers != null && answers.size() > 0) {
+				answers.forEach(aid -> {
+					TriviaAnswer answer = new TriviaAnswer();
+					answer.setId(aid);
+					quizEntry.addTriviaAnswers(answer);
+				});
+			}
+			
+			quiz.addQuizEntries(quizEntry)
+				.incrementTotalQuestions();
 		}
-				
-		quiz.addQuizEntries(quizEntry)
-			.incrementTotalQuestions();
+		
 		
 		quizService.updateCached(sessionId, quiz);
 		

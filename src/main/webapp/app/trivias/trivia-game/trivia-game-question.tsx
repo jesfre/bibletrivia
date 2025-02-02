@@ -9,7 +9,7 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 import { EntityState, IQueryParams, createEntitySlice, serializeAxiosError } from 'app/shared/reducers/reducer.utils';
 import { ITriviaGameQuestion, defaultValue } from 'app/shared/model/trivia-game-question.model';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
-import { getQuestion, updateTrivia, getTriviaQuestionInLevel } from './trivia-game.reducer';
+import { getQuestion, updateTrivia, getTriviaQuestionInLevel, getNextQuestion, getPreviousQuestion } from './trivia-game.reducer';
 import { getEntitiesForQuestion } from 'app/entities/trivia-answer/trivia-answer.reducer';
 import { AnswerType } from 'app/shared/model/enumerations/answer-type.model';
 
@@ -24,19 +24,34 @@ const TriviaGameQuestion = () => {
   const [isChecked, setIsChecked] = useState(false);
   const [selectedValues, setSelectedValues] = useState([]);
 
-  useEffect(() => {
-    dispatch(getTriviaQuestionInLevel(complexityLevel));
-  }, []);
-
   const questionEntity = useAppSelector(state => state.triviaGameQuestion.entity);
   const loading = useAppSelector(state => state.triviaGameQuestion.loading);
   const isLastQuestion = useAppSelector(state => state.triviaGameQuestion.isLastQuestion);
-  
+  const isFirstQuestion = useAppSelector(state => state.triviaGameQuestion.isFirstQuestion);
+
+  useEffect(() => {
+	var params = {level:complexityLevel, currentId:questionEntity.id ?? 0};
+    dispatch(getNextQuestion(params));
+  }, []);
 
   const handleNextQuestionPageClick = () => {
-    var data = {questionId:questionEntity.id, answers:selectedValues};
-    dispatch(updateTrivia(data));
-    dispatch(getTriviaQuestionInLevel(complexityLevel));
+	  const fetchData = async () => {
+	    var updateParams = {questionId:questionEntity.id ?? 0, answers:selectedValues ?? []};
+	    await dispatch(updateTrivia(updateParams));
+	   
+		var nextParams = {level:complexityLevel, currentId:questionEntity.id ?? 0};
+	    dispatch(getNextQuestion(nextParams));
+    };
+    fetchData();
+  };
+  
+  const handlePreviousQuestionPageClick = () => {
+	var data = {questionId:questionEntity.id, answers:selectedValues};
+	const fetchData = async () => {
+	    await dispatch(updateTrivia(data));
+	    dispatch(getPreviousQuestion(questionEntity.id));
+	};
+	fetchData();
   };
 
   const handleChkChanged = (event) => {
@@ -78,26 +93,34 @@ const TriviaGameQuestion = () => {
 
           <br/><br/>
           <div className="button-section">
-              <Button tag={Button} onClick={handleNextQuestionPageClick} replace color="info" data-cy="entityDetailsBackButton">
+          	{isFirstQuestion == 'Y' ? (
+			  <Button tag={Button} replace color="primary" disabled={true}>
+                <span className="d-none d-md-inline">
+                  <Translate contentKey="entity.action.back">Back</Translate>
+                </span>
+              </Button>
+            ):(
+			  <Button tag={Button} onClick={handlePreviousQuestionPageClick} replace color="info" data-cy="entityDetailsBackButton">
                 <FontAwesomeIcon icon="arrow-left" />{' '}
                 <span className="d-none d-md-inline">
                   <Translate contentKey="entity.action.back">Back</Translate>
                 </span>
               </Button>
+			)}
               &nbsp;
               {isLastQuestion == 'Y' ? (
-              <Button tag={Button} replace color="primary" disabled={true}>
-                <span className="d-none d-md-inline">
-                  <Translate contentKey="entity.action.end">End</Translate>
-                </span>
-              </Button>
+	              <Button tag={Button} replace color="primary" disabled={true}>
+	                <span className="d-none d-md-inline">
+	                  <Translate contentKey="entity.action.end">End</Translate>
+	                </span>
+	              </Button>
               ):(
-              <Button tag={Button} onClick={handleNextQuestionPageClick} replace color="info" data-cy="entityDetailsBackButton">
-              	<FontAwesomeIcon icon="arrow-right" />{' '}
-                <span className="d-none d-md-inline">
-                  <Translate contentKey="entity.action.next">Next</Translate>
-                </span>
-              </Button>
+	              <Button tag={Button} onClick={handleNextQuestionPageClick} replace color="info" data-cy="entityDetailsBackButton">
+	              	<FontAwesomeIcon icon="arrow-right" />{' '}
+	                <span className="d-none d-md-inline">
+	                  <Translate contentKey="entity.action.next">Next</Translate>
+	                </span>
+	              </Button>
               )}
           </div>
 

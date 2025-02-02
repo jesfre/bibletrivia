@@ -40,6 +40,24 @@ export const getTriviaQuestionInLevel = createAsyncThunk(
   { serializeError: serializeAxiosError },
 );
 
+export const getNextQuestion = createAsyncThunk(
+  'triviaGameQuestion/fetch_next_entity',
+  async ({ level, currentId }: { level: string, currentId: string | number }) => {
+    const requestUrl = `${apiUrl}/next/${level}/${currentId}`;
+    return axios.get<ITriviaQuestion>(requestUrl);
+  },
+  { serializeError: serializeAxiosError },
+);
+
+export const getPreviousQuestion = createAsyncThunk(
+  'triviaGameQuestion/fetch_previous_question',
+  async (currentId: string | number) => {
+    const requestUrl = `${apiUrl}/previous/${currentId}`;
+    return await axios.get<ITriviaQuestion>(requestUrl);
+  },
+  { serializeError: serializeAxiosError },
+);
+
 export const getQuestion = createAsyncThunk(
   'triviaGameQuestion/fetch_entity',
   async (id: string | number) => {
@@ -62,7 +80,7 @@ export const updateTrivia = createAsyncThunk(
   'triviaGameQuestion/update_entity',
   async ({ questionId, answers }: { questionId: string, answers: string[] }) => {
     const requestUrl = `${apiUrl}/update/${questionId}?answers=${answers.join(',')}`;
-    return axios.get<ITriviaQuestion>(requestUrl);
+    return await axios.get<ITriviaQuestion>(requestUrl);
   },
   { serializeError: serializeAxiosError },
 );
@@ -78,11 +96,19 @@ export const TriviaGameSlice = createEntitySlice({
         state.loading = false;
         state.entity = action.payload.data;
       })
+      .addCase(getPreviousQuestion.fulfilled, (state, action) => {
+        state.loading = false;
+        state.entity = action.payload.data;
+      })
+      .addCase(getNextQuestion.fulfilled, (state, action) => {
+        state.loading = false;
+        state.entity = action.payload.data;
+      })
       .addCase(getTriviaQuestionInLevel.fulfilled, (state, action) => {
         state.loading = false;
         state.entity = action.payload.data;
       })
-      .addMatcher(isFulfilled(getTriviaQuestionInLevel), (state, action) => {
+      .addMatcher(isFulfilled(getNextQuestion), (state, action) => {
         const { data, headers } = action.payload;
 
         return {
@@ -90,6 +116,20 @@ export const TriviaGameSlice = createEntitySlice({
           errorMessage: null,
           updateSuccess: false,
           loading: true,
+          isFirstQuestion: headers['x-bibletriviaapp-first-question'],
+          isLastQuestion: headers['x-bibletriviaapp-last-question'],
+          entity: action.payload.data
+        };
+      })
+      .addMatcher(isFulfilled(getPreviousQuestion), (state, action) => {
+        const { data, headers } = action.payload;
+
+        return {
+          ...state,
+          errorMessage: null,
+          updateSuccess: false,
+          loading: true,
+          isFirstQuestion: headers['x-bibletriviaapp-first-question'],
           isLastQuestion: headers['x-bibletriviaapp-last-question'],
           entity: action.payload.data
         };
