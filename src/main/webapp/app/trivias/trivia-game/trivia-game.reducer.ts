@@ -1,11 +1,9 @@
 import axios from 'axios';
 import { createAsyncThunk, isFulfilled, isPending } from '@reduxjs/toolkit';
-import { ASC } from 'app/shared/util/pagination.constants';
-import { cleanEntity } from 'app/shared/util/entity-utils';
 import { EntityState, IQueryParams, createEntitySlice, serializeAxiosError } from 'app/shared/reducers/reducer.utils';
-import { ITriviaQuestion, defaultValue } from 'app/shared/model/trivia-question.model';
+import { IQuizEntry, defaultValue } from 'app/shared/model/quiz-entry.model';
 
-const initialState: EntityState<ITriviaQuestion> = {
+const initialState: EntityState<IQuizEntry> = {
   loading: false,
   errorMessage: null,
   entities: [],
@@ -21,66 +19,48 @@ const apiUrl = 'api/trivia-game';
 // Actions
 {/* prettier-ignore */}
 
-
-export const resetTrivia = createAsyncThunk(
-  'triviaGameQuestion/reset_trivia',
+export const createQuiz = createAsyncThunk(
+  'triviaGameQuestion/create_quiz',
   async (level: string) => {
-    const requestUrl = `${apiUrl}/reset/${level}`;
-    return await axios.get<ITriviaQuestion>(requestUrl);
+    const requestUrl = `${apiUrl}/create/${level}`;
+    return axios.get(requestUrl);
   },
   { serializeError: serializeAxiosError },
 );
 
-export const getTriviaQuestionInLevel = createAsyncThunk(
-  'triviaGameQuestion/fetch_entity_by_level',
-  async (level: string) => {
-    const requestUrl = `${apiUrl}/level/${level}`;
-    return axios.get<ITriviaQuestion>(requestUrl);
+export const resetQuiz = createAsyncThunk(
+  'triviaGameQuestion/reset_quiz',
+  async () => {
+    const requestUrl = `${apiUrl}/reset`;
+    return await axios.get(requestUrl);
   },
   { serializeError: serializeAxiosError },
 );
 
 export const getNextQuestion = createAsyncThunk(
-  'triviaGameQuestion/fetch_next_entity',
-  async ({ level, currentId }: { level: string, currentId: string | number }) => {
-    const requestUrl = `${apiUrl}/next/${level}/${currentId}`;
-    return axios.get<ITriviaQuestion>(requestUrl);
+  'triviaGameQuestion/next_question',
+  async (currentQuestionOrder: string | number ) => {
+    const requestUrl = `${apiUrl}/next/${currentQuestionOrder}`;
+    return axios.get<IQuizEntry>(requestUrl);
   },
   { serializeError: serializeAxiosError },
 );
 
 export const getPreviousQuestion = createAsyncThunk(
-  'triviaGameQuestion/fetch_previous_question',
-  async (currentId: string | number) => {
-    const requestUrl = `${apiUrl}/previous/${currentId}`;
-    return await axios.get<ITriviaQuestion>(requestUrl);
+  'triviaGameQuestion/previous_question',
+  async (currentQuestionOrder: string | number) => {
+    const requestUrl = `${apiUrl}/previous/${currentQuestionOrder}`;
+    return await axios.get<IQuizEntry>(requestUrl);
   },
   { serializeError: serializeAxiosError },
 );
 
-export const getQuestion = createAsyncThunk(
-  'triviaGameQuestion/fetch_entity',
-  async (id: string | number) => {
-    const requestUrl = `${apiUrl}/question/${id}`;
-    return axios.get<ITriviaQuestion>(requestUrl);
-  },
-  { serializeError: serializeAxiosError },
-);
 
-export const createTrivia = createAsyncThunk(
-  'triviaGameQuestion/create_entity',
-  async (id: string | number) => {
-    const requestUrl = `${apiUrl}/create`;
-    return axios.get<ITriviaQuestion>(requestUrl);
-  },
-  { serializeError: serializeAxiosError },
-);
-
-export const updateTrivia = createAsyncThunk(
-  'triviaGameQuestion/update_entity',
-  async ({ questionId, answers }: { questionId: string, answers: string[] }) => {
-    const requestUrl = `${apiUrl}/update/${questionId}?answers=${answers.join(',')}`;
-    return await axios.get<ITriviaQuestion>(requestUrl);
+export const updateQuiz = createAsyncThunk(
+  'triviaGameQuestion/update_quiz',
+  async ({ questionNum, answers }: { questionNum: string, answers: string[] }) => {
+    const requestUrl = `${apiUrl}/update/${questionNum}?answers=${answers.join(',')}`;
+    return await axios.get<IQuizEntry>(requestUrl);
   },
   { serializeError: serializeAxiosError },
 );
@@ -92,19 +72,14 @@ export const TriviaGameSlice = createEntitySlice({
   initialState,
   extraReducers(builder) {
     builder
-      .addCase(getQuestion.fulfilled, (state, action) => {
+      .addCase(createQuiz.fulfilled, (state, action) => {
         state.loading = false;
-        state.entity = action.payload.data;
       })
       .addCase(getPreviousQuestion.fulfilled, (state, action) => {
         state.loading = false;
         state.entity = action.payload.data;
       })
       .addCase(getNextQuestion.fulfilled, (state, action) => {
-        state.loading = false;
-        state.entity = action.payload.data;
-      })
-      .addCase(getTriviaQuestionInLevel.fulfilled, (state, action) => {
         state.loading = false;
         state.entity = action.payload.data;
       })
@@ -134,7 +109,7 @@ export const TriviaGameSlice = createEntitySlice({
           entity: action.payload.data
         };
       })
-      .addMatcher(isPending(getQuestion, createTrivia, updateTrivia), state => {
+      .addMatcher(isPending(createQuiz, resetQuiz, updateQuiz), state => {
         state.errorMessage = null;
         state.updateSuccess = false;
         state.loading = true;

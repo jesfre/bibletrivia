@@ -7,10 +7,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import axios from 'axios';
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import { EntityState, IQueryParams, createEntitySlice, serializeAxiosError } from 'app/shared/reducers/reducer.utils';
-import { ITriviaGameQuestion, defaultValue } from 'app/shared/model/trivia-game-question.model';
+import { IQuizEntry, defaultValue } from 'app/shared/model/quiz-entry.model';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
-import { getQuestion, updateTrivia, getTriviaQuestionInLevel, getNextQuestion, getPreviousQuestion } from './trivia-game.reducer';
-import { getEntitiesForQuestion } from 'app/entities/trivia-answer/trivia-answer.reducer';
+import { createQuiz, getNextQuestion, getPreviousQuestion, resetQuiz, updateQuiz } from './trivia-game.reducer';
 import { AnswerType } from 'app/shared/model/enumerations/answer-type.model';
 
 {/* prettier-ignore */}
@@ -24,32 +23,30 @@ const TriviaGameQuestion = () => {
   const [isChecked, setIsChecked] = useState(false);
   const [selectedValues, setSelectedValues] = useState([]);
 
-  const questionEntity = useAppSelector(state => state.triviaGameQuestion.entity);
+  const quizEntry = useAppSelector(state => state.triviaGameQuestion.entity);
   const loading = useAppSelector(state => state.triviaGameQuestion.loading);
   const isLastQuestion = useAppSelector(state => state.triviaGameQuestion.isLastQuestion);
   const isFirstQuestion = useAppSelector(state => state.triviaGameQuestion.isFirstQuestion);
 
   useEffect(() => {
-	var params = {level:complexityLevel, currentId:questionEntity.id ?? 0};
-    dispatch(getNextQuestion(params));
+    dispatch(getNextQuestion(0));
   }, []);
 
   const handleNextQuestionPageClick = () => {
 	  const fetchData = async () => {
-	    var updateParams = {questionId:questionEntity.id ?? 0, answers:selectedValues ?? []};
-	    await dispatch(updateTrivia(updateParams));
+	    var updateParams = {questionNum:quizEntry.orderNum ?? 0, answers:selectedValues ?? []};
+	    await dispatch(updateQuiz(updateParams));
 	   
-		var nextParams = {level:complexityLevel, currentId:questionEntity.id ?? 0};
-	    dispatch(getNextQuestion(nextParams));
+	    dispatch(getNextQuestion(quizEntry.orderNum ?? 0));
     };
     fetchData();
   };
   
   const handlePreviousQuestionPageClick = () => {
-	var data = {questionId:questionEntity.id, answers:selectedValues};
 	const fetchData = async () => {
-	    await dispatch(updateTrivia(data));
-	    dispatch(getPreviousQuestion(questionEntity.id));
+	var updateParams = {questionNum:quizEntry.orderNum ?? 0, answers:selectedValues ?? []};
+	    await dispatch(updateQuiz(updateParams));
+	    dispatch(getPreviousQuestion(quizEntry.orderNum ?? 0));
 	};
 	fetchData();
   };
@@ -65,18 +62,17 @@ const TriviaGameQuestion = () => {
   return (
         <div>
           <h3>{complexityLevel} Quiz</h3>
-          <dd><span>{questionEntity.questionType}</span></dd>
-          <dd><span>Question {questionEntity.id}.</span></dd>
-          <dt><span>{questionEntity.question}</span></dt>
-          
+          <dd><span>{quizEntry.triviaQuestion? quizEntry.triviaQuestion.questionType : ''}</span></dd>
+          <dd><span>Question {quizEntry.triviaQuestion? quizEntry.triviaQuestion.id : ''}.</span></dd>
+          <dt><span>{quizEntry.triviaQuestion? quizEntry.triviaQuestion.question: ''}</span></dt>
           <br/><br/>
 
-          {questionEntity.triviaAnswers && questionEntity.triviaAnswers.length > 0 ? (
+          {quizEntry.triviaAnswers && quizEntry.triviaAnswers.length > 0 ? (
             <div className="table-responsive">
-              {questionEntity.triviaAnswers.map((answer, i) => (
+              {quizEntry.triviaAnswers.map((answer, i) => (
                 <div key={`entity-${i}`}  className="answer">
                     <span>
-                      <input type={questionEntity.answerType === AnswerType.MULTIPLE ? 'checkbox' : 'radio'} name="selectedAnswers" value={answer.id}
+                      <input type={quizEntry.triviaQuestion.answerType === AnswerType.MULTIPLE ? 'checkbox' : 'radio'} name="selectedAnswers" value={answer.id}
                         onChange={handleChkChanged}/>
                     </span>
                     &nbsp;&nbsp;<span>{answer.answer}</span>

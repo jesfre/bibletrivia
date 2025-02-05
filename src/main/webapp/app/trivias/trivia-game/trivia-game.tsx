@@ -4,7 +4,7 @@ import { TriviaLevel } from 'app/shared/model/enumerations/trivia-level.model';
 import { Translate, ValidatedField, ValidatedForm, translate } from 'react-jhipster';
 import { Button } from 'reactstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { createTrivia, resetTrivia } from 'app/trivias/trivia-game/trivia-game.reducer';
+import { createQuiz, resetQuiz } from 'app/trivias/trivia-game/trivia-game.reducer';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
 {/* prettier-ignore */}
@@ -17,13 +17,15 @@ const TriviaGame = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-      dispatch(resetTrivia('EASY'));
-      dispatch(resetTrivia('DIFFICULT'));
+      dispatch(resetQuiz());
     }, []);
 
     const handleButtonClick = () => {
-      dispatch(createTrivia(''));
-      navigate('/game/trivia-game/question', { state: { complexityLevel: level } });
+	  const fetchData = async () => {
+	  	await dispatch(createQuiz(level));
+      	navigate('/game/trivia-game/question', { state: { complexityLevel: level } });
+	  };
+      fetchData();
     };
 
     return (

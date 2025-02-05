@@ -94,11 +94,7 @@ public class QuizServiceImpl implements QuizService {
     @Cacheable(cacheNames = "com.blogspot.jesfre.bibletrivia.domain.Quiz", key = "#sessionId")
     public Quiz addOrGetCached(String sessionId, Quiz quiz) {
         LOG.debug("Adding Quiz to cache...");
-        if(quiz != null) {
-        	return quiz;
-        } else {
-        	return new Quiz();
-        }
+        return quiz;
     }
     
     @Cacheable(cacheNames = "com.blogspot.jesfre.bibletrivia.domain.Quiz", key = "#sessionId")
