@@ -14,5 +14,5 @@ public final class Constants {
     private Constants() {}
     
  // TODO somehow configure the maximum number of questions per trivia
-    public static final int MAX_NUMBER_OF_QUESTIONS = 100;
+    public static final int MAX_NUMBER_OF_QUESTIONS = 10;
 }
