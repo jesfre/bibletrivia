@@ -155,6 +155,7 @@
     "idinvalid": "ID inválido",
     "idnotfound": "ID no encontrado",
     "nomorequestions": "No se encontraron más preguntas",
+    "noquestionsfound": "No se encontraron preguntas",
     "file": {
       "could.not.extract": "No se pudo extraer el fichero",
       "not.image": "Se esperaba que el fichero fuera una imagen pero se encontro \"{{ fileType }}\""
