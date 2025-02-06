@@ -112,7 +112,8 @@
       "show": "Show {{otherEntity}}",
       "next": "Siguiente",
       "nextEntity": "Siguiente {{otherEntity}}",
-      "end": "Terminar"
+      "end": "Terminar",
+      "finishQuiz": "Terminar Quiz"
     },
     "detail": {
       "field": "Campo",

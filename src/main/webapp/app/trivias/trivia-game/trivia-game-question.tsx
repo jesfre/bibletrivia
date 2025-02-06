@@ -105,9 +105,9 @@ const TriviaGameQuestion = () => {
 			)}
               &nbsp;
               {isLastQuestion == 'Y' ? (
-	              <Button tag={Button} replace color="primary" disabled={true}>
+	              <Button tag={Link} color="primary" to={`/game/trivia-game/result`}>
 	                <span className="d-none d-md-inline">
-	                  <Translate contentKey="entity.action.end">End</Translate>
+	                  <Translate contentKey="entity.action.finishQuiz">Finish</Translate>
 	                </span>
 	              </Button>
               ):(
