@@ -101,7 +101,11 @@ public class TriviaGameResource {
         } else {
         	headers.add("x-" + applicationName + "-last-question", "N");
         }
-        headers.add("x-" + applicationName + "-first-question", "N");
+        if(currentQuestionOrder == 0) {
+        	headers.add("x-" + applicationName + "-first-question", "Y");
+        } else {
+        	headers.add("x-" + applicationName + "-first-question", "N");
+        }
         LOG.debug("Added header for NextQ: {}", headers.toString());
         return ResponseUtil.wrapOrNotFound(Optional.ofNullable(nextQentry), headers);
     }
