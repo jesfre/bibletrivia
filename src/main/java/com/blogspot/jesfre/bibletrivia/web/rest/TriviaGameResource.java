@@ -206,6 +206,19 @@ public class TriviaGameResource {
 		return ResponseEntity.noContent().build();
 	}
 	
+	@GetMapping("/score/get")
+	public ResponseEntity<Quiz> calculateResults(HttpServletRequest request) throws URISyntaxException {
+		LOG.debug("Calculating results");
+		
+		HttpSession session = request.getSession();
+        String sessionId = session.getId();
+		
+		Quiz quiz = quizService.addOrGetCached(sessionId, null);
+
+		LOG.debug("Returning quiz {}", quiz);
+		return ResponseUtil.wrapOrNotFound(Optional.of(quiz));
+	}
+	
 	private String isQuizOwnerName() {
 		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
 		  if (authentication == null || authentication instanceof AnonymousAuthenticationToken) {

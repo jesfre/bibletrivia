@@ -59,6 +59,15 @@ const TriviaGameQuestion = () => {
     }
   };
   
+  const handleFinishClick = () => {
+	const execute = async () => {
+	  	//await dispatch(createQuiz(level));
+	  	//await dispatch(getResults());
+      	navigate('/game/trivia-game/score', { state: { complexityLevel: level } });
+	  };
+      execute();  
+  };
+  
   return (
         <div>
           <h3>{complexityLevel} Quiz</h3>
@@ -105,7 +114,7 @@ const TriviaGameQuestion = () => {
 			)}
               &nbsp;
               {isLastQuestion == 'Y' ? (
-	              <Button tag={Link} color="primary" to={`/game/trivia-game/result`}>
+	              <Button tag={Link} color="primary" to="/game/trivia-game/score"  >
 	                <span className="d-none d-md-inline">
 	                  <Translate contentKey="entity.action.finishQuiz">Finish</Translate>
 	                </span>

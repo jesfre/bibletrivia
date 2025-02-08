@@ -5,13 +5,13 @@ import ErrorBoundaryRoutes from 'app/shared/error/error-boundary-routes';
 
 import TriviaGame from './trivia-game';
 import TriviaGameQuestion from './trivia-game-question';
-import TriviaGameResult from './trivia-game-result';
+import TriviaGameScore from './trivia-game-score';
 
 const TriviaGameRoutes = () => (
   <ErrorBoundaryRoutes>
     <Route index element={<TriviaGame />} />
     <Route path="question" element={<TriviaGameQuestion />} />
-    <Route path="result" element={<TriviaGameResult />} />
+    <Route path="score" element={<TriviaGameScore />} />
   </ErrorBoundaryRoutes>
 );
 
