@@ -8,6 +8,7 @@ export interface IQuiz {
   totalQuestions?: number | null;
   correctQuestions?: number | null;
   owner?: IUser | null;
+  errorCount?: number | null;
 }
 
 export const defaultValue: Readonly<IQuiz> = {};

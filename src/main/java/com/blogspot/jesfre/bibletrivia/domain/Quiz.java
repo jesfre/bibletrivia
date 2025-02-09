@@ -45,6 +45,8 @@ public class Quiz implements Serializable {
 
     @ManyToOne(fetch = FetchType.LAZY)
     private User owner;
+    
+    private Integer errorCount;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here
     
@@ -111,7 +113,7 @@ public class Quiz implements Serializable {
     }
 
     public Integer getCorrectQuestions() {
-        return this.correctQuestions;
+        return this.correctQuestions != null ? this.correctQuestions : 0;
     }
 
     public Quiz correctQuestions(Integer correctQuestions) {
@@ -166,10 +168,19 @@ public class Quiz implements Serializable {
         this.setOwner(user);
         return this;
     }
-
+    
+    public Integer getErrorCount() {
+    	return errorCount;
+    }
+    
+    public void setErrorCount(Integer errorCount) {
+    	this.errorCount = errorCount;
+    }
+    
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here
 
-    @Override
+
+	@Override
     public boolean equals(Object o) {
         if (this == o) {
             return true;

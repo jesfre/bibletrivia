@@ -214,6 +214,7 @@ public class TriviaGameResource {
         String sessionId = session.getId();
 		
 		Quiz quiz = quizService.addOrGetCached(sessionId, null);
+		quiz.setErrorCount(quiz.getTotalQuestions() - quiz.getCorrectQuestions());
 
 		LOG.debug("Returning quiz {}", quiz);
 		return ResponseUtil.wrapOrNotFound(Optional.of(quiz));

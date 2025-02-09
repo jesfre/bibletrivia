@@ -22,6 +22,7 @@ const TriviaGameResult = () => {
           <br/>{quiz.quizTaker}'s Quiz
           <br/>Started at {quiz.startDate?.toString()}
           <br/>{quiz.correctQuestions} correct answers out of {quiz.totalQuestions} questions.
+          <br/>Errors: {quiz.errorCount}
           <br/>
 
           <br/><br/>
