@@ -19,8 +19,10 @@ const TriviaGameResult = () => {
   	return (
         <div>
           <h3>Quiz Results</h3>
-          <br/>{quiz.quizTaker}
-          <br/>{quiz.totalQuestions}
+          <br/>{quiz.quizTaker}'s Quiz
+          <br/>Started at {quiz.startDate?.toString()}
+          <br/>{quiz.correctQuestions} correct answers out of {quiz.totalQuestions} questions.
+          <br/>
 
           <br/><br/>
 
