@@ -188,21 +188,20 @@ public class TriviaGameResource {
         String sessionId = session.getId();
 		
 		Quiz quiz = quizService.addOrGetCached(sessionId, null);
-		Optional<QuizEntry> qeOptional = quiz.getQuizEntries().stream()
+		quiz.getQuizEntries().stream()
 			.filter(qe -> qe.getOrderNum() == questionNum)
-			.findFirst();
+			.forEach(qe -> {
+				List<Long> correctAnswers = qe.getTriviaAnswers().stream()
+						.filter( ta -> ta.getCorrect() )
+						.map( ta -> ta.getId() )
+						.collect(Collectors.toList());
+
+				boolean isAllCorrectAnswers = answers.containsAll(correctAnswers);
+				qe.setCorrect(isAllCorrectAnswers);
+				quizService.updateCached(sessionId, quiz);
+			});
 		
-		Set<TriviaAnswer> triviaAnswers = new HashSet<TriviaAnswer>();
-		if(qeOptional.isPresent()) {
-			QuizEntry qe = qeOptional.get();
-			answers.stream().forEach(a -> triviaAnswers.add(new TriviaAnswer().id(a)));
-			qe.getTriviaAnswers().clear();
-			qe.getTriviaAnswers().addAll(triviaAnswers);
-		}
-		
-		quizService.updateCached(sessionId, quiz);
 		LOG.debug("Cached quiz: {}", quizService.addOrGetCached(sessionId, null));
-		
 		return ResponseEntity.noContent().build();
 	}
 	
@@ -214,7 +213,9 @@ public class TriviaGameResource {
         String sessionId = session.getId();
 		
 		Quiz quiz = quizService.addOrGetCached(sessionId, null);
-		quiz.setErrorCount(quiz.getTotalQuestions() - quiz.getCorrectQuestions());
+		int correctCount = (int) quiz.getQuizEntries().stream().filter(qe -> qe.getCorrect()).count();
+		quiz.setCorrectQuestions(correctCount);
+		quiz.setErrorCount(quiz.getTotalQuestions() - correctCount);
 
 		LOG.debug("Returning quiz {}", quiz);
 		return ResponseUtil.wrapOrNotFound(Optional.of(quiz));

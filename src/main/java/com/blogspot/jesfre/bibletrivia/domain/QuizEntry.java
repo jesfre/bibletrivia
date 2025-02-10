@@ -25,10 +25,10 @@ public class QuizEntry implements Serializable {
 
     @NotNull
     @Column(name = "order_num", nullable = false)
-    private Integer orderNum;
+    private Integer orderNum = 0;
 
     @Column(name = "correct")
-    private Boolean correct;
+    private Boolean correct = false;
 
     @ManyToOne(optional = false)
     @NotNull

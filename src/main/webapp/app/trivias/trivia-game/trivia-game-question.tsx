@@ -11,6 +11,7 @@ import { IQuizEntry, defaultValue } from 'app/shared/model/quiz-entry.model';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 import { createQuiz, getNextQuestion, getPreviousQuestion, resetQuiz, updateQuiz } from './trivia-game.reducer';
 import { AnswerType } from 'app/shared/model/enumerations/answer-type.model';
+import { ITriviaAnswer } from 'app/shared/model/trivia-answer.model';
 
 {/* prettier-ignore */}
 
@@ -78,13 +79,13 @@ const TriviaGameQuestion = () => {
 
           {quizEntry.triviaAnswers && quizEntry.triviaAnswers.length > 0 ? (
             <div className="table-responsive">
-              {quizEntry.triviaAnswers.map((answer, i) => (
+              {quizEntry.triviaAnswers.map((answer: ITriviaAnswer, i) => (
                 <div key={`entity-${i}`}  className="answer">
                     <span>
                       <input type={quizEntry.triviaQuestion.answerType === AnswerType.MULTIPLE ? 'checkbox' : 'radio'} name="selectedAnswers" value={answer.id}
                         onChange={handleChkChanged}/>
                     </span>
-                    &nbsp;&nbsp;<span>{answer.answer}</span>
+                    &nbsp;&nbsp;<span>{answer.answer}</span> -- {answer.correct ? 'true' : 'false'}
                 </div>
                 ))}
             </div>
