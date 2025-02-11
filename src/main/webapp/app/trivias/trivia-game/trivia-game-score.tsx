@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import dayjs from 'dayjs';
 import { Link, useLocation, useNavigate, useParams } from 'react-router-dom';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 import { getScore } from './trivia-game-score.reducer';
@@ -19,13 +20,14 @@ const TriviaGameResult = () => {
   	return (
         <div>
           <h3>Quiz Results</h3>
-          <br/>{quiz.quizTaker}'s Quiz
-          <br/>Started at {quiz.startDate?.toString()}
-          <br/>{quiz.correctQuestions} correct answers out of {quiz.totalQuestions} questions.
-          <br/>Errors: {quiz.errorCount}
           <br/>
-
-          <br/><br/>
+          <h4>{quiz.quizTaker}'s Quiz</h4>
+          <h5>Started at {dayjs(quiz.startDate).format('MM/DD/YYYY HH:mm:ss')}</h5>
+          <br/>
+          <h5>Questions: {quiz.totalQuestions}</h5>
+          <h5>Correct answers: {quiz.correctQuestions}</h5>
+          <h5>Errors: {quiz.errorCount}</h5>
+          <br/>
 
         </div>
     );
