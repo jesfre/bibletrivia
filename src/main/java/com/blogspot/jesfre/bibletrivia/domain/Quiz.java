@@ -46,6 +46,7 @@ public class Quiz implements Serializable {
     @ManyToOne(fetch = FetchType.LAZY)
     private User owner;
     
+    @Transient
     private Integer errorCount;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here

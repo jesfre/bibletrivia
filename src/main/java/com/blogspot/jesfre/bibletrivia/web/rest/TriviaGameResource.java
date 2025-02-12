@@ -216,7 +216,11 @@ public class TriviaGameResource {
 		int correctCount = (int) quiz.getQuizEntries().stream().filter(qe -> qe.getCorrect()).count();
 		quiz.setCorrectQuestions(correctCount);
 		quiz.setErrorCount(quiz.getTotalQuestions() - correctCount);
-
+		
+		LOG.debug("Saving quiz: {}", quiz);
+		quizService.save(quiz);
+		LOG.debug("Quiz saved");
+		
 		LOG.debug("Returning quiz {}", quiz);
 		return ResponseUtil.wrapOrNotFound(Optional.of(quiz));
 	}
