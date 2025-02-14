@@ -30,7 +30,7 @@ public class QuizEntry implements Serializable {
     @Column(name = "correct")
     private Boolean correct = false;
 
-    @ManyToOne(optional = false)
+    @ManyToOne(optional = false, fetch = FetchType.LAZY)
     @NotNull
     @JsonIgnoreProperties(value = { "triviaAnswers", "trivias" }, allowSetters = true)
     private TriviaQuestion triviaQuestion;
@@ -164,6 +164,7 @@ public class QuizEntry implements Serializable {
             "id=" + getId() +
             ", orderNum=" + getOrderNum() +
             ", correct='" + getCorrect() + "'" +
+            ", triviaQuestion=" + getTriviaQuestion() +
             "}";
     }
 }

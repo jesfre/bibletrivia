@@ -9,6 +9,7 @@ import { IQuiz } from 'app/shared/model/quiz.model';
 
 import { IQuizEntry } from 'app/shared/model/quiz-entry.model';
 import { Button, Table } from 'reactstrap';
+import { ITriviaQuestion } from 'app/shared/model/trivia-question.model';
 
 {/* prettier-ignore */}
 
@@ -66,8 +67,8 @@ const TriviaGameResult = () => {
 	                    </td>
 	                    <td>{quizEntry.orderNum}</td>
 	                    <td>{quizEntry.correct ? 'Yes' : 'No'}</td>
-	                    <td>
-	                      {quizEntry.triviaQuestion ? ( quizEntry.triviaQuestion.question ) : ( '-' )}
+	                    <td>{quizEntry.triviaQuestion?.question}
+	                      {quizEntry.triviaQuestion?  quizEntry.triviaQuestion.question : '-' }
 	                    </td>
 	                    <td className="text-end">
 	                      <div className="btn-group flex-btn-group-container">
