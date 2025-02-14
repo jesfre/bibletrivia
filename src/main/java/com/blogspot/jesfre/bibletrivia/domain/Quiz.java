@@ -39,7 +39,7 @@ public class Quiz implements Serializable {
     @Column(name = "correct_questions")
     private Integer correctQuestions;
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "quiz")
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "quiz", cascade = CascadeType.PERSIST)
     @JsonIgnoreProperties(value = { "triviaQuestion", "triviaAnswers", "quiz" }, allowSetters = true)
     private Set<QuizEntry> quizEntries = new HashSet<>();
 
@@ -207,6 +207,7 @@ public class Quiz implements Serializable {
             ", startDate='" + getStartDate() + "'" +
             ", totalQuestions=" + getTotalQuestions() +
             ", correctQuestions=" + getCorrectQuestions() +
+            ", quizEntries=" + getQuizEntries() +
             "}";
     }
 }

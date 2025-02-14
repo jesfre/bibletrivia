@@ -1,5 +1,6 @@
 import dayjs from 'dayjs';
 import { IUser } from 'app/shared/model/user.model';
+import { IQuizEntry } from './quiz-entry.model';
 
 export interface IQuiz {
   id?: number;
@@ -9,6 +10,7 @@ export interface IQuiz {
   correctQuestions?: number | null;
   owner?: IUser | null;
   errorCount?: number | null;
+  quizEntries?: IQuizEntry[] | null;
 }
 
 export const defaultValue: Readonly<IQuiz> = {};

@@ -34,6 +34,7 @@ import com.blogspot.jesfre.bibletrivia.domain.TriviaAnswer;
 import com.blogspot.jesfre.bibletrivia.domain.TriviaQuestion;
 import com.blogspot.jesfre.bibletrivia.domain.User;
 import com.blogspot.jesfre.bibletrivia.domain.enumeration.TriviaLevel;
+import com.blogspot.jesfre.bibletrivia.service.QuizEntryService;
 import com.blogspot.jesfre.bibletrivia.service.QuizService;
 import com.blogspot.jesfre.bibletrivia.service.TriviaQuestionService;
 import com.blogspot.jesfre.bibletrivia.service.UserService;
@@ -61,11 +62,14 @@ public class TriviaGameResource {
 	
 	private final TriviaQuestionService triviaQuestionService;
 	private final QuizService quizService;
+	private final QuizEntryService quizEntryService;
 	private final UserService userService;
 
-    public TriviaGameResource(TriviaQuestionService triviaQuestionService, QuizService quizService, UserService userService) {
+    public TriviaGameResource(TriviaQuestionService triviaQuestionService, 
+    		QuizService quizService, QuizEntryService quizEntryService, UserService userService) {
         this.triviaQuestionService = triviaQuestionService;
         this.quizService = quizService;
+        this.quizEntryService = quizEntryService;
         this.userService = userService;
     }
     
@@ -218,11 +222,13 @@ public class TriviaGameResource {
 		quiz.setErrorCount(quiz.getTotalQuestions() - correctCount);
 		
 		LOG.debug("Saving quiz: {}", quiz);
-		quizService.save(quiz);
+		quiz = quizService.save(quiz);
 		LOG.debug("Quiz saved");
 		
+//		Optional<Quiz> fromDb = quizService.findOneWithEntries(quiz.getId());
+		
 		LOG.debug("Returning quiz {}", quiz);
-		return ResponseUtil.wrapOrNotFound(Optional.of(quiz));
+		return ResponseUtil.wrapOrNotFound(Optional.ofNullable(quiz));
 	}
 	
 	private String isQuizOwnerName() {

@@ -37,4 +37,7 @@ public interface QuizRepository extends JpaRepository<Quiz, Long> {
 
     @Query("select quiz from Quiz quiz left join fetch quiz.owner where quiz.id =:id")
     Optional<Quiz> findOneWithToOneRelationships(@Param("id") Long id);
+    
+    @Query("select quiz from Quiz quiz left join fetch quiz.quizEntries where quiz.id =:id")
+    Optional<Quiz> findOneWithQuizEntries(@Param("id") Long id);
 }

@@ -84,6 +84,13 @@ public class QuizServiceImpl implements QuizService {
         LOG.debug("Request to get Quiz : {}", id);
         return quizRepository.findOneWithEagerRelationships(id);
     }
+    
+    @Override
+    @Transactional(readOnly = true)
+    public Optional<Quiz> findOneWithEntries(Long id) {
+        LOG.debug("Request to get Quiz with entries: {}", id);
+        return quizRepository.findOneWithQuizEntries(id);
+    }
 
     @Override
     public void delete(Long id) {

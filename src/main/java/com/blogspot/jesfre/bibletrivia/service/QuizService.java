@@ -59,6 +59,8 @@ public interface QuizService {
      */
     Optional<Quiz> findOne(Long id);
 
+    Optional<Quiz> findOneWithEntries(Long id);
+    
     /**
      * Delete the "id" quiz.
      *
