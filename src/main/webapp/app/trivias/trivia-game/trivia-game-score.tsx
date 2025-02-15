@@ -43,9 +43,6 @@ const TriviaGameResult = () => {
 	              <thead>
 	                <tr>
 	                  <th >
-	                    <Translate contentKey="bibletriviaApp.quizEntry.id">ID</Translate>{' '}
-	                  </th>
-	                  <th >
 	                    <Translate contentKey="bibletriviaApp.quizEntry.orderNum">Order Num</Translate>{' '}
 	                  </th>
 	                  <th >
@@ -62,10 +59,9 @@ const TriviaGameResult = () => {
 	                  <tr key={`entity-${i}`} data-cy="entityTable">
 	                    <td>
 	                      <Button tag={Link} to={`/quiz-entry/${quizEntry.id}`} color="link" size="sm">
-	                        {quizEntry.id}
+	                        {quizEntry.orderNum}
 	                      </Button>
 	                    </td>
-	                    <td>{quizEntry.orderNum}</td>
 	                    <td>{quizEntry.correct ? 'Yes' : 'No'}</td>
 	                    <td>{quizEntry.triviaQuestion?.question}
 	                      {quizEntry.triviaQuestion?  quizEntry.triviaQuestion.question : '-' }

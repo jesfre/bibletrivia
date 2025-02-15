@@ -219,7 +219,6 @@ public class TriviaGameResource {
 		Quiz quiz = quizService.addOrGetCached(sessionId, null);
 		int correctCount = (int) quiz.getQuizEntries().stream().filter(qe -> qe.getCorrect()).count();
 		quiz.setCorrectQuestions(correctCount);
-		quiz.setErrorCount(quiz.getTotalQuestions() - correctCount);
 		
 		LOG.debug("Saving quiz: {}", quiz);
 		quiz = quizService.save(quiz);
@@ -227,6 +226,7 @@ public class TriviaGameResource {
 		
 //		Optional<Quiz> fromDb = quizService.findOneWithEntries(quiz.getId());
 		
+		quiz.setErrorCount(quiz.getTotalQuestions() - correctCount);
 		LOG.debug("Returning quiz {}", quiz);
 		return ResponseUtil.wrapOrNotFound(Optional.ofNullable(quiz));
 	}

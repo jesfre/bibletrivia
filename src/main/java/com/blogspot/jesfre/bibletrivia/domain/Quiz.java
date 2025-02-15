@@ -1,6 +1,8 @@
 package com.blogspot.jesfre.bibletrivia.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
 import java.io.Serializable;
@@ -170,6 +172,7 @@ public class Quiz implements Serializable {
         return this;
     }
     
+    @JsonProperty("errorCount")
     public Integer getErrorCount() {
     	return errorCount;
     }
@@ -207,6 +210,7 @@ public class Quiz implements Serializable {
             ", startDate='" + getStartDate() + "'" +
             ", totalQuestions=" + getTotalQuestions() +
             ", correctQuestions=" + getCorrectQuestions() +
+            ", errorCount=" + getErrorCount() +
             ", quizEntries=" + getQuizEntries() +
             "}";
     }
