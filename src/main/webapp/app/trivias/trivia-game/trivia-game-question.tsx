@@ -16,18 +16,19 @@ const TriviaGameQuestion = () => {
   const dispatch = useAppDispatch();
   const location = useLocation();
   const complexityLevel = location.state?.complexityLevel;
+  const questionNumber = location.state?.questionNumber;
   const navigate = useNavigate();
   const [level, setLevel] = useState('0');
   const [isChecked, setIsChecked] = useState(false);
   const [selectedValues, setSelectedValues] = useState([]);
 
-  const quizEntry = useAppSelector(state => state.triviaGameQuestion.entity);
+  const quizEntry: IQuizEntry = useAppSelector(state => state.triviaGameQuestion.entity);
   const loading = useAppSelector(state => state.triviaGameQuestion.loading);
   const isLastQuestion = useAppSelector(state => state.triviaGameQuestion.isLastQuestion);
   const isFirstQuestion = useAppSelector(state => state.triviaGameQuestion.isFirstQuestion);
 
   useEffect(() => {
-    dispatch(getNextQuestion(0));
+    dispatch(getNextQuestion(questionNumber ? questionNumber-1 : 0));
   }, []);
 
   const handleNextQuestionPageClick = () => {
@@ -61,7 +62,7 @@ const TriviaGameQuestion = () => {
 	const execute = async () => {
 	  	//await dispatch(createQuiz(level));
 	  	//await dispatch(getResults());
-      	navigate('/game/trivia-game/score', { state: { complexityLevel: level } });
+      	navigate('/game/trivia-game/score');
 	  };
       execute();  
   };
@@ -69,8 +70,9 @@ const TriviaGameQuestion = () => {
   return (
         <div>
           <h3>{complexityLevel} Quiz</h3>
+          <dd><span>Question #{quizEntry.orderNum}.</span></dd>
+          <dd><span>Question ID: {quizEntry.triviaQuestion? quizEntry.triviaQuestion.id : ''}.</span></dd>
           <dd><span>{quizEntry.triviaQuestion? quizEntry.triviaQuestion.questionType : ''}</span></dd>
-          <dd><span>Question {quizEntry.triviaQuestion? quizEntry.triviaQuestion.id : ''}.</span></dd>
           <dt><span>{quizEntry.triviaQuestion? quizEntry.triviaQuestion.question: ''}</span></dt>
           <br/><br/>
 

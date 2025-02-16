@@ -26,7 +26,7 @@ const TriviaGameResult = () => {
 	
   	return (
         <div>
-          <h3>Quiz Results</h3>
+          <h3>Quiz Results {quiz.id}</h3>
           <br/>
           <h4>{quiz.quizTaker}'s Quiz</h4>
           <h5>Started at {dayjs(quiz.startDate).format('MM/DD/YYYY HH:mm:ss')}</h5>
@@ -58,7 +58,9 @@ const TriviaGameResult = () => {
 	                {quizEntryList.map((quizEntry, i) => (
 	                  <tr key={`entity-${i}`} data-cy="entityTable">
 	                    <td>
-	                      <Button tag={Link} to={`/quiz-entry/${quizEntry.id}`} color="link" size="sm">
+	                      <Button tag={Link} to={`/game/trivia-game/question`} 
+	                      		state={{ questionNumber: quizEntry.orderNum }}
+	                      		color="link" size="sm">
 	                        {quizEntry.orderNum}
 	                      </Button>
 	                    </td>

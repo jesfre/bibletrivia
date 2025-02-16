@@ -58,7 +58,7 @@ export const getPreviousQuestion = createAsyncThunk(
 
 export const updateQuiz = createAsyncThunk(
   'triviaGameQuestion/update_quiz',
-  async ({ questionNum, answers }: { questionNum: string, answers: string[] }) => {
+  async ({ questionNum, answers }: { questionNum: string | number, answers: string[] }) => {
     const requestUrl = `${apiUrl}/update/${questionNum}?answers=${answers.join(',')}`;
     return await axios.get<IQuizEntry>(requestUrl);
   },
