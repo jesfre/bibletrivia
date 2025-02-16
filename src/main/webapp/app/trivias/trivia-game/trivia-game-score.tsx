@@ -70,7 +70,9 @@ const TriviaGameResult = () => {
 	                    </td>
 	                    <td className="text-end">
 	                      <div className="btn-group flex-btn-group-container">
-	                        <Button tag={Link} to={`/quiz-entry/${quizEntry.id}`} color="info" size="sm" data-cy="entityDetailsButton">
+	                        <Button tag={Link} to={`/game/trivia-game/question`}
+	                        	state={{ questionNumber: quizEntry.orderNum }}
+	                        	color="info" size="sm">
 	                          <FontAwesomeIcon icon="eye" />{' '}
 	                          <span className="d-none d-md-inline">
 	                            <Translate contentKey="entity.action.view">View</Translate>
