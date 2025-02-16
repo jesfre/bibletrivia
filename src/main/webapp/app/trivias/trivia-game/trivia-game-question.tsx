@@ -26,6 +26,7 @@ const TriviaGameQuestion = () => {
   const loading = useAppSelector(state => state.triviaGameQuestion.loading);
   const isLastQuestion = useAppSelector(state => state.triviaGameQuestion.isLastQuestion);
   const isFirstQuestion = useAppSelector(state => state.triviaGameQuestion.isFirstQuestion);
+  const quizId:number = quizEntry.quiz?quizEntry.quiz.id:0;
 
   useEffect(() => {
     dispatch(getNextQuestion(questionNumber ? questionNumber-1 : 0));
@@ -69,7 +70,7 @@ const TriviaGameQuestion = () => {
   
   return (
         <div>
-          <h3>{complexityLevel} Quiz</h3>
+          <h3>{complexityLevel} Quiz {quizId}</h3>
           <dd><span>Question #{quizEntry.orderNum}.</span></dd>
           <dd><span>Question ID: {quizEntry.triviaQuestion? quizEntry.triviaQuestion.id : ''}.</span></dd>
           <dd><span>{quizEntry.triviaQuestion? quizEntry.triviaQuestion.questionType : ''}</span></dd>
@@ -82,7 +83,7 @@ const TriviaGameQuestion = () => {
                 <div key={`entity-${i}`}  className="answer">
                     <span>
                       <input type={quizEntry.triviaQuestion.answerType === AnswerType.MULTIPLE ? 'checkbox' : 'radio'} name="selectedAnswers" value={answer.id}
-                        onChange={handleChkChanged}/>
+                        onChange={handleChkChanged} disabled={quizId > 0} />
                     </span>
                     &nbsp;&nbsp;<span>{answer.answer}</span> -- {answer.correct ? 'true' : 'false'}
                 </div>

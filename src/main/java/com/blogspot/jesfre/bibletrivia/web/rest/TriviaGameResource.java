@@ -98,6 +98,7 @@ public class TriviaGameResource {
         		.filter(qe -> qe.getOrderNum() == currentQuestionOrder+1)
         		.findFirst().orElse(null);
         
+        nextQentry.setQuiz(currentQuiz);
         
         HttpHeaders headers = new HttpHeaders();
         if(nextQentry.getOrderNum() == currentQuiz.getTotalQuestions()) {
