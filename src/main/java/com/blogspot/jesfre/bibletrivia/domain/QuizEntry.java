@@ -32,7 +32,7 @@ public class QuizEntry implements Serializable {
 
     @ManyToOne(optional = false, fetch = FetchType.LAZY)
     @NotNull
-    @JsonIgnoreProperties(value = { "triviaAnswers", "trivias" }, allowSetters = true)
+    @JsonIgnoreProperties(value = { "trivias" }, allowSetters = true)
     private TriviaQuestion triviaQuestion;
 
     @ManyToMany(fetch = FetchType.LAZY)
@@ -42,7 +42,7 @@ public class QuizEntry implements Serializable {
         inverseJoinColumns = @JoinColumn(name = "trivia_answers_id")
     )
     @JsonIgnoreProperties(value = { "bibleReferences", "triviaQuestion", "quizEntries" }, allowSetters = true)
-    private Set<TriviaAnswer> triviaAnswers = new HashSet<>();
+    private Set<TriviaAnswer> selectedAnswers = new HashSet<>();
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JsonIgnoreProperties(value = { "quizEntries", "owner" }, allowSetters = true)
@@ -102,26 +102,26 @@ public class QuizEntry implements Serializable {
         return this;
     }
 
-    public Set<TriviaAnswer> getTriviaAnswers() {
-        return this.triviaAnswers;
+    public Set<TriviaAnswer> getSelectedAnswers() {
+        return this.selectedAnswers;
     }
 
-    public void setTriviaAnswers(Set<TriviaAnswer> triviaAnswers) {
-        this.triviaAnswers = triviaAnswers;
+    public void setSelectedAnswers(Set<TriviaAnswer> selectedAnswers) {
+        this.selectedAnswers = selectedAnswers;
     }
 
-    public QuizEntry triviaAnswers(Set<TriviaAnswer> triviaAnswers) {
-        this.setTriviaAnswers(triviaAnswers);
+    public QuizEntry selectedAnswers(Set<TriviaAnswer> selectedAnswers) {
+        this.setSelectedAnswers(selectedAnswers);
         return this;
     }
 
-    public QuizEntry addTriviaAnswers(TriviaAnswer triviaAnswer) {
-        this.triviaAnswers.add(triviaAnswer);
+    public QuizEntry addSelectedAnswers(TriviaAnswer selectedAnswer) {
+        this.selectedAnswers.add(selectedAnswer);
         return this;
     }
 
-    public QuizEntry removeTriviaAnswers(TriviaAnswer triviaAnswer) {
-        this.triviaAnswers.remove(triviaAnswer);
+    public QuizEntry removeSelectedAnswers(TriviaAnswer selectedAnswer) {
+        this.selectedAnswers.remove(selectedAnswer);
         return this;
     }
 

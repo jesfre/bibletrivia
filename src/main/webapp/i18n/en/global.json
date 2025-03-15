@@ -113,7 +113,8 @@
       "next": "Next",
       "nextEntity": "Next {{otherEntity}}",
       "end": "End",
-      "finishQuiz": "Finish Quiz"
+      "finishQuiz": "Finish Quiz",
+      "viewScore": "View Score"
     },
     "detail": {
       "field": "Field",

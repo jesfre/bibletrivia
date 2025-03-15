@@ -96,6 +96,14 @@ public class TriviaGameResource {
         
         QuizEntry nextQentry = currentQuiz.getQuizEntries().stream()
         		.filter(qe -> qe.getOrderNum() == currentQuestionOrder+1)
+        		.peek( qe -> { 
+        			// Mark any answers that were previously selected
+        			Set<Long> selectedAnseIdSet = qe.getSelectedAnswers().stream()
+        					.map( TriviaAnswer::getId )
+        					.collect( Collectors.toSet() );
+        			qe.getTriviaQuestion().getTriviaAnswers().stream()
+        				.forEach( ta -> ta.setSelected( selectedAnseIdSet.contains(ta.getId()) ) );
+        		})
         		.findFirst().orElse(null);
         
         nextQentry.setQuiz(currentQuiz);
@@ -123,6 +131,20 @@ public class TriviaGameResource {
         
         QuizEntry previousQentry = currentQuiz.getQuizEntries().stream()
         		.filter(qe -> qe.getOrderNum() == currentQuestionOrder-1)
+
+        		.peek( qe -> { 
+        			LOG.debug("Previously selected answers {}", qe.getSelectedAnswers());
+        			
+        			// Mark any answers that were previously selected
+        			Set<Long> selectedAnswerIdSet = qe.getSelectedAnswers().stream()
+        					.map( TriviaAnswer::getId )
+        					.collect( Collectors.toSet() );
+        			LOG.debug("List of previously selected answer Ids:{}", selectedAnswerIdSet);
+        			
+        			qe.getTriviaQuestion().getTriviaAnswers().stream()
+        				.forEach( ta -> ta.setSelected( selectedAnswerIdSet.contains(ta.getId()) ) );
+        		})
+        		
         		.findFirst().orElseThrow();
         
         HttpHeaders headers = new HttpHeaders();
@@ -171,7 +193,9 @@ public class TriviaGameResource {
 	        		.map(q -> new QuizEntry()
 	        			.orderNum(counter.incrementAndGet())
 	        			.triviaQuestion(q)
-	        			.triviaAnswers(new HashSet<TriviaAnswer>(q.getTriviaAnswers())))
+	        			// selectedAnswers must start fresh
+	        			//.selectedAnswers(new HashSet<TriviaAnswer>(q.getTriviaAnswers()))
+	        		)
 	        		.collect(Collectors.toSet());
 	        quiz.setQuizEntries(quizEntries);
 	        quiz.setTotalQuestions(quizEntries.size());
@@ -187,7 +211,7 @@ public class TriviaGameResource {
 	@GetMapping("/update/{questionNum}")
 	public ResponseEntity<Void> updateTriviaGame(HttpServletRequest request, 
 			@PathVariable("questionNum") Integer questionNum, @RequestParam("answers") List<Long> answers) throws URISyntaxException {
-		LOG.debug("Got questionNum={}, asnwers={}", questionNum, answers);
+		LOG.debug("Got questionNum={}, answers={}", questionNum, answers);
 		
 		HttpSession session = request.getSession();
         String sessionId = session.getId();
@@ -196,10 +220,24 @@ public class TriviaGameResource {
 		quiz.getQuizEntries().stream()
 			.filter(qe -> qe.getOrderNum() == questionNum)
 			.forEach(qe -> {
-				List<Long> correctAnswers = qe.getTriviaAnswers().stream()
-						.filter( ta -> ta.getCorrect() )
-						.map( ta -> ta.getId() )
-						.collect(Collectors.toList());
+				// Clear previously selected answers
+				qe.getSelectedAnswers().clear();
+				
+				// Add the newly selected answers to the quiz entry
+				qe.getTriviaQuestion().getTriviaAnswers().stream()
+					.filter( ta -> answers.contains(ta.getId()) )
+					.peek( ta -> ta.setSelected(true) )
+					.forEach( qe::addSelectedAnswers );
+				
+				LOG.debug("Selected answers {}", qe.getSelectedAnswers());
+				
+				//qe.getSelectedAnswers().stream().forEach(ta -> ta.setSelected(answers.contains(ta.getId())));
+				
+				// Get correct answers for this question
+				List<Long> correctAnswers = qe.getSelectedAnswers().stream()
+					.filter( TriviaAnswer::getCorrect )
+					.map( TriviaAnswer::getId )
+					.collect(Collectors.toList());
 
 				boolean isAllCorrectAnswers = answers.containsAll(correctAnswers);
 				qe.setCorrect(isAllCorrectAnswers);

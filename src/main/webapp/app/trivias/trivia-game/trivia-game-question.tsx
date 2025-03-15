@@ -6,7 +6,7 @@ import { Button, Table, Col, Row } from 'reactstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { IQuizEntry, defaultValue } from 'app/shared/model/quiz-entry.model';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
-import { createQuiz, getNextQuestion, getPreviousQuestion, resetQuiz, updateQuiz } from './trivia-game.reducer';
+import { createQuiz, getNextQuestion, getPreviousQuestion, resetQuiz, updateQuiz, updateQuizEntry } from './trivia-game.reducer';
 import { AnswerType } from 'app/shared/model/enumerations/answer-type.model';
 import { ITriviaAnswer } from 'app/shared/model/trivia-answer.model';
 
@@ -27,15 +27,28 @@ const TriviaGameQuestion = () => {
   const isLastQuestion = useAppSelector(state => state.triviaGameQuestion.isLastQuestion);
   const isFirstQuestion = useAppSelector(state => state.triviaGameQuestion.isFirstQuestion);
   const quizId:number = quizEntry.quiz?quizEntry.quiz.id:0;
+  
+  const [selectedAnswers, setSelectedAnswers] = useState(quizEntry.selectedAnswers);
 
   useEffect(() => {
+	  /*
+	  var containsEntry = false;
+        quizEntry.forEach(te => te.id == state.entity.id ? containsEntry=true : null);
+        if(!containsEntry) {
+        	state.entities = [...state.entities, state.entity];
+		}
+        state.entity = action.payload.data;
+	  */
     dispatch(getNextQuestion(questionNumber ? questionNumber-1 : 0));
   }, []);
 
   const handleNextQuestionPageClick = () => {
 	  const fetchData = async () => {
-	    var updateParams = {questionNum:quizEntry.orderNum ?? 0, answers:selectedValues ?? []};
-	    await dispatch(updateQuiz(updateParams));
+		if(quizId < 1) {
+			// Will update only when quiz is not finished
+		    var updateParams = {questionNum:quizEntry.orderNum ?? 0, answers:selectedValues ?? []};
+		    await dispatch(updateQuiz(updateParams));
+		}
 	   
 	    dispatch(getNextQuestion(quizEntry.orderNum ?? 0));
     };
@@ -44,18 +57,21 @@ const TriviaGameQuestion = () => {
   
   const handlePreviousQuestionPageClick = () => {
 	const fetchData = async () => {
-	var updateParams = {questionNum:quizEntry.orderNum ?? 0, answers:selectedValues ?? []};
-	    await dispatch(updateQuiz(updateParams));
+		if(quizId < 1) {
+			// Will update only when quiz is not finished
+			var updateParams = {questionNum:quizEntry.orderNum ?? 0, answers:selectedValues ?? []};
+		    await dispatch(updateQuiz(updateParams));
+	    }
 	    dispatch(getPreviousQuestion(quizEntry.orderNum ?? 0));
 	};
 	fetchData();
   };
 
   const handleChkChanged = (event) => {
-    setIsChecked(event.target.checked);
+    dispatch(updateQuizEntry({ansId:event.target.value, ansChk:event.target.checked}));
+
     if(event.target.checked && !selectedValues.includes(event.target.value)) {
       setSelectedValues([...selectedValues, event.target.value]);
-      console.log (`val=${selectedValues}`);
     }
   };
   
@@ -77,13 +93,15 @@ const TriviaGameQuestion = () => {
           <dt><span>{quizEntry.triviaQuestion? quizEntry.triviaQuestion.question: ''}</span></dt>
           <br/><br/>
 
-          {quizEntry.triviaAnswers && quizEntry.triviaAnswers.length > 0 ? (
+          {quizEntry.triviaQuestion?.triviaAnswers && quizEntry.triviaQuestion?.triviaAnswers.length > 0 ? (
             <div className="table-responsive">
-              {quizEntry.triviaAnswers.map((answer: ITriviaAnswer, i) => (
+              {quizEntry.triviaQuestion?.triviaAnswers.map((answer: ITriviaAnswer, i) => (
                 <div key={`entity-${i}`}  className="answer">
                     <span>
-                      <input type={quizEntry.triviaQuestion.answerType === AnswerType.MULTIPLE ? 'checkbox' : 'radio'} name="selectedAnswers" value={answer.id}
-                        onChange={handleChkChanged} disabled={quizId > 0} />
+                      <input type={quizEntry.triviaQuestion.answerType === AnswerType.MULTIPLE ? 'checkbox' : 'radio'} 
+                      	name="selectedAnswers" value={answer.id}
+                        onChange={handleChkChanged} disabled={quizId > 0} 
+                        checked={answer.selected} />
                     </span>
                     &nbsp;&nbsp;<span>{answer.answer}</span> -- {answer.correct ? 'true' : 'false'}
                 </div>
@@ -100,13 +118,13 @@ const TriviaGameQuestion = () => {
           <br/><br/>
           <div className="button-section">
           	{isFirstQuestion == 'Y' ? (
-			  <Button tag={Button} replace color="primary" disabled={true}>
+			  <Button tag={Button} color="primary" disabled={true}>
                 <span className="d-none d-md-inline">
                   <Translate contentKey="entity.action.back">Back</Translate>
                 </span>
               </Button>
             ):(
-			  <Button tag={Button} onClick={handlePreviousQuestionPageClick} replace color="info" data-cy="entityDetailsBackButton">
+			  <Button tag={Button} onClick={handlePreviousQuestionPageClick} color="info" data-cy="entityDetailsBackButton">
                 <FontAwesomeIcon icon="arrow-left" />{' '}
                 <span className="d-none d-md-inline">
                   <Translate contentKey="entity.action.back">Back</Translate>
@@ -117,11 +135,15 @@ const TriviaGameQuestion = () => {
               {isLastQuestion == 'Y' ? (
 	              <Button tag={Link} color="primary" to="/game/trivia-game/score"  >
 	                <span className="d-none d-md-inline">
-	                  <Translate contentKey="entity.action.finishQuiz">Finish</Translate>
+	                  {quizId > 0 ? (
+	                 	<Translate contentKey="entity.action.viewScore">View Score</Translate>
+	                  ) : (
+						<Translate contentKey="entity.action.finishQuiz">Finish</Translate>  
+					  )}
 	                </span>
 	              </Button>
               ):(
-	              <Button tag={Button} onClick={handleNextQuestionPageClick} replace color="info" data-cy="entityDetailsBackButton">
+	              <Button tag={Button} onClick={handleNextQuestionPageClick} color="info" data-cy="entityDetailsBackButton">
 	              	<FontAwesomeIcon icon="arrow-right" />{' '}
 	                <span className="d-none d-md-inline">
 	                  <Translate contentKey="entity.action.next">Next</Translate>

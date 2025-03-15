@@ -70,6 +70,15 @@ export const updateQuiz = createAsyncThunk(
 export const TriviaGameSlice = createEntitySlice({
   name: 'triviaGameQuestion',
   initialState,
+  reducers: {
+    updateQuizEntry: (state, action)=>{
+      state.entity.triviaQuestion?.triviaAnswers?.forEach(ta => {
+      	if(ta.id == action.payload.ansId) {
+			ta.selected = action.payload.ansChk;
+		}
+      });
+    }
+  },
   extraReducers(builder) {
     builder
       .addCase(createQuiz.fulfilled, (state, action) => {
@@ -82,6 +91,11 @@ export const TriviaGameSlice = createEntitySlice({
       .addCase(getNextQuestion.fulfilled, (state, action) => {
         state.loading = false;
         state.entity = action.payload.data;
+        var containsEntry = false;
+        state.entities.forEach(te => te.id == state.entity.id ? containsEntry=true : null);
+        if(!containsEntry) {
+        	state.entities = [...state.entities, state.entity];
+		}
       })
       .addMatcher(isFulfilled(getNextQuestion), (state, action) => {
         const { data, headers } = action.payload;
@@ -117,7 +131,7 @@ export const TriviaGameSlice = createEntitySlice({
   },
 });
 
-export const { reset } = TriviaGameSlice.actions;
+export const { reset, updateQuizEntry } = TriviaGameSlice.actions;
 
 // Reducer
 export default TriviaGameSlice.reducer;

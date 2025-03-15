@@ -9,6 +9,7 @@ export interface ITriviaAnswer {
   explanation?: string | null;
   correct?: boolean | null;
   picture?: string | null;
+  selected?: boolean | false;
   bibleReferences?: IBibleReference[] | null;
   triviaQuestion?: ITriviaQuestion | null;
   quizEntries?: IQuizEntry[] | null;

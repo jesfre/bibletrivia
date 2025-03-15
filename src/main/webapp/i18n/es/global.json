@@ -113,7 +113,8 @@
       "next": "Siguiente",
       "nextEntity": "Siguiente {{otherEntity}}",
       "end": "Terminar",
-      "finishQuiz": "Terminar Quiz"
+      "finishQuiz": "Terminar Quiz",
+      "viewScore": "Ver Resultados"
     },
     "detail": {
       "field": "Campo",

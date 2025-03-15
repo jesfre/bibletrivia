@@ -1,6 +1,8 @@
 package com.blogspot.jesfre.bibletrivia.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import jakarta.persistence.*;
 import java.io.Serializable;
 import java.util.HashSet;
@@ -50,10 +52,13 @@ public class TriviaAnswer implements Serializable {
     @JsonIgnoreProperties(value = { "triviaAnswers", "trivias" }, allowSetters = true)
     private TriviaQuestion triviaQuestion;
 
-    @ManyToMany(fetch = FetchType.LAZY, mappedBy = "triviaAnswers")
-    @JsonIgnoreProperties(value = { "triviaQuestion", "triviaAnswers", "quiz" }, allowSetters = true)
+    @ManyToMany(fetch = FetchType.LAZY, mappedBy = "selectedAnswers")
+    @JsonIgnoreProperties(value = { "triviaQuestion", "selectedAnswers", "quiz" }, allowSetters = true)
     private Set<QuizEntry> quizEntries = new HashSet<>();
 
+    @Transient
+    private Boolean selected = false;
+    
     // jhipster-needle-entity-add-field - JHipster will add fields here
 
     public Long getId() {
@@ -176,10 +181,10 @@ public class TriviaAnswer implements Serializable {
 
     public void setQuizEntries(Set<QuizEntry> quizEntries) {
         if (this.quizEntries != null) {
-            this.quizEntries.forEach(i -> i.removeTriviaAnswers(this));
+            this.quizEntries.forEach(i -> i.removeSelectedAnswers(this));
         }
         if (quizEntries != null) {
-            quizEntries.forEach(i -> i.addTriviaAnswers(this));
+            quizEntries.forEach(i -> i.addSelectedAnswers(this));
         }
         this.quizEntries = quizEntries;
     }
@@ -191,14 +196,23 @@ public class TriviaAnswer implements Serializable {
 
     public TriviaAnswer addQuizEntries(QuizEntry quizEntry) {
         this.quizEntries.add(quizEntry);
-        quizEntry.getTriviaAnswers().add(this);
+        quizEntry.getSelectedAnswers().add(this);
         return this;
     }
 
     public TriviaAnswer removeQuizEntries(QuizEntry quizEntry) {
         this.quizEntries.remove(quizEntry);
-        quizEntry.getTriviaAnswers().remove(this);
+        quizEntry.getSelectedAnswers().remove(this);
         return this;
+    }
+    
+    @JsonProperty("selected")
+    public Boolean getSelected() {
+    	return selected;
+    }
+    
+    public void setSelected(Boolean selected) {
+    	this.selected = selected;
     }
 
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here
@@ -230,6 +244,7 @@ public class TriviaAnswer implements Serializable {
             ", explanation='" + getExplanation() + "'" +
             ", correct='" + getCorrect() + "'" +
             ", picture='" + getPicture() + "'" +
+            ", selected='" + getSelected() + "'" +
             "}";
     }
 }
