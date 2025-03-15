@@ -1,6 +1,8 @@
 import {
   faArrowLeft,
   faArrowRight,
+  faCheck,
+  faCheckCircle,
   faAsterisk,
   faBan,
   faBell,
@@ -33,6 +35,7 @@ import {
   faUsers,
   faUsersCog,
   faWrench,
+  faXmark,
 } from '@fortawesome/free-solid-svg-icons';
 
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -41,6 +44,8 @@ export const loadIcons = () => {
   library.add(
     faArrowLeft,
     faArrowRight,
+    faCheck,
+  	faCheckCircle,
     faAsterisk,
     faBan,
     faBell,
@@ -73,5 +78,6 @@ export const loadIcons = () => {
     faUsers,
     faUsersCog,
     faWrench,
+    faXmark,
   );
 };

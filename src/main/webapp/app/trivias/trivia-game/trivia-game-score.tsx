@@ -64,7 +64,14 @@ const TriviaGameResult = () => {
 	                        {quizEntry.orderNum}
 	                      </Button>
 	                    </td>
-	                    <td>{quizEntry.correct ? 'Yes' : 'No'}</td>
+	                    <td>
+	                    {quizEntry.correct ? (
+							<FontAwesomeIcon icon="check" />
+						) : (
+							<FontAwesomeIcon icon="xmark" />
+						)
+	                    }
+	                    </td>
 	                    <td>{quizEntry.triviaQuestion?.question}
 	                      {quizEntry.triviaQuestion?  quizEntry.triviaQuestion.question : '-' }
 	                    </td>
