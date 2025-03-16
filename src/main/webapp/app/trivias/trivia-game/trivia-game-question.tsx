@@ -119,6 +119,7 @@ const TriviaGameQuestion = () => {
           <div className="button-section">
           	{isFirstQuestion == 'Y' ? (
 			  <Button tag={Button} color="primary" disabled={true}>
+			    <FontAwesomeIcon icon="arrow-left" />{' '}
                 <span className="d-none d-md-inline">
                   <Translate contentKey="entity.action.back">Back</Translate>
                 </span>
@@ -134,13 +135,21 @@ const TriviaGameQuestion = () => {
               &nbsp;
               {isLastQuestion == 'Y' ? (
 	              <Button tag={Link} color="primary" to="/game/trivia-game/score"  >
-	                <span className="d-none d-md-inline">
-	                  {quizId > 0 ? (
-	                 	<Translate contentKey="entity.action.viewScore">View Score</Translate>
-	                  ) : (
-						<Translate contentKey="entity.action.finishQuiz">Finish</Translate>  
-					  )}
-	                </span>
+					{quizId > 0 ? (
+					<React.Fragment>
+						<FontAwesomeIcon icon="list-check" />
+						<span className="d-none d-md-inline">
+	                 		<Translate contentKey="entity.action.viewScore">View Score</Translate>
+	                 	</span>
+	                </React.Fragment>
+	                ):(
+					<React.Fragment>
+						<FontAwesomeIcon icon="check" />
+						<span className="d-none d-md-inline">
+							<Translate contentKey="entity.action.finishQuiz">Finish</Translate>
+						</span>
+					</React.Fragment>
+					)}
 	              </Button>
               ):(
 	              <Button tag={Button} onClick={handleNextQuestionPageClick} color="info" data-cy="entityDetailsBackButton">

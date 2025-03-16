@@ -59,9 +59,9 @@ const TriviaGame = () => {
 
            <br/>
           
-           <p>Trivia 2</p>
            <Button tag={Button} onClick={handleButtonClick}
               replace color="info" data-cy="entityDetailsBackButton">
+            <FontAwesomeIcon icon="play" />{' '}
             <span className="d-none d-md-inline">
               <Translate contentKey="entity.action.start">Start</Translate>
             </span>
