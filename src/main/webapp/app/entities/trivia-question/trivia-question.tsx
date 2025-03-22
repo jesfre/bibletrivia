@@ -11,6 +11,7 @@ import { useAppDispatch, useAppSelector } from 'app/config/store';
 
 import { getEntities, reset } from './trivia-question.reducer';
 
+
 export const TriviaQuestion = () => {
   const dispatch = useAppDispatch();
 
@@ -130,10 +131,6 @@ export const TriviaQuestion = () => {
                     <Translate contentKey="bibletriviaApp.triviaQuestion.id">ID</Translate>{' '}
                     <FontAwesomeIcon icon={getSortIconByFieldName('id')} />
                   </th>
-                  <th className="hand" onClick={sort('questionId')}>
-                    <Translate contentKey="bibletriviaApp.triviaQuestion.questionId">Question Id</Translate>{' '}
-                    <FontAwesomeIcon icon={getSortIconByFieldName('questionId')} />
-                  </th>
                   <th className="hand" onClick={sort('level')}>
                     <Translate contentKey="bibletriviaApp.triviaQuestion.level">Level</Translate>{' '}
                     <FontAwesomeIcon icon={getSortIconByFieldName('level')} />
@@ -154,9 +151,9 @@ export const TriviaQuestion = () => {
                     <Translate contentKey="bibletriviaApp.triviaQuestion.value">Value</Translate>{' '}
                     <FontAwesomeIcon icon={getSortIconByFieldName('value')} />
                   </th>
-                  <th className="hand" onClick={sort('picture')}>
-                    <Translate contentKey="bibletriviaApp.triviaQuestion.picture">Picture</Translate>{' '}
-                    <FontAwesomeIcon icon={getSortIconByFieldName('picture')} />
+                  <th className="hand" onClick={sort('numAnswers')}>
+                    <Translate contentKey="bibletriviaApp.triviaQuestion.numAnswers"># of Answers</Translate>{' '}
+                    <FontAwesomeIcon icon={getSortIconByFieldName('numAnswers')} />
                   </th>
                   <th />
                 </tr>
@@ -169,7 +166,6 @@ export const TriviaQuestion = () => {
                         {triviaQuestion.id}
                       </Button>
                     </td>
-                    <td>{triviaQuestion.questionId}</td>
                     <td>
                       <Translate contentKey={`bibletriviaApp.TriviaLevel.${triviaQuestion.level}`} />
                     </td>
@@ -181,7 +177,7 @@ export const TriviaQuestion = () => {
                       <Translate contentKey={`bibletriviaApp.AnswerType.${triviaQuestion.answerType}`} />
                     </td>
                     <td>{triviaQuestion.value}</td>
-                    <td>{triviaQuestion.picture}</td>
+                    <td>{triviaQuestion.triviaAnswers.length}</td>
                     <td className="text-end">
                       <div className="btn-group flex-btn-group-container">
                         <Button

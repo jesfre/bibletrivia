@@ -26,7 +26,8 @@
       "value": "Value",
       "picture": "Picture",
       "triviaAnswer": "Trivia Answer",
-      "trivia": "Trivia"
+      "trivia": "Trivia",
+      "numAnswers": "# of Answers"
     }
   }
 }
