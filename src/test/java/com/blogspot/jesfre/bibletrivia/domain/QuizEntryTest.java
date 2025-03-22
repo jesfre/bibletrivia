@@ -44,17 +44,17 @@ class QuizEntryTest {
         QuizEntry quizEntry = getQuizEntryRandomSampleGenerator();
         TriviaAnswer triviaAnswerBack = getTriviaAnswerRandomSampleGenerator();
 
-        quizEntry.addTriviaAnswers(triviaAnswerBack);
-        assertThat(quizEntry.getTriviaAnswers()).containsOnly(triviaAnswerBack);
+        quizEntry.addSelectedAnswers(triviaAnswerBack);
+        assertThat(quizEntry.getSelectedAnswers()).containsOnly(triviaAnswerBack);
 
-        quizEntry.removeTriviaAnswers(triviaAnswerBack);
-        assertThat(quizEntry.getTriviaAnswers()).doesNotContain(triviaAnswerBack);
+        quizEntry.removeSelectedAnswers(triviaAnswerBack);
+        assertThat(quizEntry.getSelectedAnswers()).doesNotContain(triviaAnswerBack);
 
-        quizEntry.triviaAnswers(new HashSet<>(Set.of(triviaAnswerBack)));
-        assertThat(quizEntry.getTriviaAnswers()).containsOnly(triviaAnswerBack);
+        quizEntry.selectedAnswers(new HashSet<>(Set.of(triviaAnswerBack)));
+        assertThat(quizEntry.getSelectedAnswers()).containsOnly(triviaAnswerBack);
 
-        quizEntry.setTriviaAnswers(new HashSet<>());
-        assertThat(quizEntry.getTriviaAnswers()).doesNotContain(triviaAnswerBack);
+        quizEntry.setSelectedAnswers(new HashSet<>());
+        assertThat(quizEntry.getSelectedAnswers()).doesNotContain(triviaAnswerBack);
     }
 
     @Test

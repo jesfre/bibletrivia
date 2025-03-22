@@ -64,18 +64,18 @@ class TriviaAnswerTest {
 
         triviaAnswer.addQuizEntries(quizEntryBack);
         assertThat(triviaAnswer.getQuizEntries()).containsOnly(quizEntryBack);
-        assertThat(quizEntryBack.getTriviaAnswers()).containsOnly(triviaAnswer);
+        assertThat(quizEntryBack.getSelectedAnswers()).containsOnly(triviaAnswer);
 
         triviaAnswer.removeQuizEntries(quizEntryBack);
         assertThat(triviaAnswer.getQuizEntries()).doesNotContain(quizEntryBack);
-        assertThat(quizEntryBack.getTriviaAnswers()).doesNotContain(triviaAnswer);
+        assertThat(quizEntryBack.getSelectedAnswers()).doesNotContain(triviaAnswer);
 
         triviaAnswer.quizEntries(new HashSet<>(Set.of(quizEntryBack)));
         assertThat(triviaAnswer.getQuizEntries()).containsOnly(quizEntryBack);
-        assertThat(quizEntryBack.getTriviaAnswers()).containsOnly(triviaAnswer);
+        assertThat(quizEntryBack.getSelectedAnswers()).containsOnly(triviaAnswer);
 
         triviaAnswer.setQuizEntries(new HashSet<>());
         assertThat(triviaAnswer.getQuizEntries()).doesNotContain(quizEntryBack);
-        assertThat(quizEntryBack.getTriviaAnswers()).doesNotContain(triviaAnswer);
+        assertThat(quizEntryBack.getSelectedAnswers()).doesNotContain(triviaAnswer);
     }
 }
