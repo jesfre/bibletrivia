@@ -22,7 +22,7 @@ const apiUrl = 'api/trivia-answers';
 
 export const getEntities = createAsyncThunk(
   'triviaAnswer/fetch_entity_list',
-  async ({ sort }: IQueryParams) => {
+  async ({ sort } : IQueryParams) => {
     const requestUrl = `${apiUrl}?${sort ? `sort=${sort}&` : ''}cacheBuster=${new Date().getTime()}`;
     return axios.get<ITriviaAnswer[]>(requestUrl);
   },

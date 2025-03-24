@@ -6,6 +6,8 @@ import com.blogspot.jesfre.bibletrivia.service.TriviaAnswerService;
 import com.blogspot.jesfre.bibletrivia.web.rest.errors.BadRequestAlertException;
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -141,7 +143,7 @@ public class TriviaAnswerResource {
         LOG.debug("REST request to get all TriviaAnswers");
         return triviaAnswerService.findAll();
     }
-
+    
     /**
      * {@code GET  /trivia-answers/:id} : get the "id" triviaAnswer.
      *

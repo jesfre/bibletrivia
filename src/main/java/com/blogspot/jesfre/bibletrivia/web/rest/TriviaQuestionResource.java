@@ -1,14 +1,18 @@
 package com.blogspot.jesfre.bibletrivia.web.rest;
 
 import com.blogspot.jesfre.bibletrivia.config.Constants;
+import com.blogspot.jesfre.bibletrivia.domain.TriviaAnswer;
 import com.blogspot.jesfre.bibletrivia.domain.TriviaQuestion;
 import com.blogspot.jesfre.bibletrivia.domain.enumeration.TriviaLevel;
 import com.blogspot.jesfre.bibletrivia.repository.TriviaQuestionRepository;
+import com.blogspot.jesfre.bibletrivia.service.TriviaAnswerService;
 import com.blogspot.jesfre.bibletrivia.service.TriviaQuestionService;
 import com.blogspot.jesfre.bibletrivia.web.rest.errors.BadRequestAlertException;
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.time.LocalTime;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -45,10 +49,14 @@ public class TriviaQuestionResource {
     private final TriviaQuestionService triviaQuestionService;
 
     private final TriviaQuestionRepository triviaQuestionRepository;
+    
+    private final TriviaAnswerService triviaAnswerService;
 
-    public TriviaQuestionResource(TriviaQuestionService triviaQuestionService, TriviaQuestionRepository triviaQuestionRepository) {
+    public TriviaQuestionResource(TriviaQuestionService triviaQuestionService, TriviaQuestionRepository triviaQuestionRepository,
+    		TriviaAnswerService triviaAnswerService) {
         this.triviaQuestionService = triviaQuestionService;
         this.triviaQuestionRepository = triviaQuestionRepository;
+        this.triviaAnswerService = triviaAnswerService;
     }
 
     /**
@@ -181,4 +189,11 @@ public class TriviaQuestionResource {
             .build();
     }
 
+    @GetMapping("/{id}/answers")
+    public List<TriviaAnswer> getTriviaAnswers(@PathVariable("id") Long questionId) {
+        LOG.debug("REST request to get TriviaAnswers for question {}", questionId);
+        LOG.debug("TIME "+LocalTime.now());
+        Optional<TriviaQuestion> triviaQuestion = triviaQuestionService.findOne(questionId);
+        return triviaQuestion.isPresent() ? List.copyOf(triviaQuestion.get().getTriviaAnswers()) : Collections.emptyList();
+    }
 }

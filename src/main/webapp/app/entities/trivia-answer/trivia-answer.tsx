@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate, useParams } from 'react-router-dom';
 import { Button, Table } from 'reactstrap';
 import { Translate, getSortState } from 'react-jhipster';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -8,7 +8,7 @@ import { ASC, DESC } from 'app/shared/util/pagination.constants';
 import { overrideSortStateWithQueryParams } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { getEntities } from './trivia-answer.reducer';
+import { getEntities, getEntitiesForQuestion } from './trivia-answer.reducer';
 
 export const TriviaAnswer = () => {
   const dispatch = useAppDispatch();
@@ -20,11 +20,13 @@ export const TriviaAnswer = () => {
 
   const triviaAnswerList = useAppSelector(state => state.triviaAnswer.entities);
   const loading = useAppSelector(state => state.triviaAnswer.loading);
+  
+  const {id} = useParams<'id'>();
 
   const getAllEntities = () => {
     dispatch(
       getEntities({
-        sort: `${sortState.sort},${sortState.order}`,
+        sort: `${sortState.sort},${sortState.order}`
       }),
     );
   };
@@ -38,7 +40,11 @@ export const TriviaAnswer = () => {
   };
 
   useEffect(() => {
-    sortEntities();
+	  if(id === '') {
+		  sortEntities();
+	  } else if(parseInt(id, 10) >= 0) {
+		  dispatch(getEntitiesForQuestion(id));
+	  }
   }, [sortState.order, sortState.sort]);
 
   const sort = p => () => {

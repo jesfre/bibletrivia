@@ -63,4 +63,6 @@ public interface TriviaAnswerService {
      * @param id the id of the entity.
      */
     void delete(Long id);
+    
+    List<TriviaAnswer> findAllByQuestionId(Long questionId);
 }

@@ -90,4 +90,10 @@ public class TriviaAnswerServiceImpl implements TriviaAnswerService {
         LOG.debug("Request to delete TriviaAnswer : {}", id);
         triviaAnswerRepository.deleteById(id);
     }
+    
+    @Override
+    public List<TriviaAnswer> findAllByQuestionId(Long questionId) {
+    	LOG.debug("Request to find all TriviaAnswer by questionId: {}", questionId);
+        return triviaAnswerRepository.findAllByQuestion(questionId);
+    }
 }

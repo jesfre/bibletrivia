@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
 import { getEntity } from './trivia-question.reducer';
+import { TriviaAnswer } from './../trivia-answer/trivia-answer';
 
 export const TriviaQuestionDetail = () => {
   const dispatch = useAppDispatch();
@@ -20,7 +21,7 @@ export const TriviaQuestionDetail = () => {
   const triviaQuestionEntity = useAppSelector(state => state.triviaQuestion.entity);
   return (
     <Row>
-      <Col md="8">
+      <Col>
         <h2 data-cy="triviaQuestionDetailsHeading">
           <Translate contentKey="bibletriviaApp.triviaQuestion.detail.title">TriviaQuestion</Translate>
         </h2>
@@ -100,6 +101,8 @@ export const TriviaQuestionDetail = () => {
             <Translate contentKey="entity.action.edit">Edit</Translate>
           </span>
         </Button>
+        
+        <TriviaAnswer/>
       </Col>
     </Row>
   );
