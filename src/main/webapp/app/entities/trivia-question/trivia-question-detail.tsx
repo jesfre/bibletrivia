@@ -7,7 +7,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
 import { getEntity } from './trivia-question.reducer';
-import { TriviaAnswer } from './../trivia-answer/trivia-answer';
+//import { TriviaAnswer } from './../trivia-answer/trivia-answer';
+import { QuestionAnswers } from './../trivia-question/question-answers';
 
 export const TriviaQuestionDetail = () => {
   const dispatch = useAppDispatch();
@@ -102,7 +103,7 @@ export const TriviaQuestionDetail = () => {
           </span>
         </Button>
         
-        <TriviaAnswer/>
+        <QuestionAnswers/>
       </Col>
     </Row>
   );

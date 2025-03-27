@@ -4,6 +4,7 @@ import { loadMoreDataWhenScrolled, parseHeaderForLinks } from 'react-jhipster';
 import { cleanEntity } from 'app/shared/util/entity-utils';
 import { EntityState, IQueryParams, createEntitySlice, serializeAxiosError } from 'app/shared/reducers/reducer.utils';
 import { ITriviaQuestion, defaultValue } from 'app/shared/model/trivia-question.model';
+import { ITriviaAnswer } from 'app/shared/model/trivia-answer.model';
 
 const initialState: EntityState<ITriviaQuestion> = {
   loading: false,
@@ -72,6 +73,16 @@ export const deleteEntity = createAsyncThunk(
   { serializeError: serializeAxiosError },
 );
 
+export const getAnswers = createAsyncThunk(
+  'triviaQuestionAnswer/fetch_entity_list_answer',
+  async (id: string | number) => {
+	  console.debug(id);
+    const requestUrl = `${apiUrl}/${id}/answers`;
+    console.debug(requestUrl);
+    return axios.get<ITriviaAnswer[]>(requestUrl);
+  },
+  { serializeError: serializeAxiosError },
+);
 
 // slice
 
@@ -88,6 +99,15 @@ export const TriviaQuestionSlice = createEntitySlice({
         state.updating = false;
         state.updateSuccess = true;
         state.entity = {};
+      })
+      .addMatcher(isFulfilled(getAnswers), (state, action) => {
+        const { data } = action.payload;
+
+        return {
+          ...state,
+          loading: false,
+          entities: data,
+        };
       })
       .addMatcher(isFulfilled(getEntities), (state, action) => {
         const { data, headers } = action.payload;
