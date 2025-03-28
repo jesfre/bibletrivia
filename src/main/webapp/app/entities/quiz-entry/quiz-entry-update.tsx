@@ -60,7 +60,7 @@ export const QuizEntryUpdate = () => {
       ...quizEntryEntity,
       ...values,
       triviaQuestion: triviaQuestions.find(it => it.id.toString() === values.triviaQuestion?.toString()),
-      triviaAnswers: mapIdList(values.triviaAnswers),
+      triviaAnswers: mapIdList(values.selectedAnswers),
       quiz: quizzes.find(it => it.id.toString() === values.quiz?.toString()),
     };
 
@@ -77,7 +77,7 @@ export const QuizEntryUpdate = () => {
       : {
           ...quizEntryEntity,
           triviaQuestion: quizEntryEntity?.triviaQuestion?.id,
-          triviaAnswers: quizEntryEntity?.triviaAnswers?.map(e => e.id.toString()),
+          triviaAnswers: quizEntryEntity?.selectedAnswers?.map(e => e.id.toString()),
           quiz: quizEntryEntity?.quiz?.id,
         };
 
@@ -146,12 +146,12 @@ export const QuizEntryUpdate = () => {
                 <Translate contentKey="entity.validation.required">This field is required.</Translate>
               </FormText>
               <ValidatedField
-                label={translate('bibletriviaApp.quizEntry.triviaAnswers')}
-                id="quiz-entry-triviaAnswers"
-                data-cy="triviaAnswers"
+                label={translate('bibletriviaApp.quizEntry.selectedAnswers')}
+                id="quiz-entry-selectedAnswers"
+                data-cy="selectedAnswers"
                 type="select"
                 multiple
-                name="triviaAnswers"
+                name="selectedAnswers"
               >
                 <option value="" key="0" />
                 {triviaAnswers

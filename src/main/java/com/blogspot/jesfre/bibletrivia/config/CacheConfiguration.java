@@ -54,7 +54,7 @@ public class CacheConfiguration {
             createCache(cm, com.blogspot.jesfre.bibletrivia.domain.Quiz.class.getName());
             createCache(cm, com.blogspot.jesfre.bibletrivia.domain.Quiz.class.getName() + ".quizEntries");
             createCache(cm, com.blogspot.jesfre.bibletrivia.domain.TriviaAnswer.class.getName() + ".quizEntries");
-            createCache(cm, com.blogspot.jesfre.bibletrivia.domain.QuizEntry.class.getName() + ".triviaAnswers");
+            createCache(cm, com.blogspot.jesfre.bibletrivia.domain.QuizEntry.class.getName() + ".selectedAnswers");
             // jhipster-needle-ehcache-add-entry
         };
     }

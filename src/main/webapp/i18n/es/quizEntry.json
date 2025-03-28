@@ -21,7 +21,7 @@
       "orderNum": "Order Num",
       "correct": "Correct",
       "triviaQuestion": "Trivia Question",
-      "triviaAnswers": "Trivia Answers",
+      "selectedAnswers": "Selected Answers",
       "quiz": "Quiz"
     }
   }

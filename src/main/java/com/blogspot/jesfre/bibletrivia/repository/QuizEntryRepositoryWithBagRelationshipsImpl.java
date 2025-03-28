@@ -40,7 +40,7 @@ public class QuizEntryRepositoryWithBagRelationshipsImpl implements QuizEntryRep
     QuizEntry fetchTriviaAnswers(QuizEntry result) {
         return entityManager
             .createQuery(
-                "select quizEntry from QuizEntry quizEntry left join fetch quizEntry.triviaAnswers where quizEntry.id = :id",
+                "select quizEntry from QuizEntry quizEntry left join fetch quizEntry.selectedAnswers where quizEntry.id = :id",
                 QuizEntry.class
             )
             .setParameter(ID_PARAMETER, result.getId())
@@ -52,7 +52,7 @@ public class QuizEntryRepositoryWithBagRelationshipsImpl implements QuizEntryRep
         IntStream.range(0, quizEntries.size()).forEach(index -> order.put(quizEntries.get(index).getId(), index));
         List<QuizEntry> result = entityManager
             .createQuery(
-                "select quizEntry from QuizEntry quizEntry left join fetch quizEntry.triviaAnswers where quizEntry in :quizEntries",
+                "select quizEntry from QuizEntry quizEntry left join fetch quizEntry.selectedAnswers where quizEntry in :quizEntries",
                 QuizEntry.class
             )
             .setParameter(QUIZENTRIES_PARAMETER, quizEntries)

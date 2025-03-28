@@ -48,14 +48,14 @@ export const QuizEntryDetail = () => {
           </dt>
           <dd>{quizEntryEntity.triviaQuestion ? quizEntryEntity.triviaQuestion.question : ''}</dd>
           <dt>
-            <Translate contentKey="bibletriviaApp.quizEntry.triviaAnswers">Trivia Answers</Translate>
+            <Translate contentKey="bibletriviaApp.quizEntry.selectedAnswers">Trivia Answers</Translate>
           </dt>
           <dd>
-            {quizEntryEntity.triviaAnswers
-              ? quizEntryEntity.triviaAnswers.map((val, i) => (
+            {quizEntryEntity.selectedAnswers
+              ? quizEntryEntity.selectedAnswers.map((val, i) => (
                   <span key={val.id}>
                     <a>{val.answer}</a>
-                    {quizEntryEntity.triviaAnswers && i === quizEntryEntity.triviaAnswers.length - 1 ? '' : ', '}
+                    {quizEntryEntity.selectedAnswers && i === quizEntryEntity.selectedAnswers.length - 1 ? '' : ', '}
                   </span>
                 ))
               : null}
