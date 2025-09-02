@@ -1,0 +1,226 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:pro="http://www.liquibase.org/xml/ns/pro" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-latest.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <changeSet author="jorge (generated)" id="1756783269095-1">
+        <createSequence incrementBy="50" sequenceName="sequence_generator" startValue="1"/>
+    </changeSet>
+    <changeSet author="jorge (generated)" id="1756783269095-2">
+        <createTable tableName="bible_reference">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="bible_referencePK"/>
+            </column>
+            <column name="bible_verse" type="VARCHAR(255)"/>
+            <column name="book" type="ENUM"/>
+            <column name="chapter" type="INT"/>
+            <column name="testament" type="ENUM"/>
+            <column name="url" type="VARCHAR(255)"/>
+            <column name="verse" type="INT"/>
+            <column name="version" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="jorge (generated)" id="1756783269095-3">
+        <createTable tableName="jhi_authority">
+            <column name="name" type="VARCHAR(50)">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="jhi_authorityPK"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="jorge (generated)" id="1756783269095-4">
+        <createTable tableName="jhi_persistent_token">
+            <column name="series" type="VARCHAR(255)">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="jhi_persistent_tokenPK"/>
+            </column>
+            <column name="ip_address" type="VARCHAR(39)"/>
+            <column name="token_date" type="date"/>
+            <column name="token_value" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="user_agent" type="VARCHAR(255)"/>
+            <column name="user_id" type="BIGINT"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="jorge (generated)" id="1756783269095-5">
+        <createTable tableName="jhi_user">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="jhi_userPK"/>
+            </column>
+            <column name="created_by" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_date" type="datetime(6)"/>
+            <column name="last_modified_by" type="VARCHAR(50)"/>
+            <column name="last_modified_date" type="datetime(6)"/>
+            <column name="activated" type="BIT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="activation_key" type="VARCHAR(20)"/>
+            <column name="email" type="VARCHAR(254)"/>
+            <column name="first_name" type="VARCHAR(50)"/>
+            <column name="image_url" type="VARCHAR(256)"/>
+            <column name="lang_key" type="VARCHAR(10)"/>
+            <column name="last_name" type="VARCHAR(50)"/>
+            <column name="login" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="password_hash" type="VARCHAR(60)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="reset_date" type="datetime(6)"/>
+            <column name="reset_key" type="VARCHAR(20)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="jorge (generated)" id="1756783269095-6">
+        <createTable tableName="jhi_user_authority">
+            <column name="user_id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="jhi_user_authorityPK"/>
+            </column>
+            <column name="authority_name" type="VARCHAR(50)">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="jhi_user_authorityPK"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="jorge (generated)" id="1756783269095-7">
+        <createTable tableName="quiz">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="quizPK"/>
+            </column>
+            <column name="correct_questions" type="INT"/>
+            <column name="quiz_taker" type="VARCHAR(120)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="start_date" type="datetime(6)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="total_questions" type="INT"/>
+            <column name="owner_id" type="BIGINT"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="jorge (generated)" id="1756783269095-8">
+        <createTable tableName="quiz_entry">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="quiz_entryPK"/>
+            </column>
+            <column name="correct" type="BIT"/>
+            <column name="order_num" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="quiz_id" type="BIGINT"/>
+            <column name="trivia_question_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="jorge (generated)" id="1756783269095-9">
+        <createTable tableName="rel_quiz_entry__trivia_answers">
+            <column name="quiz_entry_id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="rel_quiz_entry__trivia_answersPK"/>
+            </column>
+            <column name="trivia_answers_id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="rel_quiz_entry__trivia_answersPK"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="jorge (generated)" id="1756783269095-10">
+        <createTable tableName="rel_trivia__trivia_question">
+            <column name="trivia_id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="rel_trivia__trivia_questionPK"/>
+            </column>
+            <column name="trivia_question_id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="rel_trivia__trivia_questionPK"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="jorge (generated)" id="1756783269095-11">
+        <createTable tableName="rel_trivia_answer__bible_reference">
+            <column name="trivia_answer_id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="rel_trivia_answer__bible_referencePK"/>
+            </column>
+            <column name="bible_reference_id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="rel_trivia_answer__bible_referencePK"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="jorge (generated)" id="1756783269095-12">
+        <createTable tableName="trivia">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="triviaPK"/>
+            </column>
+            <column name="end_date" type="datetime(6)"/>
+            <column name="level" type="ENUM"/>
+            <column name="name" type="VARCHAR(255)"/>
+            <column name="start_date" type="datetime(6)"/>
+            <column name="type" type="ENUM"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="jorge (generated)" id="1756783269095-13">
+        <createTable tableName="trivia_answer">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="trivia_answerPK"/>
+            </column>
+            <column name="answer" type="VARCHAR(255)"/>
+            <column name="answer_id" type="BIGINT"/>
+            <column name="correct" type="BIT"/>
+            <column name="explanation" type="VARCHAR(255)"/>
+            <column name="picture" type="VARCHAR(255)"/>
+            <column name="trivia_question_id" type="BIGINT"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="jorge (generated)" id="1756783269095-14">
+        <createTable tableName="trivia_question">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="trivia_questionPK"/>
+            </column>
+            <column name="answer_type" type="ENUM"/>
+            <column name="level" type="ENUM"/>
+            <column name="picture" type="VARCHAR(255)"/>
+            <column name="question" type="VARCHAR(255)"/>
+            <column name="question_id" type="BIGINT"/>
+            <column name="question_type" type="ENUM"/>
+            <column name="value" type="INT"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="jorge (generated)" id="1756783269095-15">
+        <addUniqueConstraint columnNames="email" constraintName="UC_JHI_USEREMAIL_COL" tableName="jhi_user"/>
+    </changeSet>
+    <changeSet author="jorge (generated)" id="1756783269095-16">
+        <addUniqueConstraint columnNames="login" constraintName="UC_JHI_USERLOGIN_COL" tableName="jhi_user"/>
+    </changeSet>
+    <changeSet author="jorge (generated)" id="1756783269095-17">
+        <addForeignKeyConstraint baseColumnNames="user_id" baseTableName="jhi_user_authority" constraintName="FK290okww5jujghp4el5i7mgwu0" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="jhi_user" validate="true"/>
+    </changeSet>
+    <changeSet author="jorge (generated)" id="1756783269095-18">
+        <addForeignKeyConstraint baseColumnNames="owner_id" baseTableName="quiz" constraintName="FK2e7itibxfah04pkysy8c4un8u" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="jhi_user" validate="true"/>
+    </changeSet>
+    <changeSet author="jorge (generated)" id="1756783269095-19">
+        <addForeignKeyConstraint baseColumnNames="quiz_id" baseTableName="quiz_entry" constraintName="FK38nrja6xgnx7tfpd476qrjoui" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="quiz" validate="true"/>
+    </changeSet>
+    <changeSet author="jorge (generated)" id="1756783269095-20">
+        <addForeignKeyConstraint baseColumnNames="authority_name" baseTableName="jhi_user_authority" constraintName="FK4psxl0jtx6nr7rhqbynr6itoc" deferrable="false" initiallyDeferred="false" referencedColumnNames="name" referencedTableName="jhi_authority" validate="true"/>
+    </changeSet>
+    <changeSet author="jorge (generated)" id="1756783269095-21">
+        <addForeignKeyConstraint baseColumnNames="trivia_answers_id" baseTableName="rel_quiz_entry__trivia_answers" constraintName="FK580v74jf3rmyachbfvofg9nod" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="trivia_answer" validate="true"/>
+    </changeSet>
+    <changeSet author="jorge (generated)" id="1756783269095-22">
+        <addForeignKeyConstraint baseColumnNames="bible_reference_id" baseTableName="rel_trivia_answer__bible_reference" constraintName="FKajeqb0cmxi5ki2x2emtyd9lhd" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="bible_reference" validate="true"/>
+    </changeSet>
+    <changeSet author="jorge (generated)" id="1756783269095-23">
+        <addForeignKeyConstraint baseColumnNames="quiz_entry_id" baseTableName="rel_quiz_entry__trivia_answers" constraintName="FKd2kv0e4hc8nqv0nu4yo86ti7v" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="quiz_entry" validate="true"/>
+    </changeSet>
+    <changeSet author="jorge (generated)" id="1756783269095-24">
+        <addForeignKeyConstraint baseColumnNames="trivia_question_id" baseTableName="rel_trivia__trivia_question" constraintName="FKjcm3o7e04938ibggf34050nsw" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="trivia_question" validate="true"/>
+    </changeSet>
+    <changeSet author="jorge (generated)" id="1756783269095-25">
+        <addForeignKeyConstraint baseColumnNames="trivia_answer_id" baseTableName="rel_trivia_answer__bible_reference" constraintName="FKmc62osqxdruns1ogc73ays4x5" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="trivia_answer" validate="true"/>
+    </changeSet>
+    <changeSet author="jorge (generated)" id="1756783269095-26">
+        <addForeignKeyConstraint baseColumnNames="user_id" baseTableName="jhi_persistent_token" constraintName="FKmogh0vmv89yg5kofe6n3t77ud" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="jhi_user" validate="true"/>
+    </changeSet>
+    <changeSet author="jorge (generated)" id="1756783269095-27">
+        <addForeignKeyConstraint baseColumnNames="trivia_id" baseTableName="rel_trivia__trivia_question" constraintName="FKo7eah86xks79fefxku60yx4h4" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="trivia" validate="true"/>
+    </changeSet>
+    <changeSet author="jorge (generated)" id="1756783269095-28">
+        <addForeignKeyConstraint baseColumnNames="trivia_question_id" baseTableName="quiz_entry" constraintName="FKqhvk5tob9yd0vrr5giu6466e6" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="trivia_question" validate="true"/>
+    </changeSet>
+    <changeSet author="jorge (generated)" id="1756783269095-29">
+        <addForeignKeyConstraint baseColumnNames="trivia_question_id" baseTableName="trivia_answer" constraintName="FKrk69rmdj4wb4r5j90fs1ssh2c" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="trivia_question" validate="true"/>
+    </changeSet>
+</databaseChangeLog>
