@@ -8,7 +8,7 @@
             <column autoIncrement="true" name="id" type="BIGINT">
                 <constraints nullable="false" primaryKey="true" primaryKeyName="bible_referencePK"/>
             </column>
-            <column name="bible_verse" type="VARCHAR(255)"/>
+            <column name="bible_verse" type="VARCHAR(500)"/>
             <column name="book" type="ENUM"/>
             <column name="chapter" type="INT"/>
             <column name="testament" type="ENUM"/>

@@ -14,7 +14,7 @@
             <column name="id" type="bigint">
                 <constraints primaryKey="true" nullable="false"/>
             </column>
-            <column name="bible_verse" type="varchar(255)">
+            <column name="bible_verse" type="varchar(500)">
                 <constraints nullable="true" />
             </column>
             <column name="version" type="varchar(255)">

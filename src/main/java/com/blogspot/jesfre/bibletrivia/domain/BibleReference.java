@@ -24,7 +24,7 @@ public class BibleReference implements Serializable {
     @Column(name = "id")
     private Long id;
 
-    @Column(name = "bible_verse")
+    @Column(name = "bible_verse", length = 500)
     private String bibleVerse;
 
     @Column(name = "version")
