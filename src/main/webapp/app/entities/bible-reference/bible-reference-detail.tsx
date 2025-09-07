@@ -72,7 +72,7 @@ export const BibleReferenceDetail = () => {
               <Translate contentKey="bibletriviaApp.bibleReference.url">Url</Translate>
             </span>
           </dt>
-          <dd>{bibleReferenceEntity.url}</dd>
+          <dd><Link to={`${bibleReferenceEntity.url}`}>{bibleReferenceEntity.url}</Link></dd>
           <dt>
             <Translate contentKey="bibletriviaApp.bibleReference.triviaAnswer">Trivia Answer</Translate>
           </dt>

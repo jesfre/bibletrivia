@@ -140,7 +140,7 @@ export const BibleReference = () => {
                   <td>
                     <Translate contentKey={`bibletriviaApp.Testament.${bibleReference.testament}`} />
                   </td>
-                  <td>{bibleReference.url}</td>
+                  <td><Link to={`${bibleReference.url}`}>{bibleReference.url}</Link></td>
                   <td>
                     {bibleReference.triviaAnswers
                       ? bibleReference.triviaAnswers.map((val, j) => (
