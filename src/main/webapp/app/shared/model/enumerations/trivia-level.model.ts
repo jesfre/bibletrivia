@@ -1,5 +1,5 @@
 export enum TriviaLevel {
   EASY = 'EASY',
-
-  DIFFICULT = 'DIFFICULT',
+  MEDIUM = 'MEDIUM',
+  HARD = 'HARD'
 }

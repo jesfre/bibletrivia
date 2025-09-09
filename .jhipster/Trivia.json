@@ -7,7 +7,7 @@
     {
       "fieldName": "level",
       "fieldType": "TriviaLevel",
-      "fieldValues": "EASY,DIFFICULT"
+      "fieldValues": "EASY,MEDIUM,HARD"
     },
     {
       "fieldName": "name",

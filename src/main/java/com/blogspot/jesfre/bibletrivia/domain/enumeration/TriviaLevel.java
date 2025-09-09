@@ -5,5 +5,6 @@ package com.blogspot.jesfre.bibletrivia.domain.enumeration;
  */
 public enum TriviaLevel {
     EASY,
-    DIFFICULT,
+    MEDIUM,
+    HARD
 }

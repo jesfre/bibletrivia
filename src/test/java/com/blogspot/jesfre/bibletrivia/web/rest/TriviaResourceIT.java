@@ -47,7 +47,7 @@ import org.springframework.transaction.annotation.Transactional;
 class TriviaResourceIT {
 
     private static final TriviaLevel DEFAULT_LEVEL = TriviaLevel.EASY;
-    private static final TriviaLevel UPDATED_LEVEL = TriviaLevel.DIFFICULT;
+    private static final TriviaLevel UPDATED_LEVEL = TriviaLevel.HARD;
 
     private static final String DEFAULT_NAME = "AAAAAAAAAA";
     private static final String UPDATED_NAME = "BBBBBBBBBB";

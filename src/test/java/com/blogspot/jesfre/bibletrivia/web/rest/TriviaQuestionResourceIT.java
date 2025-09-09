@@ -40,7 +40,7 @@ class TriviaQuestionResourceIT {
     private static final Long UPDATED_QUESTION_ID = 2L;
 
     private static final TriviaLevel DEFAULT_LEVEL = TriviaLevel.EASY;
-    private static final TriviaLevel UPDATED_LEVEL = TriviaLevel.DIFFICULT;
+    private static final TriviaLevel UPDATED_LEVEL = TriviaLevel.HARD;
 
     private static final TriviaType DEFAULT_QUESTION_TYPE = TriviaType.BIBLICAL;
     private static final TriviaType UPDATED_QUESTION_TYPE = TriviaType.HISTORY;
