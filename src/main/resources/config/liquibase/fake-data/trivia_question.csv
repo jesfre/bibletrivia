@@ -1,11 +1,90 @@
 id;question_id;level;question_type;question;answer_type;value;picture
-1;7649;EASY;BIBLICAL;hunger content ugh;MULTIPLE;22108;between hot
-2;18151;DIFFICULT;BIBLICAL;greedily quicker;MULTIPLE;6280;chiffonier arrogantly hmph
-3;29920;DIFFICULT;BIBLICAL;adjudge;TRUE_FALSE;7069;pro
-4;20369;EASY;BIBLICAL;slump newsprint;TRUE_FALSE;9180;presell
-5;13540;DIFFICULT;HISTORY;able;TRUE_FALSE;8767;disadvantage equal
-6;11301;DIFFICULT;HISTORY;diagram how tuba;MULTIPLE;14661;pfft lest or
-7;882;DIFFICULT;HISTORY;sheepishly;TRUE_FALSE;8588;truthfully lock courageously
-8;27921;DIFFICULT;HISTORY;mousse backbone license;SINGLE;15065;ridge next help
-9;22056;EASY;HISTORY;sans uproot;MULTIPLE;23018;tabletop
-10;20450;DIFFICULT;HISTORY;croon weary overfeed;MULTIPLE;16091;indeed extremely ugh
+101;101;EASY;BIBLICAL;"Who is the son of Amoz?";SINGLE;1;
+102;102;EASY;BIBLICAL;Which animals are mentioned as knowing their owner in Isaiah 1?;MULTIPLE;1; 
+103;103;EASY;BIBLICAL;Did the people rebel against the Lord according to Isaiah 1:2?;TRUE_FALSE;1; 
+104;104;EASY;BIBLICAL;What is Israel compared to in Isaiah 1:8?;SINGLE;1; 
+105;105;EASY;BIBLICAL;What does the Lord not delight in, according to Isaiah 1:11?;MULTIPLE;1; 
+106;106;EASY;BIBLICAL;What should the people do to become clean?;MULTIPLE;1; 
+107;107;EASY;BIBLICAL;If you are willing and obedient, what will you do?;SINGLE;1; 
+108;108;EASY;BIBLICAL;Is Jerusalem called the "faithful city" in Isaiah 1?;TRUE_FALSE;1; 
+109;109;EASY;BIBLICAL;What has become dross according to Isaiah 1:22?;SINGLE;1; 
+110;110;EASY;BIBLICAL;Who will be redeemed with justice?;SINGLE;1; 
+#---
+111;111;MEDIUM;BIBLICAL;Which vision did Isaiah see concerning Judah and Jerusalem?;SINGLE;1;
+112;112;MEDIUM;BIBLICAL;Who are called to hear in Isaiah 1:2?;MULTIPLE;1;
+113;113;MEDIUM;BIBLICAL;Did Israel know their Master according to Isaiah 1:3?;TRUE_FALSE;1;
+114;114;MEDIUM;BIBLICAL;What is the consequence of rebellion mentioned in Isaiah 1:5-6?;MULTIPLE;1;
+115;115;MEDIUM;BIBLICAL;What cities are mentioned as being like Sodom and Gomorrah?;SINGLE;1;
+116;116;MEDIUM;BIBLICAL;What does the Lord call the rulers of Jerusalem in Isaiah 1:10?;SINGLE;1;
+117;117;MEDIUM;BIBLICAL;Which offerings are NOT accepted by the Lord in Isaiah 1:13?;MULTIPLE;1;
+118;118;MEDIUM;BIBLICAL;Is the Lord pleased with the multitude of sacrifices?;TRUE_FALSE;1;
+119;119;MEDIUM;BIBLICAL;What is described as being "desolate" in Isaiah 1:7?;SINGLE;1;
+120;120;MEDIUM;BIBLICAL;Who is compared to a hut in a garden of cucumbers?;SINGLE;1;
+#---
+121;121;HARD;BIBLICAL;Which four kings of Judah are mentioned in Isaiah 1:1?;MULTIPLE;1;
+122;122;HARD;BIBLICAL;What two things are Israel compared to in Isaiah 1:8?;MULTIPLE;1;
+123;123;HARD;BIBLICAL;Did the Lord say He is weary of bearing the appointed feasts?;TRUE_FALSE;1;
+124;124;HARD;BIBLICAL;What is NOT listed as a wound in Isaiah 1:6?;SINGLE;1;
+125;125;HARD;BIBLICAL;Who is called to hear the word of the Lord in Isaiah 1:10?;MULTIPLE;1;
+126;126;HARD;BIBLICAL;Which offerings does the Lord NOT delight in, according to Isaiah 1:11?;MULTIPLE;1;
+127;127;HARD;BIBLICAL;Is "the whole head is sick, and the whole heart faints" a metaphor for Israel's condition?;TRUE_FALSE;1;
+128;128;HARD;BIBLICAL;What does the Lord instruct the people to do in Isaiah 1:17?;MULTIPLE;1;
+129;129;HARD;BIBLICAL;What will happen if the people refuse and rebel?;SINGLE;1;
+130;130;HARD;BIBLICAL;What has Jerusalem become, according to Isaiah 1:21?;SINGLE;1;
+#---
+131;131;EASY;BIBLICAL;Who saw the word concerning Judah and Jerusalem in Isaiah 2:1?;SINGLE;1;
+132;132;EASY;BIBLICAL;What will be established on the top of the mountains in the latter days?;SINGLE;1;
+133;133;EASY;BIBLICAL;Will all nations flow to the mountain of the Lord?;TRUE_FALSE;1;
+134;134;EASY;BIBLICAL;What will people beat their swords into?;SINGLE;1;
+135;135;EASY;BIBLICAL;Which tools are mentioned in Isaiah 2:4?;MULTIPLE;1;
+136;136;EASY;BIBLICAL;Will nation lift up sword against nation?;TRUE_FALSE;1;
+137;137;EASY;BIBLICAL;Who will teach people His ways?;SINGLE;1;
+138;138;EASY;BIBLICAL;From where will the law go forth?;SINGLE;1;
+139;139;EASY;BIBLICAL;What will people not learn anymore according to Isaiah 2:4?;SINGLE;1;
+140;140;EASY;BIBLICAL;Is the house of Jacob invited to walk in the light of the Lord?;TRUE_FALSE;1;
+#---
+141;141;MEDIUM;BIBLICAL;Who will say, 'Come, let us go up to the mountain of the Lord'?;MULTIPLE;1;
+142;142;MEDIUM;BIBLICAL;From where will the word of the Lord go forth?;SINGLE;1;
+143;143;MEDIUM;BIBLICAL;Will the Lord judge between the nations according to Isaiah 2?;TRUE_FALSE;1;
+144;144;MEDIUM;BIBLICAL;What will people not lift up against nation anymore?;SINGLE;1;
+145;145;MEDIUM;BIBLICAL;Which items are mentioned as being made from swords and spears?;MULTIPLE;1;
+146;146;MEDIUM;BIBLICAL;Is the house of Jacob described as being full of eastern ways?;TRUE_FALSE;1;
+147;147;MEDIUM;BIBLICAL;What do people worship according to Isaiah 2:8?;MULTIPLE;1;
+148;148;MEDIUM;BIBLICAL;What will happen to the lofty looks of man?;SINGLE;1;
+149;149;MEDIUM;BIBLICAL;Who alone will be exalted in that day?;SINGLE;1;
+150;150;MEDIUM;BIBLICAL;Will people cast away their idols in the caves and rocks?;TRUE_FALSE;1;
+#---
+151;151;HARD;BIBLICAL;Which two locations are mentioned as sources for the law and the word of the Lord in Isaiah 2:3?;MULTIPLE;1;
+152;152;HARD;BIBLICAL;What will the Lord judge between, according to Isaiah 2:4?;MULTIPLE;1;
+153;153;HARD;BIBLICAL;Will people learn war anymore according to Isaiah 2:4?;TRUE_FALSE;1;
+154;154;HARD;BIBLICAL;What is the house of Jacob full of in Isaiah 2:6?;MULTIPLE;1;
+155;155;HARD;BIBLICAL;Which items are mentioned as being worshipped in Isaiah 2:8?;MULTIPLE;1;
+156;156;HARD;BIBLICAL;Will the proud and lofty be brought low in that day?;TRUE_FALSE;1;
+157;157;HARD;BIBLICAL;What natural features are mentioned as being brought low in Isaiah 2:13-14?;MULTIPLE;1;
+158;158;HARD;BIBLICAL;Where will people go to hide from the terror of the Lord?;MULTIPLE;1;
+159;159;HARD;BIBLICAL;What will people cast away to the moles and bats?;SINGLE;1;
+160;160;HARD;BIBLICAL;According to Isaiah 2:22, should man be relied upon?;TRUE_FALSE;1;
+#---
+161;161;EASY;BIBLICAL;Who takes away supply and support from Jerusalem and Judah in Isaiah 3:1?;SINGLE;1;
+162;162;EASY;BIBLICAL;Which two groups are mentioned as being taken away in Isaiah 3:2-3?;MULTIPLE;1;
+163;163;EASY;BIBLICAL;Will children be their princes according to Isaiah 3:4?;TRUE_FALSE;1;
+164;164;EASY;BIBLICAL;What will the people oppress, according to Isaiah 3:5?;SINGLE;1;
+165;165;EASY;BIBLICAL;Who will be insolent toward the honorable?;SINGLE;1;
+166;166;EASY;BIBLICAL;What do the wicked declare about themselves in Isaiah 3:9?;SINGLE;1;
+167;167;EASY;BIBLICAL;Will the righteous eat the fruit of their doings?;TRUE_FALSE;1;
+168;168;EASY;BIBLICAL;What do the women of Zion do as they walk?;MULTIPLE;1;
+169;169;EASY;BIBLICAL;What will the Lord take away from the daughters of Zion?;SINGLE;1;
+170;170;EASY;BIBLICAL;Will the gates of Zion lament and mourn?;TRUE_FALSE;1;
+#---
+171;171;MEDIUM;BIBLICAL;Which supplies does the Lord take away from Jerusalem and Judah in Isaiah 3:1?;MULTIPLE;1;
+172;172;MEDIUM;BIBLICAL;Who are listed among those removed in Isaiah 3:2-3?;MULTIPLE;1;
+173;173;MEDIUM;BIBLICAL;Will the people have children as their rulers?;TRUE_FALSE;1;
+174;174;MEDIUM;BIBLICAL;Who will oppress one another according to Isaiah 3:5?;SINGLE;1;
+175;175;MEDIUM;BIBLICAL;What does a man refuse to be in his father's house in Isaiah 3:6-7?;SINGLE;1;
+176;176;MEDIUM;BIBLICAL;What do the wicked declare about themselves in Isaiah 3:9?;MULTIPLE;1;
+177;177;MEDIUM;BIBLICAL;Will the righteous eat the fruit of their doings?;TRUE_FALSE;1;
+178;178;MEDIUM;BIBLICAL;What do the women of Zion do as they walk, according to Isaiah 3:16?;MULTIPLE;1;
+179;179;MEDIUM;BIBLICAL;What will the Lord take away from the daughters of Zion in Isaiah 3:18-23?;MULTIPLE;1;
+180;180;MEDIUM;BIBLICAL;Will the gates of Zion lament and mourn?;TRUE_FALSE;1;
+#-------------------------------------------------------------------------
+

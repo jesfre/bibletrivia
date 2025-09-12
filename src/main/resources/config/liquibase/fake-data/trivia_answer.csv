@@ -1,11 +1,362 @@
 id;answer_id;answer;explanation;correct;picture;trivia_question_id
-1;19107;jumbo;sans alarmed unknown;false;what;1
-2;16968;pleased dicker;neatly;true;considering uh-huh parallel;2
-3;29003;since and consign;pillbox rarely baggy;true;gee tender or;2
-4;26977;dazzling;yahoo smoggy;true;intermesh since;3
-5;6679;confusion wherever only;fearless rubric;true;well-lit um;4
-6;31251;psst;whoever;true;pulp whoever floodlight;5
-7;28867;before fooey;precedent;true;accurate;5
-8;3025;lumpy;wherever black-and-white oh;false;publicity;2
-9;24014;like;pigpen gracefully;true;yearningly airmail;2
-10;21764;repeatedly bitterly;drag;false;sardonic;10
+201;201;Isaiah;Isaiah 1:1;true; ;101
+202;202;Jeremiah;Not in Isaiah 1;false; ;101
+203;203;Moses;Not in Isaiah 1;false; ;101
+204;204;David;Not in Isaiah 1;false; ;101
+#---
+205;205;Ox;Isaiah 1:3;true; ;102
+206;206;Donkey;Isaiah 1:3;true; ;102
+207;207;Sheep;Not mentioned;false; ;102
+208;208;Goat;Not mentioned;false; ;102
+#---
+209;209;Yes;Isaiah 1:2;true; ;103
+210;210;No;Isaiah 1:2;false; ;103
+#---
+211;211;A booth in a vineyard;Isaiah 1:8;true; ;104
+212;212;A tree by the river;Not in Isaiah 1;false; ;104
+213;213;A mountain;Not in Isaiah 1;false; ;104
+214;214;A palace;Not in Isaiah 1;false; ;104
+#---
+215;215;Blood of bulls;Isaiah 1:11;true; ;105
+216;216;Burnt offerings of rams;Isaiah 1:11;true; ;105
+217;217;Fat of fed cattle;Isaiah 1:11;true; ;105
+218;218;Incense;Isaiah 1:13;false; ;105
+#---
+219;219;Wash themselves;Isaiah 1:16;true; ;106
+220;220;Cease to do evil;Isaiah 1:16;true; ;106
+221;221;Put away evil;Isaiah 1:16;true; ;106
+222;222;Make more sacrifices;Not correct;false; ;106
+#---
+223;223;Eat the good of the land;Isaiah 1:19;true; ;107
+224;224;Be punished;Not correct;false; ;107
+225;225;Become rulers;Not correct;false; ;107
+226;226;Go to exile;Not correct;false; ;107
+#---
+227;227;Yes;Isaiah 1:21,26;true; ;108
+228;228;No;Isaiah 1:21,26;false; ;108
+#---
+229;229;Silver;Isaiah 1:22;true; ;109
+230;230;Gold;Not correct;false; ;109
+231;231;Bronze;Not correct;false; ;109
+232;232;Iron;Not correct;false; ;109
+#---
+233;233;Zion;Isaiah 1:27;true; ;110
+234;234;Babylon;Not correct;false; ;110
+235;235;Egypt;Not correct;false; ;110
+236;236;Assyria;Not correct;false; ;110
+#---
+237;237;The vision of Isaiah;Isaiah 1:1;true;;111
+238;238;The vision of Jeremiah;Not in Isaiah 1;false;;111
+239;239;The vision of Ezekiel;Not in Isaiah 1;false;;111
+240;240;The vision of Daniel;Not in Isaiah 1;false;;111
+#---
+241;241;Heavens;Isaiah 1:2;true;;112
+242;242;Earth;Isaiah 1:2;true;;112
+243;243;Mountains;Not mentioned;false;;112
+244;244;Seas;Not mentioned;false;;112
+#---
+245;245;Yes;Isaiah 1:3;false;;113
+246;246;No;Isaiah 1:3;true;;113
+#---
+247;247;Sickness;Isaiah 1:5-6;true;;114
+248;248;Wounds;Isaiah 1:6;true;;114
+249;249;Bruises;Isaiah 1:6;true;;114
+250;250;Healing;Not mentioned;false;;114
+#---
+251;251;Jerusalem;Isaiah 1:9-10;true;;115
+252;252;Samaria;Not mentioned;false;;115
+253;253;Babylon;Not mentioned;false;;115
+254;254;Bethel;Not mentioned;false;;115
+#---
+255;255;Rulers of Sodom;Isaiah 1:10;true;;116
+256;256;Rulers of Egypt;Not mentioned;false;;116
+257;257;Rulers of Babylon;Not mentioned;false;;116
+258;258;Rulers of Nineveh;Not mentioned;false;;116
+#---
+259;259;Incense;Isaiah 1:13;true;;117
+260;260;New Moons;Isaiah 1:13;true;;117
+261;261;Sabbaths;Isaiah 1:13;true;;117
+262;262;Peace Offerings;Not mentioned;false;;117
+#---
+263;263;Yes;Isaiah 1:11;false;;118
+264;264;No;Isaiah 1:11;true;;118
+#---
+265;265;The land;Isaiah 1:7;true;;119
+266;266;The temple;Not mentioned;false;;119
+267;267;The river;Not mentioned;false;;119
+268;268;The mountain;Not mentioned;false;;119
+#---
+269;269;The daughter of Zion;Isaiah 1:8;true;;120
+270;270;The king;Not mentioned;false;;120
+271;271;The prophet;Not mentioned;false;;120
+272;272;The priest;Not mentioned;false;;120
+#---
+273;273;Uzziah;Isaiah 1:1;true;;121
+274;274;Jotham;Isaiah 1:1;true;;121
+275;275;Ahaz;Isaiah 1:1;true;;121
+276;276;Hezekiah;Isaiah 1:1;true;;121
+277;277;Manasseh;Not mentioned;false;;121
+#---
+278;278;A booth in a vineyard;Isaiah 1:8;true;;122
+279;279;A hut in a garden of cucumbers;Isaiah 1:8;true;;122
+280;280;A palace;Not mentioned;false;;122
+281;281;A mountain;Not mentioned;false;;122
+#---
+282;282;Yes;Isaiah 1:14;true;;123
+283;283;No;Isaiah 1:14;false;;123
+#---
+284;284;Broken bones;Not listed;true;;124
+285;285;Wounds;Isaiah 1:6;false;;124
+286;286;Bruises;Isaiah 1:6;false;;124
+287;287;Putrefying sores;Isaiah 1:6;false;;124
+#---
+288;288;Rulers of Sodom;Isaiah 1:10;true;;125
+289;289;People of Gomorrah;Isaiah 1:10;true;;125
+290;290;People of Israel;Not mentioned;false;;125
+291;291;Princes of Egypt;Not mentioned;false;;125
+#---
+292;292;Burnt offerings of rams;Isaiah 1:11;true;;126
+293;293;Fat of fed cattle;Isaiah 1:11;true;;126
+294;294;Blood of bulls;Isaiah 1:11;true;;126
+295;295;Blood of goats;Isaiah 1:11;true;;126
+296;296;Incense;Not in 1:11;false;;126
+#---
+297;297;Yes;Isaiah 1:5;true;;127
+298;298;No;Isaiah 1:5;false;;127
+#---
+299;299;Learn to do good;Isaiah 1:17;true;;128
+300;300;Seek justice;Isaiah 1:17;true;;128
+301;301;Rebuke the oppressor;Isaiah 1:17;true;;128
+302;302;Offer more sacrifices;Not mentioned;false;;128
+#---
+303;303;Be devoured by the sword;Isaiah 1:20;true;;129
+304;304;Eat the good of the land;Not correct;false;;129
+305;305;Be blessed;Not correct;false;;129
+306;306;Become rulers;Not correct;false;;129
+#---
+307;307;A harlot;Isaiah 1:21;true;;130
+308;308;A queen;Not correct;false;;130
+309;309;A mountain;Not correct;false;;130
+310;310;A vineyard;Not correct;false;;130
+#---
+311;311;Isaiah;Isaiah 2:1;true;;131
+312;312;Jeremiah;Not in Isaiah 2:1;false;;131
+313;313;Ezekiel;Not in Isaiah 2:1;false;;131
+314;314;Daniel;Not in Isaiah 2:1;false;;131
+#---
+315;315;The mountain of the Lord's house;Isaiah 2:2;true;;132
+316;316;The palace of the king;Not in Isaiah 2:2;false;;132
+317;317;The city of David;Not in Isaiah 2:2;false;;132
+318;318;The temple of Solomon;Not in Isaiah 2:2;false;;132
+#---
+319;319;Yes;Isaiah 2:2;true;;133
+320;320;No;Isaiah 2:2;false;;133
+#---
+321;321;Plowshares;Isaiah 2:4;true;;134
+322;322;Shields;Not in Isaiah 2:4;false;;134
+323;323;Chariots;Not in Isaiah 2:4;false;;134
+324;324;Crowns;Not in Isaiah 2:4;false;;134
+#---
+325;325;Plowshares;Isaiah 2:4;true;;135
+326;326;Pruning hooks;Isaiah 2:4;true;;135
+327;327;Swords;Isaiah 2:4;true;;135
+328;328;Spears;Isaiah 2:4;true;;135
+#---
+329;329;Yes;Isaiah 2:4;false;;136
+330;330;No;Isaiah 2:4;true;;136
+#---
+331;331;The Lord;Isaiah 2:3;true;;137
+332;332;Moses;Not in Isaiah 2:3;false;;137
+333;333;David;Not in Isaiah 2:3;false;;137
+334;334;Elijah;Not in Isaiah 2:3;false;;137
+#---
+335;335;Zion;Isaiah 2:3;true;;138
+336;336;Jericho;Not in Isaiah 2:3;false;;138
+337;337;Egypt;Not in Isaiah 2:3;false;;138
+338;338;Babylon;Not in Isaiah 2:3;false;;138
+#---
+339;339;War;Isaiah 2:4;true;;139
+340;340;Farming;Not in Isaiah 2:4;false;;139
+341;341;Singing;Not in Isaiah 2:4;false;;139
+342;342;Dancing;Not in Isaiah 2:4;false;;139
+#---
+343;343;Yes;Isaiah 2:5;true;;140
+344;344;No;Isaiah 2:5;false;;140
+#-----------------------------------------------------------------------------------
+345;345;Many people;Isaiah 2:3;true;;141
+346;346;All nations;Isaiah 2:2-3;true;;141
+347;347;The house of Jacob;Isaiah 2:5;false;;141
+348;348;The priests;Not mentioned;false;;141
+#---
+349;349;Jerusalem;Isaiah 2:3;true;;142
+350;350;Zion;Isaiah 2:3;false;;142
+351;351;Babylon;Not mentioned;false;;142
+352;352;Bethel;Not mentioned;false;;142
+#---
+353;353;Yes;Isaiah 2:4;true;;143
+354;354;No;Isaiah 2:4;false;;143
+#---
+355;355;Sword;Isaiah 2:4;true;;144
+356;356;Shield;Not mentioned;false;;144
+357;357;Plowshare;Not correct;false;;144
+358;358;Arrow;Not mentioned;false;;144
+#---
+359;359;Plowshares;Isaiah 2:4;true;;145
+360;360;Pruning hooks;Isaiah 2:4;true;;145
+361;361;Shields;Not mentioned;false;;145
+362;362;Chariots;Not mentioned;false;;145
+#---
+363;363;Yes;Isaiah 2:6;true;;146
+364;364;No;Isaiah 2:6;false;;146
+#---
+365;365;Idols;Isaiah 2:8;true;;147
+366;366;The work of their hands;Isaiah 2:8;true;;147
+367;367;The sun;Not mentioned;false;;147
+368;368;The moon;Not mentioned;false;;147
+#---
+369;369;Be humbled;Isaiah 2:11;true;;148
+370;370;Be exalted;Not correct;false;;148
+371;371;Be ignored;Not mentioned;false;;148
+372;372;Be praised;Not mentioned;false;;148
+#---
+373;373;The Lord;Isaiah 2:11;true;;149
+374;374;The king;Not correct;false;;149
+375;375;The priests;Not correct;false;;149
+376;376;The prophets;Not correct;false;;149
+#---
+377;377;Yes;Isaiah 2:20-21;true;;150
+378;378;No;Isaiah 2:20-21;false;;150
+#-----------------------------------------------------------------------------------
+379;379;Zion;Isaiah 2:3;true;;151
+380;380;Jerusalem;Isaiah 2:3;true;;151
+381;381;Babylon;Not mentioned;false;;151
+382;382;Bethel;Not mentioned;false;;151
+#---
+383;383;The nations;Isaiah 2:4;true;;152
+384;384;Many people;Isaiah 2:4;true;;152
+385;385;The kings;Not mentioned;false;;152
+386;386;The priests;Not mentioned;false;;152
+#---
+387;387;Yes;Isaiah 2:4;false;;153
+388;388;No;Isaiah 2:4;true;;153
+#---
+389;389;Eastern ways;Isaiah 2:6;true;;154
+390;390;Soothsayers;Isaiah 2:6;true;;154
+391;391;Silver;Not in 2:6;false;;154
+392;392;Gold;Not in 2:6;false;;154
+#---
+393;393;Idols;Isaiah 2:8;true;;155
+394;394;The work of their hands;Isaiah 2:8;true;;155
+395;395;Gold;Not mentioned as worshipped;false;;155
+396;396;Silver;Not mentioned as worshipped;false;;155
+#---
+397;397;Yes;Isaiah 2:11-12;true;;156
+398;398;No;Isaiah 2:11-12;false;;156
+#---
+399;399;Cedars of Lebanon;Isaiah 2:13;true;;157
+400;400;Oaks of Bashan;Isaiah 2:13;true;;157
+401;401;High mountains;Isaiah 2:14;true;;157
+402;402;Hills;Isaiah 2:14;true;;157
+403;403;Palms of Jericho;Not mentioned;false;;157
+#---
+404;404;Caves of the rocks;Isaiah 2:19;true;;158
+405;405;Holes of the ground;Isaiah 2:19;true;;158
+406;406;Palaces;Not mentioned;false;;158
+407;407;Temples;Not mentioned;false;;158
+#---
+408;408;Their idols of silver and gold;Isaiah 2:20;true;;159
+409;409;Their swords;Not mentioned;false;;159
+410;410;Their shields;Not mentioned;false;;159
+411;411;Their garments;Not mentioned;false;;159
+#---
+412;412;Yes;Isaiah 2:22;false;;160
+413;413;No;Isaiah 2:22;true;;160
+#-----------------------------------------------------------------------------------
+414;414;The Lord;Isaiah 3:1;true;;161
+415;415;The king;Not in 3:1;false;;161
+416;416;The prophet;Not in 3:1;false;;161
+417;417;The priest;Not in 3:1;false;;161
+#---
+418;418;The mighty man;Isaiah 3:2;true;;162
+419;419;The judge;Isaiah 3:2;true;;162
+420;420;The carpenter;Not in 3:2-3;false;;162
+421;421;The merchant;Not in 3:2-3;false;;162
+#---
+422;422;Yes;Isaiah 3:4;true;;163
+423;423;No;Isaiah 3:4;false;;163
+#---
+424;424;One another;Isaiah 3:5;true;;164
+425;425;The king;Not in 3:5;false;;164
+426;426;The priest;Not in 3:5;false;;164
+427;427;The stranger;Not in 3:5;false;;164
+#---
+428;428;The base;Isaiah 3:5;true;;165
+429;429;The wise;Not in 3:5;false;;165
+430;430;The rich;Not in 3:5;false;;165
+431;431;The poor;Not in 3:5;false;;165
+#---
+432;432;Their sin;Isaiah 3:9;true;;166
+433;433;Their wealth;Not in 3:9;false;;166
+434;434;Their wisdom;Not in 3:9;false;;166
+435;435;Their strength;Not in 3:9;false;;166
+#---
+436;436;Yes;Isaiah 3:10;true;;167
+437;437;No;Isaiah 3:10;false;;167
+#---
+438;438;Walk with outstretched necks;Isaiah 3:16;true;;168
+439;439;Flirt with their eyes;Isaiah 3:16;true;;168
+440;440;Take quick steps;Isaiah 3:16;true;;168
+441;441;Carry baskets;Not in 3:16;false;;168
+#---
+442;442;Their finery;Isaiah 3:18;true;;169
+443;443;Their homes;Not in 3:18;false;;169
+444;444;Their children;Not in 3:18;false;;169
+445;445;Their food;Not in 3:18;false;;169
+#---
+446;446;Yes;Isaiah 3:26;true;;170
+447;447;No;Isaiah 3:26;false;;170
+#-----------------------------------------------------------------------------------
+448;448;Bread;Isaiah 3:1;true;;171
+449;449;Water;Isaiah 3:1;true;;171
+450;450;Oil;Not mentioned;false;;171
+451;451;Meat;Not mentioned;false;;171
+#---
+452;452;The prophet;Isaiah 3:2;true;;172
+453;453;The elder;Isaiah 3:2;true;;172
+454;454;The captain of fifty;Isaiah 3:3;true;;172
+455;455;The merchant;Isaiah 3:3;true;;172
+#---
+456;456;Yes;Isaiah 3:4;true;;173
+457;457;No;Isaiah 3:4;false;;173
+#---
+458;458;Neighbor;Isaiah 3:5;true;;174
+459;459;Stranger;Not mentioned;false;;174
+460;460;Foreigner;Not mentioned;false;;174
+461;461;King;Not mentioned;false;;174
+#---
+462;462;A ruler;Isaiah 3:6-7;true;;175
+463;463;A servant;Not mentioned;false;;175
+464;464;A judge;Not mentioned;false;;175
+465;465;A prophet;Not mentioned;false;;175
+#---
+466;466;Their sin;Isaiah 3:9;true;;176
+467;467;Their pride;Not mentioned;false;;176
+468;468;Their wisdom;Not mentioned;false;;176
+469;469;Their strength;Not mentioned;false;;176
+#---
+470;470;Yes;Isaiah 3:10;true;;177
+471;471;No;Isaiah 3:10;false;;177
+#---
+472;472;Walk with outstretched necks;Isaiah 3:16;true;;178
+473;473;Flirt with their eyes;Isaiah 3:16;true;;178
+474;474;Take quick steps;Isaiah 3:16;true;;178
+475;475;Carry baskets;Not mentioned;false;;178
+#---
+476;476;Anklets;Isaiah 3:18-20;true;;179
+477;477;Headbands;Isaiah 3:18;true;;179
+478;478;Veils;Isaiah 3:19;true;;179
+479;479;Bracelets;Isaiah 3:19;true;;179
+#---
+480;480;Yes;Isaiah 3:26;true;;180
+481;481;No;Isaiah 3:26;false;;180
+#---
