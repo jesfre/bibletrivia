@@ -1,4 +1,7 @@
 id;question_id;level;question_type;question;answer_type;value;picture
+#-------------------------------------------------------------------------
+# CHAPTER 1
+#-------------------------------------------------------------------------
 101;101;EASY;BIBLICAL;"Who is the son of Amoz?";SINGLE;1;
 102;102;EASY;BIBLICAL;Which animals are mentioned as knowing their owner in Isaiah 1?;MULTIPLE;1; 
 103;103;EASY;BIBLICAL;Did the people rebel against the Lord according to Isaiah 1:2?;TRUE_FALSE;1; 
@@ -10,28 +13,30 @@ id;question_id;level;question_type;question;answer_type;value;picture
 109;109;EASY;BIBLICAL;What has become dross according to Isaiah 1:22?;SINGLE;1; 
 110;110;EASY;BIBLICAL;Who will be redeemed with justice?;SINGLE;1; 
 #---
-111;111;MEDIUM;BIBLICAL;Which vision did Isaiah see concerning Judah and Jerusalem?;SINGLE;1;
-112;112;MEDIUM;BIBLICAL;Who are called to hear in Isaiah 1:2?;MULTIPLE;1;
-113;113;MEDIUM;BIBLICAL;Did Israel know their Master according to Isaiah 1:3?;TRUE_FALSE;1;
-114;114;MEDIUM;BIBLICAL;What is the consequence of rebellion mentioned in Isaiah 1:5-6?;MULTIPLE;1;
-115;115;MEDIUM;BIBLICAL;What cities are mentioned as being like Sodom and Gomorrah?;SINGLE;1;
-116;116;MEDIUM;BIBLICAL;What does the Lord call the rulers of Jerusalem in Isaiah 1:10?;SINGLE;1;
-117;117;MEDIUM;BIBLICAL;Which offerings are NOT accepted by the Lord in Isaiah 1:13?;MULTIPLE;1;
-118;118;MEDIUM;BIBLICAL;Is the Lord pleased with the multitude of sacrifices?;TRUE_FALSE;1;
-119;119;MEDIUM;BIBLICAL;What is described as being "desolate" in Isaiah 1:7?;SINGLE;1;
-120;120;MEDIUM;BIBLICAL;Who is compared to a hut in a garden of cucumbers?;SINGLE;1;
+111;111;MEDIUM;BIBLICAL;Which vision did Isaiah see concerning Judah and Jerusalem?;SINGLE;2;
+112;112;MEDIUM;BIBLICAL;Who are called to hear in Isaiah 1:2?;MULTIPLE;2;
+113;113;MEDIUM;BIBLICAL;Did Israel know their Master according to Isaiah 1:3?;TRUE_FALSE;2;
+114;114;MEDIUM;BIBLICAL;What is the consequence of rebellion mentioned in Isaiah 1:5-6?;MULTIPLE;2;
+115;115;MEDIUM;BIBLICAL;What cities are mentioned as being like Sodom and Gomorrah?;SINGLE;2;
+116;116;MEDIUM;BIBLICAL;What does the Lord call the rulers of Jerusalem in Isaiah 1:10?;SINGLE;2;
+117;117;MEDIUM;BIBLICAL;Which offerings are NOT accepted by the Lord in Isaiah 1:13?;MULTIPLE;2;
+118;118;MEDIUM;BIBLICAL;Is the Lord pleased with the multitude of sacrifices?;TRUE_FALSE;2;
+119;119;MEDIUM;BIBLICAL;What is described as being "desolate" in Isaiah 1:7?;SINGLE;2;
+120;120;MEDIUM;BIBLICAL;Who is compared to a hut in a garden of cucumbers?;SINGLE;2;
 #---
-121;121;HARD;BIBLICAL;Which four kings of Judah are mentioned in Isaiah 1:1?;MULTIPLE;1;
-122;122;HARD;BIBLICAL;What two things are Israel compared to in Isaiah 1:8?;MULTIPLE;1;
-123;123;HARD;BIBLICAL;Did the Lord say He is weary of bearing the appointed feasts?;TRUE_FALSE;1;
-124;124;HARD;BIBLICAL;What is NOT listed as a wound in Isaiah 1:6?;SINGLE;1;
-125;125;HARD;BIBLICAL;Who is called to hear the word of the Lord in Isaiah 1:10?;MULTIPLE;1;
-126;126;HARD;BIBLICAL;Which offerings does the Lord NOT delight in, according to Isaiah 1:11?;MULTIPLE;1;
-127;127;HARD;BIBLICAL;Is "the whole head is sick, and the whole heart faints" a metaphor for Israel's condition?;TRUE_FALSE;1;
-128;128;HARD;BIBLICAL;What does the Lord instruct the people to do in Isaiah 1:17?;MULTIPLE;1;
-129;129;HARD;BIBLICAL;What will happen if the people refuse and rebel?;SINGLE;1;
-130;130;HARD;BIBLICAL;What has Jerusalem become, according to Isaiah 1:21?;SINGLE;1;
-#---
+121;121;HARD;BIBLICAL;Which four kings of Judah are mentioned in Isaiah 1:1?;MULTIPLE;3;
+122;122;HARD;BIBLICAL;What two things are Israel compared to in Isaiah 1:8?;MULTIPLE;3;
+123;123;HARD;BIBLICAL;Did the Lord say He is weary of bearing the appointed feasts?;TRUE_FALSE;3;
+124;124;HARD;BIBLICAL;What is NOT listed as a wound in Isaiah 1:6?;SINGLE;3;
+125;125;HARD;BIBLICAL;Who is called to hear the word of the Lord in Isaiah 1:10?;MULTIPLE;3;
+126;126;HARD;BIBLICAL;Which offerings does the Lord NOT delight in, according to Isaiah 1:11?;MULTIPLE;3;
+127;127;HARD;BIBLICAL;Is "the whole head is sick, and the whole heart faints" a metaphor for Israel's condition?;TRUE_FALSE;3;
+128;128;HARD;BIBLICAL;What does the Lord instruct the people to do in Isaiah 1:17?;MULTIPLE;3;
+129;129;HARD;BIBLICAL;What will happen if the people refuse and rebel?;SINGLE;3;
+130;130;HARD;BIBLICAL;What has Jerusalem become, according to Isaiah 1:21?;SINGLE;3;
+#-------------------------------------------------------------------------
+# CHAPTER 2
+#-------------------------------------------------------------------------
 131;131;EASY;BIBLICAL;Who saw the word concerning Judah and Jerusalem in Isaiah 2:1?;SINGLE;1;
 132;132;EASY;BIBLICAL;What will be established on the top of the mountains in the latter days?;SINGLE;1;
 133;133;EASY;BIBLICAL;Will all nations flow to the mountain of the Lord?;TRUE_FALSE;1;
@@ -43,28 +48,30 @@ id;question_id;level;question_type;question;answer_type;value;picture
 139;139;EASY;BIBLICAL;What will people not learn anymore according to Isaiah 2:4?;SINGLE;1;
 140;140;EASY;BIBLICAL;Is the house of Jacob invited to walk in the light of the Lord?;TRUE_FALSE;1;
 #---
-141;141;MEDIUM;BIBLICAL;Who will say, 'Come, let us go up to the mountain of the Lord'?;MULTIPLE;1;
-142;142;MEDIUM;BIBLICAL;From where will the word of the Lord go forth?;SINGLE;1;
-143;143;MEDIUM;BIBLICAL;Will the Lord judge between the nations according to Isaiah 2?;TRUE_FALSE;1;
-144;144;MEDIUM;BIBLICAL;What will people not lift up against nation anymore?;SINGLE;1;
-145;145;MEDIUM;BIBLICAL;Which items are mentioned as being made from swords and spears?;MULTIPLE;1;
-146;146;MEDIUM;BIBLICAL;Is the house of Jacob described as being full of eastern ways?;TRUE_FALSE;1;
-147;147;MEDIUM;BIBLICAL;What do people worship according to Isaiah 2:8?;MULTIPLE;1;
-148;148;MEDIUM;BIBLICAL;What will happen to the lofty looks of man?;SINGLE;1;
-149;149;MEDIUM;BIBLICAL;Who alone will be exalted in that day?;SINGLE;1;
-150;150;MEDIUM;BIBLICAL;Will people cast away their idols in the caves and rocks?;TRUE_FALSE;1;
+141;141;MEDIUM;BIBLICAL;Who will say, 'Come, let us go up to the mountain of the Lord'?;MULTIPLE;2;
+142;142;MEDIUM;BIBLICAL;From where will the word of the Lord go forth?;SINGLE;2;
+143;143;MEDIUM;BIBLICAL;Will the Lord judge between the nations according to Isaiah 2?;TRUE_FALSE;2;
+144;144;MEDIUM;BIBLICAL;What will people not lift up against nation anymore?;SINGLE;2;
+145;145;MEDIUM;BIBLICAL;Which items are mentioned as being made from swords and spears?;MULTIPLE;2;
+146;146;MEDIUM;BIBLICAL;Is the house of Jacob described as being full of eastern ways?;TRUE_FALSE;2;
+147;147;MEDIUM;BIBLICAL;What do people worship according to Isaiah 2:8?;MULTIPLE;2;
+148;148;MEDIUM;BIBLICAL;What will happen to the lofty looks of man?;SINGLE;2;
+149;149;MEDIUM;BIBLICAL;Who alone will be exalted in that day?;SINGLE;2;
+150;150;MEDIUM;BIBLICAL;Will people cast away their idols in the caves and rocks?;TRUE_FALSE;2;
 #---
-151;151;HARD;BIBLICAL;Which two locations are mentioned as sources for the law and the word of the Lord in Isaiah 2:3?;MULTIPLE;1;
-152;152;HARD;BIBLICAL;What will the Lord judge between, according to Isaiah 2:4?;MULTIPLE;1;
-153;153;HARD;BIBLICAL;Will people learn war anymore according to Isaiah 2:4?;TRUE_FALSE;1;
-154;154;HARD;BIBLICAL;What is the house of Jacob full of in Isaiah 2:6?;MULTIPLE;1;
-155;155;HARD;BIBLICAL;Which items are mentioned as being worshipped in Isaiah 2:8?;MULTIPLE;1;
-156;156;HARD;BIBLICAL;Will the proud and lofty be brought low in that day?;TRUE_FALSE;1;
-157;157;HARD;BIBLICAL;What natural features are mentioned as being brought low in Isaiah 2:13-14?;MULTIPLE;1;
-158;158;HARD;BIBLICAL;Where will people go to hide from the terror of the Lord?;MULTIPLE;1;
-159;159;HARD;BIBLICAL;What will people cast away to the moles and bats?;SINGLE;1;
-160;160;HARD;BIBLICAL;According to Isaiah 2:22, should man be relied upon?;TRUE_FALSE;1;
-#---
+151;151;HARD;BIBLICAL;Which two locations are mentioned as sources for the law and the word of the Lord in Isaiah 2:3?;MULTIPLE;3;
+152;152;HARD;BIBLICAL;What will the Lord judge between, according to Isaiah 2:4?;MULTIPLE;3;
+153;153;HARD;BIBLICAL;Will people learn war anymore according to Isaiah 2:4?;TRUE_FALSE;3;
+154;154;HARD;BIBLICAL;What is the house of Jacob full of in Isaiah 2:6?;MULTIPLE;3;
+155;155;HARD;BIBLICAL;Which items are mentioned as being worshipped in Isaiah 2:8?;MULTIPLE;3;
+156;156;HARD;BIBLICAL;Will the proud and lofty be brought low in that day?;TRUE_FALSE;3;
+157;157;HARD;BIBLICAL;What natural features are mentioned as being brought low in Isaiah 2:13-14?;MULTIPLE;3;
+158;158;HARD;BIBLICAL;Where will people go to hide from the terror of the Lord?;MULTIPLE;3;
+159;159;HARD;BIBLICAL;What will people cast away to the moles and bats?;SINGLE;3;
+160;160;HARD;BIBLICAL;According to Isaiah 2:22, should man be relied upon?;TRUE_FALSE;3;
+#-------------------------------------------------------------------------
+# CHAPTER 3
+#-------------------------------------------------------------------------
 161;161;EASY;BIBLICAL;Who takes away supply and support from Jerusalem and Judah in Isaiah 3:1?;SINGLE;1;
 162;162;EASY;BIBLICAL;Which two groups are mentioned as being taken away in Isaiah 3:2-3?;MULTIPLE;1;
 163;163;EASY;BIBLICAL;Will children be their princes according to Isaiah 3:4?;TRUE_FALSE;1;
@@ -76,15 +83,393 @@ id;question_id;level;question_type;question;answer_type;value;picture
 169;169;EASY;BIBLICAL;What will the Lord take away from the daughters of Zion?;SINGLE;1;
 170;170;EASY;BIBLICAL;Will the gates of Zion lament and mourn?;TRUE_FALSE;1;
 #---
-171;171;MEDIUM;BIBLICAL;Which supplies does the Lord take away from Jerusalem and Judah in Isaiah 3:1?;MULTIPLE;1;
-172;172;MEDIUM;BIBLICAL;Who are listed among those removed in Isaiah 3:2-3?;MULTIPLE;1;
-173;173;MEDIUM;BIBLICAL;Will the people have children as their rulers?;TRUE_FALSE;1;
-174;174;MEDIUM;BIBLICAL;Who will oppress one another according to Isaiah 3:5?;SINGLE;1;
-175;175;MEDIUM;BIBLICAL;What does a man refuse to be in his father's house in Isaiah 3:6-7?;SINGLE;1;
-176;176;MEDIUM;BIBLICAL;What do the wicked declare about themselves in Isaiah 3:9?;MULTIPLE;1;
-177;177;MEDIUM;BIBLICAL;Will the righteous eat the fruit of their doings?;TRUE_FALSE;1;
-178;178;MEDIUM;BIBLICAL;What do the women of Zion do as they walk, according to Isaiah 3:16?;MULTIPLE;1;
-179;179;MEDIUM;BIBLICAL;What will the Lord take away from the daughters of Zion in Isaiah 3:18-23?;MULTIPLE;1;
-180;180;MEDIUM;BIBLICAL;Will the gates of Zion lament and mourn?;TRUE_FALSE;1;
+171;171;MEDIUM;BIBLICAL;Which supplies does the Lord take away from Jerusalem and Judah in Isaiah 3:1?;MULTIPLE;2;
+172;172;MEDIUM;BIBLICAL;Who are listed among those removed in Isaiah 3:2-3?;MULTIPLE;2;
+173;173;MEDIUM;BIBLICAL;Will the people have children as their rulers?;TRUE_FALSE;2;
+174;174;MEDIUM;BIBLICAL;Who will oppress one another according to Isaiah 3:5?;SINGLE;2;
+175;175;MEDIUM;BIBLICAL;What does a man refuse to be in his father's house in Isaiah 3:6-7?;SINGLE;2;
+176;176;MEDIUM;BIBLICAL;What do the wicked declare about themselves in Isaiah 3:9?;MULTIPLE;2;
+177;177;MEDIUM;BIBLICAL;Will the righteous eat the fruit of their doings?;TRUE_FALSE;2;
+178;178;MEDIUM;BIBLICAL;What do the women of Zion do as they walk, according to Isaiah 3:16?;MULTIPLE;2;
+179;179;MEDIUM;BIBLICAL;What will the Lord take away from the daughters of Zion in Isaiah 3:18-23?;MULTIPLE;2;
+180;180;MEDIUM;BIBLICAL;Will the gates of Zion lament and mourn?;TRUE_FALSE;2;
+#---
+181;181;HARD;BIBLICAL;According to Isaiah 3, who will the Lord of hosts take away as "the whole stay of bread, and the whole stay of water"?;MULTIPLE;3;
+182;182;HARD;BIBLICAL;What phrase in Isaiah 3, verses 8-9, indicates that the people of Jerusalem and Judah made their sins public and without shame, similar to another biblical city?;SINGLE;3;
+183;183;HARD;BIBLICAL;True or False: According to Isaiah 3, when a man is desperately asked to be a ruler over the ruins because he has a cloak, he gladly accepts due to the dire need for leadership.;TRUE_FALSE;3;
+184;184;HARD;BIBLICAL;In Isaiah 3, what reason does the Lord give for entering into judgment with the elders and princes of His people?;SINGLE;3;
+185;185;HARD;BIBLICAL;The prophet Isaiah lists specific articles of clothing and adornment the "daughters of Zion" will have stripped away. Which of the following items are included in that list?;MULTIPLE;3;
+186;186;HARD;BIBLICAL;Besides children being their oppressors, what other group does Isaiah 3:12 state will rule over God's people?;SINGLE;3;
+187;187;HARD;BIBLICAL;What is the ultimate consequence for the men of Jerusalem, as described in Isaiah 3:25?;SINGLE;3;
+188;188;HARD;BIBLICAL;What will replace the sweet smell and well-set hair for the haughty daughters of Zion, according to Isaiah 3:24?;MULTIPLE;3;
+189;189;HARD;BIBLICAL;In Isaiah 3:10-11, how is the destiny of the righteous and the wicked contrasted?;SINGLE;3;
+190;190;HARD;BIBLICAL;How is Jerusalem, personified, described as ending up in Isaiah 3:26?;MULTIPLE;3;
+#-------------------------------------------------------------------------
+# CHAPTER 4
+#-------------------------------------------------------------------------
+191;191;EASY;BIBLICAL;According to Isaiah 4:1, how many women will take hold of one man in that day?;SINGLE;1;
+192;192;EASY;BIBLICAL;What will the women, who hold onto one man, agree to provide for themselves?;MULTIPLE;1;
+193;193;EASY;BIBLICAL;What will the women in Isaiah 4:1 ask the man for?;SINGLE;1;
+194;194;EASY;BIBLICAL;True or False: The prophecy of Isaiah 4:1 describes a time of great prosperity and many men.;TRUE_FALSE;1;
+195;195;EASY;BIBLICAL;What will the "Branch of the Lord" be described as in that day?;MULTIPLE;1;
+196;196;EASY;BIBLICAL;What will the survivors in Israel be called in Jerusalem?;SINGLE;1;
+197;197;EASY;BIBLICAL;What will the Lord create over Mount Zion and its assemblies by day?;SINGLE;1;
+198;198;EASY;BIBLICAL;What will the Lord create over Mount Zion and its assemblies by night?;SINGLE;1;
+199;199;EASY;BIBLICAL;What is described as being a "refuge" and "shelter" from storms and rain?;SINGLE;1;
+200;200;EASY;BIBLICAL;What will the Lord wash away from the "daughters of Zion"?;SINGLE;1;
+#---
+201;201;MEDIUM;BIBLICAL;According to Isaiah 4:1, what societal norm is reversed by the seven women who offer to provide for themselves?;SINGLE;2;
+202;202;MEDIUM;BIBLICAL;What is the purpose of the "spirit of judgment" and the "spirit of burning" that the Lord uses in Isaiah 4:4?;MULTIPLE;2;
+203;203;MEDIUM;BIBLICAL;What aspect of the Exodus is recalled by the description of the cloud by day and flaming fire by night in Isaiah 4:5?;SINGLE;2;
+204;204;MEDIUM;BIBLICAL;Besides a "shelter" from storms and rain, what does the tabernacle provide, according to Isaiah 4:6?;SINGLE;2;
+205;205;MEDIUM;BIBLICAL;True or False: According to Isaiah 4:3, all of the people who survive the judgment will be called holy.;TRUE_FALSE;2;
+206;206;MEDIUM;BIBLICAL;What do the phrases "Branch of the Lord" and "fruit of the earth" symbolize in Isaiah 4:2?;MULTIPLE;2;
+207;207;MEDIUM;BIBLICAL;What is the implication of the women asking for the man's name in Isaiah 4:1?;SINGLE;2;
+208;208;MEDIUM;BIBLICAL;What is promised to everyone who is "written among the living in Jerusalem" in Isaiah 4:3?;SINGLE;2;
+209;209;MEDIUM;BIBLICAL;In Isaiah 4:5, where will the cloud and smoke, and the shining of a flaming fire, be created?;MULTIPLE;2;
+210;210;MEDIUM;BIBLICAL;How is the effect of the "spirit of burning" contrasted with the filthiness of the "daughters of Zion" in Isaiah 4:4?;SINGLE;2;
+#---
+211;211;HARD;BIBLICAL;What is the symbolic significance of "seven women" seeking "one man" in Isaiah 4:1, considering the context of judgment from Isaiah 3?;SINGLE;3;
+212;212;HARD;BIBLICAL;According to some interpretations, what spiritual reality does the "spirit of judgment and the spirit of burning" symbolize for the remnant in Isaiah 4:4?;MULTIPLE;3;
+213;213;HARD;BIBLICAL;What key difference exists between the request of the women in Isaiah 4:1 and the refusal of the man to be a leader in Isaiah 3:6?;SINGLE;3;
+214;214;HARD;BIBLICAL;True or False: The imagery of the cloud by day and fire by night in Isaiah 4:5 exclusively symbolizes God's presence, with no connection to judgment.;TRUE_FALSE;3;
+215;215;HARD;BIBLICAL;What specific promise is made to "everyone that is written among the living in Jerusalem" in Isaiah 4:3?;SINGLE;3;
+216;216;HARD;BIBLICAL;What dual symbolism is sometimes associated with the "Branch of the Lord" in Isaiah 4:2, beyond its messianic interpretation?;MULTIPLE;3;
+217;217;HARD;BIBLICAL;What is the deeper theological meaning behind the women's offer to provide their own food and clothing in Isaiah 4:1?;SINGLE;3;
+218;218;HARD;BIBLICAL;Besides providing shade and refuge, what is the significance of the "glory" covering the tabernacle in Isaiah 4:5-6?;SINGLE;3;
+219;219;HARD;BIBLICAL;The purification described in Isaiah 4:4, involving the "filth of the daughters of Zion" and the "blood of Jerusalem," points to the cleansing of what two specific aspects of the people's sin?;MULTIPLE;3;
+220;220;HARD;BIBLICAL;In the context of the entire chapter, how does the tone shift from the beginning of Isaiah 4 to its conclusion?;SINGLE;3;
+#-------------------------------------------------------------------------
+# Chapter 5
+#-------------------------------------------------------------------------
+221;221;EASY;BIBLICAL;What did the "wellbeloved" plant on a very fruitful hill, according to the song in Isaiah 5?;SINGLE;1;
+222;222;EASY;BIBLICAL;What did the "wellbeloved" expect his vineyard to produce?;SINGLE;1;
+223;223;EASY;BIBLICAL;True or False: The vineyard mentioned in Isaiah 5:7 is a metaphor for the house of Israel.;TRUE_FALSE;1;
+224;224;EASY;BIBLICAL;What two things did the Lord expect from His people, but found instead oppression and a cry?;MULTIPLE;1;
+225;225;EASY;BIBLICAL;Isaiah pronounces a "woe" on those who call evil what?;SINGLE;1;
+226;226;EASY;BIBLICAL;True or False: In Isaiah 5, the people were condemned for being too righteous.;TRUE_FALSE;1;
+227;227;EASY;BIBLICAL;What is the consequence for those who add house to house and field to field?;SINGLE;1;
+228;228;EASY;BIBLICAL;What happens to the joy, lyre, and harp of the people in Isaiah 5:14?;SINGLE;1;
+229;229;EASY;BIBLICAL;How are the people described as being drunk in Isaiah 5:11?;SINGLE;1;
+230;230;EASY;BIBLICAL;What does the Lord of hosts declare will be filled with grass in Isaiah 5:17?;SINGLE;1;
+#---
+231;231;MEDIUM;BIBLICAL;According to the parable in Isaiah 5:5-6, what three things will the "wellbeloved" do to his vineyard as punishment for producing wild grapes?;MULTIPLE;2;
+232;232;MEDIUM;BIBLICAL;In Isaiah 5:7, what is the meaning behind the wordplay between "justice" and "oppression," and "righteousness" and "a cry"?;SINGLE;2;
+233;233;MEDIUM;BIBLICAL;What is the judgment for those who are "mighty to drink wine," as described in Isaiah 5:22-25?;SINGLE;2;
+234;234;MEDIUM;BIBLICAL;According to Isaiah 5:12, what do the people fail to regard while enjoying their feasts with music and wine?;MULTIPLE;2;
+235;235;MEDIUM;BIBLICAL;What is the specific prophecy regarding the houses of those who join house to house and field to field in Isaiah 5:9?;SINGLE;2;
+236;236;MEDIUM;BIBLICAL;What is the metaphorical meaning behind "drawing iniquity with cords of vanity" in Isaiah 5:18?;SINGLE;2;
+237;237;MEDIUM;BIBLICAL;What happens to the haughty and the arrogant man according to Isaiah 5:15-16?;SINGLE;2;
+238;238;MEDIUM;BIBLICAL;What judgment is declared upon those who are wise in their own eyes and prudent in their own sight?;MULTIPLE;2;
+239;239;MEDIUM;BIBLICAL;True or False: According to Isaiah 5:20, calling evil good and good evil is a lesser sin than drunkenness.;TRUE_FALSE;2;
+240;240;MEDIUM;BIBLICAL;What specific image is used to describe the consequences for those who forget the Lord and are consumed with revelry?;SINGLE;2;
+#---
+241;241;HARD;BIBLICAL;In Isaiah 5:10, what specific agricultural measures are used to illustrate the coming scarcity and desolation for the greedy?;MULTIPLE;3;
+242;242;HARD;BIBLICAL;What is the theological significance of God, the "wellbeloved," taking away the hedge and breaking down the wall of his vineyard in Isaiah 5:5?;SINGLE;3;
+243;243;HARD;BIBLICAL;True or False: The people in Isaiah 5:19 are described as challenging God to act quickly, demonstrating their faith and trust in His plans.;TRUE_FALSE;3;
+244;244;HARD;BIBLICAL;What phrase in Isaiah 5:24 connects the judgment of the people to their rejection of God's law?;SINGLE;3;
+245;245;HARD;BIBLICAL;What is the purpose of the "woes" declared in Isaiah 5:8-23?;MULTIPLE;3;
+246;246;HARD;BIBLICAL;What image is used in Isaiah 5:26 to describe how God will summon distant nations to execute judgment?;SINGLE;3;
+247;247;HARD;BIBLICAL;According to the description of the approaching foreign army in Isaiah 5:27-28, what features demonstrate their unwavering efficiency?;MULTIPLE;3;
+248;248;HARD;BIBLICAL;What is the metaphorical meaning behind "Sheol enlarging her desire, and opening her mouth without measure" in Isaiah 5:14?;SINGLE;3;
+249;249;HARD;BIBLICAL;The contrast between the "roaring of the sea" and the "darkness and sorrow" in Isaiah 5:30 suggests what about the state of the land after judgment?;SINGLE;3;
+250;250;HARD;BIBLICAL;How does the parable of the vineyard at the beginning of Isaiah 5 set the theological stage for the subsequent "woes" and final judgment?;SINGLE;3;
+#--------------------------------------------------------------------------
+# Chapter 6
+#-------------------------------------------------------------------------
+251;251;EASY;BIBLICAL;In what year did the prophet Isaiah see the Lord sitting on a throne?;SINGLE;1;
+252;252;EASY;BIBLICAL;What kind of creatures were standing above the Lord in Isaiah's vision?;SINGLE;1;
+253;253;EASY;BIBLICAL;True or False: The seraphim in the vision had six wings.;TRUE_FALSE;1;
+254;254;EASY;BIBLICAL;What did the seraphim cry out to one another in Isaiah 6:3?;SINGLE;1;
+255;255;EASY;BIBLICAL;What part of the temple was shaken by the voice of the seraphim?;SINGLE;1;
+256;256;EASY;BIBLICAL;What did Isaiah say about himself after seeing the Lord?;MULTIPLE;1;
+257;257;EASY;BIBLICAL;What did one of the seraphim use to touch Isaiah's lips?;SINGLE;1;
+258;258;EASY;BIBLICAL;What did the coal that touched Isaiah's lips do?;SINGLE;1;
+259;259;EASY;BIBLICAL;What question did the Lord ask, and who answered?;SINGLE;1;
+260;260;EASY;BIBLICAL;What was Isaiah's response when the Lord asked "Whom shall I send, and who will go for us?";SINGLE;1;
+#---
+261;261;MEDIUM;BIBLICAL;In Isaiah's vision, what specific function did the seraphim use each pair of their six wings for?;MULTIPLE;2;
+262;262;MEDIUM;BIBLICAL;What did Isaiah mean when he cried, "Woe is me! for I am undone"?;SINGLE;2;
+263;263;MEDIUM;BIBLICAL;What is the symbolic meaning of the live coal taken from the altar touching Isaiah's lips?;SINGLE;2;
+264;264;MEDIUM;BIBLICAL;What is the specific command given to Isaiah regarding the people's understanding and perception of his message?;SINGLE;2;
+265;265;MEDIUM;BIBLICAL;What is the ultimate consequence if the people listen, understand, and turn to God, according to Isaiah 6:10?;SINGLE;2;
+266;266;MEDIUM;BIBLICAL;True or False: The seraphim covered their faces because they were sinless and did not want to be seen by Isaiah.;TRUE_FALSE;2;
+267;267;MEDIUM;BIBLICAL;What was the significance of the year King Uzziah died, in the context of Isaiah's vision?;SINGLE;2;
+268;268;MEDIUM;BIBLICAL;What specific part of the temple was filled with smoke?;SINGLE;2;
+269;269;MEDIUM;BIBLICAL;What is the significance of the stump of a tree left after it has been cut down, as mentioned in Isaiah 6:13?;SINGLE;2;
+270;270;MEDIUM;BIBLICAL;Why did the Lord ask, "Whom shall I send?" if He already knew Isaiah would volunteer?;SINGLE;2;
+#---
+271;271;HARD;BIBLICAL;In Isaiah's vision, what does the train of the Lord's robe filling the temple symbolize?;SINGLE;3;
+272;272;HARD;BIBLICAL;What is the symbolic significance of the seraphim covering their faces and feet in the presence of God?;MULTIPLE;3;
+273;273;HARD;BIBLICAL;What specific theological concept is emphasized by the seraphim's threefold repetition of the word "holy" in Isaiah 6:3?;SINGLE;3;
+274;274;HARD;BIBLICAL;True or False: The purpose of Isaiah's commission to dull the hearts and ears of the people was to punish them, with no possibility of ultimate redemption.;TRUE_FALSE;3;
+275;275;HARD;BIBLICAL;The contrast between Isaiah's initial cry, "I am undone," and his later response, "Here am I; send me," highlights what theological principle?;SINGLE;3;
+276;276;HARD;BIBLICAL;According to the New Testament, who is identified as the King Isaiah saw in his vision in Isaiah 6?;SINGLE;3;
+277;277;HARD;BIBLICAL;What is the theological interpretation of the smoke filling the temple in Isaiah 6:4, drawing on other biblical accounts?;MULTIPLE;3;
+278;278;HARD;BIBLICAL;What is the deeper meaning of the question, "Whom shall I send, and who will go for us?" (Isaiah 6:8), considering the use of both singular ("I") and plural ("us") forms?;SINGLE;3;
+279;279;HARD;BIBLICAL;In Isaiah 6:13, how does the imagery of the "holy seed" as the "stump" of a tree offer a glimmer of hope amidst the harsh judgment?;SINGLE;3;
+280;280;HARD;BIBLICAL;What is the significance of the year King Uzziah died as the setting for Isaiah's vision?;SINGLE;3;
+#-------------------------------------------------------------------------
+# Chapter 7
+#-------------------------------------------------------------------------
+281;281;EASY;BIBLICAL;What two kings came against Jerusalem during the reign of King Ahaz?;MULTIPLE;1;
+282;282;EASY;BIBLICAL;True or False: According to Isaiah 7, the heart of King Ahaz and his people was not shaken by the news of the coming armies.;TRUE_FALSE;1;
+283;283;EASY;BIBLICAL;What message did the Lord tell Isaiah to give to King Ahaz?;SINGLE;1;
+284;284;EASY;BIBLICAL;Who was Isaiah commanded to bring with him to meet King Ahaz?;SINGLE;1;
+285;285;EASY;BIBLICAL;What will happen to the two kings threatening Judah, as prophesied by Isaiah?;MULTIPLE;1;
+286;286;EASY;BIBLICAL;What sign was Isaiah told to give King Ahaz to reassure him?;SINGLE;1;
+287;287;EASY;BIBLICAL;What is the name of the child that will be born as a sign?;SINGLE;1;
+288;288;EASY;BIBLICAL;What will the child "Immanuel" eat when he is old enough to choose good from evil?;SINGLE;1;
+289;289;EASY;BIBLICAL;True or False: The prophecy about the land of Judah being devoured by foreign armies happens after the two kings are defeated.;TRUE_FALSE;1;
+290;290;EASY;BIBLICAL;Who will the Lord "hiss for" to come and oppress the land of Judah?;MULTIPLE;1;
+291;291;EASY;BIBLICAL;What will every place with a thousand vines worth a thousand silver shekels become?;SINGLE;1;
+292;292;EASY;BIBLICAL;What will be the primary food source in the land during this time of desolation?;SINGLE;1;
+293;293;EASY;BIBLICAL;How is the land described as being so desolate that people will need tools to hunt?;SINGLE;1;
+294;294;EASY;BIBLICAL;What two nations will God use as tools of judgment against Judah?;MULTIPLE;1;
+295;295;EASY;BIBLICAL;What will the Lord shave with a razor from beyond the River?;SINGLE;1;
+296;296;EASY;BIBLICAL;True or False: The land of Israel will be so desolate that only a handful of people will survive.;TRUE_FALSE;1;
+297;297;EASY;BIBLICAL;What is the name of Isaiah's son mentioned in this chapter?;SINGLE;1;
+298;298;EASY;BIBLICAL;What will the child, born as a sign, eat before he knows to refuse evil and choose good?;SINGLE;1;
+299;299;EASY;BIBLICAL;What will come upon King Ahaz and his people that has not been seen since the separation of Israel and Judah?;SINGLE;1;
+300;300;EASY;BIBLICAL;What is the meaning of the name "Immanuel"?;SINGLE;1;
+#---
+301;301;MEDIUM;BIBLICAL;Why was the heart of King Ahaz and his people shaken like the trees of a wood?;SINGLE;2;
+302;302;MEDIUM;BIBLICAL;Where did the Lord instruct Isaiah to meet King Ahaz?;SINGLE;2;
+303;303;MEDIUM;BIBLICAL;What was the specific message Isaiah delivered to Ahaz regarding the two kings threatening Judah?;MULTIPLE;2;
+304;304;MEDIUM;BIBLICAL;True or False: Ahaz trusted the word of the Lord and asked for a sign as offered by Isaiah.;TRUE_FALSE;2;
+305;305;MEDIUM;BIBLICAL;By what time would the land of the two threatening kings be forsaken?;SINGLE;2;
+306;306;MEDIUM;BIBLICAL;What specific promise is tied to the sign of the Immanuel child's birth in Isaiah 7:16?;SINGLE;2;
+307;307;MEDIUM;BIBLICAL;What does the imagery of God "hissing for the fly" and "whistling for the bee" represent?;MULTIPLE;2;
+308;308;MEDIUM;BIBLICAL;What is the symbolic meaning of the Lord using a hired razor from beyond the River?;SINGLE;2;
+309;309;MEDIUM;BIBLICAL;What will become of the cultivated hillsides, and who will occupy them, according to Isaiah 7:25?;MULTIPLE;2;
+310;310;MEDIUM;BIBLICAL;What phrase in Isaiah 7:13 suggests Ahaz and the house of David's deliberate defiance of God?;SINGLE;2;
+311;311;MEDIUM;BIBLICAL;What does the consumption of "curds and honey" symbolize for the remnant left in the land, according to Isaiah 7:22?;SINGLE;2;
+312;312;MEDIUM;BIBLICAL;How is the desolation described in Isaiah 7:23, comparing the past to the future?;SINGLE;2;
+313;313;MEDIUM;BIBLICAL;What two specific consequences does Isaiah mention will affect the land before the Immanuel child can choose good from evil?;MULTIPLE;2;
+314;314;MEDIUM;BIBLICAL;In Isaiah 7:8, how long does the prophecy state before Ephraim would be "broken, that it be not a people"?;SINGLE;2;
+315;315;MEDIUM;BIBLICAL;True or False: King Ahaz's fear was primarily rooted in the spiritual alliance of Syria and Ephraim rather than their military strength.;TRUE_FALSE;2;
+316;316;MEDIUM;BIBLICAL;What does the use of the term "house of David" signify in Isaiah's address to Ahaz?;SINGLE;2;
+317;317;MEDIUM;BIBLICAL;The prophecy of the Immanuel child was given immediately after what significant event involving Ahaz?;SINGLE;2;
+318;318;MEDIUM;BIBLICAL;What specific military objective did Syria and Ephraim have in their plan against Judah, according to Isaiah 7:6?;SINGLE;2;
+319;319;MEDIUM;BIBLICAL;What specific animals are mentioned as being kept by a surviving man in Isaiah 7:21?;MULTIPLE;2;
+320;320;MEDIUM;BIBLICAL;What does Isaiah 7:9 connect with being "established" or "stand firm"?;SINGLE;2;
+#---
+321;321;HARD;BIBLICAL;In Isaiah 7:3, what is the significance of the meeting location at the "conduit of the upper pool" and the "fuller's field"?;SINGLE;3;
+322;322;HARD;BIBLICAL;What is the symbolic meaning of the name "Shearjashub" (A Remnant Shall Return) for King Ahaz, considering the context of judgment and the Immanuel prophecy?;MULTIPLE;3;
+323;323;HARD;BIBLICAL;What was the core reason behind King Ahaz's pious refusal to ask for a sign from the Lord in Isaiah 7:12?;SINGLE;3;
+324;324;HARD;BIBLICAL;What is the critical historical and theological context regarding the use of the Hebrew word 'almah' (young woman) versus 'betulah' (virgin) in Isaiah 7:14?;MULTIPLE;3;
+325;325;HARD;BIBLICAL;The prophecy in Isaiah 7:16 speaks of the land of the two kings being "forsaken" before the child knows good from evil. What is the symbolic and historical implication of this timing?;SINGLE;3;
+326;326;HARD;BIBLICAL;What is the profound theological distinction between the sign given to Ahaz in Isaiah 7 and the ultimate fulfillment in Jesus Christ, as noted in the New Testament?;SINGLE;3;
+327;327;HARD;BIBLICAL;True or False: The prophecy in Isaiah 7 has only one fulfillment, which is the historical event during the time of King Ahaz.;TRUE_FALSE;3;
+328;328;HARD;BIBLICAL;The "hired razor" from beyond the River (Assyria) in Isaiah 7:20 is an image of what two specific acts of judgment against Judah?;MULTIPLE;3;
+329;329;HARD;BIBLICAL;How does the prophecy of the land becoming thorns and briers (Isaiah 7:23) reverse the imagery of a lush vineyard in Isaiah 5?;SINGLE;3;
+330;330;HARD;BIBLICAL;What does the imagery of eating "curds and honey" in the land of desolation suggest about the lives of the remnant who survive the judgment?;MULTIPLE;3;
+331;331;HARD;BIBLICAL;What is the theological connection between the Lord "hissing" for the flies and bees (Isaiah 7:18) and the concept of God's sovereignty over pagan nations?;SINGLE;3;
+332;332;HARD;BIBLICAL;How is the phrase "house of David" used by Isaiah to highlight both the immediate failure of King Ahaz and the long-term promise of God's covenant?;SINGLE;3;
+333;333;HARD;BIBLICAL;In Isaiah 7:8, the specific timeframe of "three score and five years" (65 years) for Ephraim to be "broken, that it be not a people," points to what specific Assyrian policy?;SINGLE;3;
+334;334;HARD;BIBLICAL;What is the symbolic meaning of the land becoming so desolate that it requires bows and arrows for hunting in Isaiah 7:24?;SINGLE;3;
+335;335;HARD;BIBLICAL;True or False: The name Immanuel serves solely as a temporary sign of hope for King Ahaz, with no lasting messianic significance.;TRUE_FALSE;3;
+336;336;HARD;BIBLICAL;The prophecy of the king of Assyria coming against Judah (Isaiah 7:17) is presented as a consequence of what specific act?;SINGLE;3;
+337;337;HARD;BIBLICAL;What is the implied fate of the people who rejoice over the temporary threats of Rezin and the son of Remaliah, as contrasted with trusting God?;SINGLE;3;
+338;338;HARD;BIBLICAL;In Isaiah 7:10-12, God's willingness to give Ahaz a sign "deep as Sheol or high as heaven" demonstrates what aspect of God's character?;SINGLE;3;
+339;339;HARD;BIBLICAL;What specific aspect of the Assyrian invasion, described as "whistling for the bee," highlights their aggressive and militaristic nature?;SINGLE;3;
+340;340;HARD;BIBLICAL;What specific reason does the prophet Isaiah give for God giving the sign of Immanuel, despite Ahaz's refusal to ask for one?;SINGLE;3;
+#-------------------------------------------------------------------------
+# Chapter 8
+#-------------------------------------------------------------------------
+341;341;EASY;BIBLICAL;What did the Lord instruct Isaiah to take to write on with a man's pen?;SINGLE;1;
+342;342;EASY;BIBLICAL;What name was Isaiah instructed to write on the tablet?;SINGLE;1;
+343;343;EASY;BIBLICAL;Who did Isaiah take as faithful witnesses to record the sign?;MULTIPLE;1;
+344;344;EASY;BIBLICAL;True or False: Isaiah's wife conceived and gave birth to a son before the prophecy could be fulfilled.;TRUE_FALSE;1;
+345;345;EASY;BIBLICAL;What was the name given to Isaiah's son?;SINGLE;1;
+346;346;EASY;BIBLICAL;What will happen before the child learns to cry "My father" or "My mother"?;SINGLE;1;
+347;347;EASY;BIBLICAL;True or False: The people of Judah rejoiced over the waters of Shiloah that flow softly.;TRUE_FALSE;1;
+348;348;EASY;BIBLICAL;What will the Lord bring upon the people for their rebellion?;SINGLE;1;
+349;349;EASY;BIBLICAL;What is the name given to the king of Assyria, who is described as a flood?;SINGLE;1;
+350;350;EASY;BIBLICAL;What will the Assyrian king do to the land of Judah?;MULTIPLE;1;
+351;351;EASY;BIBLICAL;What is the name of the child that is a sign and a wonder in Israel?;SINGLE;1;
+352;352;EASY;BIBLICAL;Where was the law to be bound and the testimony sealed?;MULTIPLE;1;
+353;353;EASY;BIBLICAL;What should the people do instead of seeking out mediums and wizards?;SINGLE;1;
+354;354;EASY;BIBLICAL;True or False: Isaiah instructs the people to listen to the whispers and mutterings of false prophets.;TRUE_FALSE;1;
+355;355;EASY;BIBLICAL;What will happen to those who do not speak according to the law and testimony?;SINGLE;1;
+356;356;EASY;BIBLICAL;What will the land of Judah become before the king of Assyria comes?;SINGLE;1;
+357;357;EASY;BIBLICAL;Who does the Lord tell Isaiah not to be in fear of?;MULTIPLE;1;
+358;358;EASY;BIBLICAL;What is the name of the place where the Lord of hosts will be?;SINGLE;1;
+359;359;EASY;BIBLICAL;What is the name "Mahershalalhashbaz" referring to?;MULTIPLE;1;
+360;360;EASY;BIBLICAL;Who are described as having "a strong hand" from the Lord?;SINGLE;1;
+#---
+361;361;MEDIUM;BIBLICAL;Why was the name "Mahershalalhashbaz" written on a large roll for everyone to see?;SINGLE;2;
+362;362;MEDIUM;BIBLICAL;What is the symbolic meaning of the people's "refusal" of the "waters of Shiloah that flow softly" in Isaiah 8:6?;SINGLE;2;
+363;363;MEDIUM;BIBLICAL;What specific geopolitical action by the people of Judah prompted the Lord to bring the king of Assyria against them, as mentioned in Isaiah 8:6?;MULTIPLE;2;
+364;364;MEDIUM;BIBLICAL;What is the purpose of the Lord being a "sanctuary" for some and a "stone of stumbling" for others, as described in Isaiah 8:14?;SINGLE;2;
+365;365;MEDIUM;BIBLICAL;True or False: Isaiah's command to "bind up the testimony" and "seal the law" among his disciples meant he was to hide and protect the prophetic message from the public.;TRUE_FALSE;2;
+366;366;MEDIUM;BIBLICAL;What specific behavior of the rebellious people leads them to curse their king and their God in Isaiah 8:21?;MULTIPLE;2;
+367;367;MEDIUM;BIBLICAL;In Isaiah 8:12, what does the Lord command Isaiah not to fear?;SINGLE;2;
+368;368;MEDIUM;BIBLICAL;What is the implication of the Assyrian flood reaching "even to the neck" in Isaiah 8:8?;SINGLE;2;
+369;369;MEDIUM;BIBLICAL;What warning is given to those who seek out mediums and wizards, according to Isaiah 8:20?;SINGLE;2;
+370;370;MEDIUM;BIBLICAL;What is the symbolic significance of Isaiah and his children being "for signs and for wonders in Israel" in Isaiah 8:18?;SINGLE;2;
+371;371;MEDIUM;BIBLICAL;How does the name "Mahershalalhashbaz" (Quick to the plunder, speedy is the prey) provide both a message of judgment and a specific timeframe for the prophecy's fulfillment?;SINGLE;2;
+372;372;MEDIUM;BIBLICAL;What is the contrast drawn between the "strong and many" waters of the River (Euphrates) and the "softly flowing" waters of Shiloah in Isaiah 8:7-8?;SINGLE;2;
+373;373;MEDIUM;BIBLICAL;What is the symbolic meaning of the "outspread wings" of the Assyrian flood filling the breadth of the land of Immanuel in Isaiah 8:8?;SINGLE;2;
+374;374;MEDIUM;BIBLICAL;What specific consequence is described for "both houses of Israel" due to their stumbling and rejection of God in Isaiah 8:15?;MULTIPLE;2;
+375;375;MEDIUM;BIBLICAL;What is the significance of the fact that Isaiah's prophecy is intended for his "disciples" in Isaiah 8:16, rather than the general populace?;SINGLE;2;
+376;376;MEDIUM;BIBLICAL;Why is the Lord described as "hiding His face from the house of Jacob" in Isaiah 8:17?;SINGLE;2;
+377;377;MEDIUM;BIBLICAL;How does Isaiah 8:10 tie the Immanuel prophecy to the counsel of opposing nations?;SINGLE;2;
+378;378;MEDIUM;BIBLICAL;What is the specific instruction given to Isaiah regarding the "confederacy" mentioned in Isaiah 8:12?;SINGLE;2;
+379;379;MEDIUM;BIBLICAL;What is the consequence for those who do not speak according to the "law and the testimony" in Isaiah 8:20?;SINGLE;2;
+380;380;MEDIUM;BIBLICAL;What specific image is used to describe the fate of those who reject God's word and seek false guidance in Isaiah 8:22?;SINGLE;2;
+#---
+381;381;HARD;BIBLICAL;In Isaiah 8:1-2, what is the significance of the "great roll" and writing with a "man's pen" before faithful witnesses?;SINGLE;3;
+382;382;HARD;BIBLICAL;The contrast between the "waters of Shiloah that go softly" (Isaiah 8:6) and the "waters of the River, strong and many" (Isaiah 8:7) serves as an allegory for what theological choice the people were making?;SINGLE;3;
+383;383;HARD;BIBLICAL;What is the deeper theological meaning behind the phrase "Sanctify the LORD of hosts himself; and let him be your fear, and let him be your dread" in Isaiah 8:13?;SINGLE;3;
+384;384;HARD;BIBLICAL;In what specific ways does Isaiah describe the Lord as both a "sanctuary" and a "stone of stumbling" for the two houses of Israel in Isaiah 8:14?;MULTIPLE;3;
+385;385;HARD;BIBLICAL;What was the purpose of Isaiah binding up the testimony and sealing the law among his disciples, according to Isaiah 8:16?;MULTIPLE;3;
+386;386;HARD;BIBLICAL;True or False: Isaiah's statement, "I will wait upon the LORD, that hideth his face from the house of Jacob" (Isaiah 8:17), demonstrates a prophet's willingness to endure God's judgment alongside the unfaithful.;TRUE_FALSE;3;
+387;387;HARD;BIBLICAL;In Isaiah 8:18, how are Isaiah and his children ("for signs and for wonders") a living representation of God's message?;SINGLE;3;
+388;388;HARD;BIBLICAL;What specific spiritual practice of the time is condemned in Isaiah 8:19, and why is it presented as an act of rebellion?;SINGLE;3;
+389;389;HARD;BIBLICAL;The prophecy of those who reject the law having "no morning" (Isaiah 8:20) and being in "thick darkness" (Isaiah 8:22) signifies what two kinds of judgment?;MULTIPLE;3;
+390;390;HARD;BIBLICAL;The phrase "the outspreading of his wings shall fill the breadth of thy land, O Immanuel" (Isaiah 8:8) is an intentional and poignant paradox, why?;SINGLE;3;
+391;391;HARD;BIBLICAL;What is the significance of Isaiah's wife giving birth and the naming of the child Mahershalalhashbaz, in contrast to the virgin birth of Immanuel?;SINGLE;3;
+392;392;HARD;BIBLICAL;The contrast between the people "cursing their king and their God" (Isaiah 8:21) and Isaiah's message of trusting in God highlights what fundamental difference in the face of hardship?;SINGLE;3;
+393;393;HARD;BIBLICAL;What is the historical fulfillment of the prophecy concerning Damascus and Samaria being plundered before the child Mahershalalhashbaz could cry "father" or "mother"?;SINGLE;3;
+394;394;HARD;BIBLICAL;In Isaiah 8:9-10, the Lord's declaration to the nations ("Associate yourselves, and ye shall be broken in pieces...for God is with us") contrasts human strategy with what divine reality?;SINGLE;3;
+395;395;HARD;BIBLICAL;True or False: The imagery of the "outspread wings" of the Assyrian army (Isaiah 8:8) is an un-ironic reference to God's protective wings in the Psalms.;TRUE_FALSE;3;
+396;396;HARD;BIBLICAL;The repeated use of the word "fear" in Isaiah 8:12-13 is a deliberate wordplay to contrast what two types of fear?;MULTIPLE;3;
+397;397;HARD;BIBLICAL;How does the imagery of the Assyrian invasion as a flood reaching "even to the neck" (Isaiah 8:8) convey the severity and reach of the judgment?;SINGLE;3;
+398;398;HARD;BIBLICAL;The contrast between the "light" (Isaiah 8:20) and the "thick darkness" (Isaiah 8:22) is presented as a consequence of what fundamental choice?;SINGLE;3;
+399;399;HARD;BIBLICAL;What is the theological basis for Isaiah's confidence that God would not utterly destroy the "house of Jacob," despite hiding His face?;SINGLE;3;
+400;400;HARD;BIBLICAL;The phrase "the spoil of Samaria and the riches of Damascus" (Isaiah 8:4) is not just a geographical reference but refers to what specific political and military context?;MULTIPLE;3;
+#-------------------------------------------------------------------------
+# Chapter 9
+#-------------------------------------------------------------------------
+401;401;EASY;BIBLICAL;What two regions are mentioned as being in Galilee of the nations?;MULTIPLE;1;
+402;402;EASY;BIBLICAL;True or False: The people who walked in darkness have seen a great light.;TRUE_FALSE;1;
+403;403;EASY;BIBLICAL;What was broken, according to Isaiah 9:4?;MULTIPLE;1;
+404;404;EASY;BIBLICAL;What will happen to every battle boot and garment rolled in blood?;SINGLE;1;
+405;405;EASY;BIBLICAL;What is the name of the child that is born to us?;SINGLE;1;
+406;406;EASY;BIBLICAL;What is the child's government upon?;SINGLE;1;
+407;407;EASY;BIBLICAL;What is one of the names given to the child in Isaiah 9:6?;MULTIPLE;1;
+408;408;EASY;BIBLICAL;True or False: The increase of the government and peace will have no end.;TRUE_FALSE;1;
+409;409;EASY;BIBLICAL;On what throne will the government and peace be established?;SINGLE;1;
+410;410;EASY;BIBLICAL;What did the people of Israel say in their pride?;SINGLE;1;
+411;411;EASY;BIBLICAL;What will the Lord raise up against the people?;SINGLE;1;
+412;412;EASY;BIBLICAL;True or False: The Lord will not turn away His anger but will keep His hand stretched out.;TRUE_FALSE;1;
+413;413;EASY;BIBLICAL;What are the two groups mentioned who will eat up Israel with their mouth?;MULTIPLE;1;
+414;414;EASY;BIBLICAL;Who was cut off from Israel in one day?;MULTIPLE;1;
+415;415;EASY;BIBLICAL;Who are the "prophets" who teach lies, according to Isaiah 9:15?;SINGLE;1;
+416;416;EASY;BIBLICAL;True or False: The Lord did not have compassion on the young men and widows of Israel.;TRUE_FALSE;1;
+417;417;EASY;BIBLICAL;What will happen to the wicked?;SINGLE;1;
+418;418;EASY;BIBLICAL;What will people eat, each man the flesh of his own arm?;SINGLE;1;
+419;419;EASY;BIBLICAL;What will Ephraim not do to Judah, according to Isaiah 9:21?;SINGLE;1;
+420;420;EASY;BIBLICAL;What is the Lord's hand still stretched out to do?;SINGLE;1;
+#---
+421;421;MEDIUM;BIBLICAL;How is the destruction of the oppressor's burdens described in Isaiah 9:4, recalling a past victory of God?;SINGLE;2;
+422;422;MEDIUM;BIBLICAL;What is the symbolic meaning of the "battle boots" and "garments rolled in blood" being burned as fuel for the fire in Isaiah 9:5?;SINGLE;2;
+423;423;MEDIUM;BIBLICAL;According to Isaiah 9:7, what will accomplish the establishment of the Prince of Peace's kingdom?;SINGLE;2;
+424;424;MEDIUM;BIBLICAL;What two types of trees are mentioned in Isaiah 9:10, and what do they symbolize in the people's defiant boast?;MULTIPLE;2;
+425;425;MEDIUM;BIBLICAL;What two nations are mentioned as devouring Israel with "open mouth" in Isaiah 9:12?;MULTIPLE;2;
+426;426;MEDIUM;BIBLICAL;True or False: According to Isaiah 9:13, the reason for God's continued anger is that the people repented and sought the Lord.;TRUE_FALSE;2;
+427;427;MEDIUM;BIBLICAL;What is the symbolic meaning of cutting off the "head and tail" of Israel in a single day, as explained in Isaiah 9:14-15?;SINGLE;2;
+428;428;MEDIUM;BIBLICAL;What specific reason is given for the Lord having no compassion on the "young men" and "fatherless and widows" in Isaiah 9:17?;MULTIPLE;2;
+429;429;MEDIUM;BIBLICAL;In Isaiah 9:18, what is the imagery used to describe how wickedness will consume the land?;MULTIPLE;2;
+430;430;MEDIUM;BIBLICAL;What does the prophecy in Isaiah 9:20, where men "eat every man the flesh of his own arm," refer to?;SINGLE;2;
+431;431;MEDIUM;BIBLICAL;What is the ultimate consequence of Ephraim and Manasseh devouring each other, according to Isaiah 9:21?;SINGLE;2;
+432;432;MEDIUM;BIBLICAL;What is the meaning of the phrase, "his hand is stretched out still," which is repeated multiple times in this chapter?;SINGLE;2;
+433;433;MEDIUM;BIBLICAL;How is the joy of the nation described in Isaiah 9:3, comparing it to two other events?;MULTIPLE;2;
+434;434;MEDIUM;BIBLICAL;What will the Lord do to the leaders who mislead the people, according to Isaiah 9:16?;SINGLE;2;
+435;435;MEDIUM;BIBLICAL;What phrase in Isaiah 9:9-10 signifies the people's arrogant defiance of God's judgment?;SINGLE;2;
+436;436;MEDIUM;BIBLICAL;What is the relationship between the leader (head) and the false prophet (tail), as described in Isaiah 9:15?;SINGLE;2;
+437;437;MEDIUM;BIBLICAL;What is the difference between the "head" and "tail" in terms of their respective authority and status, according to Isaiah 9:15?;SINGLE;2;
+438;438;MEDIUM;BIBLICAL;What is the result of the leaders misleading the people, according to Isaiah 9:16?;SINGLE;2;
+439;439;MEDIUM;BIBLICAL;How does the imagery of wickedness burning like fire (Isaiah 9:18) connect to the state of the people?;SINGLE;2;
+440;440;MEDIUM;BIBLICAL;What is the contrast presented in Isaiah 9:19 regarding the consequences of God's wrath?;MULTIPLE;2;
+#---
+441;441;HARD;BIBLICAL;The prophecy in Isaiah 9:1 speaks of a time when the regions of Zebulun and Naphtali would be glorified after having been afflicted. How does this prophecy connect historically and theologically to Jesus' ministry?;SINGLE;3;
+442;442;HARD;BIBLICAL;What is the symbolic significance of the "great light" shining on people dwelling in the "land of the shadow of death" in Isaiah 9:2?;SINGLE;3;
+443;443;HARD;BIBLICAL;How does the reference to the "day of Midian" in Isaiah 9:4 serve as a powerful metaphor for the victory promised?;MULTIPLE;3;
+444;444;HARD;BIBLICAL;What is the theological basis for attributing divine titles such as "Mighty God" and "Everlasting Father" to a child in Isaiah 9:6?;SINGLE;3;
+445;445;HARD;BIBLICAL;The phrase "the government shall be upon his shoulder" (Isaiah 9:6) carries a specific connotation related to what aspect of divine rule?;SINGLE;3;
+446;446;HARD;BIBLICAL;True or False: The people's boast in Isaiah 9:10, of rebuilding with hewn stones and replacing sycamores with cedars, is an act of spiritual determination and faith.;TRUE_FALSE;3;
+447;447;HARD;BIBLICAL;The repeated phrase, "For all this his anger is not turned away, but his hand is stretched out still," (Isaiah 9:12, 17, 21) serves what specific theological and rhetorical purpose?;MULTIPLE;3;
+448;448;HARD;BIBLICAL;How does Isaiah 9:15-16 relate the corruption of leadership (head and tail) to the spiritual state of the people?;MULTIPLE;3;
+449;449;HARD;BIBLICAL;What does the judgment of having "no compassion on their young men, nor... mercy on their fatherless and widows" (Isaiah 9:17) reveal about the extent and nature of Israel's spiritual corruption?;SINGLE;3;
+450;450;HARD;BIBLICAL;The imagery of wickedness burning like fire (Isaiah 9:18) and consuming the land conveys what specific aspect of judgment?;SINGLE;3;
+451;451;HARD;BIBLICAL;What is the psychological and spiritual impact of the people being so consumed by strife that they "eat every man the flesh of his own arm" (Isaiah 9:20)?;MULTIPLE;3;
+452;452;HARD;BIBLICAL;The internecine conflict between Manasseh and Ephraim, and their joint action against Judah (Isaiah 9:21), highlights what particular aspect of internal strife?;SINGLE;3;
+453;453;HARD;BIBLICAL;What is the deeper meaning behind the joy described in Isaiah 9:3, comparing it to the "joy in harvest" and rejoicing when dividing the "spoil"?;SINGLE;3;
+454;454;HARD;BIBLICAL;How does the coming Messiah's reign, established with "judgment and with justice" (Isaiah 9:7), contrast with the corrupted leadership described later in the chapter?;SINGLE;3;
+455;455;HARD;BIBLICAL;What is the historical significance of the Syrians coming "before" and the Philistines coming "behind" Israel (Isaiah 9:12)?;SINGLE;3;
+456;456;HARD;BIBLICAL;True or False: The prophecy of a coming king who is "Wonderful Counselor, Mighty God, Everlasting Father, Prince of Peace" (Isaiah 9:6) was fully understood by the immediate audience of Isaiah as referring to a future divine king.;TRUE_FALSE;3;
+457;457;HARD;BIBLICAL;The reference to Galilee of the Nations (Isaiah 9:1) has specific historical context tied to what significant event in the region?;MULTIPLE;3;
+458;458;HARD;BIBLICAL;What theological point is made by the contrast between the fleeting military might of the warrior (Isaiah 9:5) and the eternal nature of the coming king (Isaiah 9:7)?;SINGLE;3;
+459;459;HARD;BIBLICAL;How does the phrase "the zeal of the LORD of hosts will perform this" (Isaiah 9:7) emphasize divine sovereignty over human action in bringing about the messianic kingdom?;SINGLE;3;
+460;460;HARD;BIBLICAL;How does the imagery of God "sending a word into Jacob" (Isaiah 9:8) highlight the divine origin of the coming judgment?;SINGLE;3;
+#-------------------------------------------------------------------------
+# Chapter 10
+#-------------------------------------------------------------------------
+461;461;EASY;BIBLICAL;According to Isaiah 10, to whom does the LORD say "I will send him against a godless nation"?;SINGLE;1;
+462;462;EASY;BIBLICAL;The LORD says Assyria is the rod of his anger. True or False?;TRUE_FALSE;1;
+463;463;EASY;BIBLICAL;What will happen to the 'princes' of Zoan and the 'counselors' of Pharaoh?;SINGLE;1;
+464;464;EASY;BIBLICAL;Who will devour the glory of Assyria's forest?;SINGLE;1;
+465;465;EASY;BIBLICAL;What is the name of the 'king of Assyria' who boasts about his power?;SINGLE;1;
+466;466;EASY;BIBLICAL;From which region did the king of Assyria boast that he took away treasures?;SINGLE;1;
+467;467;EASY;BIBLICAL;What will be the result of the LORD's decision to punish the arrogant heart of Assyria's king?;SINGLE;1;
+468;468;EASY;BIBLICAL;According to the chapter, the LORD of hosts will send against Assyria a wasting disease and an affliction like what?;MULTIPLE;1;
+469;469;EASY;BIBLICAL;What is the reason given for the LORD's anger against the godless nation?;SINGLE;1;
+470;470;EASY;BIBLICAL;What does Isaiah 10 say will happen to the 'remnant of Israel'?;SINGLE;1;
+471;471;EASY;BIBLICAL;The LORD of hosts will send against Assyria a wasting disease and a fire like a burning flame. True or False?;TRUE_FALSE;1;
+472;472;EASY;BIBLICAL;What will Assyria's king not be able to do, despite his boastful words?;SINGLE;1;
+473;473;EASY;BIBLICAL;According to the chapter, what will be the 'sign' of Assyria's destruction?;SINGLE;1;
+474;474;EASY;BIBLICAL;The remnant of Jacob will rely on the one who struck them. True or False?;TRUE_FALSE;1;
+475;475;EASY;BIBLICAL;Where does the king of Assyria say he will sit to extend his power?;SINGLE;1;
+476;476;EASY;BIBLICAL;The LORD says that his people, Israel, will not be afraid of the Assyrians because the LORD will be with them. True or False?;TRUE_FALSE;1;
+477;477;EASY;BIBLICAL;What will the 'light of Israel' become, according to the chapter?;SINGLE;1;
+478;478;EASY;BIBLICAL;Which of these cities is mentioned as a place that will be afraid of the advancing Assyrian army?;MULTIPLE;1;
+479;479;EASY;BIBLICAL;The LORD will send a scourge against the Assyrians, according to the pattern of which historical event?;SINGLE;1;
+480;480;EASY;BIBLICAL;What will be the result of the LORD's punishing the king of Assyria?;SINGLE;1;
+#---
+481;481;MEDIUM;BIBLICAL;To what does the LORD compare Assyria when speaking of it as an instrument of his anger?;SINGLE;2;
+482;482;MEDIUM;BIBLICAL;According to the boast of the Assyrian king, by what power has he accomplished his victories?;MULTIPLE;2;
+483;483;MEDIUM;BIBLICAL;The king of Assyria, in his arrogance, asks if he has dealt with Samaria and its idols as he will with Jerusalem and its idols. True or False?;TRUE_FALSE;2;
+484;484;MEDIUM;BIBLICAL;What is the metaphor used to describe the suddenness of Assyria's destruction?;SINGLE;2;
+485;485;MEDIUM;BIBLICAL;What is the primary sin for which the LORD will punish the king of Assyria?;SINGLE;2;
+486;486;MEDIUM;BIBLICAL;What will happen to the remaining trees of Assyria's forest and prosperous field?;SINGLE;2;
+487;487;MEDIUM;BIBLICAL;What does the LORD say he will do when he has finished his work on Mount Zion and Jerusalem?;SINGLE;2;
+488;488;MEDIUM;BIBLICAL;What is the metaphor used for God's action against Assyria at the end of the chapter?;SINGLE;2;
+489;489;MEDIUM;BIBLICAL;Why will the remnant of Israel no longer rely on those who struck them, according to Isaiah 10?;SINGLE;2;
+490;490;MEDIUM;BIBLICAL;What cities are listed as being intimidated by the Assyrian advance?;MULTIPLE;2;
+491;491;MEDIUM;BIBLICAL;The burden of Assyria will be lifted from the shoulder of God's people because of their military might. True or False?;TRUE_FALSE;2;
+492;492;MEDIUM;BIBLICAL;When the Assyrian king boasts about his conquests, he claims his hands were like a bird collecting what?;SINGLE;2;
+493;493;MEDIUM;BIBLICAL;What will Assyria's forest and fertile land become like after the LORD's judgment?;SINGLE;2;
+494;494;MEDIUM;BIBLICAL;God uses Assyria as the rod of his anger, but Assyria is also accountable for its own motives. True or False?;TRUE_FALSE;2;
+495;495;MEDIUM;BIBLICAL;What does the LORD of hosts say will destroy the yoke of Assyria?;SINGLE;2;
+496;496;MEDIUM;BIBLICAL;What happens to the mightiest of Assyria's men when the LORD acts against them?;SINGLE;2;
+497;497;MEDIUM;BIBLICAL;What does the LORD say will happen to the arrogant and the mighty among the Assyrians?;MULTIPLE;2;
+498;498;MEDIUM;BIBLICAL;Isaiah 10 ends with the image of the LORD lopping off the boughs with a what?;SINGLE;2;
+499;499;MEDIUM;BIBLICAL;Why does the LORD not excuse Assyria, even though they were his instrument?;SINGLE;2;
+500;500;MEDIUM;BIBLICAL;The prophet's mention of cities like Aiath, Migron, and Michmash serves to illustrate the Assyrian army's specific and terrifying advance towards Jerusalem. True or False?;TRUE_FALSE;2;
+#---
+501;501;HARD;BIBLICAL;What is the specific accusation against the oppressive leaders of Judah mentioned at the beginning of Isaiah 10?;MULTIPLE;3;
+502;502;HARD;BIBLICAL;Explain the paradox of Assyria being the 'rod of God's anger' yet being punished for its own actions.;SINGLE;3;
+503;503;HARD;BIBLICAL;The metaphor of the axe is used to describe the Assyrian king's pride. In this metaphor, what is the 'hand that wields the axe'?;SINGLE;3;
+504;504;HARD;BIBLICAL;Isaiah 10:1-4 is a woe pronounced against oppressive lawmakers. What is the implied fate of these specific leaders, apart from the general fate of the nation?;SINGLE;3;
+505;505;HARD;BIBLICAL;When the Assyrian king boasts of conquering kingdoms of idols, what is his flawed reasoning regarding the God of Jerusalem and Samaria?;SINGLE;3;
+506;506;HARD;BIBLICAL;What is the theological significance of the prophecy that only a remnant of Israel will return, despite their numbers being like the sand of the sea?;SINGLE;3;
+507;507;HARD;BIBLICAL;According to the text, what specific motivation does the king of Assyria have for his conquests, which is different from God's intended use of him?;MULTIPLE;3;
+508;508;HARD;BIBLICAL;The destruction of Assyria is compared to the slaughter of Midian at the rock of Oreb. What does this historical parallel imply about the manner of Assyria's defeat?;SINGLE;3;
+509;509;HARD;BIBLICAL;Explain the figurative meaning of the Assyrian army's advance being described step-by-step through various towns towards Jerusalem.;SINGLE;3;
+510;510;HARD;BIBLICAL;The prophet asks, "What will you do in the day of visitation?" (Isaiah 10:3). What is the Hebrew term used for 'visitation,' and what is its dual meaning here?;SINGLE;3;
+511;511;HARD;BIBLICAL;What is the ultimate purpose of the 'consumption decreed' in the midst of the whole land, mentioned in Isaiah 10:23?;SINGLE;3;
+512;512;HARD;BIBLICAL;When the Assyrian king says he has "gathered all the earth like gathering eggs," what specific action is he boasting about?;SINGLE;3;
+513;513;HARD;BIBLICAL;How does the imagery of the consuming fire in Isaiah 10:16-17 demonstrate a reversal of power?;SINGLE;3;
+514;514;HARD;BIBLICAL;What is the significance of the "yoke" being broken from the shoulder of Israel "because of the anointing"?;SINGLE;3;
+515;515;HARD;BIBLICAL;The chapter personifies inanimate objects (axe and saw). What is the rhetorical purpose of this personification?;SINGLE;3;
+516;516;HARD;BIBLICAL;When God says Assyria's "glory" will be consumed like a forest, what does this "glory" represent?;MULTIPLE;3;
+517;517;HARD;BIBLICAL;The end of the chapter mentions the Lord lopping off the boughs with a mighty stroke. What does this imagery signify beyond military defeat?;SINGLE;3;
+518;518;HARD;BIBLICAL;What key difference exists between Assyria's intent and God's purpose in Assyria's actions against the nations?;SINGLE;3;
+519;519;HARD;BIBLICAL;How does the imagery of a wasting disease (leanness) contribute to the description of Assyria's downfall?;SINGLE;3;
+520;520;HARD;BIBLICAL;What contrast is highlighted between the remnant of Israel and the Assyrians in terms of their respective sources of strength and reliance?;SINGLE;3;
+#-------------------------------------------------------------------------
+# Chapter 11
 #-------------------------------------------------------------------------
 

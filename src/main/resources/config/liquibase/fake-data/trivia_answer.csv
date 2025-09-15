@@ -1,4 +1,7 @@
 id;answer_id;answer;explanation;correct;picture;trivia_question_id
+#-------------------------------------------------------------------------
+# CHAPTER 1
+#-------------------------------------------------------------------------
 201;201;Isaiah;Isaiah 1:1;true; ;101
 202;202;Jeremiah;Not in Isaiah 1;false; ;101
 203;203;Moses;Not in Isaiah 1;false; ;101
@@ -138,7 +141,10 @@ id;answer_id;answer;explanation;correct;picture;trivia_question_id
 308;308;A queen;Not correct;false;;130
 309;309;A mountain;Not correct;false;;130
 310;310;A vineyard;Not correct;false;;130
-#---
+
+#-------------------------------------------------------------------------
+# CHAPTER 2
+#-------------------------------------------------------------------------
 311;311;Isaiah;Isaiah 2:1;true;;131
 312;312;Jeremiah;Not in Isaiah 2:1;false;;131
 313;313;Ezekiel;Not in Isaiah 2:1;false;;131
@@ -271,7 +277,10 @@ id;answer_id;answer;explanation;correct;picture;trivia_question_id
 #---
 412;412;Yes;Isaiah 2:22;false;;160
 413;413;No;Isaiah 2:22;true;;160
-#-----------------------------------------------------------------------------------
+
+#-------------------------------------------------------------------------
+# CHAPTER 3
+#-------------------------------------------------------------------------
 414;414;The Lord;Isaiah 3:1;true;;161
 415;415;The king;Not in 3:1;false;;161
 416;416;The prophet;Not in 3:1;false;;161
@@ -359,4 +368,1363 @@ id;answer_id;answer;explanation;correct;picture;trivia_question_id
 #---
 480;480;Yes;Isaiah 3:26;true;;180
 481;481;No;Isaiah 3:26;false;;180
+#---------------------------------------------------------------------------------
+482;482;The mighty man and the man of war;Isaiah 3:1-3;true;;181
+483;483;The judge and the prophet;Isaiah 3:1-3;true;;181
+484;484;The counselor and the cunning artificer;Isaiah 3:1-3;true;;181
+485;485;The merchant and the tax collector;This group is not mentioned in Isaiah 3:1-3.;false;;181
 #---
+486;486;They declare their sin as Sodom;Isaiah 3:9;true;;182
+487;487;They flaunt their transgression like Gomorrah;Isaiah 3:9 compares the sin to Sodom, not Gomorrah.;false;;182
+488;488;They make a public spectacle of their evil;This is a modern interpretation.;false;;182
+#---
+489;489;True;Isaiah 3:6-7 shows the man refusing due to lack of resources.;false;;183
+490;490;False;Isaiah 3:6-7;true;;183
+#---
+491;491;They have devoured the vineyard;Isaiah 3:14;true;;184
+492;492;They built idols within the city;This is not the specific charge in Isaiah 3:14.;false;;184
+493;493;They did not pay their tithes;This is not the specific charge in Isaiah 3:14.;false;;184
+494;494;They ignored the prophets' warnings;This is not the specific charge in Isaiah 3:14.;false;;184
+#---
+495;495;Anklets;Isaiah 3:18;true;;185
+496;496;Perfume boxes;Isaiah 3:20;true;;185
+497;497;Veils;Isaiah 3:19, 23;true;;185
+498;498;Wimples;Isaiah 3:22;true;;185
+499;499;Crowns;Crowns are not listed in Isaiah 3:18-23.;false;;185
+#---
+500;500;Women;Isaiah 3:12;true;;186
+501;501;The elderly;Isaiah 3:5 states the young will oppress the elderly.;false;;186
+502;502;The mighty men;Isaiah 3:2 states they will be removed.;false;;186
+503;503;Foreigners;The oppression is internal.;false;;186
+#---
+504;504;They shall fall by the sword in war;Isaiah 3:25;true;;187
+505;505;They will be branded as captives;Branding is for women (Isaiah 3:24).;false;;187
+506;506;They will become rulers over ruins;This describes their desolate state, not their ultimate consequence (Isaiah 3:6-7, 25).;false;;187
+507;507;They will face famine and thirst;This is part of the initial judgment, not the final consequence for men (Isaiah 3:1, 25).;false;;187
+#---
+508;508;Stench;Isaiah 3:24;true;;188
+509;509;Baldness;Isaiah 3:24;true;;188
+510;510;Burning;Isaiah 3:24;true;;188
+511;511;A rope for a girdle;Isaiah 3:24 states a rope replaces a girdle.;false;;188
+#---
+512;512;The righteous will be rewarded for their deeds, but the wicked will get what they deserve.;Isaiah 3:10-11;true;;189
+513;513;Both will suffer equally during the time of judgment.;Isaiah distinguishes between the righteous and the wicked.;false;;189
+514;514;The righteous will escape judgment completely, while the wicked face it all.;The passage implies both will experience national calamities.;false;;189
+515;515;The wicked will be spared, but the righteous will be punished.;This contradicts scripture.;false;;189
+#---
+516;516;She will lament and mourn;Isaiah 3:26;true;;190
+517;517;She will sit upon the ground;Isaiah 3:26;true;;190
+518;518;She will be adorned with sackcloth;Isaiah 3:24, 26;true;;190
+519;519;She will be rebuilt by a foreign king;The chapter describes desolation, not rebuilding by a foreign power.;false;;190
+#-------------------------------------------------------------------------
+# CHAPTER 4
+#-------------------------------------------------------------------------
+520;520;Seven women;Isaiah 4:1;true;;191
+521;521;Five women;Not mentioned in Isaiah 4:1.;false;;191
+522;522;Ten women;Not mentioned in Isaiah 4:1.;false;;191
+#---
+523;523;Their own bread;Isaiah 4:1;true;;192
+524;524;Their own apparel;Isaiah 4:1;true;;192
+525;525;The man's food and clothing;This contradicts what they state.;false;;192
+#---
+526;526;To be called by his name;Isaiah 4:1;true;;193
+527;527;For him to provide for them;This contradicts what they state.;false;;193
+528;528;To make them a ruler;This was a request in chapter 3, not chapter 4.;false;;193
+#---
+529;529;True;False, the verse implies a great scarcity of men.;false;;194
+530;530;False;Isaiah 4:1 describes a scarcity of men, not a time of great prosperity and many men.;true;;194
+#---
+531;531;Beautiful;Isaiah 4:2;true;;195
+532;532;Glorious;Isaiah 4:2;true;;195
+533;533;Powerful;While true, these are the specific words used in Isaiah 4:2.;false;;195
+#---
+534;534;Holy;Isaiah 4:3;true;;196
+535;535;Mighty;Isaiah 4:3 states they will be called holy.;false;;196
+536;536;Chosen;Isaiah 4:3 states they will be called holy.;false;;196
+#---
+537;537;A cloud of smoke;Isaiah 4:5;true;;197
+538;538;A burning fire;This will be created by night.;false;;197
+539;539;A strong wind;This is not mentioned.;false;;197
+#---
+540;540;A shining of a flaming fire;Isaiah 4:5;true;;198
+541;541;A cloud of smoke;This will be created by day.;false;;198
+542;542;A great noise;This is not mentioned.;false;;198
+#---
+543;543;A tabernacle;Isaiah 4:6;true;;199
+544;544;A mountain;Isaiah 4:6 states a tabernacle will be a refuge.;false;;199
+545;545;A tree;Isaiah 4:6 states a tabernacle will be a refuge.;false;;199
+#---
+546;546;The filth;Isaiah 4:4;true;;200
+547;547;The wealth;Isaiah 4:4 states the Lord will wash away the filth.;false;;200
+548;548;The pride;Isaiah 4:4 states the Lord will wash away the filth.;false;;200
+#-----------------------------------------------------------------------
+549;549;The traditional male role of provision;In a reversal of the traditional provision role, the women offer to provide their own food and clothing.;true;;201
+550;550;The requirement for a dowry;The text does not mention dowries.;false;;201
+551;551;The practice of polygamy;While polygamy is implied, the specific reversal is the women's offer of self-provision.;false;;201
+552;552;The prohibition of bearing children;The women want to bear children.;false;;201
+#---
+553;553;To wash away the filth of the daughters of Zion;Isaiah 4:4;true;;202
+554;554;To purge the bloodstains of Jerusalem;Isaiah 4:4;true;;202
+555;555;To rain down fire upon the wicked;The burning is for purification, not destruction.;false;;202
+#---
+556;556;The pillar of cloud and fire that guided Israel;Isaiah 4:5;true;;203
+557;557;The fiery furnace of Babylon;This is from Daniel, not Isaiah.;false;;203
+558;558;The burning bush that Moses encountered;This happened before the Exodus journey.;false;;203
+#---
+559;559;A shadow in the daytime from the heat;Isaiah 4:6;true;;204
+560;560;A place to store riches;Not mentioned in Isaiah 4:6.;false;;204
+561;561;A place for sacrifice;The tabernacle is a refuge.;false;;204
+#---
+562;562;True;Isaiah 4:3 says only those who are "left" in Zion and Jerusalem will be called holy.;false;;205
+563;563;False;Isaiah 4:3;true;;205
+#---
+564;564;The Messiah;Isaiah 4:2;true;;206
+565;565;A purified and restored Israel;Isaiah 4:2;true;;206
+566;566;Abundant agricultural prosperity;While a result, it is not the primary symbolism.;false;;206
+#---
+567;567;To take away their social disgrace of being unmarried or childless;The man's name removes their reproach.;true;;207
+568;568;To gain control of his family's wealth;This is not mentioned in Isaiah 4:1.;false;;207
+569;569;To have him as their sole provider;The women explicitly state they will provide for themselves.;false;;207
+#---
+570;570;They shall be called holy;Isaiah 4:3;true;;208
+571;571;They shall inherit the entire land;Only those who are "written" will be called holy.;false;;208
+572;572;They shall be protected from all hardship;While protected, the promise is holiness.;false;;208
+#---
+573;573;Over every dwelling place of Mount Zion;Isaiah 4:5;true;;209
+574;574;Over her assemblies;Isaiah 4:5;true;;209
+575;575;Over the temple in Jerusalem;The temple is not mentioned.;false;;209
+#---
+576;576;The burning purifies and cleanses the filth;The spirit of burning purges the filth and bloodstains.;true;;210
+577;577;The burning is a judgment that leaves them untouched;This would be illogical.;false;;210
+578;578;The burning makes their filth more visible;The purpose is purification, not exhibition.;false;;210
+#-------------------------------------------------------------------------
+579;579;The desperation of women seeking marriage to escape social disgrace due to the scarcity of men following war and judgment.;Isaiah 4:1 follows a depiction of judgment and war where many men would fall, leading to a severe imbalance in population.;true;;211
+580;580;A sudden societal shift towards polygamy as the preferred marriage model.;The verse is a consequence of judgment, not a cultural shift.;false;;211
+581;581;The beginning of a new age of prosperity where women can support men.;The text indicates a time of destitution, not prosperity.;false;;211
+#---
+582;582;The complete cleansing of sin and impurity from the people's hearts and lives.;Isaiah 4:4;true;;212
+583;583;The purging of internal corruption and societal bloodguilt.;Isaiah 4:4;true;;212
+584;584;The literal burning of the city of Jerusalem and its inhabitants.;The burning is spiritual purification, not literal destruction.;false;;212
+#---
+585;585;The women represent a humbled people who take responsibility for their sustenance, unlike the man who refused leadership.;The man in Isaiah 3 refused because he lacked resources, while the women in Isaiah 4 willingly offer to provide for themselves.;true;;213
+586;586;The women's request is purely for social status, while the man's refusal is based on humility.;The man refused out of inability, while the women's desperation is tied to social stigma.;false;;213
+587;587;There is no significant difference, as both illustrate the breakdown of social order.;The motivation behind each action is different.;false;;213
+#---
+588;588;True;The imagery is reminiscent of the Exodus guidance but within the context of Isaiah 4, it also symbolizes protection and judgment for the righteous.;false;;214
+589;589;False;The imagery recalls the pillar of cloud and fire from the Exodus, signifying God's protective presence over the redeemed remnant.;true;;214
+#---
+590;590;They shall be called holy.;Isaiah 4:3;true;;215
+591;591;They will be spared from all future hardship.;While protected, they are still called holy.;false;;215
+592;592;They will inherit great wealth and power.;The promise is of spiritual purity, not worldly wealth.;false;;215
+#---
+593;593;It can also represent the righteous remnant of Israel.;Isaiah 4:2, referring to the "fruit of the earth" as the pride of the "survivors of Israel".;true;;216
+594;594;It can also represent agricultural prosperity in the promised land.;Isaiah 4:2, where the "fruit of the earth" is mentioned alongside the Branch.;true;;216
+595;595;It represents the fulfillment of the Messianic prophecy of a coming king.;While this is a valid interpretation, the question asks for symbolism beyond the messianic.;false;;216
+#---
+596;596;It symbolizes the people's willingness to humble themselves and rely on God after judgment.;The offer to provide for themselves signifies the humility that comes after experiencing judgment and loss.;true;;217
+597;597;It signifies a new economic system where men and women are equal providers.;The context is a reversal of roles due to scarcity, not equality.;false;;217
+598;598;It implies that the women are wealthier and more capable than the men.;The women are driven by desperation, not a position of strength.;false;;217
+#---
+599;599;It indicates that God's presence is a permanent source of protection and restoration.;The canopy of glory provides a perpetual defense for the purified people.;true;;218
+600;600;It signifies a temporary covering until the people can rebuild their own defenses.;The covering is from God, and eternal in nature.;false;;218
+601;601;It means that the people's own good works will serve as their protection.;The glory is God's, not the people's.;false;;218
+#---
+602;602;The moral filth of the daughters of Zion (vanity) and the bloodshed of Jerusalem (violence).;Isaiah 4:4 contrasts with the sins condemned in Isaiah 3.;true;;219
+603;603;The spiritual idolatry and physical destruction of the land.;While elements of this are present, Isaiah 4:4 focuses on internal corruption.;false;;219
+604;604;The rejection of the prophets and the refusal to offer sacrifices.;This was a theme in other parts of Isaiah, but not specifically in Isaiah 4:4.;false;;219
+#---
+605;605;From a dire prophecy of judgment to a message of hope and restoration.;The chapter begins with judgment (Isaiah 4:1) but ends with promises of salvation (Isaiah 4:2-6).;true;;220
+606;606;From a message of hope and restoration to a warning of judgment.;The tone reverses from Isaiah 3.;false;;220
+607;607;The tone remains consistently somber and focused on judgment throughout.;The chapter shows a clear transition from judgment to hope.;false;;220
+#-----------------------------------------------------------------------------------------
+# CHAPTER 5
+#-----------------------------------------------------------------------------------------
+608;608;A vineyard;Isaiah 5:1;true;;221
+609;609;A fig tree;This is not what is mentioned.;false;;221
+610;610;An olive grove;This is not what is mentioned.;false;;221
+#---
+611;611;Good grapes;Isaiah 5:2;true;;222
+612;612;Wild grapes;This is what the vineyard produced, not what was expected.;false;;222
+613;613;Wheat;The song is about a vineyard, not a grain field.;false;;222
+#---
+614;614;True;Isaiah 5:7;true;;223
+615;615;False;Isaiah 5:7 states the house of Israel is the vineyard.;false;;223
+#---
+616;616;Justice;Isaiah 5:7;true;;224
+617;617;Righteousness;Isaiah 5:7;true;;224
+618;618;Peace;While desired, the specific terms used are justice and righteousness.;false;;224
+#---
+619;619;Good;Isaiah 5:20;true;;225
+620;620;Sweet;This is not the term used in this verse.;false;;225
+621;621;Pure;This is not the term used in this verse.;false;;225
+#---
+622;622;True;Isaiah 5 is a series of "woes" against the unrighteous.;false;;226
+623;623;False;Isaiah 5 is a series of "woes" against the wicked and unrighteous.;true;;226
+#---
+624;624;They shall be left alone in the land;Isaiah 5:8;true;;227
+625;625;They will have great wealth and power;Isaiah 5:9 states the houses will be desolate.;false;;227
+626;626;Their houses will be filled with people;Isaiah 5:9 states the houses will be desolate.;false;;227
+#---
+627;627;It shall be taken away to the grave;Isaiah 5:14;true;;228
+628;628;It shall be turned to a song of praise;The grave is mentioned, not praise.;false;;228
+629;629;It will be given to the poor;The grave is mentioned, not giving to the poor.;false;;228
+#---
+630;630;With wine from the morning to the evening;Isaiah 5:11;true;;229
+631;631;With worldly riches;The drunkenness is from wine.;false;;229
+632;632;With pride and vanity;This is a sin but not the "drunkenness" described here.;false;;229
+#---
+633;633;The waste places of the fat ones;Isaiah 5:17;true;;230
+634;634;The city streets;The waste places of the fat ones are mentioned.;false;;230
+635;635;The vineyards of the people;This is not what is mentioned here.;false;;230
+#---------------------------------------------------------------------------------
+636;636;He will take away its hedge;Isaiah 5:5;true;;231
+637;637;He will break down its wall;Isaiah 5:5;true;;231
+638;638;He will command the clouds to rain no rain upon it;Isaiah 5:6;true;;231
+639;639;He will replant it with a different crop;Isaiah 5:6 states it will be left as a waste.;false;;231
+#---
+640;640;It highlights that instead of administering justice, they practiced oppression, and instead of showing righteousness, they caused a cry from the oppressed.;Isaiah 5:7;true;;232
+641;641;It is a comparison between good people and bad people.;The verse is a metaphor for the failures of Israel.;false;;232
+642;642;It refers to a specific legal case that Isaiah was referencing.;The verse is a general allegory.;false;;232
+#---
+643;643;The mighty men and heroes of drinking will be taken away by fire, consumed like chaff and dry grass.;Isaiah 5:24;true;;233
+644;644;They will be honored for their bravery in drinking.;This contradicts the "woe" pronounced upon them.;false;;233
+645;645;They will have their wealth and possessions taken away.;While part of the judgment, Isaiah 5:24 specifies being consumed by fire.;false;;233
+#---
+646;646;The work of the Lord;Isaiah 5:12;true;;234
+647;647;The operation of His hands;Isaiah 5:12;true;;234
+648;648;The needs of the poor;This is a general sin but not the specific failure mentioned in Isaiah 5:12.;false;;234
+#---
+649;649;The houses shall be desolate, even great and beautiful ones, without inhabitant.;Isaiah 5:9;true;;235
+650;650;The houses shall be given to the poor and needy.;Isaiah 5:9 states the houses will be without inhabitant.;false;;235
+651;651;The houses shall be rebuilt with finer materials.;This contradicts the judgment.;false;;235
+#---
+652;652;It refers to the people's habit of pulling sin along as if they are animals pulling a cart.;Isaiah 5:18;true;;236
+653;653;It means they are tied to their idols with beautiful cords.;The cords are of falsehood and iniquity.;false;;236
+654;654;It describes how they decorate their houses with stolen goods.;The metaphor refers to drawing sin and iniquity.;false;;236
+#---
+655;655;They shall be brought down and humbled.;Isaiah 5:15;true;;237
+656;656;They will be lifted up and exalted.;This contradicts the judgment.;false;;237
+657;657;They will be spared from judgment.;Isaiah 5:15 states they will be humbled.;false;;237
+#---
+658;658;Their roots will be like rottenness;Isaiah 5:24;true;;238
+659;659;Their blossoms will go up as dust;Isaiah 5:24;true;;238
+660;660;Their arrogance will be forgotten;Their arrogance is the reason for judgment.;false;;238
+#---
+661;661;True;Isaiah lists several woes as equal signs of moral decay.;false;;239
+662;662;False;Calling evil good is one of the "woes" pronounced by Isaiah, indicating it is a significant sin and a mark of moral perversion, just like the others.;true;;239
+#---
+663;663;The grave opening its mouth wide;Isaiah 5:14;true;;240
+664;664;A great famine in the land;While a consequence, the image is the grave.;false;;240
+665;665;A flood covering the land;This is not mentioned in this chapter.;false;;240
+#-----------------------------------------------------------------------------------
+666;666;Ten acres of vineyard yielding only one bath;Isaiah 5:10;true;;241
+667;667;Ten baths of seed yielding only an ephah;Isaiah 5:10 mentions ten acres of vineyard and ten baths of seed.;true;;241
+668;668;A vineyard yielding only wild grapes;This refers to the quality of the fruit, not the quantity of the yield.;false;;241
+#---
+669;669;The removal of God's divine protection from his people, leaving them vulnerable to their enemies.;Isaiah 5:5 shows the consequence of their failure to produce righteousness.;true;;242
+670;670;The Lord is symbolically rebuilding his kingdom with better people.;This is the opposite of the judgment described.;false;;242
+671;671;It signifies that the people are no longer under the law but under grace.;This is a New Testament concept not applicable here.;false;;242
+#---
+672;672;True;Isaiah 5:19;false;;243
+673;673;False;The people's challenge is a sign of their arrogant mockery and defiance, not faith.;true;;243
+#---
+674;674;"They have cast away the law of the Lord of hosts.";Isaiah 5:24;true;;244
+675;675;"They call evil good and good evil.";This is the sin of moral perversion, not specifically the rejection of the law.;false;;244
+676;676;"Woe unto them that are wise in their own eyes.";This is a different woe.;false;;244
+#---
+677;677;To condemn specific injustices and sins prevalent in Israel.;Isaiah 5:8-23;true;;245
+678;678;To demonstrate the ultimate judgment awaiting all who reject God's holiness.;The woes foreshadow the ultimate judgment.;true;;245
+679;679;To warn foreign nations about Israel's sinfulness.;The woes are directed at Israel.;false;;245
+#---
+680;680;He will whistle unto them;Isaiah 5:26;true;;246
+681;681;He will roar like a lion;This is what the enemy will do, not God.;false;;246
+682;682;He will sound a trumpet;This image is used elsewhere but not here.;false;;246
+#---
+683;683;They will not stumble or sleep;Isaiah 5:27;true;;247
+684;684;Their bows are strung and their arrows are sharp;Isaiah 5:28;true;;247
+685;685;Their horses' hoofs will be like flint;Isaiah 5:28;true;;247
+686;686;They will carry their banners high for all to see;The banner is for God to summon them, not for them to carry.;false;;247
+#---
+687;687;The insatiable appetite of death and destruction for the many who will die as a result of God's judgment.;Isaiah 5:14;true;;248
+688;688;The expanding borders of the promised land.;Sheol is a place of the dead.;false;;248
+689;689;The greed of the people for more wealth and land.;While a sin, this is not the meaning of Sheol here.;false;;248
+#---
+690;690;The judgment will be so overwhelming that any hope for light or salvation is extinguished, leaving only utter despair.;Isaiah 5:30;true;;249
+691;691;The people will ultimately be saved from their enemies.;This contradicts the prophecy of darkness.;false;;249
+692;692;The roar is a sign of God's victory over the enemy.;The roar is the enemy's, not God's.;false;;249
+#---
+693;693;It establishes the divine lawsuit against Israel, demonstrating that despite God's perfect provision, the people failed, justifying the ensuing punishment.;Isaiah 5:1-7 sets up the metaphor that is then unpacked in the rest of the chapter.;true;;250
+694;694;It presents the people's love for God and their obedience.;The people are portrayed as disobedient.;false;;250
+695;695;It promises that Israel will one day be restored to its former glory.;The initial verses focus on failure, not promise.;false;;250
+#---------------------------------------------------------------------------------
+# CHAPTER 6
+#---------------------------------------------------------------------------------
+696;696;The year that King Uzziah died;Isaiah 6:1;true;;251
+697;697;The year that King Ahaz began his reign;Isaiah 6:1 specifies King Uzziah.;false;;251
+698;698;The year that King Solomon died;Isaiah 6:1 specifies King Uzziah.;false;;251
+#---
+699;699;Seraphim;Isaiah 6:2;true;;252
+700;700;Cherubim;Isaiah 6:2 specifies seraphim.;false;;252
+701;701;Angels;The text specifies seraphim.;false;;252
+#---
+702;702;True;Isaiah 6:2;true;;253
+703;703;False;Isaiah 6:2 states the seraphim had six wings.;false;;253
+#---
+704;704;Holy, holy, holy, is the Lord of hosts: the whole earth is full of his glory;Isaiah 6:3;true;;254
+705;705;Worthy is the Lamb that was slain;This is from Revelation.;false;;254
+706;706;Praise the Lord for He is good;This is from Psalms.;false;;254
+#---
+707;707;The posts of the door;Isaiah 6:4;true;;255
+708;708;The temple walls;Isaiah 6:4 specifies the doorposts.;false;;255
+709;709;The altar;Isaiah 6:4 specifies the doorposts.;false;;255
+#---
+710;710;He was a man of unclean lips;Isaiah 6:5;true;;256
+711;711;He lived among a people of unclean lips;Isaiah 6:5;true;;256
+712;712;He was too holy to speak;Isaiah said he was "undone" or "destroyed," not too holy.;false;;256
+#---
+713;713;A live coal;Isaiah 6:6;true;;257
+714;714;A fiery stone;This is not mentioned.;false;;257
+715;715;His hand;Isaiah 6:6 states a coal was used.;false;;257
+#---
+716;716;It took away his iniquity and purged his sin;Isaiah 6:7;true;;258
+717;717;It gave him a new voice;The coal purged his sin, allowing him to speak for God.;false;;258
+718;718;It burned his mouth;The coal purged his sin, not just burned his mouth.;false;;258
+#---
+719;719;The Lord asked, and Isaiah answered;Isaiah 6:8;true;;259
+720;720;An angel asked, and the Lord answered;The Lord asks the question, and Isaiah answers.;false;;259
+721;721;Isaiah asked, and the Lord answered;The Lord is the one who asks the question.;false;;259
+#---
+722;722;Here am I; send me;Isaiah 6:8;true;;260
+723;723;Woe is me!;Isaiah said this before being cleansed, not in response to the call.;false;;260
+724;724;I am a man of unclean lips;Isaiah said this before being cleansed, not in response to the call.;false;;260
+#--------------------------------------------------------------------------
+725;725;Two to cover their faces;Isaiah 6:2;true;;261
+726;726;Two to cover their feet;Isaiah 6:2;true;;261
+727;727;Two to fly;Isaiah 6:2;true;;261
+728;728;Two to cover their eyes;Isaiah 6:2 states faces, not eyes.;false;;261
+#---
+729;729;He was overwhelmed by the overwhelming holiness of God and his own sinful nature, feeling he was ruined or destroyed.;Isaiah 6:5;true;;262
+730;730;He was disappointed that his preaching had been ineffective.;His sin is the focus, not his ministry's effect.;false;;262
+731;731;He was sad that King Uzziah had died.;While Uzziah's death is mentioned, his personal sin is the reason for his cry.;false;;262
+#---
+732;732;It was a ceremonial cleansing that atoned for and purged Isaiah's sin and guilt.;Isaiah 6:6-7;true;;263
+733;733;It was a painful reminder of his failings.;The coal purged his sin, it was not merely a reminder.;false;;263
+734;734;It was a sign of a new prophecy to come.;The coal purges his sin, not gives a new prophecy.;false;;263
+#---
+735;735;"Make the heart of this people calloused; make their ears dull and close their eyes.";Isaiah 6:10;true;;264
+736;736;"Go and preach to them, and they will repent.";The opposite of this is what is commanded.;false;;264
+737;737;"Speak to them words of comfort and peace.";Isaiah's message is one of judgment.;false;;264
+#---
+738;738;They might see, hear, understand, turn, and be healed.;Isaiah 6:10;true;;265
+739;739;They will be spared from destruction.;Healing is mentioned, not necessarily being spared from destruction.;false;;265
+740;740;They will be granted great wealth.;Healing is mentioned, not wealth.;false;;265
+#---
+741;741;True;The seraphim covered their faces and feet out of reverence for God's presence.;false;;266
+742;742;False;They covered their faces out of reverence and to shield their eyes from the glory of God.;true;;266
+#---
+743;743;It marked a time of political instability and God's intervention, setting the context for Isaiah's vision.;Isaiah 6:1;true;;267
+744;744;It was the year Isaiah began his ministry.;It was the beginning of his vision, not necessarily his ministry.;false;;267
+745;745;It was a year of great military victory.;King Uzziah's death marked a time of instability, not victory.;false;;267
+#---
+746;746;The house;Isaiah 6:4 states the house was filled with smoke.;true;;268
+747;747;The sanctuary;The entire house or temple was filled with smoke.;false;;268
+748;748;The Holy of Holies;The entire house was filled, not just the Holy of Holies.;false;;268
+#---
+749;749;It represents the hope of a faithful remnant that will survive God's judgment.;Isaiah 6:13;true;;269
+750;750;It symbolizes the complete and final destruction of the people.;The stump signifies hope, not total destruction.;false;;269
+751;751;It is a warning of future desolation.;While judgment is involved, the stump represents a future hope.;false;;269
+#---
+752;752;To allow Isaiah to willingly offer himself in service.;Isaiah 6:8;true;;270
+753;753;He was seeking another volunteer besides Isaiah.;The Lord is asking for a volunteer, and Isaiah responds immediately.;false;;270
+754;754;He was unsure who to send.;The Lord is omniscient and knows who to send.;false;;270
+#---------------------------------------------------------------------------------
+755;755;God's transcendent majesty and immanence, filling even the earthly temple.;Isaiah 6:1;true;;271
+756;756;The impending destruction of the temple.;The vision focuses on God's glory.;false;;271
+757;757;The corruption of the earthly temple.;The robe filling the temple suggests God's presence, not corruption.;false;;271
+#---
+758;758;Their humility and reverence before God's overwhelming holiness.;;true;;272
+759;759;Their inability to look upon God's face directly.;Isaiah 6:2 shows their reverence.;true;;272
+760;760;Their shame at their own sinfulness.;The seraphim are sinless.;false;;272
+#---
+761;761;It emphasizes the Trinity, hinting at a three-in-one nature of God.;The repetition emphasizes God's absolute and perfect holiness, not the Trinity.;false;;273
+762;762;The absolute and superlative holiness of God.;;true;;273
+763;763;The perfection of the angels.;The cry is about God's holiness, not the angels' perfection.;false;;273
+#---
+764;764;True;Isaiah 6:10 states that the people's heart will become calloused and their ears heavy, lest they turn and be healed. This indicates the possibility of healing if they turn.;false;;274
+765;765;False;Isaiah 6:10;true;;274
+#---
+766;766;It demonstrates how God's grace and cleansing overcome human unworthiness, empowering the sinner for service.;Isaiah's transformation from feeling undone by sin to eagerly volunteering for service illustrates this principle.;true;;275
+767;767;It shows that only the most confident people are called by God.;Isaiah's initial response was of unworthiness, not confidence.;false;;275
+768;768;It implies that Isaiah was not truly repentant at first.;His cry, "Woe is me," shows genuine repentance.;false;;275
+#---
+769;769;Jesus Christ;John 12:41 identifies Jesus as the King Isaiah saw.;true;;276
+770;770;The Holy Spirit;While present, Jesus is the king mentioned in John.;false;;276
+771;771;The Father;Jesus is the King Isaiah saw, according to John 12:41.;false;;276
+#---
+772;772;It represents the cloud of the Shekinah glory, signifying God's presence and holiness.;;true;;277
+773;773;It alludes to the smoke from the altar of incense, indicating atonement and prayer.;;true;;277
+774;774;It is a warning of impending destruction.;The smoke represents God's glory and presence, not destruction.;false;;277
+#---
+775;775;It suggests the Trinitarian nature of God: "I" (the Son) and "us" (the Father, Son, and Holy Spirit);;true;;278
+776;776;It refers to God and the seraphim as the senders of the prophet.;The "us" is interpreted as the Trinity.;false;;278
+777;777;It is simply a rhetorical flourish of no specific theological significance.;It is interpreted as a significant theological point.;false;;278
+#---
+778;778;It signifies that even though the nation will be destroyed, a faithful remnant (the holy seed) will survive to ensure the continuation of God's covenant.;;true;;279
+779;779;It means that all of Israel will eventually return to the land and be rebuilt.;The passage speaks of a remnant, not all.;false;;279
+780;780;It represents the righteous individuals who will be saved from all hardship.;The stump is a symbol of resilience through judgment, not avoidance of hardship.;false;;279
+#---
+781;781;It marks a time of national instability and human fallibility, setting the stage for Isaiah's vision of God's unshakable sovereignty.;;true;;280
+782;782;It was the final sign of God's approval of Uzziah's long and prosperous reign.;Uzziah's death is associated with instability, not approval.;false;;280
+783;783;It was a random historical event with no particular significance to the prophecy.;The death of a king often marks a significant turning point in biblical prophecy.;false;;280
+#---------------------------------------------------------------------------------
+# CHAPTER 7
+#---------------------------------------------------------------------------------
+784;784;King Rezin of Syria;Isaiah 7:1;true;;281
+785;785;King Pekah of Israel;Isaiah 7:1;true;;281
+786;786;King Nebuchadnezzar of Babylon;This king came much later.;false;;281
+#---
+787;787;True;Isaiah 7:2;false;;282
+788;788;False;Isaiah 7:2 states their hearts were "shaken, as the trees of the wood are shaken with the wind.";true;;282
+#---
+789;789;To be calm and not fear them;Isaiah 7:4;true;;283
+790;790;To surrender to them;This is the opposite of the message.;false;;283
+791;791;To gather all the armies of Judah;The message is to be still and trust God.;false;;283
+#---
+792;792;His son, Shearjashub;Isaiah 7:3;true;;284
+793;793;His wife;This is not mentioned.;false;;284
+794;794;Another prophet;Isaiah's son is specifically named.;false;;284
+#---
+795;795;Their plans to attack will fail;Isaiah 7:7;true;;285
+796;796;They will be defeated within a short time;Isaiah 7:8, 16;true;;285
+797;797;They will become allies of Judah;They are described as enemies.;false;;285
+#---
+798;798;The birth of a son to a virgin;Isaiah 7:14;true;;286
+799;799;A new king for Judah;The sign is a child's birth.;false;;286
+800;800;A great victory in battle;The sign is a future event.;false;;286
+#---
+801;801;Immanuel;Isaiah 7:14;true;;287
+802;802;Shearjashub;This is Isaiah's son, not the son from the prophecy.;false;;287
+803;803;Mahershalalhashbaz;This is another one of Isaiah's sons.;false;;287
+#---
+804;804;Butter and honey;Isaiah 7:15;true;;288
+805;805;Bread and water;This is not what is mentioned.;false;;288
+806;806;Milk and meat;This is not what is mentioned.;false;;288
+#---
+807;807;True;Isaiah 7:17;true;;289
+808;808;False;Isaiah 7:17 indicates that the Lord will bring the king of Assyria upon the land, which is a new and worse judgment after the initial threat from Syria and Israel is removed.;false;;289
+#---
+809;809;The fly in the farthest part of Egypt;Isaiah 7:18;true;;290
+810;810;The bee that is in the land of Assyria;Isaiah 7:18;true;;290
+811;811;The locusts from the desert;Locusts are not mentioned.;false;;290
+#---
+812;812;Briers and thorns;Isaiah 7:23;true;;291
+813;813;A fertile pasture;The land is described as desolate.;false;;291
+814;814;A place for a new city;The land is overrun with thorns.;false;;291
+#---
+815;815;Butter and honey;Isaiah 7:22;true;;292
+816;816;Bread and water;This is what is taken away in a previous chapter.;false;;292
+817;817;Wild game;The text mentions butter and honey.;false;;292
+#---
+818;818;With arrows and with bows;Isaiah 7:24;true;;293
+819;819;With spears and with shields;The tools mentioned are for hunting.;false;;293
+820;820;With axes and with clubs;The tools mentioned are bows and arrows.;false;;293
+#---
+821;821;Egypt;Isaiah 7:18;true;;294
+822;822;Assyria;Isaiah 7:18, 20;true;;294
+823;823;Babylon;Babylon comes later.;false;;294
+#---
+824;824;The head and the hair of the feet and the beard;Isaiah 7:20;true;;295
+825;825;The glory and the pride;This is a metaphor, not the literal shaving.;false;;295
+826;826;The vines and the trees;This is what will be cut down, not shaved.;false;;295
+#---
+827;827;True;Isaiah 7:21-25 describes a few surviving, but the land is desolate.;false;;296
+828;828;False;Isaiah 7 describes a handful of people surviving on butter and honey in a desolate land.;true;;296
+#---
+829;829;Shearjashub;Isaiah 7:3;true;;297
+830;830;Immanuel;Immanuel is the name of the promised child, not Isaiah's son.;false;;297
+831;831;Maher-shalal-hash-baz;This is another son of Isaiah, but from chapter 8.;false;;297
+#---
+832;832;Curds and honey;Isaiah 7:15;true;;298
+833;833;Bread and meat;The text mentions curds and honey.;false;;298
+834;834;Fruits and vegetables;The text mentions curds and honey.;false;;298
+#---
+835;835;The king of Assyria;Isaiah 7:17;true;;299
+836;836;The king of Syria;The king of Syria is defeated, but Assyria is the main threat.;false;;299
+837;837;A great drought;Assyria is the specific event mentioned.;false;;299
+#---
+838;838;God with us;Isaiah 7:14;true;;300
+839;839;He has returned;This is not the meaning.;false;;300
+840;840;My people are saved;This is not the meaning.;false;;300
+#-------------------------------------------------------------------------------------------
+841;841;They were told that Syria was allied with Ephraim;Isaiah 7:2;true;;301
+842;842;An earthquake shook the land;An earthquake occurred in a previous chapter.;false;;301
+843;843;They heard the sound of approaching armies;The report of the alliance is what caused the fear.;false;;301
+#---
+844;844;At the end of the conduit of the upper pool;Isaiah 7:3;true;;302
+845;845;In the temple in Jerusalem;Isaiah met Ahaz at a specific outdoor location.;false;;302
+846;846;On Mount Zion;He met Ahaz by the pool.;false;;302
+#---
+847;847;They were merely "two smoking firebrands";Isaiah 7:4;true;;303
+848;848;Their plan to invade would fail;Isaiah 7:7;true;;303
+849;849;They would be defeated by a stronger enemy;Isaiah's immediate message was that they would not succeed in taking Judah.;false;;303
+#---
+850;850;True;Ahaz refused to ask for a sign, stating he would not test the Lord.;false;;304
+851;851;False;Isaiah 7:12;true;;304
+#---
+852;852;Before the child Immanuel knows to choose good and evil;Isaiah 7:16;true;;305
+853;853;Within three days;That is mentioned in chapter 8, for a different reason.;false;;305
+854;854;In sixty-five years;That specific timeframe applies to Ephraim becoming "not a people," not the forsaking of the land by the two kings.;false;;305
+#---
+855;855;The land of the two kings Ahaz fears will be laid waste;Isaiah 7:16;true;;306
+856;856;The birth of another of Isaiah's children;This is a separate prophecy.;false;;306
+857;857;The immediate destruction of Assyria;Assyria is used as the tool of judgment later.;false;;306
+#---
+858;858;The summoning of foreign nations;Isaiah 7:18;true;;307
+859;859;The destructive power of invaders;The flies and bees are symbolic of the foreign powers.;true;;307
+860;860;The guidance of God's people;This is a negative symbol, not guidance.;false;;307
+#---
+861;861;The Lord using the king of Assyria to humiliate and devastate Judah;Isaiah 7:20;true;;308
+862;862;The shaving of hair as a sign of mourning;The razor is hired from beyond the River, referencing Assyria, for a purpose of devastation.;false;;308
+863;863;The cutting off of the priesthood;The shaving is for humiliation and judgment.;false;;308
+#---
+864;864;They will become covered with thorns and briers;Isaiah 7:23;true;;309
+865;865;They will become a place for oxen and sheep;Isaiah 7:25;true;;309
+866;866;They will be rebuilt into beautiful cities;The land will be desolate, not rebuilt.;false;;309
+#---
+867;867;"Is it too little for you to weary men, that you weary my God also?";Isaiah 7:13;true;;310
+868;868;"I will not ask, nor will I test the Lord";Ahaz's statement was a pretext for unbelief.;false;;310
+869;869;"Behold, the virgin shall conceive";This is God's sign, not Ahaz's defiance.;false;;310
+#---
+870;870;A state of severe poverty and desolation;Isaiah 7:22;true;;311
+871;871;A time of great prosperity and abundance;This is the opposite of the context.;false;;311
+872;872;A normal diet for those who have been spared;The diet is for a remnant in a desolate land.;false;;311
+#---
+873;873;Once valuable vineyards will be overgrown with briers and thorns;Isaiah 7:23;true;;312
+874;874;The land will become even more fruitful;The prophecy is of desolation.;false;;312
+875;875;The land will be completely burned and uninhabitable;The land is overgrown with thorns, not completely burned.;false;;312
+#---
+876;876;The land will be forsaken by the kings;Isaiah 7:16;true;;313
+877;877;He will eat butter and honey;Isaiah 7:15;true;;313
+878;878;He will choose between good and evil;He will know to do this, but it is not a consequence on the land.;false;;313
+#---
+879;879;Within sixty-five years;Isaiah 7:8;true;;314
+880;880;Before the child is two years old;This is another timeframe, but not the 65-year one.;false;;314
+881;881;Before the next generation dies;The specific number is given.;false;;314
+#---
+882;882;True;Isaiah 7:2 indicates Ahaz's fear was of the military alliance, though his lack of faith was a spiritual issue.;false;;315
+883;883;False;Ahaz's heart shook because of the military threat, but his lack of faith was a spiritual problem.;true;;315
+#---
+884;884;It emphasizes that God's covenant with David remains, despite the current king's unfaithfulness.;Isaiah 7:13;true;;316
+885;885;It warns that the Davidic line is about to be completely destroyed.;The Immanuel sign promises a future for the line.;false;;316
+886;886;It refers to the entire nation of Israel, not just Judah.;The house of David refers to the royal line of Judah.;false;;316
+#---
+887;887;His refusal to ask for a sign from God;Isaiah 7:12-13;true;;317
+888;888;A devastating defeat in battle;The prophecy came before a defeat, to encourage faith.;false;;317
+889;889;A great famine in the land;The famine comes later as part of the judgment.;false;;317
+#---
+890;890;To replace Ahaz with a new king;Isaiah 7:6;true;;318
+891;891;To capture and enslave the people of Judah;This was a consequence, not the specific objective here.;false;;318
+892;892;To establish a new trade route through Judah;The objective was to install their own ruler.;false;;318
+#---
+893;893;A young cow;Isaiah 7:21;true;;319
+894;894;Two sheep;The ESV mentions two sheep.;true;;319
+895;895;Two goats;The NIV mentions two goats.;true;;319
+#---
+896;896;Belief;Isaiah 7:9;true;;320
+897;897;Sacrifice;Sacrifice was part of the ritual law, not the basis for being established here.;false;;320
+898;898;Military strength;Ahaz was relying on this, and it was the wrong approach.;false;;320
+#-----------------------------------------------------------------------------------
+899;899;The location symbolizes Ahaz's worldly strategy of relying on waterworks and political alliances (like with Assyria) instead of trusting God for deliverance, foreshadowing his spiritual blindness.;Ahaz was inspecting waterworks to prepare for a siege when Isaiah met him, showing his worldly focus.;true;;321
+900;900;It was a sacred spot where prophets always met with kings.;The location was a common, utilitarian site, not sacred.;false;;321
+901;901;The conduit and fuller's field represent the cleansing and purification that Judah would undergo.;The location's significance points to Ahaz's lack of faith, not to Judah's purification.;false;;321
+#---
+902;902;To warn Ahaz that while a remnant would be saved, the nation would first face severe judgment and devastation.;Isaiah 7:3 and commentary;true;;322
+903;903;To provide a sign of hope that despite the present crisis, God's covenant with His people would endure.;Isaiah 7:3 and commentary;true;;322
+904;904;To imply that a remnant of the defeated Northern Kingdom (Ephraim) would return to Judah.;The name applies to the remnant of Judah itself, not Ephraim.;false;;322
+#---
+905;905;His deep-seated unbelief and refusal to trust God's promise, having already decided to rely on Assyrian aid.;Isaiah 7:12 and 2 Kings 16:7-9;true;;323
+906;906;His genuine reverence for God's holiness and desire not to test His power.;This was a feigned piety, as revealed by his subsequent actions.;false;;323
+907;907;His belief that he could handle the military threat on his own without divine intervention.;Ahaz's actions reveal his reliance on foreign powers, not self-sufficiency.;false;;323
+#---
+908;908;The use of 'almah' suggests a young woman of marriageable age, not necessarily a virgin, pointing to a contemporary fulfillment for Ahaz.;Commentary on Isaiah 7:14;true;;324
+909;909;The Septuagint's translation of 'almah' as 'parthenos' (virgin) enabled Matthew to see a greater, messianic fulfillment in Jesus.;Matthew 1:23 and commentary;true;;324
+910;910;The Hebrew word for 'virgin' ('betulah') was never used in Isaiah, indicating it was never meant to be a virgin birth prophecy.;Isaiah uses 'betulah' elsewhere, making the choice of 'almah' significant.;false;;324
+#---
+911;911;The timing shows that God's deliverance from the immediate threat of Syria and Israel would occur relatively quickly, but a greater, more devastating judgment (by Assyria) would follow.;Isaiah 7:16-17;true;;325
+912;912;The time frame is a sign that God will defeat all of Judah's enemies forever.;The text shows that a worse enemy is coming.;false;;325
+913;913;The land will be utterly destroyed and uninhabitable.;The land will be desolate and overgrown, not completely uninhabitable.;false;;325
+#---
+914;914;The Immanuel of Isaiah 7 was a temporary sign of God's presence, while Jesus is the ultimate, divine "God with us" in the flesh.;The New Testament makes clear that Jesus is the ultimate fulfillment.;true;;326
+915;915;The only difference is the length of time between the prophecy and its fulfillment.;The nature of the fulfillment is different, as well as the timing.;false;;326
+916;916;Ahaz's sign was fulfilled by a human child, while Jesus' birth was purely a spiritual event.;Matthew describes the Incarnation, where God became man.;false;;326
+#---
+917;917;True;The prophecy is understood as having both a near-term fulfillment for Ahaz and a long-term, ultimate fulfillment in Jesus Christ.;false;;327
+918;918;False;The prophecy of Immanuel is understood as having a dual fulfillment, both near (for Ahaz) and far (for the Messiah).;true;;327
+#---
+919;919;National humiliation and desecration;Shaving the hair was a sign of great dishonor.;true;;328
+920;920;The complete devastation and depopulation of the land;Shaving of the head, beard, and feet symbolizes total humiliation.;true;;328
+921;921;The ritual shaving of priests before a sacrifice;The shaving is for humiliation, not consecration.;false;;328
+#---
+922;922;It signifies that the once-fruitful land, representing God's blessing, will become wild and desolate due to disobedience.;The vineyard metaphor in Isaiah 5 and the desolation in Isaiah 7 are contrasted.;true;;329
+923;923;It means the land will be more fertile and wild, not desolate.;Thorns and briers indicate uncultivated land, not fertility.;false;;329
+924;924;It is a temporary setback that will soon be reversed.;The prophecy indicates a prolonged period of desolation.;false;;329
+#---
+925;925;The scarcity of other food sources due to the widespread devastation of the land.;Isaiah 7:21-22 implies this.;true;;330
+926;926;A diet of survival for the remnant, not one of abundance or blessing.;The food is what is available, not a sign of prosperity.;true;;330
+927;927;A return to primitive, idyllic living away from the corrupting influence of the city.;The context is one of judgment and desolation, not a utopia.;false;;330
+#---
+928;928;It demonstrates that God controls and uses even pagan nations as instruments of His judgment and will.;The comparison of nations to flies and bees shows God's easy control over them.;true;;331
+929;929;It shows that God is indifferent to the actions of pagan nations.;God's whistling shows His direct control.;false;;331
+930;930;It means that pagan gods have power over their own people, and God uses them to defeat His enemies.;The Lord is the one doing the whistling, not pagan gods.;false;;331
+#---
+931;931;It addresses Ahaz as a representative of the covenant line of David, highlighting his failure while reaffirming God's ultimate faithfulness to that covenant through the promised Immanuel.;Isaiah 7:13;true;;332
+932;932;It is a title used to shame Ahaz for his unfaithfulness and signal the end of the Davidic line.;The prophecy of Immanuel reassures the continuation of the line.;false;;332
+933;933;It broadens the scope of the prophecy to include all of Israel, not just Judah.;The address is specifically to the "house of David.";false;;332
+#---
+934;934;The Assyrian policy of forced depopulation and resettlement of conquered territories, which ultimately erased Ephraim's identity.;Historical commentary on Isaiah 7:8;true;;333
+935;935;The prophecy refers to a period of peace and stability that lasted for 65 years.;The prophecy is of destruction, not peace.;false;;334
+936;936;The timeframe was a literal countdown to the end of the world.;The timeframe is tied to historical events.;false;;335
+#---
+937;937;It indicates a regression to a more primitive state where agriculture fails and people must resort to hunting for survival in a wilderness overrun by thorns.;Isaiah 7:24;true;;334
+938;938;It shows that the people will become skilled hunters and survive easily.;The context is desolation and hardship, not easy living.;false;;334
+939;939;It is a call to military preparedness for future wars.;The imagery is of a devastated land, not a prepared army.;false;;334
+#---
+940;940;True;The name Immanuel is an integral part of the messianic prophecy and has a lasting spiritual significance.;false;;335
+941;941;False;Matthew 1:23 explicitly links Isaiah's prophecy of Immanuel to the birth of Jesus, indicating its messianic significance.;true;;335
+#---
+942;942;King Ahaz's decision to form an alliance with Assyria against God's will.;Isaiah 7:17 is a consequence of Ahaz's unfaithfulness.;true;;336
+943;943;The military strength of Syria and Ephraim;The Assyrian attack is a judgment from God, not a natural outcome of military power.;false;;336
+944;944;The death of King Uzziah;Uzziah's death is the setting, not the cause of this judgment.;false;;336
+#---
+945;945;They will face a judgment that will make the temporary threat they feared seem insignificant in comparison.;Isaiah 7:17;true;;337
+946;946;They will be spared because they did not trust God.;This contradicts the principle of judgment for unbelief.;false;;337
+947;947;They will be granted a sign that proves their trust in God.;The sign is given to Ahaz despite his unbelief, not because of it.;false;;337
+#---
+948;948;God's immense power and willingness to intervene in human history, even for an unfaithful king.;God offered any sign, demonstrating His omnipotence.;true;;338
+949;949;God's anger towards Ahaz for his lack of faith.;The offer was a sign of grace, not anger.;false;;338
+950;950;God's desire to test Ahaz's loyalty.;God's motive is to give a sign, not to test Ahaz.;false;;338
+#---
+951;951;The speed, aggressiveness, and sheer number of the invading forces, which will swarm the land like a hive of bees.;Isaiah 7:18;true;;339
+952;952;The ability of the Assyrians to navigate difficult terrain.;The focus is on their overwhelming presence and aggression.;false;;339
+953;953;The peaceful nature of the Assyrian invasion.;The comparison to bees suggests stinging and aggression.;false;;339
+#---
+954;954;Because of Ahaz's persistent unbelief and defiance, the Lord offers a sign not for Ahaz's benefit, but for the sake of the "house of David" and the covenant promise.;Isaiah 7:13-14 implies this shift in focus.;true;;340
+955;955;To punish Ahaz for his wickedness by overwhelming him with a prophecy he could not understand.;The sign is for the sake of the house of David, not just for Ahaz.;false;;340
+956;956;To show that God does not require faith to perform a miracle.;God desires faith, but acts despite the lack of it.;false;;340
+#------------------------------------------------------------------------------------
+# CHAPTER 8
+#------------------------------------------------------------------------------------
+957;957;A great roll;Isaiah 8:1;true;;341
+958;958;A scroll;Isaiah 8:1 says a "great roll.";false;;341
+959;959;A clay tablet;Isaiah 8:1 says a "great roll.";false;;341
+#---
+960;960;Mahershalalhashbaz;Isaiah 8:1;true;;342
+961;961;Immanuel;Immanuel is from Isaiah 7.;false;;342
+962;962;Shearjashub;This is another one of Isaiah's sons.;false;;342
+#---
+963;963;Uriah the priest;Isaiah 8:2;true;;343
+964;964;Zechariah the son of Jeberechiah;Isaiah 8:2;true;;343
+965;965;Hilkiah the high priest;Hilkiah is not mentioned here.;false;;343
+#---
+966;966;True;Isaiah 8:3;true;;344
+967;967;False;Isaiah 8:3 states that Isaiah's wife conceived and bore a son.;false;;344
+#---
+968;968;Mahershalalhashbaz;Isaiah 8:3;true;;345
+969;969;Immanuel;Immanuel is from Isaiah 7.;false;;345
+970;970;Shearjashub;This is another one of Isaiah's sons.;false;;345
+#---
+971;971;The riches of Damascus and the spoil of Samaria will be taken away;Isaiah 8:4;true;;346
+972;972;The king of Assyria will be defeated;The Assyrian king will not be defeated at this time.;false;;346
+973;973;The temple will be rebuilt;This is not what is mentioned.;false;;346
+#---
+974;974;True;Isaiah 8:6 says the people "refuse" the waters.;false;;347
+975;975;False;Isaiah 8:6 says they "refuse" the waters of Shiloah and are happy with King Rezin and the son of Remaliah.;true;;347
+#---
+976;976;The waters of the river, mighty and many;Isaiah 8:7;true;;348
+977;977;A plague of locusts;This is not what is mentioned.;false;;348
+978;978;A great drought;A flood is mentioned, not a drought.;false;;348
+#---
+979;979;The king of Assyria;Isaiah 8:7;true;;349
+980;980;The king of Syria;The king of Syria was the threat that was defeated.;false;;349
+981;981;King of Egypt;The king of Egypt is mentioned in chapter 7 as a fly, not a flood.;false;;349
+#---
+982;982;Go over all his banks;Isaiah 8:8;true;;350
+983;983;Overflow and go over;Isaiah 8:8;true;;350
+984;984;Cleanse the land of all wickedness;The flood is a sign of judgment and destruction, not cleansing.;false;;350
+#---
+985;985;Isaiah and his children;Isaiah 8:18;true;;351
+986;986;Immanuel;Immanuel is a sign of the messiah, but Isaiah and his children are the sign in this verse.;false;;351
+987;987;King Ahaz and his sons;King Ahaz is not a sign.;false;;351
+#---
+988;988;Among his disciples;Isaiah 8:16;true;;352
+989;989;In the temple;Isaiah 8:16 says among his disciples.;false;;352
+990;990;In the city gates;Isaiah 8:16 says among his disciples.;false;;352
+#---
+991;991;The law and the testimony;Isaiah 8:20;true;;353
+992;992;The stars and the moon;This is a form of divination, which they are told to avoid.;false;;353
+993;993;The gods of other nations;They are told to seek the Lord, not other gods.;false;;353
+#---
+994;994;True;Isaiah 8:19;false;;354
+995;995;False;Isaiah 8:19 warns against listening to them.;true;;354
+#---
+996;996;There is no morning for them;Isaiah 8:20;true;;355
+997;997;They will have a short life;The text states there is no morning for them.;false;;355
+998;998;They will be forgiven and saved;This contradicts the verse.;false;;355
+#---
+999;999;The land of Israel and the land of Judah will be laid waste;The land of Judah will be taken over by the Assyrian king.;false;;356
+1000;1000;The whole land will be filled with water;The land will be filled with the armies of the king of Assyria.;false;;356
+1001;1001;It will be a time of trouble and distress;Isaiah 8:22 describes the land as a place of trouble.;true;;356
+#---
+1002;1002;A confederacy;Isaiah 8:12;true;;357
+1003;1003;Their fear;Isaiah 8:13;true;;357
+1004;1004;The people of the land;They are told not to fear them.;false;;357
+#---
+1005;1005;The sanctuary;Isaiah 8:14;true;;358
+1006;1006;A trap and a snare;He is a sanctuary to some, a trap to others.;false;;358
+1007;1007;The city of Jerusalem;He is in the sanctuary, not just the city.;false;;358
+#---
+1008;1008;The speed of the plunder;Isaiah 8:1;true;;359
+1009;1009;The haste of the spoil;Isaiah 8:1;true;;359
+1010;1010;The coming of the Messiah;The name is a prophecy of judgment, not the Messiah.;false;;359
+#---
+1011;1011;The Lord himself;Isaiah 8:11;true;;360
+1012;1012;The prophet Isaiah;The Lord is the one with the strong hand.;false;;360
+1013;1013;The king of Assyria;The king of Assyria is the tool, not the one with the strong hand.;false;;360
+#-----------------------------------------------------------------------------------
+1014;1014;To serve as a public, verifiable sign of the impending judgment upon Damascus and Samaria.;Isaiah 8:1, 4;true;;361
+1015;1015;It was a secret message for the king's eyes only.;The sign was public, witnessed by Uriah and Zechariah.;false;;361
+1016;1016;The name was a celebratory title for a military victory.;The name is a prophecy of plunder and judgment.;false;;361
+#---
+1017;1017;Their rejection of God's gentle, covenantal rule and reliance on foreign alliances instead.;Isaiah 8:6 contrasts the people's refusal of God's peace with their rejoicing in their foreign allies.;true;;362
+1018;1018;Their literal refusal to drink from a certain pool in Jerusalem.;The language is symbolic, representing their spiritual choices.;false;;362
+1019;1019;Their desire for a more powerful, aggressive king.;Their rejoicing in Rezin and Remaliah's son is tied to their worldly reliance.;false;;362
+#---
+1020;1020;Rejecting the gentle waters of Shiloah;Isaiah 8:6;true;;363
+1021;1021;Rejoicing in Rezin and the son of Remaliah;Isaiah 8:6;true;;363
+1022;1022;Worshipping other gods;While they did this, the text highlights the political reliance that prompted the specific action.;false;;363
+#---
+1023;1023;It reveals that God's presence and plans will bring either salvation or judgment, depending on how people respond.;Isaiah 8:14;true;;364
+1024;1024;To give both the faithful and the unfaithful an equal chance at salvation.;The imagery implies a division, not an equal chance.;false;;364
+1025;1025;To cause the people to fall and be broken, regardless of their faith.;The Lord is a sanctuary for those who fear Him.;false;;364
+#---
+1026;1026;True;The command was to protect the message from a rebellious public who would not accept it.;true;;365
+1027;1027;False;The message was to be proclaimed to everyone, not sealed away.;false;;365
+#---
+1028;1028;Being distressed and hungry;Isaiah 8:21;true;;366
+1029;1029;Being famished;Isaiah 8:21;true;;366
+1030;1030;Seeking mediums and wizards;That is a separate act of rebellion, though related.;false;;366
+#---
+1031;1031;A confederacy that the people feared;Isaiah 8:12;true;;367
+1032;1032;The king of Assyria;The Lord is the one to be feared.;false;;367
+1033;1033;The consequences of his own prophecy;Isaiah is to have no fear of man.;false;;367
+#---
+1034;1034;The Assyrian invasion will be overwhelming and all-encompassing, leaving Judah with only a breath of life, and on the brink of total annihilation.;Isaiah 8:8;true;;368
+1035;1035;The flood will not harm the people of Judah.;The image of a flood up to the neck is one of extreme danger.;false;;368
+1036;1036;The Assyrians will only capture a portion of Judah's land.;The flood will cover the entire land.;false;;368
+#---
+1037;1037;That they have "no dawn" or light in them;Isaiah 8:20;true;;369
+1038;1038;That they will be protected from the coming judgment;The warning is negative, not positive.;false;;369
+1039;1039;That they will have a brighter future;The verse states the opposite.;false;;369
+#---
+1040;1040;They are living symbols of God's prophetic message, acting as a constant reminder to the people of God's plans.;Isaiah 8:18;true;;370
+1041;1041;Their supernatural powers allow them to perform miracles.;Isaiah and his children were human, not possessing supernatural powers.;false;;370
+1042;1042;They serve as prophets to other nations.;Their purpose is as a sign to Israel.;false;;370
+#---
+1043;1043;The name itself signifies the swiftness of the plunder, and the mention of the child's maturity sets the timeframe for the prophecy's fulfillment.;Isaiah 8:1, 4;true;;371
+1044;1044;The name's meaning is irrelevant to the timing of the prophecy.;The name is a prophecy.;false;;371
+1045;1045;The prophecy only concerns the immediate fulfillment and has no long-term significance.;The name is a public, permanent sign.;false;;371
+#---
+1046;1046;The "gently flowing waters" represent God's gentle and faithful provision, while the "strong and mighty" river symbolizes the overwhelming and destructive force of Assyria.;Isaiah 8:6-8;true;;372
+1047;1047;The waters of Shiloah represent a weak king, and the River represents a strong king.;The water imagery represents God's provision vs. Assyrian judgment.;false;;372
+1048;1048;There is no symbolic contrast intended; it is a literal description of two rivers.;The context shows a clear symbolic contrast.;false;;372
+#---
+1049;1049;The image represents the all-encompassing nature of the Assyrian invasion, which will cover the land with its destructive force.;Isaiah 8:8;true;;373
+1050;1050;It symbolizes God's protective wings covering the land.;The context is the invasion of Assyria.;false;;373
+1051;1051;It refers to the wings of the angels who will protect Judah.;The wings are part of the metaphor for the Assyrian army.;false;;373
+#---
+1052;1052;They shall be snared;Isaiah 8:15;true;;374
+1053;1053;They shall be taken;Isaiah 8:15;true;;374
+1054;1054;They shall be forgiven;The passage describes judgment.;false;;374
+#---
+1055;1055;It signifies a moment of divine sealing, where the message is preserved for a faithful remnant who will carry it forward.;Isaiah 8:16;true;;375
+1056;1056;It means the prophecy was only for a select group and not for all of Israel.;The prophecy is for all Israel, but only the disciples receive it.;false;;375
+1057;1057;It shows that Isaiah was speaking to an elite religious group.;The message is for a remnant within Israel.;false;;375
+#---
+1058;1058;Because of the house of Jacob's persistent rebellion and refusal to trust God's promises.;Isaiah 8:17;true;;376
+1059;1059;Because God was unable to protect them any longer.;God is hiding His face, not unable to protect.;false;;376
+1060;1060;Because the people of Jacob had no sin.;The hiding of the face is a sign of judgment.;false;;376
+#---
+1061;1061;It asserts that no human plan or confederacy can stand against God's ultimate plan, which is symbolized by "God with us" (Immanuel).;Isaiah 8:10;true;;377
+1062;1062;It suggests that the nations will succeed because God is with them.;The nations will be broken.;false;;377
+1063;1063;It promises that the counsel of Judah's enemies will eventually turn to good.;The counsel comes to nothing.;false;;377
+#---
+1064;1064;To not call it a "confederacy" and not to fear what the people fear.;Isaiah 8:12;true;;378
+1065;1065;To join the confederacy against Assyria.;Isaiah is instructed to trust God, not join the confederacy.;false;;378
+1066;1066;To warn the confederacy that they will be destroyed.;The message is to Isaiah and his followers.;false;;378
+#---
+1067;1067;There is "no morning" or light for them, indicating a state of darkness and judgment.;Isaiah 8:20;true;;379
+1068;1068;They will be given more time to repent and believe.;The text indicates immediate judgment.;false;;379
+1069;1069;They will be made wise and knowledgeable.;The verse states the opposite.;false;;379
+#---
+1070;1070;Being driven away into "thick darkness";Isaiah 8:22;true;;380
+1071;1071;Being swallowed by the earth;The text mentions darkness.;false;;380
+1072;1072;Being scattered among the nations;The text mentions darkness.;false;;380
+#-----------------------------------------------------------------------------------
+1073;1073;To create a legally binding, public, and verifiable record of the prophecy for all to see.;Isaiah 8:1-2;true;;381
+1074;1074;To give Isaiah a personal souvenir of the prophecy.;The writing was a public act.;false;;381
+1075;1075;To show that Isaiah was a skilled scribe.;The purpose was prophetic and legal, not personal.;false;;381
+#---
+1076;1076;The people's rejection of God's gentle, covenantal rule in favor of foreign alliances and their destructive power.;Isaiah 8:6-7;true;;382
+1077;1077;The people's desire for a less powerful river.;This is a symbolic contrast, not literal.;false;;382
+1078;1078;The people's preference for foreign gods.;The text focuses on their political choices and alliances.;false;;382
+#---
+1079;1079;It contrasts the people's misplaced fear of human enemies with the proper and reverential fear owed only to the holy and sovereign God.;Isaiah 8:12-13;true;;383
+1080;1080;It instructs the people to be afraid of God's wrath.;The fear is one of reverence, not just terror.;false;;383
+1081;1081;It means that God is a scary and dreadful being.;The fear is tied to God's holiness and sovereignty.;false;;383
+#---
+1082;1082;He is a place of refuge and security for those who trust in Him.;Isaiah 8:14;true;;384
+1083;1083;He is a cause for stumbling and falling for those who reject His authority.;Isaiah 8:14-15;true;;384
+1084;1084;He is a trap for all people, both faithful and unfaithful.;He is a sanctuary for some.;false;;384
+#---
+1085;1085;To preserve the pure and uncorrupted prophetic message for a faithful remnant who would later understand it.;Isaiah 8:16;true;;385
+1086;1086;To hide the law from the rebellious populace who rejected it.;The message was to be preserved, not hidden.;true;;385
+1087;1087;To protect Isaiah's personal reputation from his enemies.;The purpose was theological, not personal.;false;;385
+#---
+1088;1088;True;Isaiah 8:17;true;;386
+1089;1089;False;Isaiah expresses hope in the Lord, waiting for His future actions.;false;;386
+#---
+1090;1090;Their names (Shearjashub and Mahershalalhashbaz) and their very lives serve as concrete object lessons of God's promises and warnings.;Isaiah 8:18;true;;387
+1091;1091;Their family was a literal, physical spectacle for the people.;They were spiritual signs, not physical spectacles.;false;;387
+1092;1092;They were prophets in their own right.;They are described as signs, not necessarily prophets.;false;;387
+#---
+1093;1093;Necromancy (seeking the dead), presented as rebellion because it rejects God as the ultimate source of truth and life.;Isaiah 8:19;true;;388
+1094;1094;Worshipping idols, as it is a common biblical sin.;Necromancy is explicitly mentioned.;false;;388
+1095;1095;Disobeying the king, as it undermines political order.;The rebellion is against God.;false;;388
+#---
+1096;1096;Spiritual darkness: they have no "light" or truth within them.;Isaiah 8:20;true;;389
+1097;1097;Physical suffering: they will be in "distress and darkness" and hunger.;Isaiah 8:21-22;true;;389
+1098;1098;Eternal damnation: the darkness is an endless punishment.;While implied, the text focuses on immediate spiritual and physical consequences.;false;;389
+#---
+1099;1099;It ironically highlights that even the very land promised to the "God with us" (Immanuel) would be overwhelmed by the invader, as a result of the people's unfaithfulness.;Isaiah 8:8;true;;390
+1100;1100;It means the Assyrian king will protect the land of Immanuel.;The Assyrian king is the source of the flood.;false;;390
+1101;1101;It indicates that the flood will not harm the land of Immanuel.;The flood reaches even to the neck.;false;;390
+#---
+1102;1102;The contrast highlights that while the Immanuel sign was a miraculous, divine sign, the Mahershalalhashbaz prophecy was a normal, human birth to signify a mundane, political event.;Isaiah 8:1-4 vs. Isaiah 7:14;true;;391
+1103;1103;Both prophecies are identical in meaning and fulfillment.;They refer to different births and have different meanings.;false;;391
+1104;1104;The Mahershalalhashbaz prophecy was a spiritual event, while the Immanuel prophecy was political.;The reverse is true.;false;;391
+#---
+1105;1105;The people's curse reveals their misplaced blame and failure to see God's hand in their hardship, while Isaiah's trust demonstrates faith even in the midst of suffering.;Isaiah 8:17, 21;true;;392
+1106;1106;The people's cursing shows their defiance, while Isaiah's trust is a naive optimism.;Isaiah's trust is based on God's character, not optimism.;false;;392
+1107;1107;The people's reaction is an acceptable response to hardship.;The cursing is condemned.;false;;392
+#---
+1108;1108;The Assyrian conquest of Damascus and Samaria around 732 B.C., a known historical event.;Assyrian records align with this historical event.;true;;393
+1109;1109;The birth of Jesus Christ, as a future fulfillment of the prophecy.;This was a near-term fulfillment.;false;;393
+1110;1110;The event never happened, as it was a symbolic warning.;The prophecy was a historical event.;false;;393
+#---
+1111;1111;It asserts that no human alliance or plot can ultimately succeed against God's sovereign will and promise of divine presence ("Immanuel").;Isaiah 8:10;true;;394
+1112;1112;It shows that God is indifferent to human affairs.;The verses show God's active involvement.;false;;394
+1113;1113;It suggests that human alliances and plots can defeat God's plans.;The verse states the opposite.;false;;394
+#---
+1114;1114;True;The imagery is an ironic reversal, where the wings of a destructive enemy are used, subverting the traditional association with divine protection.;true;;395
+1115;1115;False;The wings are explicitly associated with God's protective nature in the Psalms, making this an intentional and ironic image of destruction.;false;;395
+#---
+1116;1116;The "fear of the people," which is worldly, panicky fear of human threats.;Isaiah 8:12;true;;396
+1117;1117;The "fear of the LORD," which is reverential, holy dread of God's power and justice.;Isaiah 8:13;true;;396
+1118;1118;The fear of future judgment, as a motivation for repentance.;While related, the text focuses on contrasting types of fear.;false;;396
+#---
+1119;1119;It portrays the judgment as being so overwhelming that it nearly drowns the people, leaving them on the brink of total destruction but not quite consumed.;Isaiah 8:8;true;;397
+1120;1120;It suggests that the judgment will be temporary and not too severe.;The image of flooding to the neck suggests a close call with death.;false;;397
+1121;1121;It means that only a small portion of the land will be flooded.;The flood fills the "breadth of the land.";false;;397
+#---
+1122;1122;The choice to consult false spiritual sources (mediums and wizards) instead of God's "law and testimony";Isaiah 8:19-20;true;;398
+1123;1123;The decision to rebel against the king of Judah.;The text focuses on spiritual disobedience.;false;;398
+1124;1124;The lack of knowledge and education among the people.;The text refers to spiritual blindness, not intellectual deficiency.;false;;398
+#---
+1125;1125;His trust is based on God's covenantal faithfulness to the house of Jacob, despite their unfaithfulness.;Isaiah 8:17 implies God's continued presence and faithfulness.;true;;399
+1126;1126;He is a prophet, so he is exempt from judgment.;Isaiah also faced judgment but was cleansed.;false;;399
+1127;1127;God's judgment is reserved for other nations, not His own people.;Isaiah chapter 8 is a prophecy of judgment on Judah.;false;;399
+#---
+1128;1128;The spoils and wealth of Israel (Samaria) and Syria (Damascus), which would be taken by Assyria.;This was the result of the alliance that threatened Judah.;true;;400
+1129;1129;The wealth that King Ahaz possessed.;The text refers to the enemies of Judah.;false;;400
+1130;1130;The treasures of Egypt and Assyria.;The spoils are from Damascus and Samaria.;false;;400
+#-----------------------------------------------------------------------------------
+# CHAPTER 9
+#-----------------------------------------------------------------------------------
+1131;1131;Zebulun;Isaiah 9:1;true;;401
+1132;1132;Naphtali;Isaiah 9:1;true;;401
+1133;1133;Manasseh;Manasseh is not mentioned in this verse.;false;;401
+#---
+1134;1134;True;Isaiah 9:2;true;;402
+1135;1135;False;Isaiah 9:2 states the people who walked in darkness have seen a great light.;false;;402
+#---
+1136;1136;The yoke of his burden;Isaiah 9:4;true;;403
+1137;1137;The staff of his shoulder;Isaiah 9:4;true;;403
+1138;1138;The sword of the enemy;The sword is not mentioned here.;false;;403
+#---
+1139;1139;They will be for burning and fuel of fire;Isaiah 9:5;true;;404
+1140;1140;They will be washed and reused;The text states they will be burned.;false;;404
+1141;1141;They will be buried in the ground;The text states they will be burned.;false;;404
+#---
+1142;1142;A son;Isaiah 9:6;true;;405
+1143;1143;A king;The child is born, and the government is upon his shoulder.;false;;405
+1144;1144;A prophet;The child is the subject of the prophecy.;false;;405
+#---
+1145;1145;His shoulder;Isaiah 9:6;true;;406
+1146;1146;His head;The government is on his shoulder.;false;;406
+1147;1147;His hand;The government is on his shoulder.;false;;406
+#---
+1148;1148;Wonderful;Isaiah 9:6;true;;407
+1149;1149;Counselor;Isaiah 9:6;true;;407
+1150;1150;Mighty God;Isaiah 9:6;true;;407
+1151;1151;Prince of Peace;Isaiah 9:6;true;;407
+#---
+1152;1152;True;Isaiah 9:7;true;;408
+1153;1153;False;Isaiah 9:7 states the increase will have no end.;false;;408
+#---
+1154;1154;The throne of David;Isaiah 9:7;true;;409
+1155;1155;The throne of Solomon;The throne of David is specifically mentioned.;false;;409
+1156;1156;The throne of Jerusalem;The throne of David is specifically mentioned.;false;;409
+#---
+1157;1157;The bricks are fallen down, but we will build with hewn stones;Isaiah 9:10;true;;410
+1158;1158;We have sinned and will repent;This is not what is said.;false;;410
+1159;1159;We will find a new king;The people are defiant, not repentant.;false;;410
+#---
+1160;1160;The adversaries of Rezin;Isaiah 9:11;true;;411
+1161;1161;A great plague;The adversaries of Rezin are mentioned.;false;;411
+1162;1162;The king of Assyria;The adversaries of Rezin are mentioned, followed by other enemies.;false;;411
+#---
+1163;1163;True;Isaiah 9:12;true;;412
+1164;1164;False;Isaiah 9:12 states His hand is still stretched out.;false;;412
+#---
+1165;1165;The Syrians and the Philistines;Isaiah 9:12;true;;413
+1166;1166;Assyria and Babylon;The Syrians and Philistines are mentioned.;false;;413
+1167;1167;Egypt and Edom;The Syrians and Philistines are mentioned.;false;;413
+#---
+1168;1168;The head and the tail;Isaiah 9:14;true;;414
+1169;1169;The old and the young;The head and the tail are the specific terms.;false;;414
+1170;1170;The mighty and the humble;The head and the tail are the specific terms.;false;;414
+#---
+1171;1171;The ancient and honorable men;Isaiah 9:15;true;;415
+1172;1172;The priests and the Levites;The honorable men and prophets are mentioned.;false;;415
+1173;1173;The scribes and the Pharisees;This is from the New Testament.;false;;415
+#---
+1174;1174;True;Isaiah 9:17;false;;416
+1175;1175;False;Isaiah 9:17 says the Lord "shall not have compassion on their young men, nor have mercy on their fatherless and widows.";true;;416
+#---
+1176;1176;They will be burned up like fire in the briars and thorns;Isaiah 9:18;true;;417
+1177;1177;They will be forgiven and live peacefully;The text states they will be burned.;false;;417
+1178;1178;They will be taken as slaves to other nations;The text states they will be burned.;false;;417
+#---
+1179;1179;The flesh of his own arm;Isaiah 9:20;true;;418
+1180;1180;The flesh of his neighbor;This is not what is mentioned.;false;;418
+1181;1181;The flesh of his children;This is not what is mentioned.;false;;418
+#---
+1182;1182;To be against Judah;Isaiah 9:21;true;;419
+1183;1183;To be for Judah;The two will fight against each other.;false;;419
+1184;1184;To fight alongside Judah;The two will fight against each other.;false;;419
+#---
+1185;1185;Strike the people;Isaiah 9:12, 17, 21;true;;420
+1186;1186;Save the people;The hand is stretched out in anger, not salvation.;false;;420
+1187;1187;Protect the people;The hand is stretched out in anger, not protection.;false;;420
+#------------------------------------------------------------------------------------------
+1188;1188;Like the victory over Midian;Isaiah 9:4;true;;421
+1189;1189;Like the parting of the Red Sea;The victory over Midian is specifically mentioned.;false;;421
+1190;1190;Like the destruction of Jericho;The victory over Midian is specifically mentioned.;false;;421
+#---
+1191;1191;It signifies a complete and final cessation of war and conflict, brought about by the coming Messiah.;Isaiah 9:5;true;;422
+1192;1192;It means the war will continue until all enemies are burned.;The burning symbolizes the end of conflict.;false;;422
+1193;1193;It is a literal description of how the battle ended.;The burning is symbolic of perpetual peace.;false;;422
+#---
+1194;1194;The zeal of the Lord of hosts;Isaiah 9:7;true;;423
+1195;1195;The strength of His army;The zeal of the Lord is what accomplishes it.;false;;423
+1196;1196;The repentance of the people;The prophecy is of a new king, not dependent on the people's repentance.;false;;423
+#---
+1197;1197;Sycamores and cedars;The people boast of replacing sycamores with cedars in their arrogance.;true;;424
+1198;1198;Bricks and hewn stones;Isaiah 9:10;true;;424
+1199;1199;Vines and thorns;This imagery is used in other chapters.;false;;424
+#---
+1200;1200;The Syrians from the east;Isaiah 9:12;true;;425
+1201;1201;The Philistines from the west;Isaiah 9:12;true;;425
+1202;1202;The Babylonians and the Medes;These come later.;false;;425
+#---
+1203;1203;True;The people did not turn to God, which is why His anger is not turned away.;false;;426
+1204;1204;False;Isaiah 9:13 states the people "turned not unto him that smiteth them, neither did they seek the LORD of hosts.";true;;426
+#---
+1205;1205;The destruction of both the leaders (head) and the false prophets (tail) of Israel.;Isaiah 9:14-15;true;;427
+1206;1206;The beheading of the king and the tail of a serpent.;The terms are metaphorical, not literal.;false;;427
+1207;1207;The eradication of all people in Israel.;The focus is on the leaders and prophets.;false;;427
+#---
+1208;1208;Everyone is a hypocrite and an evildoer;Isaiah 9:17;true;;428
+1209;1209;Every mouth speaks folly;Isaiah 9:17;true;;428
+1210;1210;They did not offer proper sacrifices;The focus is on their widespread wickedness and corruption.;false;;428
+#---
+1211;1211;It consumes briers and thorns;Isaiah 9:18;true;;429
+1212;1212;It kindles the thickets of the forest;Isaiah 9:18;true;;429
+1213;1213;It rises in a column of smoke;Isaiah 9:18;true;;429
+#---
+1214;1214;Civil strife and internal factionalism, where people turn on their own kind.;Isaiah 9:20;true;;430
+1215;1215;Famine so severe that cannibalism is required.;While this is one interpretation, commentators suggest it refers to internal strife.;false;;430
+1216;1216;The people will literally eat their own limbs.;This is a metaphorical description of internal fighting.;false;;430
+#---
+1217;1217;They will come together against Judah.;Isaiah 9:21;true;;431
+1218;1218;They will repent and turn to God.;The text shows them turning against Judah.;false;;431
+1219;1219;They will be destroyed by foreign armies.;While they are destroyed, the immediate consequence is turning against Judah.;false;;431
+#---
+1220;1220;God's anger is not yet satisfied, and His judgment is still impending.;Isaiah 9:12, 17, 21;true;;432
+1221;1221;God is holding back His anger and waiting for the people to repent.;The context is one of impending judgment, not holding back.;false;;432
+1222;1222;God's hand is stretched out in blessing and salvation.;The context is one of judgment, not blessing.;false;;432
+#---
+1223;1223;The joy of harvest;Isaiah 9:3;true;;433
+1224;1224;The joy of dividing the spoil;Isaiah 9:3;true;;433
+1225;1225;The joy of celebrating a feast;The text mentions harvest and dividing the spoil.;false;;433
+#---
+1226;1226;He will cut them off in one day, along with the false prophets.;Isaiah 9:14;true;;434
+1227;1227;He will make them the head of the people.;He will cut them off.;false;;434
+1228;1228;He will send them to another land.;He will cut them off.;false;;434
+#---
+1229;1229;"We will build with hewn stones" and "change them into cedars";Isaiah 9:10;true;;435
+1230;1230;"The bricks are fallen down";This refers to their losses, not their defiance.;false;;435
+1231;1231;"The sycomores are cut down";This refers to their losses, not their defiance.;false;;435
+#---
+1232;1232;The prophets who teach lies are the "tail" because they mislead the people, who are led by the "head" (honorable men and elders).;Isaiah 9:15-16;true;;436
+1233;1233;The head and tail are at odds with each other.;They are part of the same corrupt system.;false;;436
+1234;1234;The false prophets are the true leaders, and the elders are their followers.;The elders are the head.;false;;436
+#---
+1235;1235;The head (honorable men/elders) is the highest in status, while the tail (false prophets) is the lowest, yet both are corrupt and cut off.;Isaiah 9:14-15;true;;437
+1236;1236;The head and tail are equally honored and respected.;The tail (false prophets) are dishonorable.;false;;437
+1237;1237;The head is the king, and the tail is the common person.;The text defines them differently.;false;;437
+#---
+1238;1238;The people who are guided by them are led astray and destroyed.;Isaiah 9:16;true;;438
+1239;1239;The leaders themselves are destroyed, but the people are saved.;The people are destroyed as well.;false;;438
+1240;1240;The people become righteous and turn to God.;The text states the people are led astray.;false;;438
+#---
+1241;1241;Wickedness, like a fire, consumes everything from the smallest to the largest, leaving nothing but smoke.;Isaiah 9:18;true;;439
+1242;1242;The people will literally be burned by fire.;The image is metaphorical.;false;;439
+1243;1243;The wickedness will be put out by God's judgment.;The wickedness fuels the fire of judgment.;false;;439
+#---
+1244;440;The land is scorched by God's wrath;Isaiah 9:19;true;;440
+1245;441;The people become fuel for the fire;Isaiah 9:19;true;;440
+1246;442;The people are saved from the fire;The wrath of God is upon them.;false;;440
+#-------------------------------------------------------------------------------------
+1247;1247;Historically, Matthew 4:12-16 explains that Jesus began his public ministry in this region, which was previously a place of darkness and foreign oppression.;Matthew 4:12-16;true;;441
+1248;1248;Theologically, it signifies that Jesus brought the light of salvation and glory to a region spiritually dead and in need of redemption.;Matthew 4:12-16;true;;441
+1249;1249;The region experienced a military victory that turned into spiritual revival.;While there was a military victory, the text highlights the spiritual aspect.;false;;441
+#---
+1250;1250;The "great light" represents salvation and spiritual enlightenment, while the "land of the shadow of death" symbolizes the ignorance and spiritual darkness of the people.;Isaiah 9:2;true;;442
+1251;1251;The light represents a powerful king who will bring military victory, and the shadow of death represents the defeated enemy.;The light is spiritual, not military.;false;;442
+1252;1252;The light is the sun, and the shadow of death is the coming drought.;The symbolism is spiritual.;false;;442
+#---
+1253;1253;It recalls Gideon's victory over the Midianites, which was achieved through God's power rather than military might, symbolizing a spiritual victory over oppression.;Judges 7;true;;443
+1254;1254;It emphasizes that God's deliverance comes supernaturally, not through human strength or warfare.;Judges 7 and Isaiah 9:4;true;;443
+1255;1255;The day of Midian was a time of great military strength, which the new king would emulate.;The victory of Midian was a supernatural one.;false;;443
+#---
+1256;1256;It points to the messianic expectation of a king who is not merely human but divine, foreshadowing the incarnation of Jesus Christ.;Isaiah 9:6;true;;444
+1257;1257;The titles are a hyperbolic way of praising a human king.;The names are divine titles.;false;;444
+1258;1258;The titles refer to different kings throughout Israel's history.;The titles are for one specific king, the Messiah.;false;;444
+#---
+1259;1259;The weight and responsibility of absolute divine authority, indicating the king's sovereign and righteous rule.;Isaiah 9:6;true;;445
+1260;1260;The king's heavy burden of taxation on his people.;The government is on his shoulder, symbolizing authority.;false;;445
+1261;1261;The king's personal sacrifice for his people.;The government is on his shoulder, symbolizing authority.;false;;445
+#---
+1262;1262;True;The boast reflects the people's stubborn pride and defiance of God, believing they can overcome their losses through their own strength, not God's.;true;;446
+1263;1263;False;The people's boast is an act of rebellion against God, not faith.;false;;446
+#---
+1264;1264;It emphasizes that despite repeated judgments, the people's rebellion persists, requiring further punishment.;Isaiah 9:13;true;;447
+1265;1265;It functions as a recurring refrain to remind the reader of God's unwavering and escalating judgment.;Isaiah 9:12, 17, 21;true;;447
+1266;1266;It assures the people that God's hand is stretched out in mercy and blessing, despite their sins.;The context is one of judgment, not mercy.;false;;447
+#---
+1267;1267;The corruption at the top (head) infects and misleads the entire populace, who are then led astray and destroyed.;Isaiah 9:16;true;;448
+1268;1268;The lying prophets (tail) lead the honorable men (head) astray.;The honorable men are the head, and the lying prophets are the tail, and both are corrupt.;true;;448
+1269;1269;The leaders and prophets are righteous, but the people are corrupted.;The leaders are corrupt and cause the people to err.;false;;448
+#---
+1270;1270;It signifies that the corruption is so pervasive that it has infected the entire social fabric, leaving no one truly innocent, including the most vulnerable.;Isaiah 9:17;true;;449
+1271;1271;God is capricious and does not care for the poor and vulnerable.;God's lack of mercy here is a consequence of the people's pervasive sin.;false;;449
+1272;1272;The young men and widows were guilty of a specific sin that warranted this judgment.;Their universal hypocrisy and evildoing is the reason.;false;;449
+#---
+1273;1273;The consuming and all-encompassing nature of sin, which, like fire, destroys everything in its path, from the lowly to the mighty.;Isaiah 9:18;true;;450
+1274;1274;The wickedness will be put out by God's judgment.;Wickedness fuels the fire, it is not put out.;false;;450
+1275;1275;The fire is a purifying one, cleansing the land of all sin.;The fire is one of destruction and judgment.;false;;450
+#---
+1276;1276;It describes the madness of internal factionalism and civil war, where people turn on their closest relations in a state of insatiable strife.;Isaiah 9:20;true;;451
+1277;1277;It reflects the people's desperation due to famine, resorting to cannibalism.;The text refers to internal strife and factionalism, not just famine.;true;;451
+1278;1278;The people will have a new kind of diet, eating only meat.;This is a metaphorical description of internal fighting.;false;;451
+#---
+1279;1279;The complete breakdown of even familial and tribal bonds, where those who should be allies turn on each other, foreshadowing the ultimate downfall.;Isaiah 9:21;true;;452
+1280;1280;The tribes will become united and strong against their enemies.;They turn on each other first, then on Judah.;false;;452
+1281;1281;The conflict is limited to internal strife and does not affect the larger nation.;The conflict leads to judgment and destruction.;false;;452
+#---
+1282;1282;It contrasts the joyful anticipation of spiritual harvest and redemption with the bitter reality of earthly conquest and oppression that the people face.;The joy of harvest is spiritual, while the dividing of spoil is earthly.;true;;453
+1283;1283;The people are rejoicing because they have been delivered from their enemies.;The joy is in anticipation of the Messiah, not because of deliverance from enemies.;false;;453
+1284;1284;The people are rejoicing in their military victories.;The joy is spiritual, not military.;false;;453
+#---
+1285;1285;The Messiah's rule is based on true judgment and justice, unlike the crooked and deceitful leadership that caused the people to err.;Isaiah 9:7 vs. 9:16;true;;454
+1286;1286;The Messiah's rule is similar to the corrupted leadership, but he is more powerful.;The Messiah's rule is righteous and just.;false;;454
+1287;1287;The Messiah's rule is based on the same principles as the corrupted leadership.;The Messiah's rule is righteous and just.;false;;454
+#---
+1288;1288;It signifies that Israel would be attacked from all sides, representing a complete and total military encirclement.;Isaiah 9:12;true;;455
+1289;1289;The Syrians will lead the attack, and the Philistines will follow.;They will attack from all sides.;false;;455
+1290;1290;The attack will be limited to a specific area.;The attack is from all sides.;false;;455
+#---
+1291;1291;True;The concept of a divine human king was a foreign idea to them, as they were expecting a human king from the line of David.;false;;456
+1292;1292;False;The immediate audience would likely have understood the prophecy in a limited, temporal sense, expecting a human king, while the full meaning was revealed later in the New Testament.;true;;456
+#---
+1293;1293;The defeat and devastation of the northern tribes (Zebulun and Naphtali) by the Assyrians under Tiglath-Pileser III.;2 Kings 15:29;true;;457
+1294;1294;The settlement of the region by foreign peoples, known as "Galilee of the Nations.";2 Kings 15:29;true;;457
+1295;1295;The ministry of Jesus in the region, bringing light to a place of spiritual darkness.;Matthew 4:12-16;true;;457
+#---
+1296;1296;It highlights the contrast between the temporary nature of human power, symbolized by burning the instruments of war, and the eternal, lasting peace of God's kingdom.;Isaiah 9:5-7;true;;458
+1297;1297;It suggests that military might will be replaced by a more powerful army of angels.;The focus is on the nature of the rule, not the army.;false;;458
+1298;1298;It implies that the warrior's actions were all for nothing.;The focus is on the eternal nature of the new king.;false;;458
+#---
+1299;1299;It indicates that God, not human effort or political maneuvering, is the ultimate force behind the establishment of the messianic kingdom.;Isaiah 9:7;true;;459
+1300;1300;The zeal of the Lord is a metaphor for the people's passion.;The zeal is the Lord's, not the people's.;false;;459
+1301;1301;The zeal of the Lord is a motivation for the people to act.;The zeal is the Lord's, not the people's.;false;;459
+#---
+1302;1302;It portrays God's word as a powerful, active force, like a weapon, that brings judgment upon His people, not as a passive message.;Isaiah 9:8;true;;460
+1303;1303;The word is a message of comfort and peace.;The word brings judgment.;false;;460
+1304;1304;The word is a physical object that was sent to Jacob.;The word is a powerful, active force.;false;;460
+#----------------------------------------------------------------------------------------------------
+# CHAPTER 10
+#----------------------------------------------------------------------------------------------------
+1305;1305;Assyria;Isaiah 10:5;true;;461
+1306;1306;Egypt;Isaiah 10:5;false;;461
+1307;1307;Babylon;Isaiah 10:5;false;;461
+#---
+1308;1308;True;Isaiah 10:5;true;;462
+1309;1309;False;Isaiah 10:5;false;;462
+#---
+1310;1310;They will be filled with a spirit of confusion;Isaiah 10:4;true;;463
+1311;1311;They will join the army of Assyria;Isaiah 10:4;false;;463
+1312;1312;They will be saved by Israel;Isaiah 10:4;false;;463
+#---
+1313;1313;A fire from the LORD;Isaiah 10:16;true;;464
+1314;1314;A swarm of locusts;Isaiah 10:16;false;;464
+1315;1315;The armies of Israel;Isaiah 10:16;false;;464
+#---
+1316;1316;The king of Assyria is not named;Isaiah 10:5-15;true;;465
+1317;1317;Tiglath-Pileser;Isaiah 10:5-15;false;;465
+1318;1318;Sennacherib;Isaiah 10:5-15;false;;465
+#---
+1319;1319;Syria and Samaria;Isaiah 10:9-11;true;;466
+1320;1320;Moab and Edom;Isaiah 10:9-11;false;;466
+1321;1321;Judea and Galilee;Isaiah 10:9-11;false;;466
+#---
+1322;1322;The LORD will punish the king's arrogance;Isaiah 10:12;true;;467
+1323;1323;The king will conquer all nations;Isaiah 10:12;false;;467
+1324;1324;The king will be crowned ruler of the world;Isaiah 10:12;false;;467
+#---
+1325;1325;A wasting disease;Isaiah 10:16;true;;468
+1326;1326;A burning fire;Isaiah 10:16;true;;468
+1327;1327;A flood of water;Isaiah 10:16;false;;468
+#---
+1328;1328;To get plunder and spoil;Isaiah 10:6;true;;469
+1329;1329;To make a peace treaty;Isaiah 10:6;false;;469
+1330;1330;To make them worship new gods;Isaiah 10:6;false;;469
+#---
+1331;1331;It will return to the LORD;Isaiah 10:21;true;;470
+1332;1332;It will be destroyed by Assyria;Isaiah 10:21;false;;470
+1333;1333;It will become a mighty nation;Isaiah 10:21;false;;470
+#---
+1334;1334;True;Isaiah 10:16-17;true;;471
+1335;1335;False;Isaiah 10:16-17;false;;471
+#---
+1336;1336;Uproot the forest and fields of the LORD;Isaiah 10:18-19;true;;472
+1337;1337;Defeat the Egyptians;Isaiah 10:18-19;false;;472
+1338;1338;Take over Jerusalem;Isaiah 10:18-19;false;;472
+#---
+1339;1339;Only a few trees will be left;Isaiah 10:19;true;;473
+1340;1340;A plague of locusts;Isaiah 10:19;false;;473
+1341;1341;The army of Babylon will defeat them;Isaiah 10:19;false;;473
+#---
+1342;1342;False;Isaiah 10:20;true;;474
+1343;1343;True;Isaiah 10:20;false;;474
+#---
+1344;1344;On the mountain of assembly;Isaiah 10:13-14;true;;475
+1345;1345;In the valleys of Israel;Isaiah 10:13-14;false;;475
+1346;1346;On the plains of Mesopotamia;Isaiah 10:13-14;false;;475
+#---
+1347;1347;True;Isaiah 10:24;true;;476
+1348;1348;False;Isaiah 10:24;false;;476
+#---
+1349;1349;A fire that will consume the Assyrian thorns and briars;Isaiah 10:17;true;;477
+1350;1350;A lamp for all nations;Isaiah 10:17;false;;477
+1351;1351;A bright sun for Israel;Isaiah 10:17;false;;477
+#---
+1352;1352;Michmash;Isaiah 10:28;true;;478
+1353;1353;Beth-aven;Isaiah 10:28;true;;478
+1354;1354;Aiath;Isaiah 10:28;true;;478
+1355;1355;Jerusalem;Isaiah 10:28;false;;478
+#---
+1356;1356;The defeat of Midian;Isaiah 10:26;true;;479
+1357;1357;The flood of Noah;Isaiah 10:26;false;;479
+1358;1358;The ten plagues of Egypt;Isaiah 10:26;false;;479
+#---
+1359;1359;The LORD of hosts will send a wasting disease;Isaiah 10:16;true;;480
+1360;1360;The king will build a great temple;Isaiah 10:16;false;;480
+1361;1361;The king will be replaced by his son;Isaiah 10:16;false;;480
+#--------------------------------------------------------------------------------------------------
+1362;1362;A rod and a staff;Isaiah 10:5;true;;481
+1363;1363;A great axe;Isaiah 10:5;false;;481
+1364;1364;A mighty club;Isaiah 10:5;false;;481
+#---
+1365;1365;His own power;Isaiah 10:13;true;;482
+1366;1366;His wisdom;Isaiah 10:13;true;;482
+1367;1367;His cunning;Isaiah 10:13;false;;482
+1368;1368;The strength of his allies;Isaiah 10:13;false;;482
+#---
+1369;1369;True;Isaiah 10:10-11;true;;483
+1370;1370;False;Isaiah 10:10-11;false;;483
+#---
+1371;1371;A consuming fire;Isaiah 10:17;true;;484
+1372;1372;A sudden earthquake;Isaiah 10:17;false;;484
+1373;1373;A rushing wind;Isaiah 10:17;false;;484
+#---
+1374;1374;The willful pride of his heart and haughty eyes;Isaiah 10:12;true;;485
+1375;1375;His greed for plunder;Isaiah 10:12;false;;485
+1376;1376;His harshness towards captives;Isaiah 10:12;false;;485
+#---
+1377;1377;They will be so few a child can count them;Isaiah 10:19;true;;486
+1378;1378;They will become a new forest for Israel;Isaiah 10:19;false;;486
+1379;1379;They will become a sign of the LORD's power;Isaiah 10:19;false;;486
+#---
+1380;1380;He will punish the arrogant heart of Assyria's king;Isaiah 10:12;true;;487
+1381;1381;He will send Assyria to attack Egypt;Isaiah 10:12;false;;487
+1382;1382;He will give Assyria more power;Isaiah 10:12;false;;487
+#---
+1383;1383;A sharp blade lopping off the boughs;Isaiah 10:33-34;true;;488
+1384;1384;A great wave of water;Isaiah 10:33-34;false;;488
+1385;1385;A pack of wolves;Isaiah 10:33-34;false;;488
+#---
+1386;1386;They will return to the LORD;Isaiah 10:20-21;true;;489
+1387;1387;They will have a new king;Isaiah 10:20-21;false;;489
+1388;1388;They will have a new army;Isaiah 10:20-21;false;;489
+#---
+1389;1389;Aiath;Isaiah 10:28;true;;490
+1390;1390;Migron;Isaiah 10:28;true;;490
+1391;1391;Michmash;Isaiah 10:28;true;;490
+1392;1392;Samaria;Isaiah 10:28;false;;490
+#---
+1393;1393;False;Isaiah 10:27;true;;491
+1394;1394;True;Isaiah 10:27;false;;491
+#---
+1395;1395;Eggs;Isaiah 10:14;true;;492
+1396;1396;Feathers;Isaiah 10:14;false;;492
+1397;1397;Sticks;Isaiah 10:14;false;;492
+#---
+1398;1398;A wasteland;Isaiah 10:18-19;true;;493
+1399;1399;A new and more fertile land;Isaiah 10:18-19;false;;493
+1400;1400;A city of idols;Isaiah 10:18-19;false;;493
+#---
+1401;1401;True;Isaiah 10:7;true;;494
+1402;1402;False;Isaiah 10:7;false;;494
+#---
+1403;1403;The anointing oil;Isaiah 10:27;true;;495
+1404;1404;A powerful army;Isaiah 10:27;false;;495
+1405;1405;A great flood;Isaiah 10:27;false;;495
+#---
+1406;1406;They are brought down and humbled;Isaiah 10:33;true;;496
+1407;1407;They join the remnant of Israel;Isaiah 10:33;false;;496
+1408;1408;They flee to Egypt;Isaiah 10:33;false;;496
+#---
+1409;1409;They will be humbled;Isaiah 10:33;true;;497
+1410;1410;They will be hewn down;Isaiah 10:33;true;;497
+1411;1411;They will be saved;Isaiah 10:33;false;;497
+1412;1412;They will be given a great reward;Isaiah 10:33;false;;497
+#---
+1413;1413;A mighty stroke;Isaiah 10:33;true;;498
+1414;1414;A fiery sword;Isaiah 10:33;false;;498
+1415;1415;A strong flood;Isaiah 10:33;false;;498
+#---
+1416;1416;Assyria did not intend to fulfill God's will, but to destroy;Isaiah 10:7;true;;499
+1417;1417;Assyria's methods were too cruel;Isaiah 10:7;false;;499
+1418;1418;Assyria had made a treaty with Israel;Isaiah 10:7;false;;499
+#---
+1419;1419;True;Isaiah 10:28-32;true;;500
+1420;1420;False;Isaiah 10:28-32;false;;500
+#------------------------------------------------------------------------------------------
+1421;1421;Enacting unjust laws that oppress the poor;Isaiah 10:1-2;true;;501
+1422;1422;Depriving the needy of justice;Isaiah 10:1-2;true;;501
+1423;1423;Plundering widows and the fatherless;Isaiah 10:1-2;true;;501
+1424;1424;Failing to pay their taxes;Isaiah 10:1-2;false;;501
+#---
+1425;1425;Assyria intended to invade for its own gain, but God used them as an instrument of judgment on Israel. God judges Assyria for its own evil motives, not for being His instrument;Isaiah 10:7, 12;true;;502
+1426;1426;Assyria was judged because it was a foreign power;Isaiah 10:7, 12;false;;502
+1427;1427;Assyria was punished for the same sins as Israel;Isaiah 10:7, 12;false;;502
+#---
+1428;1428;The LORD;Isaiah 10:15;true;;503
+1429;1429;The Assyrian king himself;Isaiah 10:15;false;;503
+1430;1430;Assyria's gods;Isaiah 10:15;false;;503
+#---
+1431;1431;They will be cast into captivity or slain, with no one to help them;Isaiah 10:3-4;true;;504
+1432;1432;They will be spared from the general judgment;Isaiah 10:3-4;false;;504
+1433;1433;They will be forced to serve their own idols;Isaiah 10:3-4;false;;504
+#---
+1434;1434;He assumes that the God of Israel is just another national deity, like the idols he has conquered, expecting an easy victory;Isaiah 10:10-11;true;;505
+1435;1435;He believes the God of Israel is on his side;Isaiah 10:10-11;false;;505
+1436;1436;He fears the God of Israel, but thinks his army is more powerful;Isaiah 10:10-11;false;;505
+#---
+1437;1437;It emphasizes that God's severe judgment reduces His people to a tiny fraction, but also highlights His faithfulness in preserving a small portion for restoration;Isaiah 10:21-22;true;;506
+1438;1438;It signifies God's complete abandonment of Israel;Isaiah 10:21-22;false;;506
+1439;1439;It promises a future, full restoration without any loss;Isaiah 10:21-22;false;;506
+#---
+1440;1440;To destroy and to cut off many nations;Isaiah 10:7;true;;507
+1441;1441;To seize loot and snatch plunder;Isaiah 10:6;true;;507
+1442;1442;To show off his own power and wisdom;Isaiah 10:13;true;;507
+1443;1443;To establish a peaceful and just empire;Isaiah 10:6, 13;false;;507
+#---
+1444;1444;It implies that Assyria's defeat will be a miraculous and complete intervention by God, not due to Israel's strength, similar to Gideon's victory over Midian;Isaiah 10:26;true;;508
+1445;1445;It means Israel will be defeated by Midian;Isaiah 10:26;false;;508
+1446;1446;It indicates a long, drawn-out war;Isaiah 10:26;false;;508
+#---
+1447;1447;It builds suspense by describing the enemy's progression closer to Jerusalem, highlighting vulnerability before God's promised deliverance;Isaiah 10:28-32;true;;509
+1448;1448;It was a literal travel guide for the Assyrian army;Isaiah 10:28-32;false;;509
+1449;1449;It was a symbolic map of Israel's future conquests;Isaiah 10:28-32;false;;509
+#---
+1450;1450;The Hebrew term is *pequddah*, meaning 'visitation' of judgment for the wicked and 'visitation' of justice for the oppressed;Isaiah 10:3;true;;510
+1451;1451;The Hebrew term is *soah*, meaning 'storm';Isaiah 10:3;false;;510
+1452;1452;The Hebrew term is *shibah*, meaning 'return';Isaiah 10:3;false;;510
+#---
+1453;1453;The purpose is to fulfill God's decreed judgment with righteousness, preserving a righteous remnant despite widespread sin;Isaiah 10:22-23;true;;511
+1454;1454;The purpose is to destroy everything completely;Isaiah 10:22-23;false;;511
+1455;1455;The purpose is to convert all nations to the worship of Israel's God;Isaiah 10:22-23;false;;511
+#---
+1456;1456;He boasts about the ease with which he plundered nations, taking wealth with as little resistance as taking eggs from an empty nest;Isaiah 10:14;true;;512
+1457;1457;He is boasting about his ability to raise a new army from scratch;Isaiah 10:14;false;;512
+1458;1458;He is boasting about his ability to defeat large armies in battle;Isaiah 10:14;false;;512
+#---
+1459;1459;Assyrians, God's rod of anger (fire), become fuel for a greater divine fire, showing how God's instrument is consumed by His ultimate power;Isaiah 10:16-17;true;;513
+1460;1460;It shows that Israel is stronger than Assyria;Isaiah 10:16-17;false;;513
+1461;1461;It shows that God is angry with all nations equally;Isaiah 10:16-17;false;;513
+#---
+1462;1462;It signifies that Assyrian oppression will be removed not by human power, but by God's anointed one (the Messiah), indicating miraculous deliverance;Isaiah 10:27;true;;514
+1463;1463;It means the yoke will be broken because of a special military weapon;Isaiah 10:27;false;;514
+1464;1464;It suggests the yoke is broken because of Israel's repentance;Isaiah 10:27;false;;514
+#---
+1465;1465;To highlight the absurdity of the Assyrian king's pride by showing how foolish it is for a tool to boast over the one who wields it;Isaiah 10:15;true;;515
+1466;1466;To suggest that the tools themselves are magical;Isaiah 10:15;false;;515
+1467;1467;To criticize the craftsmanship of Assyrian tools;Isaiah 10:15;false;;515
+#---
+1468;1468;The Assyrian army;Isaiah 10:18-19;true;;516
+1469;1469;The Assyrian king's power and pride;Isaiah 10:18-19;true;;516
+1470;1470;The Assyrian empire's territory;Isaiah 10:18-19;true;;516
+1471;1471;The gods of Assyria;Isaiah 10:18-19;false;;516
+#---
+1472;1472;It represents the complete and decisive judgment of God, felling the proud and bringing their might to nothing, similar to a forester clearing a forest;Isaiah 10:33-34;true;;517
+1473;1473;It symbolizes a peaceful disarmament;Isaiah 10:33-34;false;;517
+1474;1474;It represents a new growth of trees for Israel;Isaiah 10:33-34;false;;517
+#---
+1475;1475;Assyria intends to destroy nations for its own gain, while God uses their actions to discipline His people;Isaiah 10:7;true;;518
+1476;1476;Assyria intends to bring peace, but God's purpose is war;Isaiah 10:7;false;;518
+1477;1477;Assyria intends to serve God, but ends up serving its own interests;Isaiah 10:7;false;;518
+#---
+1478;1478;The imagery portrays a gradual, systemic destruction of the Assyrian army, contrasting with their initial strength and representing the silent nature of divine judgment;Isaiah 10:16;true;;519
+1479;1479;It emphasizes the suddenness of the defeat;Isaiah 10:16;false;;519
+1480;1480;It suggests that Assyria's downfall is caused by lack of food;Isaiah 10:16;false;;519
+#---
+1481;1481;The remnant of Israel will rely on the Lord, while the Assyrians rely on their own strength, wisdom, and conquests;Isaiah 10:20-21, 13;true;;520
+1482;1482;The remnant relies on military power, while the Assyrians rely on diplomacy;Isaiah 10:20-21, 13;false;;520
+1483;1483;The remnant relies on foreign alliances, while the Assyrians rely on their own people;Isaiah 10:20-21, 13;false;;520
+#-----------------------------------------------------------------------------------
+# CHAPTER 11
+#-----------------------------------------------------------------------------------
+
