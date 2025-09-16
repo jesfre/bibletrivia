@@ -203,7 +203,7 @@ id;question_id;level;question_type;question;answer_type;value;picture
 272;272;HARD;BIBLICAL;What is the symbolic significance of the seraphim covering their faces and feet in the presence of God?;MULTIPLE;3;
 273;273;HARD;BIBLICAL;What specific theological concept is emphasized by the seraphim's threefold repetition of the word "holy" in Isaiah 6:3?;SINGLE;3;
 274;274;HARD;BIBLICAL;True or False: The purpose of Isaiah's commission to dull the hearts and ears of the people was to punish them, with no possibility of ultimate redemption.;TRUE_FALSE;3;
-275;275;HARD;BIBLICAL;The contrast between Isaiah's initial cry, "I am undone," and his later response, "Here am I; send me," highlights what theological principle?;SINGLE;3;
+275;275;HARD;BIBLICAL;"The contrast between Isaiah's initial cry, ""I am undone,"" and his later response, ""Here am I; send me,"" highlights what theological principle?";SINGLE;3;
 276;276;HARD;BIBLICAL;According to the New Testament, who is identified as the King Isaiah saw in his vision in Isaiah 6?;SINGLE;3;
 277;277;HARD;BIBLICAL;What is the theological interpretation of the smoke filling the temple in Isaiah 6:4, drawing on other biblical accounts?;MULTIPLE;3;
 278;278;HARD;BIBLICAL;What is the deeper meaning of the question, "Whom shall I send, and who will go for us?" (Isaiah 6:8), considering the use of both singular ("I") and plural ("us") forms?;SINGLE;3;
@@ -321,7 +321,7 @@ id;question_id;level;question_type;question;answer_type;value;picture
 #---
 381;381;HARD;BIBLICAL;In Isaiah 8:1-2, what is the significance of the "great roll" and writing with a "man's pen" before faithful witnesses?;SINGLE;3;
 382;382;HARD;BIBLICAL;The contrast between the "waters of Shiloah that go softly" (Isaiah 8:6) and the "waters of the River, strong and many" (Isaiah 8:7) serves as an allegory for what theological choice the people were making?;SINGLE;3;
-383;383;HARD;BIBLICAL;What is the deeper theological meaning behind the phrase "Sanctify the LORD of hosts himself; and let him be your fear, and let him be your dread" in Isaiah 8:13?;SINGLE;3;
+383;383;HARD;BIBLICAL;"What is the deeper theological meaning behind the phrase ""Sanctify the LORD of hosts himself; and let him be your fear, and let him be your dread"" in Isaiah 8:13?";SINGLE;3;
 384;384;HARD;BIBLICAL;In what specific ways does Isaiah describe the Lord as both a "sanctuary" and a "stone of stumbling" for the two houses of Israel in Isaiah 8:14?;MULTIPLE;3;
 385;385;HARD;BIBLICAL;What was the purpose of Isaiah binding up the testimony and sealing the law among his disciples, according to Isaiah 8:16?;MULTIPLE;3;
 386;386;HARD;BIBLICAL;True or False: Isaiah's statement, "I will wait upon the LORD, that hideth his face from the house of Jacob" (Isaiah 8:17), demonstrates a prophet's willingness to endure God's judgment alongside the unfaithful.;TRUE_FALSE;3;

@@ -694,7 +694,7 @@ id;answer_id;answer;explanation;correct;picture;trivia_question_id
 720;720;An angel asked, and the Lord answered;The Lord asks the question, and Isaiah answers.;false;;259
 721;721;Isaiah asked, and the Lord answered;The Lord is the one who asks the question.;false;;259
 #---
-722;722;Here am I; send me;Isaiah 6:8;true;;260
+722;722;"Here am I; send me";Isaiah 6:8;true;;260
 723;723;Woe is me!;Isaiah said this before being cleansed, not in response to the call.;false;;260
 724;724;I am a man of unclean lips;Isaiah said this before being cleansed, not in response to the call.;false;;260
 #--------------------------------------------------------------------------
@@ -1136,7 +1136,7 @@ id;answer_id;answer;explanation;correct;picture;trivia_question_id
 #---
 1046;1046;The "gently flowing waters" represent God's gentle and faithful provision, while the "strong and mighty" river symbolizes the overwhelming and destructive force of Assyria.;Isaiah 8:6-8;true;;372
 1047;1047;The waters of Shiloah represent a weak king, and the River represents a strong king.;The water imagery represents God's provision vs. Assyrian judgment.;false;;372
-1048;1048;There is no symbolic contrast intended; it is a literal description of two rivers.;The context shows a clear symbolic contrast.;false;;372
+1048;1048;"There is no symbolic contrast intended; it is a literal description of two rivers.";The context shows a clear symbolic contrast.;false;;372
 #---
 1049;1049;The image represents the all-encompassing nature of the Assyrian invasion, which will cover the land with its destructive force.;Isaiah 8:8;true;;373
 1050;1050;It symbolizes God's protective wings covering the land.;The context is the invasion of Assyria.;false;;373
